@@ -23,7 +23,7 @@ package org.jacorb.orb.connection;
 /**
  * 
  * @author Gerald Brose, FU Berlin
- * @version $Id: LocateRequestInputStream.java,v 1.5 2001-03-28 08:55:48 brose Exp $
+ * @version $Id: LocateRequestInputStream.java,v 1.7 2001-03-28 10:07:05 jacorb Exp $
  *
  * Hack for locate requests: turn a locate request into
  * a _non_existent() request and actually ping the object. This appears
@@ -60,8 +60,6 @@ public class LocateRequestInputStream
                                                 null ); 
     }
 }
-
-
 
 
 

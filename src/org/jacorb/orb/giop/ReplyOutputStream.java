@@ -27,7 +27,7 @@ import org.jacorb.orb.*;
 
 /**
  * @author Gerald Brose, FU Berlin 1999
- * @version $Id: ReplyOutputStream.java,v 1.5 2001-03-28 08:55:51 brose Exp $
+ * @version $Id: ReplyOutputStream.java,v 1.7 2001-03-28 10:07:05 jacorb Exp $
  *
  */
 
@@ -128,8 +128,6 @@ public class ReplyOutputStream
         }
     } 
 }
-
-
 
 
 

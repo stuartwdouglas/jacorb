@@ -26,7 +26,7 @@ import org.jacorb.orb.*;
 
 /**
  * @author Gerald Brose, FU Berlin 1999
- * @version $Id: RequestOutputStream.java,v 1.6 2001-03-28 08:55:53 brose Exp $
+ * @version $Id: RequestOutputStream.java,v 1.8 2001-03-28 10:07:06 jacorb Exp $
  *
  */
 
@@ -148,11 +148,11 @@ public class RequestOutputStream
             writeHeader(header_stream);
         }
 
-        //jacorb.util.Debug.output(2, "Header size: " + header_stream.size());
-        //jacorb.util.Debug.output(2, "Data size: " + size());
+        //org.jacorb.util.Debug.output(2, "Header size: " + header_stream.size());
+        //org.jacorb.util.Debug.output(2, "Data size: " + size());
     }
   
-    public void setRequest(jacorb.orb.dii.Request request)
+    public void setRequest(org.jacorb.orb.dii.Request request)
     {
         this.request = request;
     }
@@ -162,8 +162,6 @@ public class RequestOutputStream
         return request;
     }
 }
-
-
 
 
 
