@@ -24,7 +24,7 @@ package org.jacorb.orb.connection;
  * This class manages connections.<br>
  *
  * @author Gerald Brose, FU Berlin
- * @version $Id: ConnectionManager.java,v 1.3 2001-03-19 11:08:29 brose Exp $
+ * @version $Id: ConnectionManager.java,v 1.5 2001-03-28 09:00:56 jacorb Exp $
  *
  */
 

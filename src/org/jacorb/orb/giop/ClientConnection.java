@@ -23,7 +23,7 @@ package org.jacorb.orb.connection;
 /**
  *
  * @author Gerald Brose, FU Berlin
- * @version $Id: ClientConnection.java,v 1.4 2001-03-27 12:01:25 noffke Exp $
+ * @version $Id: ClientConnection.java,v 1.6 2001-03-28 08:59:15 jacorb Exp $
  *
  */
 
