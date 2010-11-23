@@ -22,30 +22,44 @@ package org.jacorb.orb;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: AbstractBufferManager.java,v 1.1 2009-09-29 10:27:52 alexander.bykov Exp $
+ * @version $Id: AbstractBufferManager.java,v 1.2 2010-11-23 15:22:05 alexander.bykov Exp $
  */
 public abstract class AbstractBufferManager implements IBufferManager
 {
-    public byte[] getBuffer(int size)
-    {
-        return getBuffer(size, false);
-    }
+   /**
+    * Default size for getPreferredMemoryBuffer
+    */
+   static final int MEM_BUFSIZE = 1023;
 
-    public void returnBuffer(byte[] buf)
-    {
-        returnBuffer(buf, false);
-    }
 
-    public byte[] getPreferredMemoryBuffer()
-    {
-        return getBuffer(256);
-    }
+   public void returnBuffer (byte[] buf)
+   {
+      returnBuffer (buf, false);
+   }
 
-    public void release()
-    {
-    }
 
-    public void returnBuffer(byte[] buffer, boolean b)
-    {
-    }
+   /**
+    * <code>getPreferredMemoryBuffer</code> returns a new buffer
+    * with the default (<code>MEM_BUFSIZE</code> = 1023) size.
+    *
+    * Method is used when there is no possibility to determine
+    * what exactly size of buffer is required. Thus, just create
+    * new buffer with the minimum cacheable size.
+    *
+    * @return a <code>byte[]</code> value
+    */
+   public byte[] getPreferredMemoryBuffer ()
+   {
+      return getBuffer (MEM_BUFSIZE);
+   }
+
+
+   public void release ()
+   {
+   }
+
+
+   public void returnBuffer (byte[] buffer, boolean b)
+   {
+   }
 }

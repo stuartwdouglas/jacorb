@@ -55,7 +55,7 @@ import org.omg.IOP.TaggedProfile;
 
 /**
  * @author Gerald Brose,  1999
- * @version $Id: CDROutputStream.java,v 1.140 2010-11-05 12:16:19 nick.cross Exp $
+ * @version $Id: CDROutputStream.java,v 1.141 2010-11-23 15:22:05 alexander.bykov Exp $
  *
  * A stream for CDR marshalling.
  *
@@ -267,7 +267,7 @@ public class CDROutputStream
         }
         else
         {
-            buffer = bufMgr.getBuffer(bufferSize, true);
+            buffer = bufMgr.getBuffer(bufferSize);
         }
     }
     /**
@@ -537,7 +537,7 @@ public class CDROutputStream
                 new_size = _result;
             }
 
-            final byte[] new_buf = bufMgr.getBuffer( new_size, true);
+            final byte[] new_buf = bufMgr.getBuffer(new_size);
 
             if (buffer != null)
             {

@@ -54,7 +54,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Gerald Brose, FU Berlin
- * @version $Id: ServerRequest.java,v 1.51 2009-12-14 16:27:29 nick.cross Exp $
+ * @version $Id: ServerRequest.java,v 1.52 2010-11-23 15:22:05 alexander.bykov Exp $
  */
 
 public class ServerRequest
@@ -364,6 +364,7 @@ public class ServerRequest
     }
 
 
+    // BasicAdapter / ServerRequestListener / IMR
     public void reply()
     {
         if( responseExpected() )
@@ -452,6 +453,12 @@ public class ServerRequest
             catch ( Exception ioe )
             {
                 logger.info("Error replying to request!", ioe);
+            }
+            finally
+            {
+                out.close();
+                // nullify output stream to force its recreation on next call
+                out = null;
             }
         }
     }

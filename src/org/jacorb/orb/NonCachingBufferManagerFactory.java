@@ -27,14 +27,14 @@ import org.jacorb.config.Configuration;
  * that'll create a new array of byte for every invocation).
  *
  * @author Alphonse Bendt
- * @version $Id: NonCachingBufferManagerFactory.java,v 1.1 2009-09-29 10:27:52 alexander.bykov Exp $
+ * @version $Id: NonCachingBufferManagerFactory.java,v 1.2 2010-11-23 15:22:05 alexander.bykov Exp $
  */
 
 public class NonCachingBufferManagerFactory implements BufferManagerFactory
 {
     private final static IBufferManager bufferManager = new AbstractBufferManager()
     {
-        public byte[] getBuffer(int size, boolean cdrStr)
+        public byte[] getBuffer(int size)
         {
             return new byte[size];
         }
