@@ -22,7 +22,7 @@ package org.jacorb.idl;
 
 /**
  * @author Gerald Brose
- * @version $Id: ElementSpec.java,v 1.21 2010-11-05 09:39:01 alexander.bykov Exp $
+ * @version $Id: ElementSpec.java,v 1.22 2010-11-23 12:05:41 alexander.bykov Exp $
  */
 
 public class ElementSpec
@@ -61,7 +61,8 @@ public class ElementSpec
            {
               tmpRef = tmpRef.substring( 0, tmpRef.lastIndexOf( "Package" ) );
            }
-           if (ScopedName.isPseudoScope (tmpRef))
+           if (ScopedName.isPseudoScope (tmpRef)
+               || ((ConstrTypeSpec)typeSpec.typeSpec ()).c_type_spec instanceof StructType)
            {
               ((ConstrTypeSpec)typeSpec.typeSpec ()).c_type_spec.pack_name =
                  ((ConstrTypeSpec)typeSpec.typeSpec ()).c_type_spec.pack_name + "." + ut.name + "Package";
