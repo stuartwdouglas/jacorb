@@ -28,7 +28,7 @@ import java.util.Set;
 
 /**
  * @author Gerald Brose
- * @version $Id: UnionType.java,v 1.73 2010-11-09 16:59:21 alexander.bykov Exp $
+ * @version $Id: UnionType.java,v 1.74 2010-11-29 13:47:03 alexander.bykov Exp $
  */
 public class UnionType
     extends TypeDeclaration
@@ -1457,5 +1457,20 @@ public class UnionType
     public void accept(IDLTreeVisitor visitor)
     {
         visitor.visitUnion(this);
+    }
+
+    public void set_name(String n)
+    {
+        super.set_name(n);
+
+        if (switch_type_spec != null)
+        {
+            switch_type_spec.setPackage( n );
+        }
+
+        if (switch_body != null)
+        {
+            switch_body.setPackage( n );
+        }
     }
 }

@@ -22,7 +22,7 @@ package org.jacorb.idl;
 
 /**
  * @author Gerald Brose
- * @version $Id: ElementSpec.java,v 1.22 2010-11-23 12:05:41 alexander.bykov Exp $
+ * @version $Id: ElementSpec.java,v 1.23 2010-11-29 13:47:03 alexander.bykov Exp $
  */
 
 public class ElementSpec
@@ -51,23 +51,6 @@ public class ElementSpec
     public void setUnion( UnionType ut )
     {
         containingUnion = ut;
-
-        // If its a constrType and is a pseudoscope add union name
-        if (typeSpec.typeSpec () instanceof ConstrTypeSpec)
-        {
-           String tmpRef = ((ConstrTypeSpec)typeSpec.typeSpec ()).c_type_spec.pack_name;
-
-           if (tmpRef.endsWith ("PackagePackage") || ! tmpRef.startsWith ("_") && tmpRef.endsWith ("Package"))
-           {
-              tmpRef = tmpRef.substring( 0, tmpRef.lastIndexOf( "Package" ) );
-           }
-           if (ScopedName.isPseudoScope (tmpRef)
-               || ((ConstrTypeSpec)typeSpec.typeSpec ()).c_type_spec instanceof StructType)
-           {
-              ((ConstrTypeSpec)typeSpec.typeSpec ()).c_type_spec.pack_name =
-                 ((ConstrTypeSpec)typeSpec.typeSpec ()).c_type_spec.pack_name + "." + ut.name + "Package";
-           }
-        }
     }
 
     public void setEnclosingSymbol( IdlSymbol s )
