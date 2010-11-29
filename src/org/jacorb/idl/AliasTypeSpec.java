@@ -27,7 +27,7 @@ import java.util.Set;
 
 /**
  * @author Gerald Brose
- * @version $Id: AliasTypeSpec.java,v 1.57 2009-12-03 17:38:22 alexander.bykov Exp $
+ * @version $Id: AliasTypeSpec.java,v 1.58 2010-11-29 16:56:31 alexander.bykov Exp $
  */
 
 public class AliasTypeSpec
@@ -248,6 +248,7 @@ public class AliasTypeSpec
             try
             {
                 if (!(originalType instanceof FixedPointType) &&
+                    !(originalType.typeSpec() instanceof ArrayTypeSpec) &&
                     !(originalType.typeSpec() instanceof StringType) &&
                     !(originalType.typeSpec() instanceof SequenceType) &&
                     ! originalTypeWasScopedName &&
