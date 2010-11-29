@@ -86,7 +86,7 @@ import org.omg.TimeBase.UtcT;
  * JacORB implementation of CORBA object reference
  *
  * @author Gerald Brose
- * @version $Id: Delegate.java,v 1.163 2010-11-01 16:49:09 alexander.bykov Exp $
+ * @version $Id: Delegate.java,v 1.164 2010-11-29 18:13:28 martin.corino Exp $
  *
  */
 
@@ -2132,7 +2132,7 @@ public final class Delegate
                                                      org.omg.CORBA.Policy[] policies,
                                                      org.omg.CORBA.SetOverrideType set_add )
     {
-        return set_policy_override (self, policies, set_add);
+        return set_policy_overrides (self, policies, set_add);
     }
 
     public org.omg.CORBA.Object set_policy_overrides( org.omg.CORBA.Object self,
