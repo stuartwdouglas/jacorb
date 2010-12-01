@@ -28,7 +28,7 @@ import java.util.Set;
 
 /**
  * @author Gerald Brose
- * @version $Id: UnionType.java,v 1.74 2010-11-29 13:47:03 alexander.bykov Exp $
+ * @version $Id: UnionType.java,v 1.75 2010-12-01 10:36:05 alexander.bykov Exp $
  */
 public class UnionType
     extends TypeDeclaration
@@ -282,14 +282,6 @@ public class UnionType
             ScopedName.addRecursionScope(typeName());
             switch_body.parse();
             ScopedName.removeRecursionScope(typeName());
-
-            // Fixup array typing
-
-            for (Enumeration e = switch_body.caseListVector.elements(); e.hasMoreElements();)
-            {
-                Case c = (Case)e.nextElement();
-                c.element_spec.typeSpec = getElementType(c.element_spec);
-            }
 
             NameTable.parsed_interfaces.put(full_name(), "");
             parser.remove_pending(full_name());
@@ -1415,23 +1407,6 @@ public class UnionType
                 }
             }
         }
-    }
-
-    private TypeSpec getElementType(ElementSpec element)
-    {
-        TypeSpec tspec = element.typeSpec;
-
-        // Arrays are handled as a special case. Parser generates
-        // an ArrayDeclarator for an array, need to spot this and
-        // create appropriate type information with an ArrayTypeSpec.
-
-        if (element.declarator.d instanceof ArrayDeclarator)
-        {
-            tspec = new ArrayTypeSpec(new_num(), tspec,
-                                      (ArrayDeclarator)element.declarator.d, pack_name);
-            tspec.parse();
-        }
-        return tspec;
     }
 
     public void printInsertIntoAny(PrintWriter ps,
