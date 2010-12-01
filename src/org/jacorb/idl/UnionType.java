@@ -28,7 +28,7 @@ import java.util.Set;
 
 /**
  * @author Gerald Brose
- * @version $Id: UnionType.java,v 1.75 2010-12-01 10:36:05 alexander.bykov Exp $
+ * @version $Id: UnionType.java,v 1.76 2010-12-01 13:00:28 alexander.bykov Exp $
  */
 public class UnionType
     extends TypeDeclaration
@@ -722,7 +722,7 @@ public class UnionType
                         String lab = (String) unusedCaseLabels.elementAt (i);
                         if (! lab.equals (defaultStr))
                         {
-                            pw.print (" && discriminator != " + lab);
+                            pw.print (" && _discriminator != " + lab);
                         }
                     }
                 }
