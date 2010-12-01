@@ -21,7 +21,7 @@ import org.jacorb.idl.util.IDLLogger;
  *
  * @author Gerald Brose <mailto:gerald.brose@acm.org>
  *
- * $Id: parser.cup,v 1.118 2010-11-10 12:01:24 alexander.bykov Exp $
+ * $Id: parser.cup,v 1.119 2010-12-01 13:50:06 alexander.bykov Exp $
  */
 
 action code
@@ -717,7 +717,7 @@ parser code
 
     static Hashtable pending_interfaces = new Hashtable();
 
-    public static synchronized void set_pending( String name )
+    public static synchronized void set_pending( String name, Object type )
     {
          // name will only be marked pending if it has not already been
          // parsed before and if is not already pending
@@ -726,7 +726,7 @@ parser code
          if( ! ( pending_interfaces.containsKey(use) ||
                  NameTable.parsed_interfaces.containsKey(use)) )
          {
-                 pending_interfaces.put(use, new Object());
+                 pending_interfaces.put(use, type);
          }
     }
 

@@ -29,7 +29,7 @@ import java.util.Set;
 /**
  * @author Andre Spiegel
  * @author Gerald Brose
- * @version $Id: ValueAbsDecl.java,v 1.29 2010-11-05 09:39:01 alexander.bykov Exp $
+ * @version $Id: ValueAbsDecl.java,v 1.30 2010-12-01 13:50:06 alexander.bykov Exp $
  *
  * This class is basically the same as Interface.java, but we can't extend
  * that one because we have to extend Value, and delegating some parts and
@@ -220,10 +220,9 @@ public class ValueAbsDecl
         {
             // i am forward declared, must set myself as
             // pending further parsing
-            parser.set_pending(full_name());
+            parser.set_pending(full_name(), this);
         }
     }
-
 
     ValueBody getBody()
     {

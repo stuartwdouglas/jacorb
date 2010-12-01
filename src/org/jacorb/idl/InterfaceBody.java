@@ -28,7 +28,7 @@ import java.util.Vector;
 
 /**
  * @author Gerald Brose
- * @version $Id: InterfaceBody.java,v 1.32 2010-10-11 18:18:02 nick.cross Exp $
+ * @version $Id: InterfaceBody.java,v 1.33 2010-12-01 13:50:06 alexander.bykov Exp $
  *
  * directly known subclasses: ValueBody
  */
@@ -62,7 +62,7 @@ public class InterfaceBody
 
         public void run()
         {
-            parser.set_pending( b.full_name() );
+            parser.set_pending( b.full_name(), b );
             Object o = null;
             for( Enumeration e = inheritance_spec.v.elements(); e.hasMoreElements(); )
             {
@@ -200,7 +200,7 @@ public class InterfaceBody
             }
             if( pending )
             {
-                parser.set_pending( full_name() );
+                parser.set_pending( full_name(), o );
                 new ParseThread( this );
             }
             else
