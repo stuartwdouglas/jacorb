@@ -22,7 +22,7 @@ package org.jacorb.orb;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: AbstractBufferManager.java,v 1.2 2010-11-23 15:22:05 alexander.bykov Exp $
+ * @version $Id: AbstractBufferManager.java,v 1.3 2010-12-20 16:58:38 alexander.bykov Exp $
  */
 public abstract class AbstractBufferManager implements IBufferManager
 {
@@ -61,5 +61,12 @@ public abstract class AbstractBufferManager implements IBufferManager
 
    public void returnBuffer (byte[] buffer, boolean b)
    {
+   }
+
+   public byte[] getExpandedBuffer (int size)
+   {
+       // No expansion policy defined just return the 
+       // buffer with the requested size
+       return getBuffer (size);
    }
 }

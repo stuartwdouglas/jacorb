@@ -55,7 +55,7 @@ import org.omg.IOP.TaggedProfile;
 
 /**
  * @author Gerald Brose,  1999
- * @version $Id: CDROutputStream.java,v 1.141 2010-11-23 15:22:05 alexander.bykov Exp $
+ * @version $Id: CDROutputStream.java,v 1.142 2010-12-20 16:58:38 alexander.bykov Exp $
  *
  * A stream for CDR marshalling.
  *
@@ -521,23 +521,7 @@ public class CDROutputStream
         final int requiredSize = pos + i + 2;
         if (buffer == null || requiredSize > buffer.length)
         {
-            final int new_size;
-
-            if (buffer == null)
-            {
-                new_size = requiredSize;
-            }
-            else
-            {
-                int _result = buffer.length;
-                while(requiredSize > _result)
-                {
-                    _result *= 3;
-                }
-                new_size = _result;
-            }
-
-            final byte[] new_buf = bufMgr.getBuffer(new_size);
+            final byte[] new_buf = bufMgr.getExpandedBuffer(requiredSize);
 
             if (buffer != null)
             {

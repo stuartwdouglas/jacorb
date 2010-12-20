@@ -27,7 +27,7 @@ package org.jacorb.orb;
  * Buffers are generally created on demand.
  *
  * @author Gerald Brose
- * @version $Id: IBufferManager.java,v 1.3 2010-11-23 15:22:05 alexander.bykov Exp $
+ * @version $Id: IBufferManager.java,v 1.4 2010-12-20 16:58:38 alexander.bykov Exp $
  */
 public interface IBufferManager
 {
@@ -57,6 +57,15 @@ public interface IBufferManager
      * @return a <code>byte[]</code> value
      */
     byte[] getBuffer(int size);
+
+    /**
+     * <code>getExpandedBuffer</code> returns a new buffer which size
+     * will be calculated according to BufferManager expansion policy.
+     *
+     * @param size an <code>int</code> value
+     * @return a <code>byte[]</code> value
+     */
+    byte[] getExpandedBuffer (int requiredSize);
 
     /**
      * release all resources that are held by this buffer

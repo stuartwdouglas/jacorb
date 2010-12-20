@@ -54,7 +54,7 @@ import org.jacorb.orb.ORB;
  * retreive their Logger objects.
  *
  * @author Gerald Brose, XTRADYNE Technologies
- * @version $Id: Configuration.java,v 1.20 2009-05-03 21:27:51 andre.spiegel Exp $
+ * @version $Id: Configuration.java,v 1.21 2010-12-20 16:58:38 alexander.bykov Exp $
  */
 
 public interface Configuration
@@ -139,4 +139,6 @@ public interface Configuration
      * with the specified prefix
      */
     List getAttributeNamesWithPrefix(String string);
+
+    double getAttributeAsFloat (String key, double defaultValue);
 }

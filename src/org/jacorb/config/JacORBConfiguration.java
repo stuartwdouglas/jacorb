@@ -38,7 +38,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Gerald Brose
- * @version $Id: JacORBConfiguration.java,v 1.36 2009-11-26 16:36:14 nick.cross Exp $
+ * @version $Id: JacORBConfiguration.java,v 1.37 2010-12-20 16:58:38 alexander.bykov Exp $
  */
 public class JacORBConfiguration implements Configuration
 {
@@ -936,5 +936,29 @@ public class JacORBConfiguration implements Configuration
           level = warning;
           message = string;
        }
+    }
+
+
+    public double getAttributeAsFloat (String key, double defaultValue)
+    {
+        Object value = attributes.getProperty (key, null);
+        if (value == null)
+        {
+            return defaultValue;
+        }
+
+        try
+        {
+           double ret = Double.parseDouble (((String)value).trim());
+
+           return ret;
+        }
+        catch (NumberFormatException ex)
+        {
+           throw new ConfigurationException
+           (
+             "value for attribute " + key + " is not numeric: " + value
+           );
+        }
     }
 }
