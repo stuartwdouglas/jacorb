@@ -27,7 +27,7 @@ import java.util.Set;
 
 /**
  * @author Gerald Brose <mailto:gerald.brose@acm.org>
- * @version $Id: ArrayTypeSpec.java,v 1.37 2010-11-05 09:39:01 alexander.bykov Exp $
+ * @version $Id: ArrayTypeSpec.java,v 1.38 2011-01-05 16:01:15 alexander.bykov Exp $
  *
  */
 
@@ -317,7 +317,6 @@ public class ArrayTypeSpec
     public String printWriteStatement(String var_name, String streamname)
     {
         StringBuffer sb = new StringBuffer();
-        String type = typeName();
         sb.append("\t\tif (" + var_name + ".length<" + length() + ")" + Environment.NL +
                   "\t\t\tthrow new org.omg.CORBA.MARSHAL(\"Incorrect array size \"+" +
                   var_name + ".length+\", expecting " + length() + "\");" + Environment.NL);
@@ -377,8 +376,6 @@ public class ArrayTypeSpec
         ps.println("\t{");
         ps.println("\t\treturn " + className + "Helper.type ();");
         ps.println("\t}");
-
-        TypeSpec m = type_spec;
 
         ps.println("\tpublic void _read (final org.omg.CORBA.portable.InputStream _in)");
         ps.println("\t{");
