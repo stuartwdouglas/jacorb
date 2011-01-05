@@ -27,7 +27,7 @@ import java.util.Set;
 
 /**
  * @author Gerald Brose
- * @version $Id: AliasTypeSpec.java,v 1.58 2010-11-29 16:56:31 alexander.bykov Exp $
+ * @version $Id: AliasTypeSpec.java,v 1.59 2011-01-05 16:00:44 alexander.bykov Exp $
  */
 
 public class AliasTypeSpec
@@ -260,6 +260,11 @@ public class AliasTypeSpec
                     // scoped names (references to other defs), which would
                     // lead to loops!
                     originalType.print(ps);
+                }
+
+                if(originalType.typeSpec() instanceof ArrayTypeSpec)
+                {
+                    originalType.type_spec.print(ps);
                 }
 
                 String className = className();

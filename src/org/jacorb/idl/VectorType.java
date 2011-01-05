@@ -28,15 +28,13 @@ import java.util.Set;
  *
  *
  * @author Gerald Brose
- * @version $Id: VectorType.java,v 1.18 2009-12-03 17:38:22 alexander.bykov Exp $
+ * @version $Id: VectorType.java,v 1.19 2011-01-05 16:00:44 alexander.bykov Exp $
  */
 
 
 public abstract class VectorType
     extends TemplateTypeSpec
 {
-    TypeSpec type_spec;
-
     public VectorType( int num )
     {
         super( num );
