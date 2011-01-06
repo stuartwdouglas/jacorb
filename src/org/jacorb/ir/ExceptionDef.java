@@ -34,7 +34,7 @@ import org.omg.PortableServer.POA;
 import org.slf4j.Logger;
 
 /**
- * @version $Id: ExceptionDef.java,v 1.14 2010-04-20 15:46:16 nick.cross Exp $
+ * @version $Id: ExceptionDef.java,v 1.15 2011-01-06 12:27:02 nick.cross Exp $
  */
 
 public class ExceptionDef
@@ -218,8 +218,7 @@ public class ExceptionDef
                     String id,
                     String name,
                     String version,
-                    /*InterfaceDefSeq*/ org.omg.CORBA.InterfaceDef[] base_interfaces,
-                    boolean is_abstract )
+                    /*InterfaceDefSeq*/ org.omg.CORBA.InterfaceDef[] base_interfaces)
     {
         return null;
     }
@@ -350,5 +349,3 @@ public class ExceptionDef
       throw new NO_IMPLEMENT ("NYI");
    }
 }
-
-
