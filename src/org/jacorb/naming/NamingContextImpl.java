@@ -51,7 +51,7 @@ import org.slf4j.Logger;
  *      The implementation for the CORBAService Naming
  *
  *      @author Gerald Brose
- *      @version $Id: NamingContextImpl.java,v 1.34 2009-10-27 09:47:21 nick.cross Exp $
+ *      @version $Id: NamingContextImpl.java,v 1.35 2011-01-13 17:10:57 nick.cross Exp $
  */
 
 public class NamingContextImpl
@@ -68,7 +68,7 @@ public class NamingContextImpl
     private transient org.jacorb.config.Configuration configuration = null;
 
     /** no tests of bound objects for existence */
-    private boolean noPing = false;
+    private boolean ping = false;
 
     /** purge? */
     private boolean doPurge = false;
@@ -91,7 +91,7 @@ public class NamingContextImpl
         this.configuration = (org.jacorb.config.Configuration)myConfiguration;
         logger = configuration.getLogger("jacorb.naming");
         doPurge = configuration.getAttribute("jacorb.naming.purge","off").equals("on");
-        noPing = configuration.getAttribute("jacorb.naming.noping","off").equals("on");
+        ping = configuration.getAttribute("jacorb.naming.ping","off").equals("on");
     }
 
 
@@ -586,7 +586,7 @@ public class NamingContextImpl
             if (result == null)
                 throw new NotFound(NotFoundReason.missing_node, n.components());
 
-            if ( !noPing && isDead(result))
+            if ( ping && isDead(result))
             {
                 throw new NotFound(NotFoundReason.missing_node, n.components());
             }
