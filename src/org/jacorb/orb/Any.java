@@ -51,7 +51,7 @@ import org.omg.CORBA_2_3.portable.OutputStream;
  * CORBA any
  *
  * @author Gerald Brose
- * $Id: Any.java,v 1.61 2010-11-29 18:18:04 martin.corino Exp $
+ * $Id: Any.java,v 1.62 2011-01-17 12:36:14 nick.cross Exp $
  */
 
 public final class Any
@@ -1098,7 +1098,7 @@ public final class Any
         else
         {
             this.value    = null;
-            this.typeCode = new TypeCode (TCKind._tk_null);
+            this.typeCode = TypeCode.get_primitive_tc (TCKind._tk_null);
         }
     }
 

@@ -30,6 +30,7 @@ import org.jacorb.config.Configurable;
 import org.jacorb.config.Configuration;
 import org.jacorb.config.ConfigurationException;
 import org.omg.CORBA.AbstractInterfaceDef;
+import org.jacorb.config.JacORBConfiguration;
 import org.omg.CORBA.ExtInitializer;
 import org.omg.CORBA.ExtValueDef;
 import org.omg.CORBA.InterfaceDef;
@@ -63,7 +64,7 @@ import org.slf4j.Logger;
  * <p>
  *
  * @author Gerald Brose
- * @version $Id: RepositoryImpl.java,v 1.21 2011-01-06 12:27:02 nick.cross Exp $
+ * @version $Id: RepositoryImpl.java,v 1.22 2011-01-17 12:36:14 nick.cross Exp $
  */
 
 public class RepositoryImpl
@@ -107,7 +108,7 @@ public class RepositoryImpl
 
         containers = new Container[ paths.length ];
 
-        this.configure(((org.jacorb.orb.ORB) orb).getConfiguration());
+        this.configure(JacORBConfiguration.getConfiguration (null,orb,false));
 
         // need a regular SYSTEM_ID poa for IfR operation
         poa = POAHelper.narrow(orb.resolve_initial_references("RootPOA"));
@@ -260,7 +261,7 @@ public class RepositoryImpl
             return org.omg.CORBA.PrimitiveDefHelper.narrow(
                 poa.servant_to_reference(
                         new org.omg.CORBA.PrimitiveDefPOATie(
-                            new org.jacorb.ir.PrimitiveDef( kind.value() ))));
+                            new PrimitiveDef( kind.value() ))));
         }
         catch( Exception e )
         {

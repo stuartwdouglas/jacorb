@@ -26,7 +26,7 @@ import org.omg.CORBA.INTF_REPOS;
 import org.omg.PortableServer.POA;
 
 /**
- * @version $Id: Contained.java,v 1.17 2009-05-03 21:34:06 andre.spiegel Exp $
+ * @version $Id: Contained.java,v 1.18 2011-01-17 12:36:14 nick.cross Exp $
  */
 
 public abstract class Contained
@@ -94,7 +94,7 @@ public abstract class Contained
             }
             catch ( ClassNotFoundException cnf )
             {
-                // debug:  cnf.printStackTrace();
+                // cnf.printStackTrace();
             }
         }
 
@@ -116,8 +116,7 @@ public abstract class Contained
                         return null;
                     }
 
-                    org.jacorb.ir.InterfaceDef idef =
-                        new org.jacorb.ir.InterfaceDef( c,
+                    InterfaceDef idef = new InterfaceDef( c,
                                                         helperClass,
                                                         path,
                                                         _defined_in,
@@ -130,7 +129,6 @@ public abstract class Contained
                 }
                 catch ( ClassNotFoundException e )
                 {
-                    // debug: e.printStackTrace();
                     return null;
                 }
             }
@@ -139,7 +137,7 @@ public abstract class Contained
                 try
                 {
                     Field f = c.getDeclaredField("value");
-                    return new org.jacorb.ir.ConstantDef( c,
+                    return new ConstantDef( c,
                                                           _defined_in,
                                                           ir,
                                                           logger,
@@ -153,12 +151,12 @@ public abstract class Contained
         }
         else if( exceptClass.isAssignableFrom( c ))
         {
-            return new org.jacorb.ir.ExceptionDef(c,
-                                                  _defined_in,
-                                                  ir,
-                                                  loader,
-                                                  poa,
-                                                  logger);
+            return new ExceptionDef(c,
+                                    _defined_in,
+                                    ir,
+                                    loader,
+                                    poa,
+                                    logger);
         }
         else if( idlClass.isAssignableFrom( c ) )
         {
@@ -172,7 +170,7 @@ public abstract class Contained
                 switch( tc.kind().value())
                 {
                 case org.omg.CORBA.TCKind._tk_struct:
-                    return new org.jacorb.ir.StructDef( c,
+                    return new StructDef( c,
                                                         path,
                                                         _defined_in,
                                                         ir,
@@ -180,13 +178,13 @@ public abstract class Contained
                                                         loader,
                                                         poa );
                 case org.omg.CORBA.TCKind._tk_enum:
-                    return new org.jacorb.ir.EnumDef(
+                    return new EnumDef(
                                                      c,
                                                      _defined_in,
                                                      ir,
                                                      loader );
                 case org.omg.CORBA.TCKind._tk_union:
-                    return new org.jacorb.ir.UnionDef( c,
+                    return new UnionDef( c,
                                                        path,
                                                        _defined_in,
                                                        ir,

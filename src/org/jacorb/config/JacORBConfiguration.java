@@ -31,14 +31,14 @@ import java.util.List;
 import java.util.Properties;
 import java.util.StringTokenizer;
 import java.util.logging.Level;
-import org.jacorb.orb.ORB;
 import org.jacorb.util.ObjectUtil;
 import org.omg.CORBA.NO_IMPLEMENT;
+import org.omg.CORBA.ORB;
 import org.slf4j.Logger;
 
 /**
  * @author Gerald Brose
- * @version $Id: JacORBConfiguration.java,v 1.37 2010-12-20 16:58:38 alexander.bykov Exp $
+ * @version $Id: JacORBConfiguration.java,v 1.38 2011-01-17 12:36:14 nick.cross Exp $
  */
 public class JacORBConfiguration implements Configuration
 {
@@ -599,9 +599,9 @@ public class JacORBConfiguration implements Configuration
      * @return the ORB for which this configuration was created
      */
 
-    public ORB getORB()
+    public org.jacorb.orb.ORB getORB()
     {
-        return orb;
+        return (org.jacorb.orb.ORB)orb;
     }
 
 

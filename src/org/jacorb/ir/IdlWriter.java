@@ -22,18 +22,18 @@ package org.jacorb.ir;
 
 import java.io.PrintStream;
 import org.slf4j.Logger;
-import org.jacorb.orb.ORB;
 import org.jacorb.orb.TypeCode;
 import org.omg.CORBA.INTERNAL;
 import org.omg.DynamicAny.DynAnyFactory;
 import org.omg.DynamicAny.DynEnum;
 import org.omg.DynamicAny.DynEnumHelper;
+import org.omg.CORBA.ORB;
 
 /**
  * This class prints IDL from IR-Descriptions to PrintStreams
  *
  * @author (c) Gerald Brose, FU Berlin 2000
- * @version $Id: IdlWriter.java,v 1.15 2009-05-03 21:34:07 andre.spiegel Exp $
+ * @version $Id: IdlWriter.java,v 1.16 2011-01-17 12:36:14 nick.cross Exp $
  */
 
 public class IdlWriter
