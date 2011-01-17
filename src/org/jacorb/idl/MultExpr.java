@@ -24,7 +24,7 @@ import java.io.PrintWriter;
 
 /**
  * @author Gerald Brose
- * @version $Id: MultExpr.java,v 1.15 2006-06-19 10:34:57 alphonse.bendt Exp $
+ * @version $Id: MultExpr.java,v 1.16 2011-01-17 19:11:31 nick.cross Exp $
  */
 
 public class MultExpr extends IdlSymbol
@@ -83,11 +83,17 @@ public class MultExpr extends IdlSymbol
         {
             int z = mult_expr.pos_int_const();
             if( operator.equals( "*" ) )
-                y *= z;
+            {
+                y = z * y;
+            }
             else if( operator.equals( "/" ) )
-                y /= z;
+            {
+                y = z / y;
+            }
             else if( operator.equals( "%" ) )
-                y %= z;
+            {
+                y = z % y;
+            }
         }
         return y;
     }
