@@ -65,7 +65,7 @@ import org.omg.PortableInterceptor.ORBInitInfo;
  * This is the SAS Client Security Service (CSS) Interceptor
  *
  * @author David Robison
- * @version $Id: SASClientInterceptor.java,v 1.30 2010-04-20 15:46:16 nick.cross Exp $
+ * @version $Id: SASClientInterceptor.java,v 1.31 2011-01-19 11:05:34 nick.cross Exp $
  */
 
 public class SASClientInterceptor
@@ -101,7 +101,7 @@ public class SASClientInterceptor
         throws ConfigurationException
     {
         logger =
-            ((org.jacorb.config.Configuration)configuration).getLogger("jacorb.security.sas.CSS");
+            ((org.jacorb.config.Configuration)configuration).getLogger("jacorb.security.sas.CSS.log.verbosity");
 
         useStateful =
             configuration.getAttribute("jacorb.security.sas.stateful","true").equals("true");
@@ -180,9 +180,10 @@ public class SASClientInterceptor
 
         if(csmList != null &&
            csmList.mechanism_list[0].as_context_mech.target_supports == 0 &&
-            csmList.mechanism_list[0].as_context_mech.target_requires == 0 &&
-            csmList.mechanism_list[0].sas_context_mech.target_supports == 0 &&
-           csmList.mechanism_list[0].sas_context_mech.target_requires == 0) {
+           csmList.mechanism_list[0].as_context_mech.target_requires == 0 &&
+           csmList.mechanism_list[0].sas_context_mech.target_supports == 0 &&
+           csmList.mechanism_list[0].sas_context_mech.target_requires == 0)
+        {
             return;
         }
 

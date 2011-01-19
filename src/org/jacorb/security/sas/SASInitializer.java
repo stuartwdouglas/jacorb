@@ -34,7 +34,7 @@ import org.omg.PortableInterceptor.ORBInitInfoPackage.DuplicateName;
  * This initializes the SAS Target Security Service (TSS) Interceptor
  *
  * @author David Robison
- * @version $Id: SASInitializer.java,v 1.8 2009-05-03 21:36:48 andre.spiegel Exp $
+ * @version $Id: SASInitializer.java,v 1.9 2011-01-19 11:05:34 nick.cross Exp $
  */
 
 public class SASInitializer
@@ -50,10 +50,10 @@ public class SASInitializer
      */
     public void post_init( ORBInitInfo info )
     {
-        org.jacorb.orb.ORB orb = 
+        org.jacorb.orb.ORB orb =
             ((org.jacorb.orb.portableInterceptor.ORBInitInfoImpl)info).getORB ();
-        logger = 
-            orb.getConfiguration().getLogger("jacorb.security.SAS");
+        logger =
+            orb.getConfiguration().getLogger("jacorb.security.sas.log.verbosity");
 
         // install the TSS interceptor
         try
