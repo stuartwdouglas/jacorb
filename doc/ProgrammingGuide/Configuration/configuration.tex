@@ -1,5 +1,5 @@
 %
-% $Id: configuration.tex,v 1.57 2011-01-19 11:05:34 nick.cross Exp $
+% $Id: configuration.tex,v 1.58 2011-01-20 11:57:24 nick.cross Exp $
 %
 
 This chapter explains the general mechanism for configuring JacORB
@@ -857,7 +857,9 @@ after the configuration has been read & class &
 \hline
 ~ \hfill \textbf {Property} \hfill ~ & ~ \hfill \textbf {Description} \hfill ~ & ~ \hfill \textbf {Type} \hfill ~ \endhead
 \hline
-
+\verb"jacorb.naming.log." & The log level for the name & \\
+\verb"verbosity" & service. Defaults to jacorb.log.default.verbosity & 0-4  \\
+\hline
 \verb"jacorb.naming.purge" & Whether non-active references are purged from name service
 when list operation is invoked. Default is off & on or off \\
 \hline
