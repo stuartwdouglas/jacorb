@@ -87,7 +87,7 @@ import org.slf4j.Logger;
  * JacORB implementation of CORBA object reference
  *
  * @author Gerald Brose
- * @version $Id: Delegate.java,v 1.166 2011-01-18 11:24:31 nick.cross Exp $
+ * @version $Id: Delegate.java,v 1.167 2011-02-14 13:28:07 nick.cross Exp $
  *
  */
 
@@ -490,7 +490,7 @@ public final class Delegate
     {
         String object_reference = orb.object_to_string(obj);
 
-        if (object_reference.indexOf( "IOR:" ) == 0)
+        if (object_reference != null && object_reference.indexOf( "IOR:" ) == 0)
         {
             rebind(new ParsedIOR( orb, object_reference));
         }
