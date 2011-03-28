@@ -29,7 +29,7 @@ import java.util.Set;
 
 /**
  * @author Gerald Brose
- * @version $Id: StructType.java,v 1.65 2010-12-01 13:50:06 alexander.bykov Exp $
+ * @version $Id: StructType.java,v 1.66 2011-03-28 10:15:43 nick.cross Exp $
  */
 
 public class StructType
@@ -732,11 +732,15 @@ public class StructType
         {
             // print member declarations
 
+            if ( ! isSystemException( className ) )
+            {
             for (Enumeration e = memberlist.v.elements(); e.hasMoreElements();)
             {
                 ((Member)e.nextElement()).member_print(ps, "\tpublic ");
                 ps.println();
             }
+            }
+
 
             if (parser.generateEnhanced)
             {
