@@ -19,7 +19,7 @@ import org.omg.CORBA.TIMEOUT;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: AbstractSocketFactoryTestCase.java,v 1.3 2009-09-03 12:49:18 alexander.bykov Exp $
+ * @version $Id: AbstractSocketFactoryTestCase.java,v 1.4 2011-03-29 09:21:52 nick.cross Exp $
  */
 public abstract class AbstractSocketFactoryTestCase extends TestCase
 {
@@ -147,7 +147,7 @@ public abstract class AbstractSocketFactoryTestCase extends TestCase
             // NOTE we expect the connection to the specified host
             // to timeout! if this is not the case the test will
             // fail and another host/port combination must be used.
-            objectUnderTest.createSocket("10.0.1.222", 45000, 1);
+            objectUnderTest.createSocket("10.1.0.222", 45000, 1);
         }
         catch (TIMEOUT e)
         {
