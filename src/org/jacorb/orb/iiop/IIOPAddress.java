@@ -31,7 +31,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Andre Spiegel, Phil Mesnier
- * @version $Id: IIOPAddress.java,v 1.21 2010-10-19 16:12:23 nick.cross Exp $
+ * @version $Id: IIOPAddress.java,v 1.22 2011-03-30 08:57:21 alexander.bykov Exp $
  */
 public class IIOPAddress
     extends ProtocolAddressBase
@@ -49,6 +49,7 @@ public class IIOPAddress
     private boolean hideZoneID = true;
     private Logger logger;
     private boolean doEagerResolve;
+    private boolean forceDNSLookup = true;
 
     /**
      * Creates a new IIOPAddress that will be initialized later by a string
@@ -105,6 +106,7 @@ public class IIOPAddress
         {
             init_host();
         }
+        forceDNSLookup = configuration.getAttributeAsBoolean("jacorb.dns.force_lookup", true);
    }
 
     /**
@@ -223,7 +225,12 @@ public class IIOPAddress
             return source_name;
         }
 
-        return host.getHostAddress();
+        if (! dnsEnabled)
+        {
+           return host.getHostAddress();
+        }
+
+        return forceDNSLookup ? host.getCanonicalHostName() : host.getHostName();
     }
 
     /**
