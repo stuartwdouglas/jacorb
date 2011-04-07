@@ -28,7 +28,7 @@ import org.jacorb.orb.ORB;
  * based on parameters from the JacORB configuration.
  *
  * @author Andre Spiegel <spiegel@gnu.org>
- * @version $Id: LoggingInitializer.java,v 1.4 2009-11-26 16:36:14 nick.cross Exp $
+ * @version $Id: LoggingInitializer.java,v 1.5 2011-04-07 15:55:18 phil.mesnier Exp $
  */
 public abstract class LoggingInitializer
 {
@@ -37,6 +37,7 @@ public abstract class LoggingInitializer
     public static final String ATTR_LOG_APPEND    = "jacorb.logfile.append";
     public static final String ATTR_LOG_SIZE      = "jacorb.logfile.maxLogSize";
     public static final String ATTR_LOG_ROTATE    = "jacorb.logfile.rotateCount";
+    public static final String ATTR_LOG_THREAD_ID = "jacorb.log.showThread";
 
     /**
      * If the given filename contains the string "$implname", replaces
