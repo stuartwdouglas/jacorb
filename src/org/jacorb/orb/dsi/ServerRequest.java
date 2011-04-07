@@ -54,7 +54,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Gerald Brose, FU Berlin
- * @version $Id: ServerRequest.java,v 1.52 2010-11-23 15:22:05 alexander.bykov Exp $
+ * @version $Id: ServerRequest.java,v 1.53 2011-04-07 16:03:18 phil.mesnier Exp $
  */
 
 public class ServerRequest
@@ -313,7 +313,7 @@ public class ServerRequest
                     }
                     catch (Exception e)
                     {
-                        logger.info("Caught exception ", e);
+                        logger.info("DSI arguments: Caught exception ", e);
                     }
                 }
 

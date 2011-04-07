@@ -35,7 +35,7 @@ import org.slf4j.Logger;
  *
  * @author Nicolas Noffke
  * @author Andre Spiegel
- * @version $Id: ConnectionBase.java,v 1.7 2010-01-16 16:24:11 alexander.bykov Exp $
+ * @version $Id: ConnectionBase.java,v 1.8 2011-04-07 16:03:18 phil.mesnier Exp $
  */
 
 public abstract class ConnectionBase
@@ -148,7 +148,7 @@ public abstract class ConnectionBase
     {
         if (logger.isDebugEnabled())
         {
-            logger.debug("Caught exception", exception);
+            logger.debug("to_COMM_FAILURE: Caught exception", exception);
         }
 
         return new org.omg.CORBA.COMM_FAILURE("IOException: "
