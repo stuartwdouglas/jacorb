@@ -42,7 +42,7 @@ import org.omg.IOP.ServiceContext;
 import org.omg.IOP.TAG_CODE_SETS;
 /**
  * @author Gerald Brose
- * @version $Id: CodeSet.java,v 1.27 2009-08-11 16:43:33 alexander.bykov Exp $
+ * @version $Id: CodeSet.java,v 1.28 2011-04-07 16:06:06 phil.mesnier Exp $
  */
 public class CodeSet
 {
@@ -149,7 +149,7 @@ public class CodeSet
 
             if (ncsw != null && ! ("".equals (ncsw)))
             {
-                CodeSet codeset = getCodeSet(ncsc);
+                CodeSet codeset = getCodeSet(ncsw);
                 if (codeset != NULL_CODE_SET)
                 {
                     nativeCodeSetWchar = codeset;
