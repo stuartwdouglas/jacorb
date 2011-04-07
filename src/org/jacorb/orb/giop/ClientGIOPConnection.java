@@ -24,7 +24,7 @@ import org.jacorb.config.*;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: ClientGIOPConnection.java,v 1.20 2010-09-06 18:23:50 andre.spiegel Exp $
+ * @version $Id: ClientGIOPConnection.java,v 1.21 2011-04-07 22:25:43 phil.mesnier Exp $
  */
 public class ClientGIOPConnection
     extends GIOPConnection
@@ -49,6 +49,7 @@ public class ClientGIOPConnection
 
         ignore_pending_messages_on_timeout =
             configuration.getAttribute("jacorb.connection.client.timeout_ignores_pending_messages","off").equals("on");
+        use_client_write_monitor ();
     }
 
     /**
