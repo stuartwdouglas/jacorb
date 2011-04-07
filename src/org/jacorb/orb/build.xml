@@ -6,8 +6,8 @@
 
   <!-- ==================================================== -->
   <!--             ORB build file                         -->
-  <!-- $Id: build.xml,v 1.31 2009-12-14 16:27:29 nick.cross Exp $ -->
-  <!-- $Id: build.xml,v 1.31 2009-12-14 16:27:29 nick.cross Exp $ -->
+  <!-- $Id: build.xml,v 1.32 2011-04-07 15:53:17 phil.mesnier Exp $ -->
+  <!-- $Id: build.xml,v 1.32 2011-04-07 15:53:17 phil.mesnier Exp $ -->
   <!-- ==================================================== -->
 
    &common;
@@ -16,7 +16,9 @@
 
    <target name="compile">
       <jacorb-javac
-        javac-includes="org/jacorb/orb/dii/*.java,
+        javac-includes=
+            "org/jacorb/orb/buffermanager/*.java,
+             org/jacorb/orb/dii/*.java,
              org/jacorb/orb/diop/*.java
              org/jacorb/orb/dsi/*.java,
              org/jacorb/orb/dynany/*.java,
