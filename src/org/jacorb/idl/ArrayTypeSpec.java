@@ -27,7 +27,7 @@ import java.util.Set;
 
 /**
  * @author Gerald Brose <mailto:gerald.brose@acm.org>
- * @version $Id: ArrayTypeSpec.java,v 1.38 2011-01-05 16:01:15 alexander.bykov Exp $
+ * @version $Id: ArrayTypeSpec.java,v 1.39 2011-04-11 15:59:57 nick.cross Exp $
  *
  */
 
@@ -351,9 +351,6 @@ public class ArrayTypeSpec
 
     private void printHolderClass(String className, PrintWriter ps)
     {
-        if (Environment.JAVA14 && pack_name.equals(""))
-            lexer.emit_warn
-                ("No package defined for " + className + " - illegal in JDK1.4", token);
         if (!pack_name.equals(""))
             ps.println("package " + pack_name + ";" + Environment.NL);
 
@@ -393,9 +390,6 @@ public class ArrayTypeSpec
 
     private void printHelperClass(String className, PrintWriter ps)
     {
-        if (Environment.JAVA14 && pack_name.equals(""))
-            lexer.emit_warn
-                ("No package defined for " + className + " - illegal in JDK1.4", token);
         if (!pack_name.equals(""))
             ps.println("package " + pack_name + ";");
 

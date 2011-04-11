@@ -28,7 +28,7 @@ import java.util.Set;
 
 /**
  * @author Gerald Brose
- * @version $Id: EnumType.java,v 1.45 2010-11-05 09:39:01 alexander.bykov Exp $
+ * @version $Id: EnumType.java,v 1.46 2011-04-11 15:59:57 nick.cross Exp $
  */
 
 public class EnumType
@@ -223,9 +223,6 @@ public class EnumType
 
     private void printHolderClass(String className, PrintWriter ps)
     {
-        if (Environment.JAVA14 && pack_name.equals(""))
-            lexer.emit_warn
-                ("No package defined for " + className + " - illegal in JDK1.4", token);
         if (!pack_name.equals(""))
             ps.println("package " + pack_name + ";");
 
@@ -266,9 +263,6 @@ public class EnumType
 
     private void printHelperClass(String className, PrintWriter ps)
     {
-        if (Environment.JAVA14 && pack_name.equals(""))
-            lexer.emit_warn
-                ("No package defined for " + className + " - illegal in JDK1.4", token);
         if (!pack_name.equals(""))
             ps.println("package " + pack_name + ";");
 
@@ -325,9 +319,6 @@ public class EnumType
 
     private void printEnumClass(String className, PrintWriter pw)
     {
-        if (Environment.JAVA14 && pack_name.equals(""))
-            lexer.emit_warn
-                ("No package defined for " + className + " - illegal in JDK1.4", token);
         if (!pack_name.equals(""))
             pw.println("package " + pack_name + ";");
 

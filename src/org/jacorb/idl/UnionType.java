@@ -28,7 +28,7 @@ import java.util.Set;
 
 /**
  * @author Gerald Brose
- * @version $Id: UnionType.java,v 1.77 2010-12-01 13:50:06 alexander.bykov Exp $
+ * @version $Id: UnionType.java,v 1.78 2011-04-11 15:59:57 nick.cross Exp $
  */
 public class UnionType
     extends TypeDeclaration
@@ -325,11 +325,7 @@ public class UnionType
     private void printUnionClass(String className, PrintWriter pw)
     {
         Enumeration e;
-        if (Environment.JAVA14 && pack_name.equals(""))
-        {
-            lexer.emit_warn
-                ("No package defined for " + className + " - illegal in JDK1.4", token);
-        }
+
         if (!pack_name.equals(""))
         {
             pw.println("package " + pack_name + ";");
@@ -781,11 +777,6 @@ public class UnionType
 
     public void printHolderClass(String className, PrintWriter ps)
     {
-        if (Environment.JAVA14 && pack_name.equals(""))
-        {
-            lexer.emit_warn
-                ("No package defined for " + className + " - illegal in JDK1.4", token);
-        }
         if (!pack_name.equals(""))
         {
             ps.println("package " + pack_name + ";");
@@ -828,11 +819,6 @@ public class UnionType
 
     private void printHelperClass (String className, PrintWriter ps)
     {
-        if (Environment.JAVA14 && pack_name.equals(""))
-        {
-            lexer.emit_warn
-                ("No package defined for " + className + " - illegal in JDK1.4", token);
-        }
         if (!pack_name.equals (""))
         {
             ps.println ("package " + pack_name + ";");

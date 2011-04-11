@@ -30,7 +30,7 @@ import java.util.Set;
  *
  *
  * @author Gerald Brose
- * @version $Id: SequenceType.java,v 1.47 2010-11-05 09:39:01 alexander.bykov Exp $
+ * @version $Id: SequenceType.java,v 1.48 2011-04-11 15:59:57 nick.cross Exp $
  */
 
 public class SequenceType
@@ -435,11 +435,6 @@ public class SequenceType
 
     private void printHolderClass(String className, PrintWriter out)
     {
-        if (Environment.JAVA14 && pack_name.equals(""))
-        {
-            lexer.emit_warn
-                ("No package defined for " + className + " - illegal in JDK1.4", token);
-        }
         if (!pack_name.equals(""))
         {
             out.println("package " + pack_name + ";" + Environment.NL);
@@ -486,11 +481,6 @@ public class SequenceType
 
     private void printHelperClass(String className, PrintWriter out)
     {
-        if (Environment.JAVA14 && pack_name.equals(""))
-        {
-            lexer.emit_warn
-                ("No package defined for " + className + " - illegal in JDK1.4", token);
-        }
         if (!pack_name.equals(""))
         {
             out.println("package " + pack_name + ";");

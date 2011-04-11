@@ -26,7 +26,7 @@ import java.util.Set;
 
 /**
  * @author Gerald Brose
- * @version $Id: FixedPointType.java,v 1.31 2009-12-03 17:38:22 alexander.bykov Exp $
+ * @version $Id: FixedPointType.java,v 1.32 2011-04-11 15:59:57 nick.cross Exp $
  */
 
 public class FixedPointType
@@ -105,9 +105,6 @@ public class FixedPointType
 
     private void printHelperClass(String className, PrintWriter ps)
     {
-        if (Environment.JAVA14 && pack_name.equals(""))
-            lexer.emit_warn
-                ("No package defined for " + className + " - illegal in JDK1.4", token);
         if (!pack_name.equals(""))
             ps.println("package " + pack_name + ";");
 

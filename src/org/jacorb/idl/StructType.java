@@ -29,7 +29,7 @@ import java.util.Set;
 
 /**
  * @author Gerald Brose
- * @version $Id: StructType.java,v 1.66 2011-03-28 10:15:43 nick.cross Exp $
+ * @version $Id: StructType.java,v 1.67 2011-04-11 15:59:57 nick.cross Exp $
  */
 
 public class StructType
@@ -390,11 +390,6 @@ public class StructType
 
     private void printHolderClass(String className, PrintWriter ps)
     {
-        if (Environment.JAVA14 && pack_name.equals(""))
-        {
-            lexer.emit_warn
-                ("No package defined for " + className + " - illegal in JDK1.4", token);
-        }
         if (!pack_name.equals(""))
         {
             ps.println("package " + pack_name + ";");
@@ -440,11 +435,6 @@ public class StructType
 
     private void printHelperClass(String className, PrintWriter ps)
     {
-        if (Environment.JAVA14 && pack_name.equals(""))
-        {
-            lexer.emit_warn
-                ("No package defined for " + className + " - illegal in JDK1.4", token);
-        }
         if (!pack_name.equals(""))
         {
             ps.println("package " + pack_name + ";" + Environment.NL);
@@ -608,11 +598,6 @@ public class StructType
 
     private void printStructClass(String className, PrintWriter ps)
     {
-        if (Environment.JAVA14 && pack_name.equals(""))
-        {
-            lexer.emit_warn
-                ("No package defined for " + className + " - illegal in JDK1.4", token);
-        }
         String fullClassName = className;
 
         if (!pack_name.equals(""))

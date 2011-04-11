@@ -22,7 +22,7 @@ package org.jacorb.idl;
 
 /**
  * @author Gerald Brose
- * @version $Id: ConstDecl.java,v 1.34 2010-11-05 09:39:01 alexander.bykov Exp $
+ * @version $Id: ConstDecl.java,v 1.35 2011-04-11 15:59:57 nick.cross Exp $
  */
 
 import java.io.File;
@@ -194,9 +194,6 @@ public class ConstDecl extends Declaration
                 if (logger.isDebugEnabled())
                     logger.debug("ConstDecl.print " + fname);
 
-                if (Environment.JAVA14 && pack_name.equals(""))
-                    lexer.emit_warn
-                        ("No package defined for " + className + " - illegal in JDK1.4", token);
                 if (!pack_name.equals(""))
                     pw.println("package " + pack_name + ";");
 

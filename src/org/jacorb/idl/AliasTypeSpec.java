@@ -27,7 +27,7 @@ import java.util.Set;
 
 /**
  * @author Gerald Brose
- * @version $Id: AliasTypeSpec.java,v 1.59 2011-01-05 16:00:44 alexander.bykov Exp $
+ * @version $Id: AliasTypeSpec.java,v 1.60 2011-04-11 15:59:57 nick.cross Exp $
  */
 
 public class AliasTypeSpec
@@ -388,9 +388,6 @@ public class AliasTypeSpec
 
     private void printHolderClass(String className, PrintWriter ps)
     {
-        if (Environment.JAVA14 && pack_name.equals(""))
-            lexer.emit_warn
-                ("No package defined for " + className + " - illegal in JDK1.4", token);
         if (!pack_name.equals(""))
             ps.println("package " + pack_name + ";");
 
@@ -437,12 +434,6 @@ public class AliasTypeSpec
 
     private void printHelperClass(String className, PrintWriter ps)
     {
-        if (Environment.JAVA14 && pack_name.equals(""))
-        {
-            lexer.emit_warn
-                ("No package defined for " + className + " - illegal in JDK1.4", token);
-        }
-
         if (!pack_name.equals(""))
         {
             ps.println("package " + pack_name + ";");
