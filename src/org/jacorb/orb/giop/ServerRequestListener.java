@@ -39,7 +39,7 @@ import org.omg.PortableGroup.TagGroupTaggedComponent;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: ServerRequestListener.java,v 1.33 2010-11-01 16:49:09 alexander.bykov Exp $
+ * @version $Id: ServerRequestListener.java,v 1.34 2011-04-20 16:29:36 alexander.bykov Exp $
  */
 public class ServerRequestListener
     implements RequestListener, Configurable
@@ -301,7 +301,7 @@ public class ServerRequestListener
                 catch ( org.jacorb.poa.except.ParentIsHolding p )
                 {
                     /* if one of the POAs is in holding state, we
-                       simply deliver deliver the request to this
+                       simply deliver the request to this
                        POA. It will forward the request to its
                        child POAs if necessary when changing back
                        to active For the POA to be able to forward
@@ -310,7 +310,7 @@ public class ServerRequestListener
                        POA name */
 
                     String [] rest_of_name = new String[scopes.size () - i];
-                    for( int j = 0; j < i; j++ )
+                    for( int j = 0; j < rest_of_name.length; j++ )
                     {
                         rest_of_name[j] = (String)scopes.get( j+i );
                     }
