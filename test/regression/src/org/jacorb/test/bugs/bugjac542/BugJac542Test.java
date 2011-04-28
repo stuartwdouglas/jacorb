@@ -29,7 +29,7 @@ import junit.framework.TestCase;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: BugJac542Test.java,v 1.1 2009-11-17 15:50:38 alexander.bykov Exp $
+ * @version $Id: BugJac542Test.java,v 1.2 2011-04-28 14:07:50 alexander.bykov Exp $
  */
 public class BugJac542Test extends TestCase
 {
@@ -43,6 +43,7 @@ public class BugJac542Test extends TestCase
         
         configControl.expectAndReturn(configMock.getLogger("jacorb.iiop.address"), new MyNullLogger());
         configControl.expectAndReturn(configMock.getAttributeAsBoolean("jacorb.dns.enable", false), true);
+        configControl.expectAndReturn(configMock.getAttributeAsBoolean("jacorb.dns.force_lookup", true), true);
         configControl.expectAndReturn(configMock.getAttributeAsBoolean("jacorb.ipv6.hide_zoneid", true), true);
         configControl.expectAndReturn(configMock.getAttributeAsBoolean("jacorb.dns.eager_resolve", true), true);
         
