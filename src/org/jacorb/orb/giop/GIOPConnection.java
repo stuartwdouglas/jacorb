@@ -54,7 +54,7 @@ import org.omg.GIOP.ReplyStatusType_1_2;
  * jacorb.connection.statistics_providers={classnames}, default=(empty)<br>
  *
  * @author Nicolas Noffke
- * @version $Id: GIOPConnection.java,v 1.82 2011-04-07 22:25:43 phil.mesnier Exp $
+ * @version $Id: GIOPConnection.java,v 1.83 2011-05-05 12:26:15 nick.cross Exp $
  */
 
 public abstract class GIOPConnection
@@ -194,7 +194,7 @@ public abstract class GIOPConnection
 
         logger = jacorbConfiguration.getLogger("jacorb.giop.conn");
         dump_incoming =
-            configuration.getAttribute("jacorb.debug.dump_incoming_messages","off").equals("on");
+            configuration.getAttributeAsBoolean("jacorb.debug.dump_incoming_messages", false);
         timeout =
             configuration.getAttributeAsInteger("jacorb.connection.client.connect_timeout", 90000);
 

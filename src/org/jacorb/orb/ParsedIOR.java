@@ -57,7 +57,7 @@ import org.slf4j.Logger;
  * Class to convert IOR strings into IOR structures
  *
  * @author Gerald Brose
- * @version $Id: ParsedIOR.java,v 1.88 2009-12-14 16:27:29 nick.cross Exp $
+ * @version $Id: ParsedIOR.java,v 1.89 2011-05-05 12:26:15 nick.cross Exp $
  */
 
 public class ParsedIOR
@@ -764,7 +764,11 @@ public class ParsedIOR
         return components.getComponent (tag, helper);
     }
 
-    private static class LongHelper
+    /**
+     * <code>LongHelper</code> is a wrapper class so component access for
+     * ETF profiles may use the same interface.
+     */
+    static class LongHelper
     {
         public static Integer read (org.omg.CORBA.portable.InputStream in)
         {
@@ -780,7 +784,11 @@ public class ParsedIOR
         return (Integer)getComponent (tag, LongHelper.class);
     }
 
-    private static class StringHelper
+    /**
+     * <code>StringHelper</code> is a wrapper class so component access for
+     * ETF profiles may use the same interface.
+     */
+    static class StringHelper
     {
         public static String read (org.omg.CORBA.portable.InputStream in)
         {

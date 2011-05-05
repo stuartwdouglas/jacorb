@@ -38,7 +38,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Gerald Brose
- * @version $Id: JacORBConfiguration.java,v 1.38 2011-01-17 12:36:14 nick.cross Exp $
+ * @version $Id: JacORBConfiguration.java,v 1.39 2011-05-05 12:26:15 nick.cross Exp $
  */
 public class JacORBConfiguration implements Configuration
 {
@@ -960,5 +960,11 @@ public class JacORBConfiguration implements Configuration
              "value for attribute " + key + " is not numeric: " + value
            );
         }
+    }
+
+
+    public boolean isAttributeSet(String name)
+    {
+        return getAttribute(name, "").length() > 0;
     }
 }

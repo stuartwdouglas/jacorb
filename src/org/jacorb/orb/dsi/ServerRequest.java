@@ -31,6 +31,7 @@ import org.jacorb.orb.giop.ReplyOutputStream;
 import org.jacorb.orb.giop.RequestInputStream;
 import org.jacorb.orb.portableInterceptor.ServerInterceptorIterator;
 import org.jacorb.orb.portableInterceptor.ServerRequestInfoImpl;
+import org.jacorb.poa.util.ByteArrayKey;
 import org.jacorb.poa.util.POAUtil;
 import org.jacorb.util.Time;
 import org.omg.CORBA.BAD_INV_ORDER;
@@ -54,7 +55,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Gerald Brose, FU Berlin
- * @version $Id: ServerRequest.java,v 1.53 2011-04-07 16:03:18 phil.mesnier Exp $
+ * @version $Id: ServerRequest.java,v 1.54 2011-05-05 12:26:15 nick.cross Exp $
  */
 
 public class ServerRequest
@@ -102,6 +103,7 @@ public class ServerRequest
     private final Logger logger;
 
     //MIOP
+    private ByteArrayKey byteArrayKey;
     private TagGroupTaggedComponent tagGroup = null;
 
 
@@ -114,7 +116,7 @@ public class ServerRequest
         this.orb = orb;
         Configuration config = orb.getConfiguration();
         this.logger = config.getLogger("jacorb.org.giop");
-        this.cachePoaNames = config.getAttribute("jacorb.cachePoaNames","off").equals("on");
+        this.cachePoaNames = config.getAttributeAsBoolean("jacorb.cachePoaNames", false);
 
         this.inputStream = inStream;
         connection = _connection;
@@ -666,6 +668,16 @@ public class ServerRequest
     public byte[] objectId()
     {
         return oid; // NOPMD
+    }
+
+    public synchronized ByteArrayKey objectIdAsByteArrayKey()
+    {
+        if (byteArrayKey == null)
+        {
+            byteArrayKey = new ByteArrayKey(oid);
+        }
+
+        return byteArrayKey;
     }
 
     public boolean streamBased()

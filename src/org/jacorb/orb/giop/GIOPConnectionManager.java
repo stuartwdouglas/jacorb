@@ -30,7 +30,7 @@ import org.jacorb.util.ObjectUtil;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: GIOPConnectionManager.java,v 1.17 2010-10-11 15:41:21 nick.cross Exp $
+ * @version $Id: GIOPConnectionManager.java,v 1.18 2011-05-05 12:26:15 nick.cross Exp $
  */
 
 public class GIOPConnectionManager
@@ -77,24 +77,22 @@ public class GIOPConnectionManager
             configuration.getAttributeAsInteger(
                 "jacorb.connection.wait_for_idle_interval", 500 );
 
-        String statisticsProviderClassName =
-            configuration.getAttribute( "jacorb.connection.statistics_provider_class","" );
+        final String statisticsProviderProperty = "jacorb.connection.statistics_provider_class";
 
-        if( statisticsProviderClassName.length() > 0 )
+        if( configuration.isAttributeSet(statisticsProviderProperty) )
         {
             try
             {
-                statistics_provider_class = ObjectUtil.classForName( statisticsProviderClassName );
+                statistics_provider_class = ObjectUtil.classForName( configuration.getAttribute(statisticsProviderProperty) );
             }
             catch( Exception e )
             {
                 if (logger.isErrorEnabled())
                 {
-                    logger.error( "Unable to create class from property >jacorb.connection.statistics_provider_class<: " + e.toString() );
+                    logger.error( "Unable to create class from property >" + statisticsProviderProperty + "<: " + e.toString() );
                 }
             }
         }
-
     }
 
 

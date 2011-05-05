@@ -55,7 +55,7 @@ import org.omg.PortableServer.ServantLocatorPackage.CookieHolder;
  * it returns the ServerRequest object to the ORB.
  *
  * @author Reimo Tiedemann, FU Berlin
- * @version $Id: RequestProcessor.java,v 1.44 2010-11-01 16:49:09 alexander.bykov Exp $
+ * @version $Id: RequestProcessor.java,v 1.45 2011-05-05 12:26:15 nick.cross Exp $
  */
 
 public class RequestProcessor
@@ -222,7 +222,7 @@ public class RequestProcessor
         try
         {
 
-            servant = controller.getAOM().incarnate( request.objectId(),
+            servant = controller.getAOM().incarnate( request.objectIdAsByteArrayKey(),
                                                      (ServantActivator) servantManager,
                                                      controller.getPOA());
             if (servant == null)

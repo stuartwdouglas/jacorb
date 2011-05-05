@@ -39,7 +39,7 @@ import org.omg.CORBA.ValueMember;
  * JacORB implementation of CORBA TypeCodes
  *
  * @author Gerald Brose, FU Berlin
- * @version $Id: TypeCode.java,v 1.49 2009-09-29 10:27:52 alexander.bykov Exp $
+ * @version $Id: TypeCode.java,v 1.50 2011-05-05 12:26:15 nick.cross Exp $
  */
 
 public class TypeCode
@@ -836,8 +836,6 @@ public class TypeCode
         // Duplicate the original typecode.
 
         // Member names are optional, so compact them down for transmission.
-        // Check whether we are doing full compaction or not.
-        //        if (Environment.getCompactTypecodes() > 1 && member_name != null)
         if ( member_name != null)
         {
             result.member_name = new String [member_name.length];

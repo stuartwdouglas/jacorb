@@ -85,7 +85,7 @@ import org.slf4j.Logger;
  * <code>org.omg.PortableServer.POA</code>
  *
  * @author Reimo Tiedemann, FU Berlin
- * @version $Id: POA.java,v 1.71 2010-04-20 15:46:16 nick.cross Exp $
+ * @version $Id: POA.java,v 1.72 2011-05-05 12:26:15 nick.cross Exp $
  */
 
 public class POA
@@ -340,7 +340,7 @@ public class POA
     public Servant _incarnateServant(byte[] oid, ServantActivator sa)
         throws org.omg.PortableServer.ForwardRequest
     {
-        return aom.incarnate(oid, sa, this);
+        return aom.incarnate(new ByteArrayKey(oid), sa, this);
     }
 
     /**
@@ -1793,7 +1793,7 @@ public class POA
             throw new WrongAdapter();
         }
 
-        ByteArrayKey oid = new ByteArrayKey (objectId);
+        final ByteArrayKey oid = new ByteArrayKey (objectId);
 
         if ( ( aom != null && aom.isDeactivating (oid) )
              || requestController.isDeactivating (oid))
@@ -1810,7 +1810,7 @@ public class POA
         Servant servant = null;
 
         /* is active servant */
-        if (isRetain() && (servant = aom.getServant(objectId)) != null)
+        if (isRetain() && (servant = aom.getServant(oid)) != null)
         {
             return servant;
         }

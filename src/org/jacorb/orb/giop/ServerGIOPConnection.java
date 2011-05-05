@@ -25,7 +25,7 @@ import org.jacorb.orb.iiop.IIOPConnection;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: ServerGIOPConnection.java,v 1.27 2011-04-07 22:25:43 phil.mesnier Exp $
+ * @version $Id: ServerGIOPConnection.java,v 1.28 2011-05-05 12:26:15 nick.cross Exp $
  */
 
 public class ServerGIOPConnection
@@ -65,7 +65,7 @@ public class ServerGIOPConnection
         super.configure(configuration);
 
         delayClose =
-            configuration.getAttribute("jacorb.connection.delay_close","off").equals("on");
+            configuration.getAttributeAsBoolean("jacorb.connection.delay_close", false);
         use_server_write_monitor();
     }
 

@@ -56,7 +56,7 @@ import org.slf4j.Logger;
  * Read CDR encoded data
  *
  * @author Gerald Brose, FU Berlin
- * $Id: CDRInputStream.java,v 1.129 2010-09-02 11:07:29 alexander.bykov Exp $
+ * $Id: CDRInputStream.java,v 1.130 2011-05-05 12:26:15 nick.cross Exp $
  */
 
 public class CDRInputStream
@@ -275,12 +275,13 @@ public class CDRInputStream
         cometInteropFix =
             configuration.getAttribute("jacorb.interop.comet","off").equals("on");
         laxBooleanEncoding =
-            configuration.getAttribute("jacorb.interop.lax_boolean_encoding","off").equals("on");
+            configuration.getAttributeAsBoolean("jacorb.interop.lax_boolean_encoding", false);
         cacheTypecodes =
-            configuration.getAttribute("jacorb.cacheTypecodes","off").equals("on");
+            configuration.getAttributeAsBoolean("jacorb.cacheTypecodes", false);
         sunInteropFix =
-            configuration.getAttribute("jacorb.interop.sun", "off").equalsIgnoreCase("on");
-        isMutatorEnabled = configuration.getAttribute("jacorb.iormutator", "").length() > 0;
+            configuration.getAttributeAsBoolean("jacorb.interop.sun", false);
+
+        isMutatorEnabled = jacorbConfig.isAttributeSet("jacorb.iormutator");
 
         if (isMutatorEnabled)
         {
