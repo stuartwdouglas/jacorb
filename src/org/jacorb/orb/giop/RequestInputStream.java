@@ -43,7 +43,7 @@ import org.omg.IOP.TaggedProfile;
 
 /**
  * @author Gerald Brose, FU Berlin
- * @version $Id: RequestInputStream.java,v 1.21 2009-12-14 16:27:29 nick.cross Exp $
+ * @version $Id: RequestInputStream.java,v 1.22 2011-05-06 14:52:37 nick.cross Exp $
  */
 public class RequestInputStream
     extends ServiceContextTransportingInputStream
@@ -210,17 +210,5 @@ public class RequestInputStream
     public boolean isLocateRequest()
     {
         return is_locate_request;
-    }
-
-    protected void finalize() throws Throwable
-    {
-        try
-        {
-            close();
-        }
-        finally
-        {
-            super.finalize();
-        }
     }
 }

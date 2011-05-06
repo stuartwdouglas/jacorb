@@ -39,7 +39,7 @@ import org.omg.PortableGroup.TagGroupTaggedComponent;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: ServerRequestListener.java,v 1.34 2011-04-20 16:29:36 alexander.bykov Exp $
+ * @version $Id: ServerRequestListener.java,v 1.35 2011-05-06 14:52:37 nick.cross Exp $
  */
 public class ServerRequestListener
     implements RequestListener, Configurable
@@ -274,7 +274,7 @@ public class ServerRequestListener
             {
                 final String res = ((String)scopes.get (i));
 
-                if( res.equals(""))
+                if( res.length() == 0)
                 {
                     break;
                 }

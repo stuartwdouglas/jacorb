@@ -24,14 +24,10 @@ package org.jacorb.poa;
  * This class collects all POA related constants.
  *
  * @author Reimo Tiedemann, FU Berlin
- * @version $Id: POAConstants.java,v 1.12 2004-05-06 12:40:00 nicolas Exp $
+ * @version $Id: POAConstants.java,v 1.13 2011-05-06 14:52:37 nick.cross Exp $
  */
 public class POAConstants
 {
-    /* request queue */
-    public final static int QUEUE_CAPACITY_INI = 10;
-    public final static int QUEUE_CAPACITY_INC = 10;
-
     /* shutdown states */
     public final static int NOT_CALLED = 0;
     public final static int SHUTDOWN_IN_PROGRESS = 1;

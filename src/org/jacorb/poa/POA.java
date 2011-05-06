@@ -85,7 +85,7 @@ import org.slf4j.Logger;
  * <code>org.omg.PortableServer.POA</code>
  *
  * @author Reimo Tiedemann, FU Berlin
- * @version $Id: POA.java,v 1.72 2011-05-05 12:26:15 nick.cross Exp $
+ * @version $Id: POA.java,v 1.73 2011-05-06 14:52:37 nick.cross Exp $
  */
 
 public class POA
@@ -479,23 +479,6 @@ public class POA
             // key is generated from him
             if (request.remainingPOAName() == null)
             {
-                if (!previouslyGeneratedObjectKey(request.objectKey()))
-                {
-                    if (logger.isWarnEnabled())
-                    {
-                        logger.warn(logPrefix +
-                                    " rid: " + request.requestId() +
-                                    " opname: " + request.operation() +
-                                    " _invoke: object key not previously generated!");
-                        if (logger.isDebugEnabled())
-                        {
-                            logger.debug(logPrefix +
-                                         " ObjectKey : " + org.jacorb.orb.util.CorbaLoc.parseKey(request.objectKey()) +
-                                         " to POA Id : " + org.jacorb.orb.util.CorbaLoc.parseKey(getPOAId()) + " mismatch.");
-                        }
-                    }
-                    throw new WrongAdapter();
-                }
                 if (isSystemId() && !previouslyGeneratedObjectId(request.objectId()) )
                 {
                     if (logger.isWarnEnabled())

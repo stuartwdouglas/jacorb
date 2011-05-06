@@ -35,7 +35,7 @@ import org.omg.PortableServer.ForwardRequest;
 
 /**
  * @author Gerald Brose, FU Berlin 1999
- * @version $Id: ReplyInputStream.java,v 1.24 2006-06-28 12:41:43 alphonse.bendt Exp $
+ * @version $Id: ReplyInputStream.java,v 1.25 2011-05-06 14:52:37 nick.cross Exp $
  *
  */
 
@@ -170,17 +170,5 @@ public class ReplyInputStream
         byte[] body = new byte[body_length];
         System.arraycopy (buffer, body_start, body, 0, body_length);
         return body;
-    }
-
-    protected void finalize() throws Throwable
-    {
-        try
-        {
-            close();
-        }
-        finally
-        {
-            super.finalize();
-        }
     }
 }
