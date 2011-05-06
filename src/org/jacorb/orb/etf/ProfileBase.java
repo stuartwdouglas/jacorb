@@ -42,7 +42,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Andre Spiegel
- * @version $Id: ProfileBase.java,v 1.13 2009-12-16 14:52:03 nick.cross Exp $
+ * @version $Id: ProfileBase.java,v 1.14 2011-05-06 07:08:12 nick.cross Exp $
  */
 public abstract class ProfileBase
     extends _ProfileLocalBase
@@ -200,7 +200,10 @@ public abstract class ProfileBase
                  + tagged_profile.value.tag);
         }
         initFromProfileData(tagged_profile.value.profile_data);
-        components.value = getComponents().asArray();
+        if (components != null)
+        {
+            components.value = getComponents().asArray();
+        }
     }
 
     /**

@@ -56,7 +56,7 @@ import org.slf4j.Logger;
  * Read CDR encoded data
  *
  * @author Gerald Brose, FU Berlin
- * $Id: CDRInputStream.java,v 1.130 2011-05-05 12:26:15 nick.cross Exp $
+ * $Id: CDRInputStream.java,v 1.131 2011-05-06 07:08:12 nick.cross Exp $
  */
 
 public class CDRInputStream
@@ -1110,14 +1110,14 @@ public class CDRInputStream
             ior = mutator.mutateIncoming (ior);
         }
 
-        ParsedIOR pior = new ParsedIOR( (org.jacorb.orb.ORB)orb, ior );
-
-        if( pior.isNull() )
+        if (ParsedIOR.isNull(ior))
         {
             return null;
         }
-
-        return ((org.jacorb.orb.ORB)orb)._getDelegate(pior);
+        else
+        {
+            return ((org.jacorb.orb.ORB)orb)._getObject(ior);
+        }
     }
 
     public org.omg.CORBA.Object read_Object(final java.lang.Class clazz)

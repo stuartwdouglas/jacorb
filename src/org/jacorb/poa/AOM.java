@@ -45,7 +45,7 @@ import org.slf4j.Logger;
  * The data can be retrieved using getServant() or getObjectId().
  *
  * @author Reimo Tiedemann, FU Berlin
- * @version $Id: AOM.java,v 1.39 2011-05-05 12:26:15 nick.cross Exp $
+ * @version $Id: AOM.java,v 1.40 2011-05-06 07:08:12 nick.cross Exp $
  */
 
 public class AOM
@@ -281,7 +281,7 @@ public class AOM
 
     protected Servant getServant(byte[] oid)
     {
-        return (Servant) objectMap.get( new ByteArrayKey( oid ) );
+        return getServant( new ByteArrayKey( oid ) );
     }
 
     protected synchronized Servant getServant(ByteArrayKey oid)

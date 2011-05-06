@@ -37,7 +37,7 @@ import org.omg.PortableServer.ServantManager;
  * requests out from the queue and will see that the necessary steps are taken.
  *
  * @author Reimo Tiedemann
- * @version $Id: RequestController.java,v 1.40 2011-05-05 12:26:15 nick.cross Exp $
+ * @version $Id: RequestController.java,v 1.41 2011-05-06 07:08:12 nick.cross Exp $
  */
 
 public final class RequestController
@@ -277,7 +277,7 @@ public final class RequestController
 
             if (!invalid && poa.isRetain())
             {
-                servant = aom.getServant(request.objectId());
+                servant = aom.getServant(oid);
             }
 
             if (servant == null)
