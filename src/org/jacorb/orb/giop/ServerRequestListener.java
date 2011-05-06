@@ -39,7 +39,7 @@ import org.omg.PortableGroup.TagGroupTaggedComponent;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: ServerRequestListener.java,v 1.35 2011-05-06 14:52:37 nick.cross Exp $
+ * @version $Id: ServerRequestListener.java,v 1.36 2011-05-06 15:02:27 alexander.bykov Exp $
  */
 public class ServerRequestListener
     implements RequestListener, Configurable
@@ -71,7 +71,7 @@ public class ServerRequestListener
         if( supportSSL )
         {
             int required =
-                configuration.getAttributeAsInteger("jacorb.security.ssl.server.required_options",16);
+                configuration.getAttributeAsInteger("jacorb.security.ssl.server.required_options", 16, 16);
 
             //if we require EstablishTrustInTarget or
             //EstablishTrustInClient, SSL must be used.

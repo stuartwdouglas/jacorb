@@ -39,7 +39,7 @@ import org.omg.CORBA.TIMEOUT;
 /**
  * @author Nicolas Noffke
  * @author Andre Spiegel
- * @version $Id: ClientIIOPConnection.java,v 1.40 2009-11-24 17:32:28 alexander.bykov Exp $
+ * @version $Id: ClientIIOPConnection.java,v 1.41 2011-05-06 15:02:27 alexander.bykov Exp $
  */
 public class ClientIIOPConnection
     extends IIOPConnection
@@ -433,8 +433,10 @@ public class ClientIIOPConnection
     {
         if (!doSupportSSL) return;
 
-        int client_required = configuration.getAttributeAsInteger("jacorb.security.ssl.client.required_options", 16);
-        int client_supported = configuration.getAttributeAsInteger("jacorb.security.ssl.client.supported_options",16);
+        int client_required =
+            configuration.getAttributeAsInteger("jacorb.security.ssl.client.required_options", 16, 16);
+        int client_supported =
+            configuration.getAttributeAsInteger("jacorb.security.ssl.client.supported_options", 16, 16);
 
         ssl_port = ((IIOPProfile) profile).getSslPortIfSupported( client_required, client_supported );
         use_ssl  = ssl_port != -1;

@@ -54,7 +54,7 @@ import org.jacorb.orb.ORB;
  * retreive their Logger objects.
  *
  * @author Gerald Brose, XTRADYNE Technologies
- * @version $Id: Configuration.java,v 1.22 2011-05-05 12:26:15 nick.cross Exp $
+ * @version $Id: Configuration.java,v 1.23 2011-05-06 15:02:27 alexander.bykov Exp $
  */
 
 public interface Configuration
@@ -101,11 +101,18 @@ public interface Configuration
 
     /**
      * Returns the value of the configuration attribute with the given key,
+     * as an integer using the radix as number base for the value.  If the 
+     * attribute value for this key is undefined, the defaultValue is returned.
+     */
+    int getAttributeAsInteger (String key, int defaultValue, int radix);
+
+    /**
+     * Returns the value of the configuration attribute with the given key,
      * as a long value.  If the attribute value for this key is undefined, the
      * defaultValue is returned.
      */
     long getAttributeAsLong (String key, long defaultValue);
-
+    
     /**
      * For a property that has a list of comma-separated values,
      * this method returns these values as a list of Strings.
