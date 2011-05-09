@@ -36,7 +36,7 @@ import org.omg.PortableServer.POAPackage.WrongPolicy;
 /**
  * JacORB-specific implementation of PortableServer.Servant
  *
- * $Id: ServantDelegate.java,v 1.29 2010-04-20 15:46:16 nick.cross Exp $
+ * $Id: ServantDelegate.java,v 1.30 2011-05-09 15:43:13 nick.cross Exp $
  */
 public class ServantDelegate
     implements org.omg.PortableServer.portable.Delegate
@@ -85,7 +85,16 @@ public class ServantDelegate
 
         try
         {
-            return poa.servant_to_reference(self);
+            /**
+             * We need to return a duplicate of the object because when this method is called by
+             * generated POA code _this() method the object returned may subsequently have it's
+             * delegate set to null by the _this method.  As JacORB caches object references the
+             * cached object would then have a null delegate. Any subsequent calls that read
+             * the object from the cache and tried to narrow it would result in a BAD_OPERATION on
+             * any attempt to retrieve the delegate.  This way the cached object always retains it's
+             * delegate and it is the duplicated object that will have the delegate set to null.
+             */
+            return (poa.servant_to_reference(self))._duplicate();
         }
         catch(ServantNotActive e)
         {

@@ -1,5 +1,5 @@
 %
-% $Id: threads.tex,v 1.2 2009-12-01 17:32:22 alexander.bykov Exp $
+% $Id: threads.tex,v 1.3 2011-05-09 15:43:13 nick.cross Exp $
 %
 Threads that are created and used by JacORB are described below.
 
@@ -109,7 +109,7 @@ org/jacorb/orb/BufferManager.java} and a reference is kept by the class.
 \subsection*{AOMRemoval}
 This thread is used to ensure that calls to deactivate\_object return
 immediately. When an object is removed it is placed on a java.util.concurrent.LinkedBlockingQueue
-which this thread processes to finish deactivation of the objects.
+which this thread processes to finish deactivation of the objects. This thread is a daemon thread.
 
 \section*{Short--lived threads}
 
