@@ -41,7 +41,7 @@ import org.omg.Security.ExtensibleFamily;
 
 /**
  * @author Nicolas Noffke
- * $Id: ServerInvocationInterceptor.java,v 1.16 2009-10-27 10:13:41 nick.cross Exp $
+ * $Id: ServerInvocationInterceptor.java,v 1.17 2011-05-09 14:36:07 nick.cross Exp $
  */
 
 public class ServerInvocationInterceptor
@@ -109,7 +109,17 @@ public class ServerInvocationInterceptor
         throws ForwardRequest
     {
         ServerRequest request = ((ServerRequestInfoImpl) ri).request;
-        GIOPConnection connection = request.getConnection();
+        GIOPConnection connection = null;
+
+        /**
+         * If this is a loopback request there may be no request. Handling
+         * of local server objects with interceptors is now done locally
+         * rather than via the remote mechanism.
+         */
+        if (request != null)
+        {
+           connection = request.getConnection();
+        }
 
         // lookup for context
         if (connection == null)

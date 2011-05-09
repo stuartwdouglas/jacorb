@@ -23,30 +23,29 @@ package org.jacorb.orb;
 import org.jacorb.orb.giop.ReplyInputStream;
 import org.omg.CORBA.portable.ApplicationException;
 import org.omg.CORBA.portable.RemarshalException;
+import org.omg.PortableInterceptor.ForwardRequest;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: ClientInterceptorHandler.java,v 1.15 2011-05-09 10:54:47 nick.cross Exp $
+ * @version $Id: ClientInterceptorHandler.java,v 1.16 2011-05-09 14:36:06 nick.cross Exp $
  */
 public interface ClientInterceptorHandler
 {
-
-    void handle_send_request() throws RemarshalException;
+    void handle_send_request() throws RemarshalException, ForwardRequest;
 
     void handle_location_forward(ReplyInputStream reply,
-            org.omg.CORBA.Object forward_reference) throws RemarshalException;
+            org.omg.CORBA.Object forward_reference) throws RemarshalException, ForwardRequest;
 
-    void handle_receive_reply(ReplyInputStream reply) throws RemarshalException;
+    void handle_receive_reply(ReplyInputStream reply) throws RemarshalException, ForwardRequest;
 
-    void handle_receive_other(short reply_status) throws RemarshalException;
+    void handle_receive_other(short reply_status) throws RemarshalException, ForwardRequest;
 
     void handle_receive_exception(org.omg.CORBA.SystemException exception)
-                                                                          throws RemarshalException;
+        throws RemarshalException, ForwardRequest;
 
     void handle_receive_exception(org.omg.CORBA.SystemException exception,
-            ReplyInputStream reply) throws RemarshalException;
+            ReplyInputStream reply) throws RemarshalException, ForwardRequest;
 
     void handle_receive_exception(ApplicationException exception,
-            ReplyInputStream reply) throws RemarshalException;
-
+            ReplyInputStream reply) throws RemarshalException, ForwardRequest;
 }

@@ -33,7 +33,7 @@ import org.omg.PortableInterceptor.LOCATION_FORWARD;
  * of ClientRequestInterceptors.
  *
  * @author Nicolas Noffke
- * @version  $Id: ClientInterceptorIterator.java,v 1.17 2009-11-19 16:59:28 alexander.bykov Exp $
+ * @version  $Id: ClientInterceptorIterator.java,v 1.18 2011-05-09 14:36:07 nick.cross Exp $
  */
 
 public class ClientInterceptorIterator
@@ -64,6 +64,14 @@ public class ClientInterceptorIterator
         // ok, op <= SEND_POLL is more efficient but
         // less understandable
         setDirection((op == SEND_REQUEST) || (op == SEND_POLL));
+
+        /**
+         * See RequestInterceptorIterator for full explanation
+         * of this method.  The client interceptor flow has no
+         * intermediate points so this is always false.  It has
+         * been included for completeness.
+         */
+        setIntermediatePoint (false);
 
         iterate();
 
