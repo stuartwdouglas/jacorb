@@ -25,13 +25,14 @@ import java.util.Iterator;
 import java.util.Map;
 import org.slf4j.Logger;
 import org.jacorb.config.Configuration;
+import org.jacorb.config.ConfigurationException;
 import org.jacorb.orb.ParsedIOR;
 import org.jacorb.util.ObjectUtil;
 import org.omg.CONV_FRAME.CodeSetComponentInfo;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: ClientConnection.java,v 1.67 2010-02-03 15:48:53 phil.mesnier Exp $
+ * @version $Id: ClientConnection.java,v 1.68 2011-05-09 10:54:47 nick.cross Exp $
  */
 public class ClientConnection
     implements ReplyListener, ConnectionListener
@@ -122,7 +123,16 @@ public class ClientConnection
         connection.setReplyListener( this );
         connection.setConnectionListener( this );
 
-        replies = new HashMap();
+        try
+        {
+            replies = (Map) configuration.getAttributeAsObject("java.util.Map", HashMap.class.getName());
+        }
+        catch (ConfigurationException e)
+        {
+            // should never happen
+            throw new RuntimeException(e);
+        }
+
         sasContexts = new HashMap();
     }
 

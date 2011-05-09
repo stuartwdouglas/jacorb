@@ -21,7 +21,7 @@ package org.jacorb.orb.portableInterceptor;
  *
  */
 
-import java.util.Enumeration;
+import java.util.Iterator;
 import org.jacorb.orb.dsi.ServerRequest;
 import org.omg.CORBA.Any;
 import org.omg.CORBA.BAD_INV_ORDER;
@@ -45,7 +45,7 @@ import org.omg.PortableServer.Servant;
  * See PI Spec p.5-50ff
  *
  * @author Nicolas Noffke
- * @version $Id: ServerRequestInfoImpl.java,v 1.19 2010-04-20 15:46:16 nick.cross Exp $
+ * @version $Id: ServerRequestInfoImpl.java,v 1.20 2011-05-09 10:54:47 nick.cross Exp $
  */
 
 public class ServerRequestInfoImpl
@@ -122,9 +122,9 @@ public class ServerRequestInfoImpl
         forward_reference = request.getForwardReference();
     }
 
-    public Enumeration getReplyServiceContexts()
+    public Iterator getReplyServiceContexts()
     {
-        return reply_ctx.elements();
+        return reply_ctx.values().iterator();
     }
 
     /**

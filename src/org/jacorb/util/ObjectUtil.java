@@ -27,7 +27,7 @@ import java.net.URL;
 
 /**
  * @author Gerald Brose, FU Berlin
- * @version $Id: ObjectUtil.java,v 1.22 2009-08-04 14:13:56 alexander.bykov Exp $
+ * @version $Id: ObjectUtil.java,v 1.23 2011-05-09 10:54:47 nick.cross Exp $
  */
 
 public class ObjectUtil
@@ -292,6 +292,6 @@ public class ObjectUtil
      */
     public static Integer newInteger(int value)
     {
-        return new Integer(value); // NOPMD
+        return Integer.valueOf(value);
     }
 }

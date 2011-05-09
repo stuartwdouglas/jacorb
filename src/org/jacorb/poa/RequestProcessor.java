@@ -20,7 +20,7 @@ package org.jacorb.poa;
  *   Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
 
-import java.util.Enumeration;
+import java.util.Iterator;
 import java.util.HashSet;
 import java.util.Set;
 import org.jacorb.config.*;
@@ -55,7 +55,7 @@ import org.omg.PortableServer.ServantLocatorPackage.CookieHolder;
  * it returns the ServerRequest object to the ORB.
  *
  * @author Reimo Tiedemann, FU Berlin
- * @version $Id: RequestProcessor.java,v 1.45 2011-05-05 12:26:15 nick.cross Exp $
+ * @version $Id: RequestProcessor.java,v 1.46 2011-05-09 10:54:47 nick.cross Exp $
  */
 
 public class RequestProcessor
@@ -96,7 +96,7 @@ public class RequestProcessor
 
         specialOperations.add("_get_policy");
         specialOperations.add("_set_policy_overrides");
-        
+
         specialOperations.add("_get_component");
     }
 
@@ -521,11 +521,11 @@ public class RequestProcessor
                 //processing and return here. The service contexts for
                 //the result have to be set, of course.
                 ReplyOutputStream out = request.getReplyOutputStream();
-                Enumeration ctx = info.getReplyServiceContexts();
+                Iterator ctx = info.getReplyServiceContexts();
 
-                while( ctx.hasMoreElements() )
+                while( ctx.hasNext() )
                 {
-                    out.addServiceContext( (ServiceContext) ctx.nextElement() );
+                    out.addServiceContext( (ServiceContext) ctx.next() );
                 }
 
                 return;
@@ -588,12 +588,12 @@ public class RequestProcessor
 
                         ReplyOutputStream out =
                             request.getReplyOutputStream();
-                        Enumeration ctx =
+                        Iterator ctx =
                             info.getReplyServiceContexts();
 
-                        while( ctx.hasMoreElements() )
+                        while( ctx.hasNext() )
                         {
-                            out.addServiceContext( (ServiceContext) ctx.nextElement() );
+                            out.addServiceContext( (ServiceContext) ctx.next() );
                         }
 
                         return;
@@ -661,12 +661,12 @@ public class RequestProcessor
 
             ReplyOutputStream out =
                 request.get_out();
-            Enumeration ctx =
+            Iterator ctx =
                 info.getReplyServiceContexts();
 
-            while( ctx.hasMoreElements() )
+            while( ctx.hasNext() )
             {
-                out.addServiceContext( (ServiceContext) ctx.nextElement() );
+                out.addServiceContext( (ServiceContext) ctx.next() );
             }
 
             manager.removeTSCurrent();
