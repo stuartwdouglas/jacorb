@@ -49,7 +49,7 @@ import org.omg.PortableServer.Servant;
  * See PI Spec p.5-50ff
  *
  * @author Nicolas Noffke
- * @version $Id: ServerRequestInfoImpl.java,v 1.21 2011-05-09 14:36:07 nick.cross Exp $
+ * @version $Id: ServerRequestInfoImpl.java,v 1.22 2011-05-10 13:29:16 nick.cross Exp $
  */
 
 public class ServerRequestInfoImpl
@@ -103,12 +103,14 @@ public class ServerRequestInfoImpl
     /**
      * This constructor is to cater for local calls where portable
      * interceptors are involved.  These calls are now handled
-     * locally rather than via the remote request mechanism so ther
+     * locally rather than via the remote request mechanism so there
      * will be no request from which to obtain information
+     * @param bs
      */
     public ServerRequestInfoImpl( org.jacorb.orb.ORB orb,
                                   ServiceContext [] contexts,
                                   Servant servant,
+                                  byte[] objectId,
                                   String operation,
                                   boolean response_expected,
                                   short sync_scope)
@@ -119,9 +121,9 @@ public class ServerRequestInfoImpl
         this.operation = operation;
         this.response_expected = response_expected;
         this.sync_scope = sync_scope;
-        requestId = 0;
+        this.objectId = objectId;
 
-        objectId = null;
+        requestId = 0;
         request = null;
 
 

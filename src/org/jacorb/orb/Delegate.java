@@ -99,7 +99,7 @@ import org.slf4j.Logger;
  * JacORB implementation of CORBA object reference
  *
  * @author Gerald Brose
- * @version $Id: Delegate.java,v 1.175 2011-05-10 13:02:58 nick.cross Exp $
+ * @version $Id: Delegate.java,v 1.176 2011-05-10 13:29:16 nick.cross Exp $
  *
  */
 
@@ -2353,11 +2353,13 @@ public final class Delegate
 
             if (orb.hasServerRequestInterceptors())
             {
+
                 sinfo = new ServerRequestInfoImpl
                 (
                     orb,
                     contexts,
                     (org.omg.PortableServer.Servant) servantObject.servant,
+                    getObjectId(),
                     operation,
                     true,
                     SYNC_WITH_TARGET.value
