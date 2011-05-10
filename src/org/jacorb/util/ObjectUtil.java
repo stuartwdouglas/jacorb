@@ -27,7 +27,7 @@ import java.net.URL;
 
 /**
  * @author Gerald Brose, FU Berlin
- * @version $Id: ObjectUtil.java,v 1.23 2011-05-09 10:54:47 nick.cross Exp $
+ * @version $Id: ObjectUtil.java,v 1.24 2011-05-10 13:02:58 nick.cross Exp $
  */
 
 public class ObjectUtil
@@ -283,15 +283,5 @@ public class ObjectUtil
             return Thread.currentThread().getContextClassLoader().getResource(name);
         }
         return ObjectUtil.class.getResource(name);
-    }
-
-    /**
-     * factory method to create Integers from ints.
-     * should be used throughout the code to prepare
-     * transition to JDK 1.5 (Integer.valueOf(int))
-     */
-    public static Integer newInteger(int value)
-    {
-        return Integer.valueOf(value);
     }
 }

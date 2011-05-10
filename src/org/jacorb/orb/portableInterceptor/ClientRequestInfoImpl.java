@@ -53,7 +53,7 @@ import org.slf4j.Logger;
  * See PI Spec p.5-46ff
  *
  * @author Nicolas Noffke
- * @version $Id: ClientRequestInfoImpl.java,v 1.38 2011-05-09 14:36:07 nick.cross Exp $
+ * @version $Id: ClientRequestInfoImpl.java,v 1.39 2011-05-10 13:02:58 nick.cross Exp $
  */
 
 public class ClientRequestInfoImpl
@@ -528,7 +528,7 @@ public class ClientRequestInfoImpl
                                     CompletionStatus.COMPLETED_MAYBE);
         }
 
-        Integer _id = ObjectUtil.newInteger(service_context.context_id);
+        Integer _id = Integer.valueOf(service_context.context_id);
 
         if (! replace && request_ctx.containsKey(_id))
         {

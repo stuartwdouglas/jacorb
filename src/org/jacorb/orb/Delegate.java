@@ -99,7 +99,7 @@ import org.slf4j.Logger;
  * JacORB implementation of CORBA object reference
  *
  * @author Gerald Brose
- * @version $Id: Delegate.java,v 1.174 2011-05-10 12:11:47 nick.cross Exp $
+ * @version $Id: Delegate.java,v 1.175 2011-05-10 13:02:58 nick.cross Exp $
  *
  */
 
@@ -703,7 +703,7 @@ public final class Delegate
 
         synchronized(policy_overrides)
         {
-            final Integer key = ObjectUtil.newInteger(policy_type);
+            final Integer key = Integer.valueOf(policy_type);
             result = (Policy)policy_overrides.get(key);
         }
 
@@ -2519,7 +2519,7 @@ public final class Delegate
 
             for ( int i = 0; i < policies.length; i++ )
             {
-                delResult.policy_overrides.put(ObjectUtil.newInteger( policies[ i ].policy_type() ), policies[ i ] );
+                delResult.policy_overrides.put(Integer.valueOf(policies[ i ].policy_type()), policies[ i ] );
             }
         }
 

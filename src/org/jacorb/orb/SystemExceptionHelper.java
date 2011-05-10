@@ -29,7 +29,7 @@ import org.omg.IOP.ServiceContext;
 
 /**
  * @author Gerald Brose
- * @version $Id: SystemExceptionHelper.java,v 1.17 2009-08-11 16:43:34 alexander.bykov Exp $
+ * @version $Id: SystemExceptionHelper.java,v 1.18 2011-05-10 13:02:58 nick.cross Exp $
  */
 
 public class SystemExceptionHelper
@@ -222,7 +222,7 @@ public class SystemExceptionHelper
 
             return (org.omg.CORBA.SystemException)ctor.newInstance(
                     new Object[]{"Server-side Exception: " + message,
-                            ObjectUtil.newInteger(minor),
+                            Integer.valueOf(minor),
                             completed});
         }
         catch (Exception e )

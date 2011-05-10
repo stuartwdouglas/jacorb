@@ -51,7 +51,7 @@ import org.omg.CORBA_2_3.portable.OutputStream;
  * CORBA any
  *
  * @author Gerald Brose
- * $Id: Any.java,v 1.62 2011-01-17 12:36:14 nick.cross Exp $
+ * $Id: Any.java,v 1.63 2011-05-10 13:02:57 nick.cross Exp $
  */
 
 public final class Any
@@ -365,7 +365,7 @@ public final class Any
 
     public void insert_long (int i)
     {
-        value = ObjectUtil.newInteger(i);
+        value = Integer.valueOf(i);
         typeCode = orb.get_primitive_tc (TCKind.tk_long);
     }
 
@@ -398,7 +398,7 @@ public final class Any
 
     public void insert_ulong (int i)
     {
-        value = ObjectUtil.newInteger(i);
+        value = Integer.valueOf(i);
         typeCode = orb.get_primitive_tc( TCKind.tk_ulong );
     }
 

@@ -44,7 +44,7 @@ import org.omg.CORBA._PolicyManagerLocalBase;
  * "ORBPolicyManager."
  *
  * @author Gerald Brose
- * @version $Id: PolicyManager.java,v 1.11 2009-09-29 10:27:53 alexander.bykov Exp $
+ * @version $Id: PolicyManager.java,v 1.12 2011-05-10 13:02:58 nick.cross Exp $
  */
 
 public class PolicyManager
@@ -111,7 +111,7 @@ public class PolicyManager
 
             for (int i = 0; i < ts.length; i++ )
             {
-                final Object policy = policy_overrides.get( ObjectUtil.newInteger( ts[i] ));
+                final Object policy = policy_overrides.get( Integer.valueOf(ts[i]));
                 if (policy != null)
                 {
                     policyList.add(policy);
@@ -201,7 +201,7 @@ public class PolicyManager
                                                       policies[i].policy_type() );
             }
             // else:
-            Integer key = ObjectUtil.newInteger( policies[i].policy_type());
+            Integer key = Integer.valueOf(policies[i].policy_type());
             if ( newPolicies.put( key, policies[i] ) != null )
             {
                 throw new org.omg.CORBA.BAD_PARAM( "Multiple policies of type " +

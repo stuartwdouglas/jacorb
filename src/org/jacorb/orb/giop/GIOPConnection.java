@@ -54,7 +54,7 @@ import org.omg.GIOP.ReplyStatusType_1_2;
  * jacorb.connection.statistics_providers={classnames}, default=(empty)<br>
  *
  * @author Nicolas Noffke
- * @version $Id: GIOPConnection.java,v 1.83 2011-05-05 12:26:15 nick.cross Exp $
+ * @version $Id: GIOPConnection.java,v 1.84 2011-05-10 13:02:58 nick.cross Exp $
  */
 
 public abstract class GIOPConnection
@@ -635,10 +635,7 @@ public abstract class GIOPConnection
 
                 //for now, only GIOP 1.2 from here on
 
-                Integer request_id = ObjectUtil.newInteger
-                (
-                     Messages.getRequestId( message )
-                );
+                Integer request_id = Integer.valueOf(Messages.getRequestId( message ));
 
                 //sanity check
                 if( ! fragments.containsKey( request_id ))

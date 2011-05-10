@@ -48,7 +48,7 @@ import org.omg.ETF.Factories;
  * sending (or handling) a request.
  *
  * @author Nicolas Noffke
- * @version $Id: TransportManager.java,v 1.30 2009-05-03 21:35:56 andre.spiegel Exp $
+ * @version $Id: TransportManager.java,v 1.31 2011-05-10 13:02:58 nick.cross Exp $
  * */
 
 public class TransportManager
@@ -143,7 +143,7 @@ public class TransportManager
         {
             loadFactories();
         }
-        return (Factories)factoriesMap.get (ObjectUtil.newInteger(tag));
+        return (Factories)factoriesMap.get (Integer.valueOf(tag));
     }
 
     /**
