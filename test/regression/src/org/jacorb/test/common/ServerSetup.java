@@ -37,7 +37,7 @@ import org.jacorb.test.common.launch.Launcher;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: ServerSetup.java,v 1.6 2010-01-16 16:24:11 alexander.bykov Exp $
+ * @version $Id: ServerSetup.java,v 1.7 2011-05-10 12:11:48 nick.cross Exp $
  */
 public class ServerSetup extends TestSetup
 {
@@ -114,6 +114,11 @@ public class ServerSetup extends TestSetup
         this(test, null, servantName, null);
     }
 
+    public ServerSetup(Test test, String servantName, Properties optionalProps)
+    {
+        this(test, null, servantName, optionalProps);
+    }
+
     /**
      * how long should we wait for a testserver to come up?
      */
@@ -160,7 +165,7 @@ public class ServerSetup extends TestSetup
         serverProperties.put ("jacorb.implname", servantName);
 
         serverProperties.putAll (serverOrbProperties);
-        
+
         if (coverage)
         {
             String outDir = System.getProperty("jacorb.test.outdir");
@@ -188,7 +193,7 @@ public class ServerSetup extends TestSetup
             in.close();
         }
 
-        final Launcher launcher = 
+        final Launcher launcher =
             launcherFactory.getLauncher(serverVersion,
                     coverage,
                     System.getProperty("java.class.path"),
