@@ -3,7 +3,7 @@ package org.jacorb.orb.listener;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2006 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -44,7 +44,7 @@ import org.jacorb.orb.iiop.IIOPConnection;
  * with the listeners.
  *
  * @author Nick Cross
- * @version $Id: SSLListenerUtil.java,v 1.1 2009-08-12 16:09:35 alexander.bykov Exp $
+ * @version $Id: SSLListenerUtil.java,v 1.2 2011-05-10 15:40:40 nick.cross Exp $
  */
 public class SSLListenerUtil
 {

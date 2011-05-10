@@ -3,7 +3,7 @@ package org.jacorb.test.common.launch;
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 2005  Gerald Brose.
+ *   Copyright (C) 2000-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -43,7 +43,7 @@ import org.jacorb.test.common.TestUtils;
  * with appropriate arguments.
  *
  * @author Andre Spiegel spiegel@gnu.org
- * @version $Id: DirectLauncher.java,v 1.16 2010-11-01 16:49:09 alexander.bykov Exp $
+ * @version $Id: DirectLauncher.java,v 1.17 2011-05-10 15:40:42 nick.cross Exp $
  */
 public class DirectLauncher extends AbstractLauncher
 {

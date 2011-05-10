@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -24,7 +24,7 @@ import java.io.PrintWriter;
 
 /**
  * @author Gerald Brose
- * @version $Id: LongType.java,v 1.17 2006-06-21 09:53:04 alphonse.bendt Exp $
+ * @version $Id: LongType.java,v 1.18 2011-05-10 15:40:36 nick.cross Exp $
  */
 
 public class LongType

@@ -3,7 +3,7 @@ package org.jacorb.notification.filter;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -26,7 +26,7 @@ import org.omg.CosNotifyFilter.ConstraintInfo;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: ConstraintEntry.java,v 1.2 2005-08-21 13:25:53 alphonse.bendt Exp $
+ * @version $Id: ConstraintEntry.java,v 1.3 2011-05-10 15:40:38 nick.cross Exp $
  */
 
 public class ConstraintEntry

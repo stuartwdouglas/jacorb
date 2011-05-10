@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -25,7 +25,7 @@ import org.jacorb.notification.interfaces.IProxyPushSupplier;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: RetryStrategyFactory.java,v 1.2 2005-04-27 10:48:40 alphonse.bendt Exp $
+ * @version $Id: RetryStrategyFactory.java,v 1.3 2011-05-10 15:40:38 nick.cross Exp $
  */
 public interface RetryStrategyFactory
 {

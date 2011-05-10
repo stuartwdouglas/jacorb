@@ -3,7 +3,7 @@ package org.jacorb.orb.dynany;
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -31,7 +31,7 @@ import org.omg.DynamicAny.DynAnyPackage.TypeMismatch;
  * CORBA DynFixed
  *
  * @author Jason Courage
- * @version $Id: DynFixed.java,v 1.12 2009-05-03 21:35:55 andre.spiegel Exp $
+ * @version $Id: DynFixed.java,v 1.13 2011-05-10 15:40:40 nick.cross Exp $
  */
 
 public final class DynFixed

@@ -3,7 +3,7 @@ package org.jacorb.poa.except;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -25,7 +25,7 @@ package org.jacorb.poa.except;
  * POA class (JacORB specific application error).
  * 
  * @author Reimo Tiedemann, FU Berlin
- * @version $Id: ApplicationError.java,v 1.8 2004-05-06 12:40:00 nicolas Exp $
+ * @version $Id: ApplicationError.java,v 1.9 2011-05-10 15:40:41 nick.cross Exp $
  * @see org.jacorb.poa.POA#create_POA(String, org.omg.PortableServer.POAManager, org.omg.CORBA.Policy[])
  */
 public final class ApplicationError 

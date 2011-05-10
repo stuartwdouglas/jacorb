@@ -2,7 +2,7 @@ package org.jacorb.orb;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -39,7 +39,7 @@ import org.omg.CORBA.NO_MEMORY;
  * Buffers are generally created on demand.
  *
  * @author Gerald Brose
- * @version $Id: BufferManager.java,v 1.35 2010-12-20 16:58:38 alexander.bykov Exp $
+ * @version $Id: BufferManager.java,v 1.36 2011-05-10 15:40:40 nick.cross Exp $
 */
 
 public class BufferManager extends AbstractBufferManager

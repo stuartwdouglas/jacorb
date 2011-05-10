@@ -3,7 +3,7 @@ package org.jacorb.orb;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -99,7 +99,7 @@ import org.slf4j.Logger;
  * JacORB implementation of CORBA object reference
  *
  * @author Gerald Brose
- * @version $Id: Delegate.java,v 1.176 2011-05-10 13:29:16 nick.cross Exp $
+ * @version $Id: Delegate.java,v 1.177 2011-05-10 15:40:40 nick.cross Exp $
  *
  */
 

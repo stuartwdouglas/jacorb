@@ -1,7 +1,7 @@
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2006 The JacORB project.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -37,7 +37,7 @@ import org.jacorb.test.common.launch.Launcher;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: ServerSetup.java,v 1.7 2011-05-10 12:11:48 nick.cross Exp $
+ * @version $Id: ServerSetup.java,v 1.8 2011-05-10 15:40:42 nick.cross Exp $
  */
 public class ServerSetup extends TestSetup
 {

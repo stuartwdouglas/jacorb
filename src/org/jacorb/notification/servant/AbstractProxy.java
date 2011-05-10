@@ -3,7 +3,7 @@ package org.jacorb.notification.servant;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -71,7 +71,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @jboss.xmbean 
  * 
  * @author Alphonse Bendt
- * @version $Id: AbstractProxy.java,v 1.34 2009-10-29 11:31:01 nick.cross Exp $
+ * @version $Id: AbstractProxy.java,v 1.35 2011-05-10 15:40:39 nick.cross Exp $
  */
 
 public abstract class AbstractProxy implements FilterAdminOperations, QoSAdminOperations,

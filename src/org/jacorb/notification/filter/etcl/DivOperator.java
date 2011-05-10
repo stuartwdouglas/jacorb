@@ -3,7 +3,7 @@ package org.jacorb.notification.filter.etcl;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -30,7 +30,7 @@ import antlr.Token;
 /**
  * A simple node to represent DIV operation
  *
- * @version $Id: DivOperator.java,v 1.7 2006-05-17 13:07:40 alphonse.bendt Exp $
+ * @version $Id: DivOperator.java,v 1.8 2011-05-10 15:40:38 nick.cross Exp $
  */
 
 public class DivOperator extends BinaryOperator

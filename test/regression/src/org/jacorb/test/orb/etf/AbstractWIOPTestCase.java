@@ -1,7 +1,7 @@
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 2006,2007  Gerald Brose.
+ *   Copyright (C) 2006-2011  Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -30,7 +30,7 @@ import org.jacorb.test.orb.etf.wiop.WIOPFactories;
 /**
  * Abstract superclass for the WIOP tests.
  * @author Alphonse Bendt
- * @version $Id: AbstractWIOPTestCase.java,v 1.2 2007-02-01 08:41:11 andre.spiegel Exp $
+ * @version $Id: AbstractWIOPTestCase.java,v 1.3 2011-05-10 15:40:43 nick.cross Exp $
  */
 public class AbstractWIOPTestCase extends ClientServerTestCase
 {

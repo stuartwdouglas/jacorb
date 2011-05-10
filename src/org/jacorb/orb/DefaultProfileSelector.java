@@ -3,7 +3,7 @@ package org.jacorb.orb;
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -32,7 +32,7 @@ import org.omg.ETF.Profile;
  * the first profile in the list, no matter what.
  * 
  * @author Andre Spiegel spiegel@gnu.org
- * @version $Id: DefaultProfileSelector.java,v 1.6 2007-02-14 08:17:37 andre.spiegel Exp $
+ * @version $Id: DefaultProfileSelector.java,v 1.7 2011-05-10 15:40:40 nick.cross Exp $
  */
 public class DefaultProfileSelector implements ProfileSelector
 {

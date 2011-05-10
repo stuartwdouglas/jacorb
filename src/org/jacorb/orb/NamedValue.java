@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -22,7 +22,7 @@ package org.jacorb.orb;
 
 /**
  * @author Gerald Brose, FU Berlin
- * @version $Id: NamedValue.java,v 1.8 2006-07-10 13:33:04 alphonse.bendt Exp $
+ * @version $Id: NamedValue.java,v 1.9 2011-05-10 15:40:40 nick.cross Exp $
  */
 
 public class NamedValue

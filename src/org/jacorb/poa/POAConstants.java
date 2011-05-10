@@ -3,7 +3,7 @@ package org.jacorb.poa;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -24,7 +24,7 @@ package org.jacorb.poa;
  * This class collects all POA related constants.
  *
  * @author Reimo Tiedemann, FU Berlin
- * @version $Id: POAConstants.java,v 1.13 2011-05-06 14:52:37 nick.cross Exp $
+ * @version $Id: POAConstants.java,v 1.14 2011-05-10 15:40:41 nick.cross Exp $
  */
 public class POAConstants
 {

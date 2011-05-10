@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) The JacORB project, 1997-2006.
+ *   Copyright (C) Copyright (C) 2000-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -46,7 +46,7 @@ import org.omg.ETF.Listener;
  * Class BasicAdapter, used by the POA.
  *
  * @author Gerald Brose
- * @version $Id: BasicAdapter.java,v 1.64 2011-04-20 16:29:36 alexander.bykov Exp $
+ * @version $Id: BasicAdapter.java,v 1.65 2011-05-10 15:40:40 nick.cross Exp $
  */
 public class BasicAdapter
     extends org.omg.ETF._HandleLocalBase

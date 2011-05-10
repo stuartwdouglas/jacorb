@@ -3,7 +3,7 @@ package org.jacorb.notification;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -43,7 +43,7 @@ import org.omg.CosNotifyFilter.UnsupportedFilterableData;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: AbstractMessage.java,v 1.32 2006-07-14 12:05:19 alphonse.bendt Exp $
+ * @version $Id: AbstractMessage.java,v 1.33 2011-05-10 15:40:38 nick.cross Exp $
  */
 
 public abstract class AbstractMessage extends AbstractPoolable

@@ -3,7 +3,7 @@ package org.jacorb.orb.giop;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -36,7 +36,7 @@ import org.omg.ETF.Factories;
  * This class manages connections.
  *
  * @author Gerald Brose, FU Berlin
- * @version $Id: ClientConnectionManager.java,v 1.37 2009-11-18 16:34:23 alexander.bykov Exp $
+ * @version $Id: ClientConnectionManager.java,v 1.38 2011-05-10 15:40:40 nick.cross Exp $
  */
 
 public class ClientConnectionManager

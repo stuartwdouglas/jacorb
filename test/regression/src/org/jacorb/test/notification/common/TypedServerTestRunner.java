@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -30,7 +30,7 @@ import org.jacorb.notification.ConsoleMain;
  * print its IOR to stdout.
  * 
  * @author Alphonse Bendt
- * @version $Id: TypedServerTestRunner.java,v 1.1 2005-12-04 22:19:27 alphonse.bendt Exp $
+ * @version $Id: TypedServerTestRunner.java,v 1.2 2011-05-10 15:40:42 nick.cross Exp $
  */
 public class TypedServerTestRunner
 {

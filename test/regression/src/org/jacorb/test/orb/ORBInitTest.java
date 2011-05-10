@@ -3,7 +3,7 @@ package org.jacorb.test.orb;
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2001  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -35,7 +35,7 @@ import org.omg.CORBA.ORB;
  * <code>ORBInitTest</code> tests ORBInit parsing
  *
  * @author Nick Cross
- * @version $Id: ORBInitTest.java,v 1.6 2010-01-16 16:24:10 alexander.bykov Exp $
+ * @version $Id: ORBInitTest.java,v 1.7 2011-05-10 15:40:43 nick.cross Exp $
  */
 public class ORBInitTest extends TestCase
 {

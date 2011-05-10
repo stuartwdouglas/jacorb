@@ -3,7 +3,7 @@ package org.jacorb.notification.servant;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2003  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -42,7 +42,7 @@ import org.picocontainer.MutablePicoContainer;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: TypedSupplierAdminImpl.java,v 1.10 2009-04-25 10:08:52 andre.spiegel Exp $
+ * @version $Id: TypedSupplierAdminImpl.java,v 1.11 2011-05-10 15:40:39 nick.cross Exp $
  */
 public class TypedSupplierAdminImpl extends SupplierAdminImpl implements
         TypedSupplierAdminOperations

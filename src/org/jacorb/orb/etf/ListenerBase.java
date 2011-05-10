@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -35,7 +35,7 @@ import org.omg.ETF._ListenerLocalBase;
 
 /**
  * @author Andre Spiegel
- * @version $Id: ListenerBase.java,v 1.9 2010-10-11 15:41:21 nick.cross Exp $
+ * @version $Id: ListenerBase.java,v 1.10 2011-05-10 15:40:40 nick.cross Exp $
  */
 public abstract class ListenerBase
     extends _ListenerLocalBase

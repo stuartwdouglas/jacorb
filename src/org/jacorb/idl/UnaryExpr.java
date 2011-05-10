@@ -3,7 +3,7 @@ package org.jacorb.idl;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -24,7 +24,7 @@ import java.io.PrintWriter;
 
 /**
  * @author Gerald Brose
- * @version $Id: UnaryExpr.java,v 1.14 2006-06-19 10:34:57 alphonse.bendt Exp $
+ * @version $Id: UnaryExpr.java,v 1.15 2011-05-10 15:40:36 nick.cross Exp $
  */
 
 public class UnaryExpr

@@ -3,7 +3,7 @@ package org.jacorb.orb;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2003  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -34,7 +34,7 @@ import org.omg.IOP.IOR;
  * IOR returned is valid.
  *
  * @author Nick Cross
- * @version $Id: IORMutator.java,v 1.1 2006-07-10 08:56:00 alphonse.bendt Exp $
+ * @version $Id: IORMutator.java,v 1.2 2011-05-10 15:40:40 nick.cross Exp $
  */
 public abstract class IORMutator
 {

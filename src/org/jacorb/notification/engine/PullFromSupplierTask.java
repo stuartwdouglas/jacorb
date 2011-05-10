@@ -3,7 +3,7 @@ package org.jacorb.notification.engine;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -26,7 +26,7 @@ import org.omg.CosEventComm.Disconnected;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: PullFromSupplierTask.java,v 1.17 2006-07-07 10:53:12 alphonse.bendt Exp $
+ * @version $Id: PullFromSupplierTask.java,v 1.18 2011-05-10 15:40:38 nick.cross Exp $
  */
 
 public class PullFromSupplierTask extends AbstractTask

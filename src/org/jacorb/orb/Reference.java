@@ -2,7 +2,7 @@ package org.jacorb.orb;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2001  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -20,7 +20,7 @@ package org.jacorb.orb;
  */
 
 /**
- * @version $Id: Reference.java,v 1.13 2009-08-12 16:09:35 alexander.bykov Exp $
+ * @version $Id: Reference.java,v 1.14 2011-05-10 15:40:40 nick.cross Exp $
  */
 
 public class Reference

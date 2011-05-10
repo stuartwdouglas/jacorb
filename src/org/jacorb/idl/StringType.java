@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -25,7 +25,7 @@ import java.util.Set;
 
 /**
  * @author Gerald Brose
- * @version $Id: StringType.java,v 1.20 2009-12-03 17:38:23 alexander.bykov Exp $
+ * @version $Id: StringType.java,v 1.21 2011-05-10 15:40:36 nick.cross Exp $
  */
 
 public class StringType

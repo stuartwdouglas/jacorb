@@ -3,7 +3,7 @@ package org.jacorb.test.orb;
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2005  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -35,7 +35,7 @@ import org.omg.PortableServer.POAManager;
  * Tests the ORB's OAAddress property using an IPv6 address.
  *
  * @author Adam Mitz (mitza@ociweb.com)
- * @version $Id: OAAddressIPv6Test.java,v 1.2 2006-11-27 14:45:18 alphonse.bendt Exp $
+ * @version $Id: OAAddressIPv6Test.java,v 1.3 2011-05-10 15:40:43 nick.cross Exp $
  */
 public class OAAddressIPv6Test extends TestCase
 {

@@ -1,7 +1,7 @@
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2006 The JacORB project.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -24,7 +24,7 @@ import org.apache.tools.ant.filters.TokenFilter.ChainableReaderFilter;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: SumFilter.java,v 1.1 2009-09-03 12:49:17 alexander.bykov Exp $
+ * @version $Id: SumFilter.java,v 1.2 2011-05-10 15:40:41 nick.cross Exp $
  */
 public class SumFilter extends ChainableReaderFilter
 {

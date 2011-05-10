@@ -3,7 +3,7 @@ package org.jacorb.notification.engine;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -29,7 +29,7 @@ import org.jacorb.notification.interfaces.FilterStage;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: AbstractFilterTask.java,v 1.18 2009-05-03 21:34:47 andre.spiegel Exp $
+ * @version $Id: AbstractFilterTask.java,v 1.19 2011-05-10 15:40:38 nick.cross Exp $
  */
 public abstract class AbstractFilterTask extends AbstractMessageTask
 {

@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) The JacORB project, 1997-2006.
+ *   Copyright (C) Copyright (C) 2000-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -29,7 +29,7 @@ import java.util.EventListener;
  * events from JacORB.
  *
  * @author Nick Cross
- * @version $Id: SSLSessionListener.java,v 1.1 2006-06-26 08:08:24 alphonse.bendt Exp $
+ * @version $Id: SSLSessionListener.java,v 1.2 2011-05-10 15:40:40 nick.cross Exp $
  */
 public interface SSLSessionListener extends EventListener
 {

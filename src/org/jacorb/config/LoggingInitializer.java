@@ -3,7 +3,7 @@ package org.jacorb.config;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 2009 Gerald Brose.
+ *   Copyright (C) 2000-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -28,7 +28,7 @@ import org.jacorb.orb.ORB;
  * based on parameters from the JacORB configuration.
  *
  * @author Andre Spiegel <spiegel@gnu.org>
- * @version $Id: LoggingInitializer.java,v 1.5 2011-04-07 15:55:18 phil.mesnier Exp $
+ * @version $Id: LoggingInitializer.java,v 1.6 2011-05-10 15:40:35 nick.cross Exp $
  */
 public abstract class LoggingInitializer
 {

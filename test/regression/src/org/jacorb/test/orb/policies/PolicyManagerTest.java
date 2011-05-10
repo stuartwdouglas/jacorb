@@ -12,7 +12,7 @@ import org.omg.CORBA.SetOverrideType;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) The JacORB project, 1997-2006.
+ *   Copyright (C) Copyright (C) 2000-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -31,7 +31,7 @@ import org.omg.CORBA.SetOverrideType;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: PolicyManagerTest.java,v 1.4 2009-05-14 16:49:08 andre.spiegel Exp $
+ * @version $Id: PolicyManagerTest.java,v 1.5 2011-05-10 15:40:43 nick.cross Exp $
  */
 public class PolicyManagerTest extends TestCase
 {

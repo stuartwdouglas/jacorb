@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -38,7 +38,7 @@ import javax.swing.JTextField;
 /**
  * A dialog to enter the name and ior for an object binding
  *
- * @version $Id: ObjectDialog.java,v 1.4 2008-11-14 08:55:30 nick.cross Exp $
+ * @version $Id: ObjectDialog.java,v 1.5 2011-05-10 15:40:37 nick.cross Exp $
  * @author Gerald Brose, Xtradyne Technologies
  */
 

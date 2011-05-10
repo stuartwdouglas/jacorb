@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -40,7 +40,7 @@ import org.apache.tools.ant.util.SourceFileScanner;
  * from the ANT build tool.
  *
  * @author Wei-ju Wu
- * @version $Id: JacIDL.java,v 1.35 2010-11-09 14:09:14 alexander.bykov Exp $
+ * @version $Id: JacIDL.java,v 1.36 2011-05-10 15:40:36 nick.cross Exp $
  */
 
 public class JacIDL

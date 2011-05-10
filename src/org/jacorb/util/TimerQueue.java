@@ -3,7 +3,7 @@ package org.jacorb.util;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 2002-2004 Gerald Brose
+ *   Copyright (C) 2002-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -43,7 +43,7 @@ import org.slf4j.Logger;
  * adversely affect the performance of the timer queue.
  *
  * @author Phil Mesnier <mesnier_p@ociweb.com>
- * @version $Id: TimerQueue.java,v 1.2 2011-04-13 15:31:38 phil.mesnier Exp $
+ * @version $Id: TimerQueue.java,v 1.3 2011-05-10 15:40:41 nick.cross Exp $
  */
 public class TimerQueue extends Thread
 {

@@ -3,7 +3,7 @@ package org.jacorb.orb.giop;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -29,7 +29,7 @@ import org.jacorb.util.threadpool.Consumer;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: MessageReceptor.java,v 1.14 2009-05-03 21:35:55 andre.spiegel Exp $
+ * @version $Id: MessageReceptor.java,v 1.15 2011-05-10 15:40:40 nick.cross Exp $
  */
 
 public class MessageReceptor

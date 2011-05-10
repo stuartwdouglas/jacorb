@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -45,7 +45,7 @@ import org.picocontainer.MutablePicoContainer;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: GarbageCollectTest.java,v 1.7 2009-05-03 21:45:33 andre.spiegel Exp $
+ * @version $Id: GarbageCollectTest.java,v 1.8 2011-05-10 15:40:43 nick.cross Exp $
  */
 public class GarbageCollectTest extends NotificationTestCase
 {

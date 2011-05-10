@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -30,7 +30,7 @@ import java.util.StringTokenizer;
  * The main server that starts the Interface Repository
  *
  * @author Gerald Brose
- * @version $Id: IRServer.java,v 1.13 2009-10-01 13:40:17 alexander.bykov Exp $
+ * @version $Id: IRServer.java,v 1.14 2011-05-10 15:40:37 nick.cross Exp $
  */
 
 public class IRServer

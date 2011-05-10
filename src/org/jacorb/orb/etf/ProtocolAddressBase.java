@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -26,7 +26,7 @@ import org.jacorb.orb.CDROutputStream;
 
 /**
  * @author Phil Mesnier
- * @version $Id: ProtocolAddressBase.java,v 1.7 2009-12-16 14:52:03 nick.cross Exp $
+ * @version $Id: ProtocolAddressBase.java,v 1.8 2011-05-10 15:40:40 nick.cross Exp $
  *
  * provides an abstraction of a protocol specific address.
  * This is necessary to allow the ORB and other components deal with

@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -22,7 +22,7 @@ package org.jacorb.idl;
 
 /**
  * @author Gerald Brose
- * @version $Id: FixedPointConstType.java,v 1.11 2006-06-19 10:34:57 alphonse.bendt Exp $
+ * @version $Id: FixedPointConstType.java,v 1.12 2011-05-10 15:40:36 nick.cross Exp $
  */
 
 public class FixedPointConstType

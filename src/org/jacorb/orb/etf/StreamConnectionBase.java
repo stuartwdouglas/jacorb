@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) The JacORB project, 1997-2006.
+ *   Copyright (C) Copyright (C) 2000-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -30,7 +30,7 @@ import org.jacorb.util.ObjectUtil;
  *
  * @author Nicolas Noffke
  * @author Andre Spiegel
- * @version $Id: StreamConnectionBase.java,v 1.10 2009-11-12 17:29:35 alexander.bykov Exp $
+ * @version $Id: StreamConnectionBase.java,v 1.11 2011-05-10 15:40:40 nick.cross Exp $
  */
 
 public abstract class StreamConnectionBase

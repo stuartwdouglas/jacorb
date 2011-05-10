@@ -3,7 +3,7 @@ package org.jacorb.test.bugs.bugjac195;
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2001  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -37,7 +37,7 @@ import org.jacorb.test.common.TestUtils;
  * connectionClosed events are reported correctly
  *
  * @author Carol Jordon
- * @version $Id: BugJac195Test.java,v 1.3 2006-11-27 14:45:19 alphonse.bendt Exp $
+ * @version $Id: BugJac195Test.java,v 1.4 2011-05-10 15:40:42 nick.cross Exp $
  */
 public class BugJac195Test extends ClientServerTestCase
 {

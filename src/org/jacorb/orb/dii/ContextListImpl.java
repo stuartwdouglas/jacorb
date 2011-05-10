@@ -7,7 +7,7 @@ import org.omg.CORBA.NO_IMPLEMENT;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) The JacORB project, 1997-2006.
+ *   Copyright (C) Copyright (C) 2000-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -26,7 +26,7 @@ import org.omg.CORBA.NO_IMPLEMENT;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: ContextListImpl.java,v 1.1 2006-07-10 14:13:13 alphonse.bendt Exp $
+ * @version $Id: ContextListImpl.java,v 1.2 2011-05-10 15:40:40 nick.cross Exp $
  */
 public class ContextListImpl extends ContextList
 {

@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) The JacORB project, 1997-2006.
+ *   Copyright (C) Copyright (C) 2000-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -28,7 +28,7 @@ import java.util.EventListener;
  * events from JacORB.
  *
  * @author Nick Cross
- * @version $Id: TCPConnectionListener.java,v 1.3 2006-07-27 09:07:59 alphonse.bendt Exp $
+ * @version $Id: TCPConnectionListener.java,v 1.4 2011-05-10 15:40:40 nick.cross Exp $
  */
 public interface TCPConnectionListener extends EventListener
 {

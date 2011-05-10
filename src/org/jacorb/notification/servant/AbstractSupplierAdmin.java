@@ -3,7 +3,7 @@ package org.jacorb.notification.servant;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2003  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -31,7 +31,7 @@ import org.omg.PortableServer.POA;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: AbstractSupplierAdmin.java,v 1.3 2009-04-25 10:08:51 andre.spiegel Exp $
+ * @version $Id: AbstractSupplierAdmin.java,v 1.4 2011-05-10 15:40:39 nick.cross Exp $
  */
 public abstract class AbstractSupplierAdmin extends AbstractAdmin {
     public abstract void setSubsequentFilterStageSource(FilterStageSource source);

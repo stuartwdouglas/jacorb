@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -26,7 +26,7 @@ import org.omg.PortableInterceptor.Interceptor;
 
 /**
  * @author Gerald Brose
- * @version $Id: AbstractInterceptorIterator.java,v 1.9 2008-11-14 08:55:34 nick.cross Exp $
+ * @version $Id: AbstractInterceptorIterator.java,v 1.10 2011-05-10 15:40:40 nick.cross Exp $
  */
 
 public abstract class AbstractInterceptorIterator

@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -58,8 +58,8 @@ import org.jacorb.idl.VectorType;
 /*
  * The compiler backend for the IDL/Java mapping
  *
- * @author Copyright (c) 1999-2004, Gerald Brose
- * @version $Id: JavaMappingGeneratingVisitor.java,v 1.8 2008-11-14 08:55:26 nick.cross Exp $
+ * @author Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
+ * @version $Id: JavaMappingGeneratingVisitor.java,v 1.9 2011-05-10 15:40:36 nick.cross Exp $
  *
  */
 

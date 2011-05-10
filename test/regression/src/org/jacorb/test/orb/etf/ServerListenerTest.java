@@ -3,7 +3,7 @@ package org.jacorb.test.orb.etf;
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2007  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -31,7 +31,7 @@ import org.jacorb.test.orb.etf.wiop.WIOPFactories;
 
 /**
  * @author Andre Spiegel spiegel@gnu.org
- * @version $Id: ServerListenerTest.java,v 1.4 2007-02-01 09:05:27 andre.spiegel Exp $
+ * @version $Id: ServerListenerTest.java,v 1.5 2011-05-10 15:40:43 nick.cross Exp $
  */
 public class ServerListenerTest extends AbstractWIOPTestCase
 {

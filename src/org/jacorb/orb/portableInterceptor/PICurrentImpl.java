@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -32,7 +32,7 @@ import org.omg.PortableInterceptor.InvalidSlot;
  * See PI Spec p. 6-55ff
  *
  * @author Nicolas Noffke
- * @version $Id: PICurrentImpl.java,v 1.12 2008-11-14 08:55:34 nick.cross Exp $
+ * @version $Id: PICurrentImpl.java,v 1.13 2011-05-10 15:40:41 nick.cross Exp $
  */
 
 public class PICurrentImpl extends org.omg.CORBA.LocalObject

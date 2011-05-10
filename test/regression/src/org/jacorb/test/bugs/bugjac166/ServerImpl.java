@@ -3,7 +3,7 @@ package org.jacorb.test.bugs.bugjac166;
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2002  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -35,7 +35,7 @@ import org.omg.PortableInterceptor.InvalidSlot;
  * Interceptor and return it to the client.
  *
  * @author Nick Cross
- * @version $Id: ServerImpl.java,v 1.2 2009-04-25 10:21:38 andre.spiegel Exp $
+ * @version $Id: ServerImpl.java,v 1.3 2011-05-10 15:40:41 nick.cross Exp $
  */
 public class ServerImpl extends Jac074ServerPOA implements Configurable
 {

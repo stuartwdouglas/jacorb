@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -29,7 +29,7 @@ import org.omg.PortableInterceptor.IORInfo;
  * It provides convenience methods to modify the newly created IOR.
 
  * @author Marc Heide
- * @version $Id: IORInfoExt.java,v 1.4 2006-07-07 10:55:57 alphonse.bendt Exp $
+ * @version $Id: IORInfoExt.java,v 1.5 2011-05-10 15:40:40 nick.cross Exp $
  */
 
 public interface IORInfoExt extends IORInfo

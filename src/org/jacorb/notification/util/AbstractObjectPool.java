@@ -3,7 +3,7 @@ package org.jacorb.notification.util;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -43,7 +43,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * This class needs a two phase initialization: configure MUST be invoked before an instance can be used.
  *
  * @author Alphonse Bendt
- * @version $Id: AbstractObjectPool.java,v 1.25 2009-10-29 11:31:02 nick.cross Exp $
+ * @version $Id: AbstractObjectPool.java,v 1.26 2011-05-10 15:40:39 nick.cross Exp $
  */
 
 public abstract class AbstractObjectPool implements Runnable, Configurable

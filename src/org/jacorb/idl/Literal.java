@@ -3,7 +3,7 @@ package org.jacorb.idl;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -28,7 +28,7 @@ import org.jacorb.idl.runtime.long_token;
 
 /**
  * @author Gerald Brose
- * @version $Id: Literal.java,v 1.27 2010-11-09 17:24:55 alexander.bykov Exp $
+ * @version $Id: Literal.java,v 1.28 2011-05-10 15:40:36 nick.cross Exp $
  */
 
 public class Literal

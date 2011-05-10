@@ -3,7 +3,7 @@ package org.jacorb.test.notification;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2003  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -35,7 +35,7 @@ import org.omg.CosNotification.StructuredEvent;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: TypedEventMessageTest.java,v 1.7 2005-12-04 22:19:27 alphonse.bendt Exp $
+ * @version $Id: TypedEventMessageTest.java,v 1.8 2011-05-10 15:40:42 nick.cross Exp $
  */
 public class TypedEventMessageTest extends NotificationTestCase
 {

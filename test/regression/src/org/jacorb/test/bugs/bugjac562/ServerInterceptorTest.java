@@ -1,7 +1,7 @@
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2006 The JacORB project.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -35,7 +35,7 @@ import org.omg.CORBA.UNKNOWN;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: ServerInterceptorTest.java,v 1.1 2009-11-19 16:59:28 alexander.bykov Exp $
+ * @version $Id: ServerInterceptorTest.java,v 1.2 2011-05-10 15:40:42 nick.cross Exp $
  */
 public class ServerInterceptorTest extends ClientServerTestCase
 {

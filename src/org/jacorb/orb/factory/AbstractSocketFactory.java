@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -34,7 +34,7 @@ import org.omg.CORBA.TIMEOUT;
  * abstract base class for JacORB's default SocketFactory implementations.
  *
  * @author Alphonse Bendt
- * @version $Id: AbstractSocketFactory.java,v 1.8 2009-05-03 21:35:55 andre.spiegel Exp $
+ * @version $Id: AbstractSocketFactory.java,v 1.9 2011-05-10 15:40:40 nick.cross Exp $
  */
 
 public abstract class AbstractSocketFactory implements SocketFactory, Configurable

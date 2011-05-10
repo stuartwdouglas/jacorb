@@ -3,7 +3,7 @@ package org.jacorb.naming;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -51,7 +51,7 @@ import org.slf4j.Logger;
  *      The implementation for the CORBAService Naming
  *
  *      @author Gerald Brose
- *      @version $Id: NamingContextImpl.java,v 1.35 2011-01-13 17:10:57 nick.cross Exp $
+ *      @version $Id: NamingContextImpl.java,v 1.36 2011-05-10 15:40:37 nick.cross Exp $
  */
 
 public class NamingContextImpl

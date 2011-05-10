@@ -3,7 +3,7 @@ package org.jacorb.security.sas;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 2002-2004 Gerald Brose
+ *   Copyright (C) 2002-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -34,7 +34,7 @@ import org.omg.PortableInterceptor.ORBInitInfoPackage.DuplicateName;
  * This initializes the SAS Target Security Service (TSS) Interceptor
  *
  * @author David Robison
- * @version $Id: SASInitializer.java,v 1.9 2011-01-19 11:05:34 nick.cross Exp $
+ * @version $Id: SASInitializer.java,v 1.10 2011-05-10 15:40:41 nick.cross Exp $
  */
 
 public class SASInitializer

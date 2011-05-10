@@ -3,7 +3,7 @@ package org.jacorb.test.notification.plugins;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2003  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -30,7 +30,7 @@ import org.omg.CosNotifyFilter.FilterFactory;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: FilterFactoryTest.java,v 1.4 2005-05-14 20:49:33 alphonse.bendt Exp $
+ * @version $Id: FilterFactoryTest.java,v 1.5 2011-05-10 15:40:43 nick.cross Exp $
  */
 public class FilterFactoryTest extends NotifyServerTestCase
 {

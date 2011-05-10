@@ -1,7 +1,7 @@
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2006 The JacORB project.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -30,7 +30,7 @@ import org.omg.CORBA.MARSHAL;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: BugJac516Test.java,v 1.1 2008-11-21 10:04:56 nick.cross Exp $
+ * @version $Id: BugJac516Test.java,v 1.2 2011-05-10 15:40:42 nick.cross Exp $
  */
 public class BugJac516Test extends ORBTestCase
 {

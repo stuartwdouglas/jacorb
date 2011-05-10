@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -22,7 +22,7 @@ package org.jacorb.orb.giop;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: NoBiDirServerReplyListener.java,v 1.10 2006-07-26 08:02:25 alphonse.bendt Exp $
+ * @version $Id: NoBiDirServerReplyListener.java,v 1.11 2011-05-10 15:40:40 nick.cross Exp $
  */
 
 public class NoBiDirServerReplyListener

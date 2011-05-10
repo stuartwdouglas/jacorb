@@ -3,7 +3,7 @@ package org.jacorb.idl;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -35,7 +35,7 @@ import java.util.HashMap;
  * When the getValue() is called, a Double object is returned.
  * If it returns null, an error occured.<p>
 
- * @version $Id: ConstExprEvaluator.java,v 1.7 2008-11-14 08:55:24 nick.cross Exp $
+ * @version $Id: ConstExprEvaluator.java,v 1.8 2011-05-10 15:40:36 nick.cross Exp $
  * @author  Gerald Brose,
  *          The-Son LAI <a href="mailto:Lts@writeme.com">Lts@writeme.com</a>
  */

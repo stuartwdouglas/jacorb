@@ -1,7 +1,7 @@
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2010 The JacORB project.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -24,7 +24,7 @@ package org.jacorb.idl;
  * Enum of idl types
  *
  * @author Alexander Birchenko
- * @version $Id: IDLTypes.java,v 1.1 2010-11-05 09:39:01 alexander.bykov Exp $
+ * @version $Id: IDLTypes.java,v 1.2 2011-05-10 15:40:36 nick.cross Exp $
  */
 
 public enum IDLTypes

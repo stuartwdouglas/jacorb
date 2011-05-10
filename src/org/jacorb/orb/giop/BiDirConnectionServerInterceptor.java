@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -38,7 +38,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: BiDirConnectionServerInterceptor.java,v 1.19 2010-10-19 16:12:23 nick.cross Exp $
+ * @version $Id: BiDirConnectionServerInterceptor.java,v 1.20 2011-05-10 15:40:40 nick.cross Exp $
  */
 public class BiDirConnectionServerInterceptor
     extends DefaultServerInterceptor

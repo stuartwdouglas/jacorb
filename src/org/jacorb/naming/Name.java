@@ -3,7 +3,7 @@ package org.jacorb.naming;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -30,7 +30,7 @@ import org.omg.CosNaming.NamingContextPackage.InvalidName;
  * between Names and their string representation
  *
  * @author Gerald Brose, FU Berlin
- * @version $Id: Name.java,v 1.15 2008-11-14 08:55:30 nick.cross Exp $
+ * @version $Id: Name.java,v 1.16 2011-05-10 15:40:37 nick.cross Exp $
  */
 
 public class Name

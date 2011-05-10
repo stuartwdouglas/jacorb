@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2006 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -28,7 +28,7 @@ import org.jacorb.notification.interfaces.Message;
  * added messages by their receivetimestamp attribute.
  * 
  * @author Alphonse Bendt
- * @version $Id: BoundedReceiveTimeEventQueue.java,v 1.2 2006-03-04 19:34:59 alphonse.bendt Exp $
+ * @version $Id: BoundedReceiveTimeEventQueue.java,v 1.3 2011-05-10 15:40:39 nick.cross Exp $
  */
 public class BoundedReceiveTimeEventQueue extends AbstractBoundedEventHeap
 {

@@ -1,7 +1,7 @@
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2006 The JacORB project.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -27,7 +27,7 @@ import org.jacorb.config.Configuration;
  * that'll create a new array of byte for every invocation).
  *
  * @author Alphonse Bendt
- * @version $Id: NonCachingBufferManagerFactory.java,v 1.2 2010-11-23 15:22:05 alexander.bykov Exp $
+ * @version $Id: NonCachingBufferManagerFactory.java,v 1.3 2011-05-10 15:40:40 nick.cross Exp $
  */
 
 public class NonCachingBufferManagerFactory implements BufferManagerFactory

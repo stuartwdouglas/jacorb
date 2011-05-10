@@ -3,7 +3,7 @@ package org.jacorb.test.bugs.bugjac10;
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2001  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -30,7 +30,7 @@ import org.jacorb.test.common.ClientServerTestCase;
 
 /**
  * @author Carol Jordon
- * @version $Id: BugJac10Test.java,v 1.3 2009-09-03 12:49:17 alexander.bykov Exp $
+ * @version $Id: BugJac10Test.java,v 1.4 2011-05-10 15:40:41 nick.cross Exp $
  */
 public class BugJac10Test extends ClientServerTestCase
 {

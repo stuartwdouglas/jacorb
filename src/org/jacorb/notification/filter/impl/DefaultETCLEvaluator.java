@@ -3,7 +3,7 @@ package org.jacorb.notification.filter.impl;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -50,7 +50,7 @@ import org.omg.DynamicAny.DynAnyPackage.TypeMismatch;
  * Provide the Basic operations needed to evaluate filter expressions on Anys.
  *
  * @author Alphonse Bendt
- * @version $Id: DefaultETCLEvaluator.java,v 1.7 2009-05-03 21:34:47 andre.spiegel Exp $
+ * @version $Id: DefaultETCLEvaluator.java,v 1.8 2011-05-10 15:40:38 nick.cross Exp $
  */
 
 public class DefaultETCLEvaluator implements ETCLEvaluator

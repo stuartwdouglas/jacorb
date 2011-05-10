@@ -3,7 +3,7 @@ package org.jacorb.orb;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -56,7 +56,7 @@ import org.slf4j.Logger;
  * Read CDR encoded data
  *
  * @author Gerald Brose, FU Berlin
- * $Id: CDRInputStream.java,v 1.133 2011-05-10 13:02:58 nick.cross Exp $
+ * $Id: CDRInputStream.java,v 1.134 2011-05-10 15:40:40 nick.cross Exp $
  */
 
 public class CDRInputStream

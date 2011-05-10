@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -39,7 +39,7 @@ import org.omg.IOP.TaggedComponent;
  * See PI Spec p.7-64f
  *
  * @author Nicolas Noffke
- * @version $Id: IORInfoImpl.java,v 1.14 2006-07-07 10:55:57 alphonse.bendt Exp $
+ * @version $Id: IORInfoImpl.java,v 1.15 2011-05-10 15:40:40 nick.cross Exp $
  */
 
 public class IORInfoImpl extends org.omg.CORBA.LocalObject

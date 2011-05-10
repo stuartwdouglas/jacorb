@@ -7,7 +7,7 @@ import org.omg.CORBA.ORB;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) The JacORB project, 1997-2006.
+ *  Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -26,7 +26,7 @@ import org.omg.CORBA.ORB;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: JacoTestServer.java,v 1.1 2006-12-07 13:30:22 alphonse.bendt Exp $
+ * @version $Id: JacoTestServer.java,v 1.2 2011-05-10 15:40:42 nick.cross Exp $
  */
 public class JacoTestServer
 {

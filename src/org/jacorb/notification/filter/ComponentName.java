@@ -3,7 +3,7 @@ package org.jacorb.notification.filter;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -22,7 +22,7 @@ package org.jacorb.notification.filter;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: ComponentName.java,v 1.2 2004-05-06 12:39:59 nicolas Exp $
+ * @version $Id: ComponentName.java,v 1.3 2011-05-10 15:40:38 nick.cross Exp $
  */
 
 public interface ComponentName {

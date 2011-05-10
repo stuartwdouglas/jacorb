@@ -3,7 +3,7 @@ package org.jacorb.test.util;
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2001  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -37,7 +37,7 @@ import org.slf4j.Logger;
  *  Unit Test for class LogKitLoggerFactory
  * @jacorb-since 2.2
  * @author Alphonse Bendt
- * @version $Id: JDKLoggerTest.java,v 1.1 2009-11-26 16:36:14 nick.cross Exp $
+ * @version $Id: JDKLoggerTest.java,v 1.2 2011-05-10 15:40:43 nick.cross Exp $
  */
 
 public class JDKLoggerTest

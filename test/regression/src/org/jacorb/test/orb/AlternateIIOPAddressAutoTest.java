@@ -3,7 +3,7 @@ package org.jacorb.test.orb;
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2005  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -35,7 +35,7 @@ import org.jacorb.test.*;
  * in the suite() method how to change that (if your test machine supports it).
  * 
  * @author Andre Spiegel <spiegel@gnu.org>
- * @version $Id: AlternateIIOPAddressAutoTest.java,v 1.2 2009-03-06 09:48:15 andre.spiegel Exp $
+ * @version $Id: AlternateIIOPAddressAutoTest.java,v 1.3 2011-05-10 15:40:43 nick.cross Exp $
  */
 public class AlternateIIOPAddressAutoTest extends ClientServerTestCase
 {

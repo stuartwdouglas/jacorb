@@ -1,7 +1,7 @@
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2006 The JacORB project.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -27,7 +27,7 @@ package org.jacorb.orb;
  * Buffers are generally created on demand.
  *
  * @author Gerald Brose
- * @version $Id: IBufferManager.java,v 1.4 2010-12-20 16:58:38 alexander.bykov Exp $
+ * @version $Id: IBufferManager.java,v 1.5 2011-05-10 15:40:40 nick.cross Exp $
  */
 public interface IBufferManager
 {

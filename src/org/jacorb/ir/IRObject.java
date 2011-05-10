@@ -3,7 +3,7 @@ package org.jacorb.ir;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -26,7 +26,7 @@ import org.omg.CORBA.INTF_REPOS;
  * Base class for Interface Repository Objects
  *
  * @author Gerald Brose
- * @version $Id: IRObject.java,v 1.9 2006-06-15 16:43:14 alphonse.bendt Exp $
+ * @version $Id: IRObject.java,v 1.10 2011-05-10 15:40:37 nick.cross Exp $
  */
 public abstract class IRObject
     implements org.omg.CORBA.IRObjectOperations

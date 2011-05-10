@@ -3,7 +3,7 @@ package org.jacorb.notification.servant;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -28,7 +28,7 @@ import org.jacorb.notification.interfaces.FilterStage;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: FilterStageListManager.java,v 1.11 2006-01-10 23:02:39 alphonse.bendt Exp $
+ * @version $Id: FilterStageListManager.java,v 1.12 2011-05-10 15:40:39 nick.cross Exp $
  */
 
 public abstract class FilterStageListManager

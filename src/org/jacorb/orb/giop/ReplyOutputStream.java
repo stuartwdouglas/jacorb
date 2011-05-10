@@ -3,7 +3,7 @@ package org.jacorb.orb.giop;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -32,7 +32,7 @@ import org.omg.GIOP.ReplyStatusType_1_2;
 
 /**
  * @author Gerald Brose
- * @version $Id: ReplyOutputStream.java,v 1.26 2009-08-11 16:43:33 alexander.bykov Exp $
+ * @version $Id: ReplyOutputStream.java,v 1.27 2011-05-10 15:40:40 nick.cross Exp $
  *
  */
 public class ReplyOutputStream

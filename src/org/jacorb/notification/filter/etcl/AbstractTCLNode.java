@@ -3,7 +3,7 @@ package org.jacorb.notification.filter.etcl;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -35,7 +35,7 @@ import antlr.collections.AST;
  * Base Class for TCLTree Nodes.
  * 
  * @author Alphonse Bendt
- * @version $Id: AbstractTCLNode.java,v 1.8 2005-08-21 13:22:57 alphonse.bendt Exp $
+ * @version $Id: AbstractTCLNode.java,v 1.9 2011-05-10 15:40:38 nick.cross Exp $
  */
 
 public abstract class AbstractTCLNode extends BaseAST implements TCLParserTokenTypes

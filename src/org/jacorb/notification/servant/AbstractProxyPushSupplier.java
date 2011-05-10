@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -59,7 +59,7 @@ import java.util.concurrent.atomic.AtomicReference;
  *                     ProxyPushConsumer failed" notificationType = "java.lang.String"
  *
  * @author Alphonse Bendt
- * @version $Id: AbstractProxyPushSupplier.java,v 1.11 2009-10-29 11:31:01 nick.cross Exp $
+ * @version $Id: AbstractProxyPushSupplier.java,v 1.12 2011-05-10 15:40:39 nick.cross Exp $
  */
 public abstract class AbstractProxyPushSupplier extends AbstractProxySupplier implements
         IProxyPushSupplier

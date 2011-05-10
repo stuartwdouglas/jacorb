@@ -3,7 +3,7 @@ package org.jacorb.test.common.launch;
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 2005  Gerald Brose.
+ *   Copyright (C) 2000-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -30,7 +30,7 @@ import java.util.List;
  * A launcher that uses the jaco script of a given JacORB installation.
  *
  * @author Andre Spiegel spiegel@gnu.org
- * @version $Id: JacoLauncher.java,v 1.4 2006-11-27 14:45:19 alphonse.bendt Exp $
+ * @version $Id: JacoLauncher.java,v 1.5 2011-05-10 15:40:42 nick.cross Exp $
  */
 public class JacoLauncher extends AbstractLauncher
 {

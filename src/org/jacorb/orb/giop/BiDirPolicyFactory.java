@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -33,7 +33,7 @@ import org.omg.PortableInterceptor.PolicyFactory;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: BiDirPolicyFactory.java,v 1.9 2006-06-28 12:41:43 alphonse.bendt Exp $
+ * @version $Id: BiDirPolicyFactory.java,v 1.10 2011-05-10 15:40:40 nick.cross Exp $
  */
 public class BiDirPolicyFactory
     extends org.omg.CORBA.LocalObject

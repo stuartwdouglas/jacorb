@@ -3,7 +3,7 @@ package org.jacorb.poa.policy;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -24,7 +24,7 @@ package org.jacorb.poa.policy;
  * This class implements the lifespan policy.
  *
  * @author Reimo Tiedemann, FU Berlin
- * @version $Id: LifespanPolicy.java,v 1.9 2006-08-29 20:20:06 andre.spiegel Exp $
+ * @version $Id: LifespanPolicy.java,v 1.10 2011-05-10 15:40:41 nick.cross Exp $
  */
 
 public class LifespanPolicy 

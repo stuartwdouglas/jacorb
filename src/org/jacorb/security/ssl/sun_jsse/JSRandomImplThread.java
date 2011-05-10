@@ -3,7 +3,7 @@ package org.jacorb.security.ssl.sun_jsse;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 2000-2006 Gerald Brose
+ *   Copyright (C) 2000-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -27,7 +27,7 @@ import java.security.SecureRandom;
  * initialization of SecureRandom..
  *
  * @author Nick Cross
- * @version $Id: JSRandomImplThread.java,v 1.1 2006-06-14 12:49:22 alphonse.bendt Exp $
+ * @version $Id: JSRandomImplThread.java,v 1.2 2011-05-10 15:40:41 nick.cross Exp $
  */
 public class JSRandomImplThread implements JSRandom
 {

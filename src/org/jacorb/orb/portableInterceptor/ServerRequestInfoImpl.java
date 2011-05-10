@@ -3,7 +3,7 @@ package org.jacorb.orb.portableInterceptor;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -49,7 +49,7 @@ import org.omg.PortableServer.Servant;
  * See PI Spec p.5-50ff
  *
  * @author Nicolas Noffke
- * @version $Id: ServerRequestInfoImpl.java,v 1.22 2011-05-10 13:29:16 nick.cross Exp $
+ * @version $Id: ServerRequestInfoImpl.java,v 1.23 2011-05-10 15:40:41 nick.cross Exp $
  */
 
 public class ServerRequestInfoImpl

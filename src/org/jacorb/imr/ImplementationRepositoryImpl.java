@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -82,7 +82,7 @@ import org.slf4j.Logger;
  *
  * @author Nicolas Noffke
  *
- * $Id: ImplementationRepositoryImpl.java,v 1.76 2010-10-07 10:03:33 alexander.bykov Exp $
+ * $Id: ImplementationRepositoryImpl.java,v 1.77 2011-05-10 15:40:36 nick.cross Exp $
  */
 
 public class ImplementationRepositoryImpl

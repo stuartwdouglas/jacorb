@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -32,7 +32,7 @@ import org.jacorb.imr.AdminPackage.IllegalServerName;
  * that blocks until the server is released.
  *
  * @author Nicolas Noffke
- * @version $Id: ImRServerInfo.java,v 1.16 2009-10-27 13:33:10 nick.cross Exp $
+ * @version $Id: ImRServerInfo.java,v 1.17 2011-05-10 15:40:36 nick.cross Exp $
  */
 public class ImRServerInfo
     implements java.io.Serializable

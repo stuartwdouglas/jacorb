@@ -3,7 +3,7 @@ package org.jacorb.test.bugs.bug532;
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2003  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -31,7 +31,7 @@ import org.omg.CORBA.ORB;
  * could not insert into an Any a byte[] of size larger than 4000 bytes.
  *
  * @author <a href="mailto:dimitris@jboss.org">Dimitris Andreadis</a>
- * @version $Id: Bug532Test.java,v 1.2 2009-09-03 12:49:17 alexander.bykov Exp $
+ * @version $Id: Bug532Test.java,v 1.3 2011-05-10 15:40:41 nick.cross Exp $
  */
 public class Bug532Test extends ORBTestCase
 {

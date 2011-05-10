@@ -3,7 +3,7 @@ package org.jacorb.test.orb;
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2005  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -46,7 +46,7 @@ import org.omg.IOP.TaggedProfile;
  *
  * @jacorb-since 2.2
  * @author Marc Heide
- * @version $Id: AlternateProfileTest.java,v 1.13 2010-01-16 16:24:10 alexander.bykov Exp $
+ * @version $Id: AlternateProfileTest.java,v 1.14 2011-05-10 15:40:43 nick.cross Exp $
  */
 public class AlternateProfileTest extends ClientServerTestCase
 {

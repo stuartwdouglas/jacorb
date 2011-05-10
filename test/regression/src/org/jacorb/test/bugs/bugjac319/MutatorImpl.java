@@ -3,7 +3,7 @@ package org.jacorb.test.bugs.bugjac319;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2003  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -30,7 +30,7 @@ import org.omg.IOP.IOR;
  * <code>MutatorImpl</code> is a sample Mutator implementation for testing.
  *
  * @author Nick Cross
- * @version $Id: MutatorImpl.java,v 1.4 2009-11-12 17:29:35 alexander.bykov Exp $
+ * @version $Id: MutatorImpl.java,v 1.5 2011-05-10 15:40:42 nick.cross Exp $
  */
 public class MutatorImpl extends IORMutator
 {

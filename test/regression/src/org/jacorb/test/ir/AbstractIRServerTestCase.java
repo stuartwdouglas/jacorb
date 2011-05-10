@@ -1,7 +1,7 @@
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2006 The JacORB project.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -38,7 +38,7 @@ import org.omg.PortableServer.POA;
  * it will also configure the client ORB properly so that it can contact the IR.
  *
  * @author Alphonse Bendt
- * @version $Id: AbstractIRServerTestCase.java,v 1.1 2006-11-27 14:45:19 alphonse.bendt Exp $
+ * @version $Id: AbstractIRServerTestCase.java,v 1.2 2011-05-10 15:40:42 nick.cross Exp $
  */
 public class AbstractIRServerTestCase extends TestCase
 {

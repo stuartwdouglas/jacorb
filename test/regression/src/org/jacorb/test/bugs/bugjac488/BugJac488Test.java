@@ -3,7 +3,7 @@ package org.jacorb.test.bugs.bugjac488;
 /*
  * JacORB - a free Java ORB
  *
- * Copyright (C) 1997-2006 The JacORB project.
+ * Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  * This library is free software; you can redistribute it and/or modify it under
  * the terms of the GNU Library General Public License as published by the Free
@@ -42,7 +42,7 @@ import org.jacorb.test.common.ClientServerTestCase;
  * correctly receives a transient and not a nullpointer exception.
  *
  * @author <a href="mailto:Nick.Cross@prismtech.com">Nick Cross</a>
- * @version $Id: BugJac488Test.java,v 1.1 2011-05-10 12:11:48 nick.cross Exp $
+ * @version $Id: BugJac488Test.java,v 1.2 2011-05-10 15:40:42 nick.cross Exp $
  */
 public class BugJac488Test extends TestCase
 {

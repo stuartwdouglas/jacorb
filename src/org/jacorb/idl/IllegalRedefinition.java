@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -22,7 +22,7 @@ package org.jacorb.idl;
 
 /**
  * @author Gerald Brose
- * @version $Id: IllegalRedefinition.java,v 1.9 2006-06-26 14:37:44 alphonse.bendt Exp $
+ * @version $Id: IllegalRedefinition.java,v 1.10 2011-05-10 15:40:36 nick.cross Exp $
  */
 
 public class IllegalRedefinition

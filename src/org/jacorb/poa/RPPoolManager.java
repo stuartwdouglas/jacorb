@@ -3,7 +3,7 @@ package org.jacorb.poa;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -32,7 +32,7 @@ import org.jacorb.poa.except.POAInternalError;
  *
  * @author Gerald Brose
  * @author Reimo Tiedemann
- * @version $Id: RPPoolManager.java,v 1.26 2011-05-05 12:26:15 nick.cross Exp $
+ * @version $Id: RPPoolManager.java,v 1.27 2011-05-10 15:40:41 nick.cross Exp $
  * @see org.jacorb.poa.RequestProcessor
  */
 

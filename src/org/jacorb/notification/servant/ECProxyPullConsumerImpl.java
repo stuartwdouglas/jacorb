@@ -3,7 +3,7 @@ package org.jacorb.notification.servant;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -38,7 +38,7 @@ import org.omg.PortableServer.Servant;
  *  @jboss.xmbean
  * 
  * @author Alphonse Bendt
- * @version $Id: ECProxyPullConsumerImpl.java,v 1.10 2009-04-25 10:08:51 andre.spiegel Exp $
+ * @version $Id: ECProxyPullConsumerImpl.java,v 1.11 2011-05-10 15:40:39 nick.cross Exp $
  */
 
 public class ECProxyPullConsumerImpl extends ProxyPullConsumerImpl implements

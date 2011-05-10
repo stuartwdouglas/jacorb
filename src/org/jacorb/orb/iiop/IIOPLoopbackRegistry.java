@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -25,7 +25,7 @@ import java.util.Map;
 
 /**
  * @author Kevin Conner (Kevin.Conner@arjuna.com)
- * @version $Id: IIOPLoopbackRegistry.java,v 1.2 2005-09-27 20:52:18 phil.mesnier Exp $
+ * @version $Id: IIOPLoopbackRegistry.java,v 1.3 2011-05-10 15:40:40 nick.cross Exp $
  */
 public class IIOPLoopbackRegistry
 {

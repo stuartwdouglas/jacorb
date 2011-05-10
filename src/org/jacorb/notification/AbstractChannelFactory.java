@@ -3,7 +3,7 @@ package org.jacorb.notification;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2003  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -72,7 +72,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: AbstractChannelFactory.java,v 1.25 2009-10-29 11:31:01 nick.cross Exp $
+ * @version $Id: AbstractChannelFactory.java,v 1.26 2011-05-10 15:40:37 nick.cross Exp $
  */
 
 public abstract class AbstractChannelFactory implements ManageableServant, Disposable

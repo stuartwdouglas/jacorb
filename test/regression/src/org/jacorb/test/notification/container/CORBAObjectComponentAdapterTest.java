@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -35,7 +35,7 @@ import org.picocontainer.defaults.DefaultPicoContainer;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: CORBAObjectComponentAdapterTest.java,v 1.2 2006-02-25 14:21:45 alphonse.bendt Exp $
+ * @version $Id: CORBAObjectComponentAdapterTest.java,v 1.3 2011-05-10 15:40:42 nick.cross Exp $
  */
 public class CORBAObjectComponentAdapterTest extends TestCase
 {

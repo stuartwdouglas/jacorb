@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) The JacORB project, 1997-2006.
+ *   Copyright (C) Copyright (C) 2000-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -33,7 +33,7 @@ import java.security.cert.Certificate;
  * on to the external SSLListener.
  *
  * @author Nick Cross
- * @version $Id: SSLHandshakeListener.java,v 1.5 2009-09-08 12:35:08 alexander.bykov Exp $
+ * @version $Id: SSLHandshakeListener.java,v 1.6 2011-05-10 15:40:40 nick.cross Exp $
  */
 public class SSLHandshakeListener implements HandshakeCompletedListener
 {

@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -27,7 +27,7 @@ package org.jacorb.orb;
  * Created: Thu Jan 31 20:55:32 2002
  *
  * @author Nicolas Noffke
- * @version $Id: ImRAccess.java,v 1.7 2005-09-27 20:56:10 phil.mesnier Exp $
+ * @version $Id: ImRAccess.java,v 1.8 2011-05-10 15:40:40 nick.cross Exp $
  */
 
 public interface ImRAccess

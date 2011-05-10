@@ -3,7 +3,7 @@ package org.jacorb.orb.giop;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -54,7 +54,7 @@ import org.omg.TimeBase.UtcT;
 
 /**
  * @author Gerald Brose, FU Berlin 1999
- * @version $Id: RequestOutputStream.java,v 1.38 2009-12-14 16:27:29 nick.cross Exp $
+ * @version $Id: RequestOutputStream.java,v 1.39 2011-05-10 15:40:40 nick.cross Exp $
  */
 public class RequestOutputStream
     extends ServiceContextTransportingOutputStream

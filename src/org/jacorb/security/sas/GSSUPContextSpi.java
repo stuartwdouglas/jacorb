@@ -3,7 +3,7 @@ package org.jacorb.security.sas;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 2002-2004 Gerald Brose
+ *   Copyright (C) 2002-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -38,7 +38,7 @@ import sun.security.jgss.spi.GSSNameSpi;
  * This is the GSS-API Sercurity Provider Interface (SPI) for the GSSUP Context
  *
  * @author David Robison
- * @version $Id: GSSUPContextSpi.java,v 1.12 2009-12-14 16:27:29 nick.cross Exp $
+ * @version $Id: GSSUPContextSpi.java,v 1.13 2011-05-10 15:40:41 nick.cross Exp $
  */
 
 public final class GSSUPContextSpi

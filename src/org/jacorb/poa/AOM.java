@@ -3,7 +3,7 @@ package org.jacorb.poa;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -45,7 +45,7 @@ import org.slf4j.Logger;
  * The data can be retrieved using getServant() or getObjectId().
  *
  * @author Reimo Tiedemann, FU Berlin
- * @version $Id: AOM.java,v 1.40 2011-05-06 07:08:12 nick.cross Exp $
+ * @version $Id: AOM.java,v 1.41 2011-05-10 15:40:41 nick.cross Exp $
  */
 
 public class AOM

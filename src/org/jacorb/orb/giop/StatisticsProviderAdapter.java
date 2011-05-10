@@ -1,7 +1,7 @@
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 2006,2007  Gerald Brose.
+ *     Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -22,12 +22,12 @@
 package org.jacorb.orb.giop;
 
 /**
- * Class StatisticsProviderAdapter is responsible for managing 
- * the StatisticsProvider instances for collecting transport usage 
+ * Class StatisticsProviderAdapter is responsible for managing
+ * the StatisticsProvider instances for collecting transport usage
  * information.
  *
  * @author Iliyan Jeliazkov
- * @version $Id: StatisticsProviderAdapter.java,v 1.1 2007-02-06 18:16:49 andre.spiegel Exp $
+ * @version $Id: StatisticsProviderAdapter.java,v 1.2 2011-05-10 15:40:40 nick.cross Exp $
  */
 
 final class StatisticsProviderAdapter implements StatisticsProvider
@@ -52,10 +52,10 @@ final class StatisticsProviderAdapter implements StatisticsProvider
     {
         if (this.cardinality_ == cardinality)
             return this.head_;
-        
+
         if (this.tail_ == null)
             return null;
-        
+
         return this.tail_.find (cardinality);
     }
 

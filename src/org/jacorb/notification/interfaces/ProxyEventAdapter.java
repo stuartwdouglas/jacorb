@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -25,7 +25,7 @@ import org.omg.CosNotifyChannelAdmin.AdminLimitExceeded;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: ProxyEventAdapter.java,v 1.1 2006-01-10 23:00:48 alphonse.bendt Exp $
+ * @version $Id: ProxyEventAdapter.java,v 1.2 2011-05-10 15:40:39 nick.cross Exp $
  */
 public abstract class ProxyEventAdapter implements ProxyEventListener
 {

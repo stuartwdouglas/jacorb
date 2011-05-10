@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2006 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -40,7 +40,7 @@ import org.omg.RTCORBA.RTORBPackage.InvalidThreadpool;
  * Currently only used for the creation of ETF related policies.
  *
  * @author Steve Osselton
- * @version $Id: RTORB.java,v 1.2 2010-04-20 15:46:16 nick.cross Exp $
+ * @version $Id: RTORB.java,v 1.3 2011-05-10 15:40:40 nick.cross Exp $
  */
 public final class RTORB
    extends org.omg.RTCORBA._RTORBLocalBase

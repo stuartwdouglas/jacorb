@@ -33,7 +33,7 @@ import org.apache.log.Logger;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: Workgroup.java,v 1.1 2009-11-09 16:10:48 alexander.bykov Exp $ Workgroup.java,v 1.6 2004/04/28 12:37:27 brose Exp $
+ * @version $Id: Workgroup.java,v 1.2 2011-05-10 15:40:35 nick.cross Exp $ Workgroup.java,v 1.6 2004-04-28 12:37:27 brose Exp $
  */
 
 public class Workgroup

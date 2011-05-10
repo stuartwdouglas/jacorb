@@ -3,7 +3,7 @@ package org.jacorb.security.sas;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 2002-2004 Gerald Brose
+ *   Copyright (C) 2002-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -35,7 +35,7 @@ import sun.security.jgss.spi.MechanismFactory;
  * This is the GSS-API Sercurity Provider Interface (SPI) Facotry GSSUP GSSManager
  *
  * @author David Robison
- * @version $Id: GSSUPMechFactory.java,v 1.10 2004-05-07 13:08:29 david.robison Exp $
+ * @version $Id: GSSUPMechFactory.java,v 1.11 2011-05-10 15:40:41 nick.cross Exp $
  */
 
 public final class GSSUPMechFactory

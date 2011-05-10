@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) The JacORB project, 1997-2006.
+ *   Copyright (C) Copyright (C) 2000-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -28,7 +28,7 @@ import org.omg.CORBA.ORB;
  * Acceptor Exception events.
  *
  * @author Nick Cross
- * @version $Id: AcceptorExceptionEvent.java,v 1.2 2008-11-14 08:55:33 nick.cross Exp $
+ * @version $Id: AcceptorExceptionEvent.java,v 1.3 2011-05-10 15:40:40 nick.cross Exp $
  */
 public class AcceptorExceptionEvent extends EventObject
 {

@@ -3,7 +3,7 @@ package org.jacorb.test.orb;
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2005  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -31,7 +31,7 @@ import org.jacorb.test.*;
 /**
  * Tests the configuration option jacorb.iiop.alternate_addresses.
  * @author Andre Spiegel <spiegel@gnu.org>
- * @version $Id: AlternateIIOPAddressConfigTest.java,v 1.1 2009-03-03 18:44:06 andre.spiegel Exp $
+ * @version $Id: AlternateIIOPAddressConfigTest.java,v 1.2 2011-05-10 15:40:43 nick.cross Exp $
  */
 public class AlternateIIOPAddressConfigTest extends ClientServerTestCase
 {

@@ -3,7 +3,7 @@ package org.jacorb.test.notification.perf;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2003 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -34,7 +34,7 @@ import org.omg.PortableServer.POAHelper;
  * Created: Mon Apr  7 15:38:18 2003
  *
  * @author Alphonse Bendt
- * @version $Id: EchoServerImpl.java,v 1.3 2005-08-21 13:36:18 alphonse.bendt Exp $
+ * @version $Id: EchoServerImpl.java,v 1.4 2011-05-10 15:40:43 nick.cross Exp $
  */
 
 public class EchoServerImpl extends EchoServerPOA

@@ -3,7 +3,7 @@ package org.jacorb.test.orb.rmi;
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2003  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -41,7 +41,7 @@ import org.jacorb.test.orb.rmi.Outer.StaticInner;
  * @see JacORBJacORBRMITest
  * @see JacORBSunRMITest
  *
- * @version $Id: AbstractRMITestCase.java,v 1.1 2009-09-03 12:49:16 alexander.bykov Exp $
+ * @version $Id: AbstractRMITestCase.java,v 1.2 2011-05-10 15:40:43 nick.cross Exp $
  */
 public abstract class AbstractRMITestCase extends ClientServerTestCase
 {

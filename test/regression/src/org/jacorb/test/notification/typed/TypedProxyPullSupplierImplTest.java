@@ -3,7 +3,7 @@ package org.jacorb.test.notification.typed;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2003  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -46,7 +46,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: TypedProxyPullSupplierImplTest.java,v 1.9 2009-10-29 11:31:02 nick.cross Exp $
+ * @version $Id: TypedProxyPullSupplierImplTest.java,v 1.10 2011-05-10 15:40:43 nick.cross Exp $
  */
 public class TypedProxyPullSupplierImplTest extends NotificationTestCase
 {

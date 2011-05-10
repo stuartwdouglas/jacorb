@@ -3,7 +3,7 @@ package org.jacorb.test.bugs.bug387;
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2003  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -31,7 +31,7 @@ import org.jacorb.test.common.TestUtils;
  * Tests marshaling of value box instances within structs within anys.
  * 
  * @author <a href="mailto:spiegel@gnu.org">Andre Spiegel</a>
- * @version $Id: Bug387Test.java,v 1.3 2010-01-16 16:24:11 alexander.bykov Exp $
+ * @version $Id: Bug387Test.java,v 1.4 2011-05-10 15:40:41 nick.cross Exp $
  */
 public class Bug387Test extends ClientServerTestCase
 {

@@ -3,7 +3,7 @@ package org.jacorb.test.bugs.bug384;
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2003  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -34,7 +34,7 @@ import org.omg.PortableServer.POA;
  * results for both local and non-local objects.
  *
  * @author Gerald Brose
- * @version $Id: Bug384Test.java,v 1.2 2010-01-16 16:24:11 alexander.bykov Exp $
+ * @version $Id: Bug384Test.java,v 1.3 2011-05-10 15:40:41 nick.cross Exp $
  */
 
 public class Bug384Test

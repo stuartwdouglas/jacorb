@@ -3,7 +3,7 @@ package org.jacorb.security.ssl.sun_jsse;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 2000-2006 Gerald Brose
+ *   Copyright (C) 2000-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -27,7 +27,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Nick Cross
- * @version $Id: SSLRandom.java,v 1.4 2009-05-03 21:36:48 andre.spiegel Exp $
+ * @version $Id: SSLRandom.java,v 1.5 2011-05-10 15:40:41 nick.cross Exp $
  */
 public class SSLRandom implements Configurable
 {

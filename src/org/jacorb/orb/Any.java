@@ -3,7 +3,7 @@ package org.jacorb.orb;
 /*
  *        JacORB - the free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -51,7 +51,7 @@ import org.omg.CORBA_2_3.portable.OutputStream;
  * CORBA any
  *
  * @author Gerald Brose
- * $Id: Any.java,v 1.63 2011-05-10 13:02:57 nick.cross Exp $
+ * $Id: Any.java,v 1.64 2011-05-10 15:40:39 nick.cross Exp $
  */
 
 public final class Any

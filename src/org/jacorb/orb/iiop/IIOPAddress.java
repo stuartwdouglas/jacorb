@@ -3,7 +3,7 @@ package org.jacorb.orb.iiop;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -31,7 +31,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Andre Spiegel, Phil Mesnier
- * @version $Id: IIOPAddress.java,v 1.22 2011-03-30 08:57:21 alexander.bykov Exp $
+ * @version $Id: IIOPAddress.java,v 1.23 2011-05-10 15:40:40 nick.cross Exp $
  */
 public class IIOPAddress
     extends ProtocolAddressBase

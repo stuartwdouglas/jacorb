@@ -3,7 +3,7 @@ package org.jacorb.naming.namemanager;
 /*
  * JacORB - a free Java ORB
  *
- * Copyright (C) 1997-2004 Gerald Brose.
+ * Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  * This library is free software; you can redistribute it and/or modify it under
  * the terms of the GNU Library General Public License as published by the Free
@@ -36,7 +36,7 @@ import org.omg.CosNaming.NamingContextExtHelper;
 
 /**
  * @author Gerald Brose, FU Berlin
- * @version $Id: ContextNode.java,v 1.18 2011-01-13 14:24:32 nick.cross Exp $
+ * @version $Id: ContextNode.java,v 1.19 2011-05-10 15:40:37 nick.cross Exp $
  */
 
 public class ContextNode

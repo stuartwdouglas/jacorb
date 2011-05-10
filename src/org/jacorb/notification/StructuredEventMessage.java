@@ -3,7 +3,7 @@ package org.jacorb.notification;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -51,7 +51,7 @@ import org.omg.TimeBase.UtcTHelper;
  * Adapts a StructuredEvent to the Message Interface.
  *
  * @author Alphonse Bendt
- * @version $Id: StructuredEventMessage.java,v 1.23 2006-07-03 12:51:42 alphonse.bendt Exp $
+ * @version $Id: StructuredEventMessage.java,v 1.24 2011-05-10 15:40:38 nick.cross Exp $
  */
 
 public class StructuredEventMessage extends AbstractMessage

@@ -3,7 +3,7 @@ package org.jacorb.notification;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -29,7 +29,7 @@ import org.tanukisoftware.wrapper.WrapperManager;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: WrapperMain.java,v 1.4 2005-10-27 21:35:35 alphonse.bendt Exp $
+ * @version $Id: WrapperMain.java,v 1.5 2011-05-10 15:40:38 nick.cross Exp $
  */
 
 public class WrapperMain implements WrapperListener

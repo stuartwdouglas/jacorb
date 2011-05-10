@@ -3,7 +3,7 @@ package org.jacorb.idl;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -24,7 +24,7 @@ import java.util.Enumeration;
 
 /**
  * @author Gerald Brose
- * @version $Id: Case.java,v 1.19 2010-11-29 13:47:03 alexander.bykov Exp $
+ * @version $Id: Case.java,v 1.20 2011-05-10 15:40:36 nick.cross Exp $
  */
 
 public class Case

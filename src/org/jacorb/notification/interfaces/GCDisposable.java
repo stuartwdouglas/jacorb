@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -23,7 +23,7 @@ package org.jacorb.notification.interfaces;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: GCDisposable.java,v 1.2 2005-08-21 13:30:01 alphonse.bendt Exp $
+ * @version $Id: GCDisposable.java,v 1.3 2011-05-10 15:40:39 nick.cross Exp $
  */
 public interface GCDisposable extends NotifyingDisposable
 {

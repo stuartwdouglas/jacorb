@@ -3,7 +3,7 @@ package org.jacorb.notification.filter.bsh;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2003  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -49,7 +49,7 @@ import bsh.Interpreter;
  * <code>jacorb.notification.filter.plugin.BSH=org.jacorb.notification.filter.bsh.BSHFilter</code>
  * 
  * @author Alphonse Bendt
- * @version $Id: BSHFilter.java,v 1.7 2009-04-25 10:08:51 andre.spiegel Exp $
+ * @version $Id: BSHFilter.java,v 1.8 2011-05-10 15:40:38 nick.cross Exp $
  */
 public class BSHFilter extends AbstractFilter
 {

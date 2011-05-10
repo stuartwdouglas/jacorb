@@ -3,7 +3,7 @@ package org.jacorb.idl;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -28,7 +28,7 @@ import java.util.Set;
 
 /**
  * @author Gerald Brose
- * @version $Id: ValueBoxDecl.java,v 1.38 2011-04-11 15:59:57 nick.cross Exp $
+ * @version $Id: ValueBoxDecl.java,v 1.39 2011-05-10 15:40:36 nick.cross Exp $
  */
 
 public class ValueBoxDecl

@@ -1,7 +1,7 @@
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2006 The JacORB project.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -28,7 +28,7 @@ import org.jacorb.idl.TypeDeclaration;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: BugJac144ObjectCachePlugin.java,v 1.1 2009-11-12 10:52:25 alexander.bykov Exp $
+ * @version $Id: BugJac144ObjectCachePlugin.java,v 1.2 2011-05-10 15:40:42 nick.cross Exp $
  */
 public class BugJac144ObjectCachePlugin implements ObjectCachePlugin
 {

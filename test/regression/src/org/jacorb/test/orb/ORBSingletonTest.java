@@ -3,7 +3,7 @@ package org.jacorb.test.orb;
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2001  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -29,7 +29,7 @@ import org.jacorb.test.common.*;
  * A very simple test that checks whether some methods in the singleton ORB
  * are correctly flagged as forbidden (NO_IMPLEMENT).
  * @author Andre Spiegel spiegel@gnu.org
- * @version $Id: ORBSingletonTest.java,v 1.1 2006-09-03 18:31:23 andre.spiegel Exp $
+ * @version $Id: ORBSingletonTest.java,v 1.2 2011-05-10 15:40:43 nick.cross Exp $
  */
 public class ORBSingletonTest extends JacORBTestCase
 {

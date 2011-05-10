@@ -3,7 +3,7 @@ package org.jacorb.notification.util;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -26,7 +26,7 @@ package org.jacorb.notification.util;
  * This is a Wrapper around a PatternMatcher.
  *
  * @author Alphonse Bendt
- * @version $Id: PatternWrapper.java,v 1.13 2006-11-24 14:14:48 alphonse.bendt Exp $
+ * @version $Id: PatternWrapper.java,v 1.14 2011-05-10 15:40:39 nick.cross Exp $
  */
 
 public abstract class PatternWrapper

@@ -3,7 +3,7 @@ package org.jacorb.imr;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -29,7 +29,7 @@ package org.jacorb.imr;
  *
  * @author Nicolas Noffke
  * 
- * $Id: ResourceLock.java,v 1.3 2004-05-06 12:39:59 nicolas Exp $
+ * $Id: ResourceLock.java,v 1.4 2011-05-10 15:40:36 nick.cross Exp $
  *
  */
 

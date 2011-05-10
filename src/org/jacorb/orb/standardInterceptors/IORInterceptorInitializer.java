@@ -3,7 +3,7 @@ package org.jacorb.orb.standardInterceptors;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -33,7 +33,7 @@ import org.omg.PortableInterceptor.ORBInitializer;
  * used by JacORB.
  *
  * @author Nicolas Noffke
- * @version $Id: IORInterceptorInitializer.java,v 1.23 2009-05-03 21:35:56 andre.spiegel Exp $
+ * @version $Id: IORInterceptorInitializer.java,v 1.24 2011-05-10 15:40:41 nick.cross Exp $
  */
 
 public class IORInterceptorInitializer

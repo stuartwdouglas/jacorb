@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -24,7 +24,7 @@ import org.jacorb.config.*;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: ClientGIOPConnection.java,v 1.22 2011-05-05 12:26:15 nick.cross Exp $
+ * @version $Id: ClientGIOPConnection.java,v 1.23 2011-05-10 15:40:40 nick.cross Exp $
  */
 public class ClientGIOPConnection
     extends GIOPConnection

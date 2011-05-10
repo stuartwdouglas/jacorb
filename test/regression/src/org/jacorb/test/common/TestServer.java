@@ -3,7 +3,7 @@ package org.jacorb.test.common;
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2002  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -46,7 +46,7 @@ import org.omg.PortableServer.*;
  * example).
  * <p>
  * @author Andre Spiegel <spiegel@gnu.org>
- * @version $Id: TestServer.java,v 1.16 2010-11-01 16:49:09 alexander.bykov Exp $
+ * @version $Id: TestServer.java,v 1.17 2011-05-10 15:40:42 nick.cross Exp $
  */
 public class TestServer
 {

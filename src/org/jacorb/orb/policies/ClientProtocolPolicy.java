@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2003 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -27,7 +27,7 @@ import org.omg.RTCORBA._ClientProtocolPolicyLocalBase;
 
 /**
  * @author Steve Osselton
- * @version $Id: ClientProtocolPolicy.java,v 1.3 2008-11-14 08:55:33 nick.cross Exp $
+ * @version $Id: ClientProtocolPolicy.java,v 1.4 2011-05-10 15:40:40 nick.cross Exp $
  */
 public class ClientProtocolPolicy extends _ClientProtocolPolicyLocalBase
 {

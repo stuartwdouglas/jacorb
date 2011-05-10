@@ -1,7 +1,7 @@
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2006 The JacORB project.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -32,7 +32,7 @@ import junit.framework.TestCase;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: ObjectUtilTest.java,v 1.1 2006-11-30 13:13:11 alphonse.bendt Exp $
+ * @version $Id: ObjectUtilTest.java,v 1.2 2011-05-10 15:40:43 nick.cross Exp $
  */
 public class ObjectUtilTest extends TestCase
 {

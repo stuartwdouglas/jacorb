@@ -3,7 +3,7 @@ package org.jacorb.test.notification.engine;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2003  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -29,7 +29,7 @@ import org.jacorb.notification.interfaces.Message;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: PushOperationTest.java,v 1.8 2006-02-25 14:21:30 alphonse.bendt Exp $
+ * @version $Id: PushOperationTest.java,v 1.9 2011-05-10 15:40:43 nick.cross Exp $
  */
 public class PushOperationTest extends TestCase
 {

@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -37,7 +37,7 @@ import org.omg.PortableInterceptor.ServerRequestInterceptor;
  * with the ORB, and controls the PICurrent.
  *
  * @author Nicolas Noffke
- * @version $Id: InterceptorManager.java,v 1.24 2009-05-03 21:35:56 andre.spiegel Exp $
+ * @version $Id: InterceptorManager.java,v 1.25 2011-05-10 15:40:41 nick.cross Exp $
  */
 
 public class InterceptorManager

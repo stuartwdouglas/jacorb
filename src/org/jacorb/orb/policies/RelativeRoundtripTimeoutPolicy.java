@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -30,7 +30,7 @@ import org.omg.Messaging._RelativeRoundtripTimeoutPolicyLocalBase;
  * and the reply delivered back to the client.
  * 
  * @author Andre Spiegel spiegel@gnu.org
- * @version $Id: RelativeRoundtripTimeoutPolicy.java,v 1.8 2008-11-14 08:55:34 nick.cross Exp $
+ * @version $Id: RelativeRoundtripTimeoutPolicy.java,v 1.9 2011-05-10 15:40:40 nick.cross Exp $
  */
 public class RelativeRoundtripTimeoutPolicy
     extends _RelativeRoundtripTimeoutPolicyLocalBase

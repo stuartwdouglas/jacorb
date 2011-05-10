@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -52,7 +52,7 @@ import org.omg.CORBA.ORB;
  * @jboss.xmbean
  *
  * @author Alphonse Bendt
- * @version $Id: JBossCOSNotificationService.java,v 1.5 2008-09-22 14:37:11 alphonse.bendt Exp $
+ * @version $Id: JBossCOSNotificationService.java,v 1.6 2011-05-10 15:40:39 nick.cross Exp $
  */
 public class JBossCOSNotificationService extends ServiceMBeanSupport implements
         JBossCOSNotificationServiceMBean, ObjectFactory

@@ -3,7 +3,7 @@ package org.jacorb.notification.engine;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2003 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -46,7 +46,7 @@ import java.util.concurrent.TimeUnit;
  * @jboss.xmbean
  *
  * @author Alphonse Bendt
- * @version $Id: DefaultTaskProcessor.java,v 1.17 2009-10-29 11:31:01 nick.cross Exp $
+ * @version $Id: DefaultTaskProcessor.java,v 1.18 2011-05-10 15:40:38 nick.cross Exp $
  */
 
 public class DefaultTaskProcessor implements TaskProcessor, Disposable, JMXManageable, DefaultTaskProcessorMBean

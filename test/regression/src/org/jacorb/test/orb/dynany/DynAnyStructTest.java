@@ -3,7 +3,7 @@ package org.jacorb.test.orb.dynany;
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2001  Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -34,7 +34,7 @@ import org.omg.DynamicAny.NameValuePair;
  * DynAny tests for struct types.
  *
  * @author Gerald Brose
- * @version $Id: DynAnyStructTest.java,v 1.6 2006-11-27 14:45:18 alphonse.bendt Exp $
+ * @version $Id: DynAnyStructTest.java,v 1.7 2011-05-10 15:40:43 nick.cross Exp $
  */
 
 public class DynAnyStructTest extends DynAnyXXXTestCase

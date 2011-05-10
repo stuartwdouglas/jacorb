@@ -3,7 +3,7 @@ package org.jacorb.config;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2009 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -24,7 +24,7 @@ package org.jacorb.config;
  * Used to report errors in the JacORB configuration, such as missing
  * attributes or illegal attribute values.
  * @author Andre Spiegel <spiegel@gnu.org>
- * @version $Id: ConfigurationException.java,v 1.1 2009-04-25 10:01:23 andre.spiegel Exp $
+ * @version $Id: ConfigurationException.java,v 1.2 2011-05-10 15:40:35 nick.cross Exp $
  */
 public class ConfigurationException extends RuntimeException
 {

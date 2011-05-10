@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -36,7 +36,7 @@ import org.jacorb.imr.UnknownServerName;
  *
  * @author Nicolas Noffke
  *
- * $Id: ImRManager.java,v 1.14 2009-05-03 21:33:38 andre.spiegel Exp $
+ * $Id: ImRManager.java,v 1.15 2011-05-10 15:40:37 nick.cross Exp $
  */
 
 public class ImRManager

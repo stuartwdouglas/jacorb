@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -64,7 +64,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Gerald Brose
- * @version $Id: PrintIOR.java,v 1.58 2010-10-22 10:22:47 nick.cross Exp $
+ * @version $Id: PrintIOR.java,v 1.59 2011-05-10 15:40:41 nick.cross Exp $
  */
 
 public class PrintIOR

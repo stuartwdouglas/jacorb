@@ -3,7 +3,7 @@ package org.jacorb.util;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 2002-2004 Gerald Brose
+ *   Copyright (C) 2002-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -30,7 +30,7 @@ import org.omg.TimeBase.UtcTHelper;
  * Contains static methods to handle CORBA time values.
  *
  * @author Andre Spiegel <spiegel@gnu.org>
- * @version $Id: Time.java,v 1.13 2009-08-12 14:22:31 alexander.bykov Exp $
+ * @version $Id: Time.java,v 1.14 2011-05-10 15:40:41 nick.cross Exp $
  */
 public class Time
 {

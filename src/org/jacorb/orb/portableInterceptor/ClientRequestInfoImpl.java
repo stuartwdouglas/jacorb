@@ -1,7 +1,7 @@
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -53,7 +53,7 @@ import org.slf4j.Logger;
  * See PI Spec p.5-46ff
  *
  * @author Nicolas Noffke
- * @version $Id: ClientRequestInfoImpl.java,v 1.39 2011-05-10 13:02:58 nick.cross Exp $
+ * @version $Id: ClientRequestInfoImpl.java,v 1.40 2011-05-10 15:40:40 nick.cross Exp $
  */
 
 public class ClientRequestInfoImpl

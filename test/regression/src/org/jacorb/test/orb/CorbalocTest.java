@@ -3,7 +3,7 @@ package org.jacorb.test.orb;
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 2006  Gerald Brose.
+ *   Copyright (C) 2000-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -32,7 +32,7 @@ import org.jacorb.test.*;
  * via corbaloc URLs.  Other functions related to corbaloc are also
  * tested here.
  * @author Andre Spiegel spiegel@gnu.org
- * @version $Id: CorbalocTest.java,v 1.3 2008-11-13 15:51:08 nick.cross Exp $
+ * @version $Id: CorbalocTest.java,v 1.4 2011-05-10 15:40:43 nick.cross Exp $
  */
 public class CorbalocTest extends ClientServerTestCase
 {

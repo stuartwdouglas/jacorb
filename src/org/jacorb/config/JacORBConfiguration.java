@@ -3,7 +3,7 @@ package org.jacorb.config;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1997-2004 Gerald Brose.
+ *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -38,7 +38,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Gerald Brose
- * @version $Id: JacORBConfiguration.java,v 1.40 2011-05-06 15:02:27 alexander.bykov Exp $
+ * @version $Id: JacORBConfiguration.java,v 1.41 2011-05-10 15:40:35 nick.cross Exp $
  */
 public class JacORBConfiguration implements Configuration
 {

@@ -3,7 +3,7 @@ package org.jacorb.notification.interfaces;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 1999-2004 Gerald Brose
+ *   Copyright (C) 1999-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -26,7 +26,7 @@ package org.jacorb.notification.interfaces;
  *
  *
  * @author Alphonse Bendt
- * @version $Id: EventChannelEventListener.java,v 1.2 2004-05-06 12:39:59 nicolas Exp $
+ * @version $Id: EventChannelEventListener.java,v 1.3 2011-05-10 15:40:39 nick.cross Exp $
  */
 
 public interface EventChannelEventListener 
