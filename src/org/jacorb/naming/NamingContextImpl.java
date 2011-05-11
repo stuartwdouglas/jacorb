@@ -51,7 +51,7 @@ import org.slf4j.Logger;
  *      The implementation for the CORBAService Naming
  *
  *      @author Gerald Brose
- *      @version $Id: NamingContextImpl.java,v 1.36 2011-05-10 15:40:37 nick.cross Exp $
+ *      @version $Id: NamingContextImpl.java,v 1.37 2011-05-11 13:54:13 nick.cross Exp $
  */
 
 public class NamingContextImpl
@@ -560,8 +560,7 @@ public class NamingContextImpl
             NamingContextExt next_context =
                 NamingContextExtHelper.narrow((org.omg.CORBA.Object)contexts.get(n));
 
-
-            if ((next_context == null)||(isDead(next_context)))
+            if ((next_context == null))
             {
                 throw new NotFound(NotFoundReason.missing_node,nc);
             }
@@ -799,7 +798,13 @@ public class NamingContextImpl
         try
         {
             non_exist = o._non_existent();
-        } catch (org.omg.CORBA.SystemException e)
+            // Code added to release the reference.
+            if(!non_exist)
+            {
+               o._release();
+            }
+        }
+        catch (org.omg.CORBA.SystemException e)
         {
             non_exist = true;
         }

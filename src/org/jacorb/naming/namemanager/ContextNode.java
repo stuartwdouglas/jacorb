@@ -30,13 +30,13 @@ import org.omg.CosNaming.BindingIteratorHolder;
 import org.omg.CosNaming.BindingListHolder;
 import org.omg.CosNaming.BindingType;
 import org.omg.CosNaming.NameComponent;
-import org.omg.CosNaming.NamingContextExt;
-import org.omg.CosNaming.NamingContextExtHelper;
+import org.omg.CosNaming.NamingContext;
+import org.omg.CosNaming.NamingContextHelper;
 
 
 /**
  * @author Gerald Brose, FU Berlin
- * @version $Id: ContextNode.java,v 1.19 2011-05-10 15:40:37 nick.cross Exp $
+ * @version $Id: ContextNode.java,v 1.20 2011-05-11 13:54:13 nick.cross Exp $
  */
 
 public class ContextNode
@@ -47,7 +47,7 @@ public class ContextNode
 
    public boolean                 used;
 
-   public NamingContextExt        context;
+   public NamingContext           context;
 
    private DefaultMutableTreeNode myDefaultNode;
 
@@ -60,7 +60,7 @@ public class ContextNode
    private String                 myName;
 
 
-   public ContextNode (NamingContextExt context, DefaultTreeModel model)
+   public ContextNode (NamingContext context, DefaultTreeModel model)
    {
       used = false;
       this.model = model;
@@ -68,7 +68,7 @@ public class ContextNode
    }
 
 
-   public ContextNode (NamingContextExt context, Binding b, DefaultTreeModel model)
+   public ContextNode (NamingContext context, Binding b, DefaultTreeModel model)
    {
       used = false;
       this.model = model;
@@ -178,7 +178,7 @@ public class ContextNode
          {
             if (bindings[i].binding_type == BindingType.ncontext)
                contexts[--context_count] = new ContextNode (
-                        NamingContextExtHelper.narrow (context.resolve (bindings[i].binding_name)),
+                        NamingContextHelper.narrow (context.resolve (bindings[i].binding_name)),
                         bindings[i], model);
             else
                objects[--object_count] = bindings[i];
