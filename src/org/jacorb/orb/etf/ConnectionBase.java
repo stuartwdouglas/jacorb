@@ -23,7 +23,6 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-
 import org.jacorb.config.Configurable;
 import org.jacorb.config.Configuration;
 import org.jacorb.config.ConfigurationException;
@@ -35,7 +34,7 @@ import org.slf4j.Logger;
  *
  * @author Nicolas Noffke
  * @author Andre Spiegel
- * @version $Id: ConnectionBase.java,v 1.9 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: ConnectionBase.java,v 1.10 2011-05-12 12:56:52 nick.cross Exp $
  */
 
 public abstract class ConnectionBase
@@ -65,7 +64,7 @@ public abstract class ConnectionBase
 
     /** shared with sub classes */
     protected Logger logger;
-    protected org.jacorb.config.Configuration configuration;
+    protected Configuration configuration;
     protected String connection_info;
     protected ORB orb;
 

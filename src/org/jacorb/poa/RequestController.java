@@ -21,9 +21,11 @@ package org.jacorb.poa;
  */
 
 import java.util.HashSet;
-import org.jacorb.config.*;
-import org.slf4j.Logger;
+import org.jacorb.config.Configurable;
+import org.jacorb.config.Configuration;
+import org.jacorb.config.ConfigurationException;
 import org.jacorb.orb.dsi.ServerRequest;
+import org.jacorb.orb.util.CorbaLoc;
 import org.jacorb.poa.except.CompletionRequestedException;
 import org.jacorb.poa.except.ResourceLimitReachedException;
 import org.jacorb.poa.except.ShutdownInProgressException;
@@ -31,13 +33,14 @@ import org.jacorb.poa.util.ByteArrayKey;
 import org.jacorb.poa.util.POAUtil;
 import org.omg.PortableServer.Servant;
 import org.omg.PortableServer.ServantManager;
+import org.slf4j.Logger;
 
 /**
  * This class manages all request processing affairs. The main thread takes the
  * requests out from the queue and will see that the necessary steps are taken.
  *
  * @author Reimo Tiedemann
- * @version $Id: RequestController.java,v 1.42 2011-05-10 15:40:41 nick.cross Exp $
+ * @version $Id: RequestController.java,v 1.43 2011-05-12 12:56:52 nick.cross Exp $
  */
 
 public final class RequestController
@@ -264,6 +267,7 @@ public final class RequestController
                     {
                         logger.info("rid: " + request.requestId() +
                                     " opname: " + request.operation() +
+                                    " objectKey: " + CorbaLoc.parseKey (request.objectKey ()) +
                                     " cannot process request, because object is already in the deactivation process");
                     }
 
@@ -314,9 +318,11 @@ public final class RequestController
                 {
                     if (logger.isWarnEnabled())
                     {
-                        logger.warn("rid: " + request.requestId() +
-                                    " opname: " + request.operation() +
-                                    " cannot process request, because object doesn't exist");
+                       logger.warn("rid: " + request.requestId() +
+                                   " opname: " + request.operation() +
+                                   " connection: " + request.getConnection ().toString () +
+                                   " objectKey: " + CorbaLoc.parseKey (request.objectKey ()) +
+                                   " cannot process request, because object doesn't exist");
                     }
                     throw new org.omg.CORBA.OBJECT_NOT_EXIST();
                 }
