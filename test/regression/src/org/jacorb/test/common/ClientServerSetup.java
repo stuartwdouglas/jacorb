@@ -75,7 +75,7 @@ import org.omg.PortableServer.POA;
  * For details, see {@link ClientServerTestCase}.
  *
  * @author Andre Spiegel <spiegel@gnu.org>
- * @version $Id: ClientServerSetup.java,v 1.44 2011-05-10 15:40:42 nick.cross Exp $
+ * @version $Id: ClientServerSetup.java,v 1.45 2011-05-12 12:58:51 alexander.bykov Exp $
  */
 public class ClientServerSetup extends TestSetup {
 
@@ -336,5 +336,15 @@ public class ClientServerSetup extends TestSetup {
     public boolean isSSLEnabled()
     {
         return clientORBSetup.isSSLEnabled() && serverSetup.isSSLEnabled();
+    }
+
+    public void patchServerPropertires (Properties serverProperties)
+    {
+        serverSetup.patchServerProperties (serverProperties);
+    }
+
+    public void patchClientPropertires (Properties clientProperties)
+    {
+        clientORBSetup.patchORBProperties (clientProperties);
     }
 }

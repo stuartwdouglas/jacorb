@@ -37,7 +37,7 @@ import org.jacorb.test.common.launch.Launcher;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: ServerSetup.java,v 1.8 2011-05-10 15:40:42 nick.cross Exp $
+ * @version $Id: ServerSetup.java,v 1.9 2011-05-12 12:58:51 alexander.bykov Exp $
  */
 public class ServerSetup extends TestSetup
 {
@@ -323,5 +323,13 @@ public class ServerSetup extends TestSetup
         details.append(outListener.toString());
         details.append(errListener.toString());
         return details.toString();
+    }
+
+    public void patchServerProperties (Properties serverProperties)
+    {
+        if (serverProperties != null && serverProperties.size () > 0)
+        {
+            serverOrbProperties.putAll (serverProperties);
+        }
     }
 }

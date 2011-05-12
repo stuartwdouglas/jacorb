@@ -33,7 +33,7 @@ import org.omg.PortableServer.POAHelper;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: ORBSetup.java,v 1.5 2011-05-10 15:40:42 nick.cross Exp $
+ * @version $Id: ORBSetup.java,v 1.6 2011-05-12 12:58:51 alexander.bykov Exp $
  */
 public class ORBSetup extends TestSetup
 {
@@ -124,5 +124,13 @@ public class ORBSetup extends TestSetup
     private boolean isPropertySet(String property)
     {
         return TestUtils.getStringAsBoolean(orbProps.getProperty(property, "false"));
+    }
+
+    public void patchORBProperties (Properties clientProperties)
+    {
+        if (clientProperties != null && clientProperties.size () > 0)
+        {
+            orbProps.putAll (clientProperties);
+        }
     }
 }
