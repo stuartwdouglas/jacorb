@@ -3,7 +3,7 @@ package org.jacorb.orb.factory;
 /*
  *        Written for JacORB - a free Java ORB
  *
- *   Copyright (C) 2000-2003 Nicolas Noffke, Gerald Brose.
+ *   Copyright (C) 2000-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -35,7 +35,7 @@ import org.jacorb.config.*;
  * and use the specified value to configure the sockets it creates.
  *
  * @author Nicolas Noffke
- * @version $Id: FixedAddressSocketFactory.java,v 1.8 2009-04-25 10:10:35 andre.spiegel Exp $
+ * @version $Id: FixedAddressSocketFactory.java,v 1.9 2011-05-13 09:24:32 nick.cross Exp $
  */
 public class FixedAddressSocketFactory extends AbstractSocketFactory
 {

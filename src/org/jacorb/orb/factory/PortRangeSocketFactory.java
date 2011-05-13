@@ -3,7 +3,7 @@ package org.jacorb.orb.factory;
 /*
  *        Written for JacORB - a free Java ORB
  *
- *   Copyright (C) 2000-2004 Nicolas Noffke, Gerald Brose.
+ *   Copyright (C) 2000-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -41,7 +41,7 @@ import org.omg.CORBA.TIMEOUT;
  * values to configure the created sockets.
  *
  * @author Steve Osselton
- * @version $Id: PortRangeSocketFactory.java,v 1.17 2009-11-24 17:32:29 alexander.bykov Exp $
+ * @version $Id: PortRangeSocketFactory.java,v 1.18 2011-05-13 09:24:32 nick.cross Exp $
  */
 public class PortRangeSocketFactory
     extends AbstractSocketFactory

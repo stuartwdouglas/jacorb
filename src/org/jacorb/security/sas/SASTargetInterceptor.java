@@ -3,7 +3,7 @@ package org.jacorb.security.sas;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 2000-2004 Nicolas Noffke, Gerald Brose.
+ *   Copyright (C) 2000-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -59,7 +59,7 @@ import org.omg.PortableInterceptor.ServerRequestInterceptor;
  * This is the SAS Target Security Service (TSS) Interceptor
  *
  * @author David Robison
- * @version $Id: SASTargetInterceptor.java,v 1.31 2011-01-19 11:05:34 nick.cross Exp $
+ * @version $Id: SASTargetInterceptor.java,v 1.32 2011-05-13 09:24:32 nick.cross Exp $
  */
 
 public class SASTargetInterceptor

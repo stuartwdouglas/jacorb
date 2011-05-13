@@ -3,7 +3,7 @@ package org.jacorb.security.ssl.sun_jsse;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 2000-2004 Nicolas Noffke, Gerald Brose.
+ *   Copyright (C) 2000-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -41,7 +41,7 @@ import org.omg.Security.ExtensibleFamily;
 
 /**
  * @author Nicolas Noffke
- * $Id: ServerInvocationInterceptor.java,v 1.17 2011-05-09 14:36:07 nick.cross Exp $
+ * $Id: ServerInvocationInterceptor.java,v 1.18 2011-05-13 09:24:32 nick.cross Exp $
  */
 
 public class ServerInvocationInterceptor

@@ -3,7 +3,7 @@ package org.jacorb.orb.factory;
 /*
  *        Written for JacORB - a free Java ORB
  *
- *   Copyright (C) 2000-2004 Nicolas Noffke, Gerald Brose.
+ *   Copyright (C) 2000-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -48,7 +48,7 @@ import org.omg.CORBA.TIMEOUT;
  * for an outgoing connection.
  *
  * @author Gerald Brose
- * @version $Id: SocketFactory.java,v 1.10 2009-04-07 16:07:28 alexander.bykov Exp $
+ * @version $Id: SocketFactory.java,v 1.11 2011-05-13 09:24:32 nick.cross Exp $
  */
 
 public interface SocketFactory

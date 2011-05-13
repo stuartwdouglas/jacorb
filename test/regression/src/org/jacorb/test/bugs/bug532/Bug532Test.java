@@ -31,7 +31,7 @@ import org.omg.CORBA.ORB;
  * could not insert into an Any a byte[] of size larger than 4000 bytes.
  *
  * @author <a href="mailto:dimitris@jboss.org">Dimitris Andreadis</a>
- * @version $Id: Bug532Test.java,v 1.3 2011-05-10 15:40:41 nick.cross Exp $
+ * @version $Id: Bug532Test.java,v 1.4 2011-05-13 09:24:32 nick.cross Exp $
  */
 public class Bug532Test extends ORBTestCase
 {

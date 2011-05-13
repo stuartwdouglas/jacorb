@@ -3,7 +3,7 @@ package org.jacorb.orb.factory;
 /*
  *        Written for JacORB - a free Java ORB
  *
- *   Copyright (C) 2000-2004 Nicolas Noffke, Gerald Brose.
+ *   Copyright (C) 2000-2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -34,7 +34,7 @@ import org.jacorb.util.ObjectUtil;
 
 /**
  * @author Steve Osselton
- * @version $Id: SocketFactoryManager.java,v 1.23 2009-06-02 13:40:35 alexander.bykov Exp $
+ * @version $Id: SocketFactoryManager.java,v 1.24 2011-05-13 09:24:32 nick.cross Exp $
  */
 public class SocketFactoryManager
     implements Configurable
