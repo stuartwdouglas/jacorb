@@ -28,7 +28,7 @@ import java.util.Set;
 
 /**
  * @author Gerald Brose
- * @version $Id: UnionType.java,v 1.80 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: UnionType.java,v 1.81 2011-06-06 12:26:37 nick.cross Exp $
  */
 public class UnionType
     extends TypeDeclaration
@@ -785,11 +785,11 @@ public class UnionType
         }
         else
         {
-            pw.println ("\t\t" + switch_type_spec.typeSpec().printWriteStatement("discriminator ", "out"));
             if (switch_is_bool)
             {
                 /* special case: booleans are no switch type in java */
                 case_str = "if (discriminator  ==";
+                colon_str = ")";
                 // colon_str and default_str are already set correctly
             }
             else if (switch_is_longlong)
