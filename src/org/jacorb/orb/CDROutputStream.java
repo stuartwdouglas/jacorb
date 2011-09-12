@@ -55,7 +55,7 @@ import org.omg.IOP.TaggedProfile;
 
 /**
  * @author Gerald Brose,  1999
- * @version $Id: CDROutputStream.java,v 1.146 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: CDROutputStream.java,v 1.147 2011-09-12 15:27:07 nick.cross Exp $
  *
  * A stream for CDR marshalling.
  *
@@ -185,6 +185,7 @@ public class CDROutputStream
     private boolean chunkCustomRmiValuetypes = false;
     private boolean compactTypeCodes = false;
     private boolean useIndirection = true;
+    private boolean nullStringEncoding;
 
     /**
      * This stream is self-configuring, i.e. configure() is private
@@ -206,6 +207,9 @@ public class CDROutputStream
             configuration.getAttributeAsBoolean("jacorb.compactTypecodes", false);
 
         useIndirection = !( configuration.getAttributeAsBoolean("jacorb.interop.indirection_encoding_disable", false));
+
+        nullStringEncoding =
+            configuration.getAttributeAsBoolean("jacorb.interop.null_string_encoding", false);
 
         isMutatorEnabled = jconfig.isAttributeSet("jacorb.iormutator");
 
@@ -848,7 +852,15 @@ public class CDROutputStream
     {
         if( value == null )
         {
-            throw new MARSHAL("Cannot marshall null string.");
+            if (nullStringEncoding)
+            {
+                write_long(0);
+                return;
+            }
+            else
+            {
+                throw new MARSHAL("Cannot marshall null string.");
+            }
         }
 
         final int valueLength = value.length();

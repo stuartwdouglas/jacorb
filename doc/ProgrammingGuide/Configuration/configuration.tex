@@ -1,5 +1,5 @@
 %
-% $Id: configuration.tex,v 1.62 2011-05-06 14:52:37 nick.cross Exp $
+% $Id: configuration.tex,v 1.63 2011-09-12 15:27:07 nick.cross Exp $
 %
 
 This chapter explains the general mechanism for configuring JacORB
@@ -710,6 +710,10 @@ can incorrectly encode buffer lengths & boolean & off
 \verb"boolean_encoding" & Treat any non zero CDR encoded boolean value
 as true (strictly should be 1 not non zero). This is useful for ORBs such
 as VisiBroker and ORBacus & boolean & off \\
+\hline
+\verb"jacorb.interop."
+\verb"null_string_encoding" & Allow reading and writing of null strings.
+This can be useful for ORBs such as VisiBroker. & boolean & off \\
 \hline
 \verb"org.omg.PortableInterc"
 \verb"eptor.ORBInitializerCl"
