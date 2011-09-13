@@ -57,7 +57,7 @@ import org.slf4j.Logger;
  * Class to convert IOR strings into IOR structures
  *
  * @author Gerald Brose
- * @version $Id: ParsedIOR.java,v 1.93 2011-09-13 09:49:01 nick.cross Exp $
+ * @version $Id: ParsedIOR.java,v 1.94 2011-09-13 15:35:49 nick.cross Exp $
  */
 
 public class ParsedIOR
@@ -591,7 +591,7 @@ public class ParsedIOR
             }
             catch (Exception e)
             {
-                logger.error("Invalid corbaloc URL", e);
+                logger.error(("Invalid corbaloc URL " + corbaLoc.getKeyString ()), e);
                 throw new IllegalArgumentException("Invalid corbaloc: URL");
             }
         }
