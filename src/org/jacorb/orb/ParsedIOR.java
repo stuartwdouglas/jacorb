@@ -57,7 +57,7 @@ import org.slf4j.Logger;
  * Class to convert IOR strings into IOR structures
  *
  * @author Gerald Brose
- * @version $Id: ParsedIOR.java,v 1.92 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: ParsedIOR.java,v 1.93 2011-09-13 09:49:01 nick.cross Exp $
  */
 
 public class ParsedIOR
@@ -162,10 +162,10 @@ public class ParsedIOR
   }
 
     /**
-    * This method replaces the unfiyTargetAddress method.
+    * This method replaces the unifyTargetAddress method.
     * <P>
     * It will extract an object key from any given GIOP::TargetAddress
-    * assuming an appropriate ETF::Factories implementation is availble
+    * assuming an appropriate ETF::Factories implementation is available
     * for the profile in use.
     */
     public static byte[] extractObjectKey(TargetAddress addr, ORB orb)
@@ -777,7 +777,7 @@ public class ParsedIOR
     {
         public static Integer read (org.omg.CORBA.portable.InputStream in)
         {
-            return new Integer (in.read_long());
+            return Integer.valueOf (in.read_long());
         }
     }
 

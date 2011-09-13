@@ -38,7 +38,6 @@ import org.jacorb.poa.util.POAUtil;
 import org.jacorb.ssl.SSLPolicy;
 import org.jacorb.ssl.SSLPolicyValue;
 import org.jacorb.ssl.SSL_POLICY_TYPE;
-import org.jacorb.util.ObjectUtil;
 import org.omg.BiDirPolicy.BIDIRECTIONAL_POLICY_TYPE;
 import org.omg.BiDirPolicy.BidirectionalPolicy;
 import org.omg.CORBA.NO_IMPLEMENT;
@@ -87,7 +86,7 @@ import org.slf4j.Logger;
  * <code>org.omg.PortableServer.POA</code>
  *
  * @author Reimo Tiedemann, FU Berlin
- * @version $Id: POA.java,v 1.76 2011-05-10 15:40:41 nick.cross Exp $
+ * @version $Id: POA.java,v 1.77 2011-09-13 09:49:01 nick.cross Exp $
  */
 
 public class POA

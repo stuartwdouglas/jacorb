@@ -45,7 +45,7 @@ import org.slf4j.Logger;
  * See PI Spec p. 9-70ff
  *
  * @author Nicolas Noffke
- * @version $Id: ORBInitInfoImpl.java,v 1.21 2011-05-10 15:40:41 nick.cross Exp $
+ * @version $Id: ORBInitInfoImpl.java,v 1.22 2011-09-13 09:49:01 nick.cross Exp $
  */
 
 public class ORBInitInfoImpl
@@ -288,7 +288,7 @@ public class ORBInitInfoImpl
             throw new org.omg.CORBA.BAD_PARAM("Actual parameter policy_factory is null!");
         }
 
-        final Integer key = new Integer(type);
+        final Integer key = Integer.valueOf (type);
         if (policy_factories.containsKey(key))
         {
             throw new org.omg.CORBA.BAD_INV_ORDER("A PolicyFactory for type " + type +

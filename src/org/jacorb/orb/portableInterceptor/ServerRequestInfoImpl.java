@@ -49,7 +49,7 @@ import org.omg.PortableServer.Servant;
  * See PI Spec p.5-50ff
  *
  * @author Nicolas Noffke
- * @version $Id: ServerRequestInfoImpl.java,v 1.23 2011-05-10 15:40:41 nick.cross Exp $
+ * @version $Id: ServerRequestInfoImpl.java,v 1.24 2011-09-13 09:49:01 nick.cross Exp $
  */
 
 public class ServerRequestInfoImpl
@@ -490,7 +490,7 @@ public class ServerRequestInfoImpl
     public void add_reply_service_context(ServiceContext service_context,
                                           boolean replace)
     {
-        Integer _id = new Integer(service_context.context_id);
+        Integer _id = Integer.valueOf (service_context.context_id);
 
         if (! replace && reply_ctx.containsKey(_id))
         {

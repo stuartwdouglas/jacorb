@@ -39,7 +39,7 @@ import org.omg.IOP.TaggedComponent;
  * See PI Spec p.7-64f
  *
  * @author Nicolas Noffke
- * @version $Id: IORInfoImpl.java,v 1.15 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: IORInfoImpl.java,v 1.16 2011-09-13 09:49:01 nick.cross Exp $
  */
 
 public class IORInfoImpl extends org.omg.CORBA.LocalObject
@@ -85,7 +85,7 @@ public class IORInfoImpl extends org.omg.CORBA.LocalObject
     public void add_ior_component_to_profile(TaggedComponent component, int id)
     {
         TaggedComponentList list =
-            (TaggedComponentList)components.get (new Integer (id));
+            (TaggedComponentList)components.get(Integer.valueOf (id));
         if (list == null)
         {
             throw new org.omg.CORBA.BAD_PARAM
@@ -119,7 +119,7 @@ public class IORInfoImpl extends org.omg.CORBA.LocalObject
         Policy policy = null;
         if (policy_overrides != null)
         {
-            policy = (Policy)policy_overrides.get (new Integer(type));
+            policy = (Policy)policy_overrides.get (Integer.valueOf (type));
         }
         return (policy != null) ? policy : poa.getPolicy(type);
     }

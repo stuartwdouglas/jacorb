@@ -43,12 +43,12 @@ import org.omg.ETF.Factories;
  * This class manages Transports. On the one hand it creates them, and
  * on the other it enforces an upper limit on the open transports.
  *
- * The class also receives notifications from threads that are about do use a 
- * Transport and notifies any interested listeners. "Use" is defined as 
+ * The class also receives notifications from threads that are about do use a
+ * Transport and notifies any interested listeners. "Use" is defined as
  * sending (or handling) a request.
  *
  * @author Nicolas Noffke
- * @version $Id: TransportManager.java,v 1.32 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: TransportManager.java,v 1.33 2011-09-13 09:49:01 nick.cross Exp $
  * */
 
 public class TransportManager
@@ -76,7 +76,7 @@ public class TransportManager
     private List factoriesList = null;
 
     /**
-     * The first listener (in a chain of instances), representing 
+     * The first listener (in a chain of instances), representing
      * parties with interest in Transport events.
      */
     private TransportListener listener = null;
@@ -182,7 +182,7 @@ public class TransportManager
         {
             String className = (String)i.next();
             Factories factories = instantiateFactories(className);
-            factoriesMap.put(new Integer(factories.profile_tag()), factories); // NOPMD
+            factoriesMap.put(Integer.valueOf(factories.profile_tag()), factories); // NOPMD
             factoriesList.add (factories);
         }
     }
@@ -260,5 +260,5 @@ public class TransportManager
             };
         }
     }
- 
+
 }
