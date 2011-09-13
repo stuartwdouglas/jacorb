@@ -22,7 +22,7 @@ package org.jacorb.idl;
 
 /**
  * @author Gerald Brose
- * @version $Id: Interface.java,v 1.86 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: Interface.java,v 1.87 2011-09-13 15:32:58 nick.cross Exp $
  */
 
 import java.io.File;
@@ -846,6 +846,8 @@ public class Interface
 
         ps.println("public" + parser.getFinalString() + " class " + name + "Helper");
         ps.println("{");
+        ps.println("\tprivate static org.omg.CORBA.TypeCode typeCode;");
+        ps.println();
 
         // Generate insert (handle either CORBA.Object or Serializable case)
         ps.println("\tpublic static void insert (final org.omg.CORBA.Any any, final " + typeName() + " s)");
@@ -916,9 +918,13 @@ public class Interface
         ps.println("\t}");
 
         // Generate the typecode
-        ps.println("\tpublic static org.omg.CORBA.TypeCode type()");
+        ps.println("\tpublic synchronized static org.omg.CORBA.TypeCode type()");
         ps.println("\t{");
-        ps.println("\t\treturn " + getTypeCodeExpression() + ";");
+        ps.println("\t\tif (typeCode == null)");
+        ps.println("\t\t{");
+        ps.println("\t\t\ttypeCode = " + getTypeCodeExpression() + ";");
+        ps.println("\t\t}");
+        ps.println("\t\treturn typeCode;");
         ps.println("\t}");
 
         printIdMethod(ps);
