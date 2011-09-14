@@ -37,7 +37,7 @@ import org.jacorb.config.ConfigurationException;
 
 /**
  * @author Nicolas Noffke
- * $Id: SSLServerSocketFactory.java,v 1.27 2011-05-10 15:40:41 nick.cross Exp $
+ * $Id: SSLServerSocketFactory.java,v 1.28 2011-09-14 14:30:26 nick.cross Exp $
  */
 
 public class SSLServerSocketFactory
@@ -132,8 +132,11 @@ public class SSLServerSocketFactory
 
         if (configuration.getAttribute("jacorb.security.ssl.server.protocols", null) != null)
         {
-            enabledProtocols = (String[]) ((org.jacorb.config.Configuration)configuration).getAttributeList
-                                            ("jacorb.security.ssl.server.protocols").toArray();
+            List l = ((org.jacorb.config.Configuration)configuration).getAttributeList
+               ("jacorb.security.ssl.server.protocols");
+            enabledProtocols = new String [l.size ()];
+            enabledProtocols = (String[])l.toArray(enabledProtocols);
+
             if (logger.isDebugEnabled())
             {
                 logger.debug("Setting user specified server enabled protocols : " +

@@ -44,7 +44,7 @@ import org.jacorb.orb.listener.SSLSessionListener;
  * to create sockets that support SSL.
  *
  * @author Nicolas Noffke
- * $Id: SSLSocketFactory.java,v 1.32 2011-05-10 15:40:41 nick.cross Exp $
+ * $Id: SSLSocketFactory.java,v 1.33 2011-09-14 14:30:26 nick.cross Exp $
  */
 public class SSLSocketFactory
     extends AbstractSocketFactory
@@ -118,8 +118,11 @@ public class SSLSocketFactory
 
         if (configuration.getAttribute("jacorb.security.ssl.client.protocols", null) != null)
         {
-            enabledProtocols = (String[]) ((org.jacorb.config.Configuration)configuration).getAttributeList
-                                            ("jacorb.security.ssl.client.protocols").toArray();
+            List l = ((org.jacorb.config.Configuration)configuration).getAttributeList
+               ("jacorb.security.ssl.server.protocols");
+            enabledProtocols = new String [l.size ()];
+            enabledProtocols = (String[])l.toArray(enabledProtocols);
+
             if (logger.isDebugEnabled())
             {
                 logger.debug("Setting user specified client enabled protocols : " +
