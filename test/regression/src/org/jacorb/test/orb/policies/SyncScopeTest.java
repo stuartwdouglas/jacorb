@@ -21,7 +21,7 @@ import org.omg.Messaging.SYNC_WITH_TRANSPORT;
  * Tests for SyncScopePolicy.
  *
  * @author Andre Spiegel <spiegel@gnu.org>
- * @version $Id: SyncScopeTest.java,v 1.6 2009-08-20 08:42:06 alexander.bykov Exp $
+ * @version $Id: SyncScopeTest.java,v 1.7 2011-09-14 13:12:49 nick.cross Exp $
  */
 public class SyncScopeTest extends TestCase
 {
@@ -30,6 +30,15 @@ public class SyncScopeTest extends TestCase
     private ServerSetup serverSetup;
     private ORBSetup orbSetup;
     private ORB orb;
+
+    public static void main(String args[]) throws Exception
+    {
+        SyncScopeTest s = new SyncScopeTest();
+        s.orb = org.omg.CORBA.ORB.init(args, null);
+        s.server = SyncScopeServerHelper.narrow (s.orb.string_to_object(args[0]));
+        s.test_sync_none();
+    }
+
 
     protected void setUp() throws Exception
     {
@@ -60,11 +69,11 @@ public class SyncScopeTest extends TestCase
 
     public void test_sync_none() throws Exception
     {
+        server = setSyncScope (server, SYNC_NONE.value);
+
         int beforeCount = server.get_oneway_count();
 
-        server = setSyncScope (server, SYNC_NONE.value);
         long start = System.currentTimeMillis();
-
         server.oneway_op (TIME);
         long time = System.currentTimeMillis() - start;
         assertTrue ("return too late", time < TIME);

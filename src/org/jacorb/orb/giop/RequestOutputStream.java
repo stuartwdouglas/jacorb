@@ -54,7 +54,7 @@ import org.omg.TimeBase.UtcT;
 
 /**
  * @author Gerald Brose, FU Berlin 1999
- * @version $Id: RequestOutputStream.java,v 1.39 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: RequestOutputStream.java,v 1.40 2011-09-14 13:12:49 nick.cross Exp $
  */
 public class RequestOutputStream
     extends ServiceContextTransportingOutputStream
@@ -98,17 +98,24 @@ public class RequestOutputStream
      */
     public RequestOutputStream( RequestOutputStream other)
     {
-        this((org.jacorb.orb.ORB)other.orb(),
-            other.connection,
-            other.request_id,
-            other.operation,
-            other.response_expected,
-            other.syncScope,
-            other.requestStartTime,
-            other.requestEndTime,
-            other.replyEndTime,
-            other.object_key,
-            other.giop_minor);
+        super(other.orb);
+
+        this.object_key = other.object_key;
+        this.request_id = other.request_id;
+        this.response_expected = other.response_expected;
+        this.syncScope = other.syncScope;
+        this.operation = other.operation;
+        this.connection = other.connection;
+        this.requestStartTime = other.requestStartTime;
+        this.requestEndTime   = other.requestEndTime;
+        this.replyEndTime     = other.replyEndTime;
+        this.contexts = other.contexts;
+        this.header_end = other.header_end;
+        this.header_padding = other.header_padding;
+        this.giop_minor = other.giop_minor;
+
+        byte[] copy = other.getBufferCopy();
+        write_octet_array (copy, 0, copy.length);
     }
 
     public RequestOutputStream( org.jacorb.orb.ORB orb,
