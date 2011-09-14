@@ -55,7 +55,7 @@ import org.omg.PortableServer.ServantLocatorPackage.CookieHolder;
  * it returns the ServerRequest object to the ORB.
  *
  * @author Reimo Tiedemann, FU Berlin
- * @version $Id: RequestProcessor.java,v 1.47 2011-05-10 15:40:41 nick.cross Exp $
+ * @version $Id: RequestProcessor.java,v 1.48 2011-09-14 15:45:54 nick.cross Exp $
  */
 
 public class RequestProcessor
@@ -350,6 +350,18 @@ public class RequestProcessor
                             e);
             }
             request.setSystemException(e);
+        }
+        catch (OutOfMemoryError e)
+        {
+            /* not spec. */
+            if (logger.isErrorEnabled())
+            {
+                logger.error("rid: " + request.requestId() +
+                             " opname: " + request.operation() +
+                             " invocation: Caught OutOfMemory invoking operation.",
+                             e);
+            }
+            request.setSystemException (new org.omg.CORBA.NO_MEMORY(e.toString()));
         }
         catch (Throwable e)
         {
