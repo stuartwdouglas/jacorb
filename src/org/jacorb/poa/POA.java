@@ -19,7 +19,6 @@ package org.jacorb.poa;
  *   License along with this library; if not, write to the Free
  *   Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Enumeration;
@@ -86,7 +85,7 @@ import org.slf4j.Logger;
  * <code>org.omg.PortableServer.POA</code>
  *
  * @author Reimo Tiedemann, FU Berlin
- * @version $Id: POA.java,v 1.77 2011-09-13 09:49:01 nick.cross Exp $
+ * @version $Id: POA.java,v 1.78 2011-09-19 11:37:20 nick.cross Exp $
  */
 
 public class POA
@@ -286,6 +285,7 @@ public class POA
                       requestController.getRequestQueue(),
                       requestController.getPoolManager(),
                       "POA " + name );
+
 
         monitor.openMonitor();
         if (poaListener != null)
@@ -1619,6 +1619,12 @@ public class POA
             if (logger.isDebugEnabled())
             {
                 logger.debug(logPrefix + "... done");
+            }
+
+            if (aom != null)
+            {
+               // Stop the AOM removal queue.
+               aom.aomRemoval.end ();
             }
 
             /* etherialize all active objects */
