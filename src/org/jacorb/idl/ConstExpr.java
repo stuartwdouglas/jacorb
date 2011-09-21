@@ -24,7 +24,7 @@ import java.io.PrintWriter;
 
 /**
  * @author Gerald Brose
- * @version $Id: ConstExpr.java,v 1.19 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: ConstExpr.java,v 1.20 2011-09-21 12:07:08 nick.cross Exp $
  */
 
 public class ConstExpr
@@ -65,11 +65,6 @@ public class ConstExpr
     public str_token get_token()
     {
         return or_expr.get_token();
-    }
-
-    public String value()
-    {
-        return or_expr.value();
     }
 
     public void setPackage( String s )

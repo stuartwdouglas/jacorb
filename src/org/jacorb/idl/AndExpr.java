@@ -25,7 +25,7 @@ import java.io.PrintWriter;
 
 /**
  * @author Gerald Brose
- * @version $Id: AndExpr.java,v 1.17 2011-05-10 15:40:35 nick.cross Exp $
+ * @version $Id: AndExpr.java,v 1.18 2011-09-21 12:07:08 nick.cross Exp $
  */
 
 public class AndExpr
@@ -86,16 +86,6 @@ public class AndExpr
     int pos_int_const()
     {
         return shift_expr.pos_int_const();
-    }
-
-    public String value()
-    {
-        String x = "";
-        if (and_expr != null)
-        {
-            x = and_expr.value() + "&";
-        }
-        return x + shift_expr.value();
     }
 
     public String toString()

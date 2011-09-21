@@ -22,14 +22,12 @@ package org.jacorb.idl;
 
 /**
  * @author Gerald Brose
- * @version $Id: Operation.java,v 1.16 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: Operation.java,v 1.17 2011-09-21 12:07:08 nick.cross Exp $
  */
 
 import java.io.PrintWriter;
-import java.io.Serializable;
 
 public interface Operation
-    extends Serializable
 {
     /**
      * <code>name</code> gives the plain name of the operation
@@ -81,24 +79,3 @@ public interface Operation
     void accept( IDLTreeVisitor visitor );
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

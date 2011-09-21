@@ -24,7 +24,7 @@ import java.io.PrintWriter;
 
 /**
  * @author Gerald Brose
- * @version $Id: UnaryExpr.java,v 1.15 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: UnaryExpr.java,v 1.16 2011-09-21 12:07:08 nick.cross Exp $
  */
 
 public class UnaryExpr
@@ -76,11 +76,6 @@ public class UnaryExpr
             return y;
         }
         return y;
-    }
-
-    public String value()
-    {
-        return unary_op + primary_expr.value();
     }
 
     public String toString()

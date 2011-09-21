@@ -24,7 +24,7 @@ import java.io.PrintWriter;
 
 /**
  * @author Gerald Brose
- * @version $Id: XorExpr.java,v 1.15 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: XorExpr.java,v 1.16 2011-09-21 12:07:08 nick.cross Exp $
  */
 
 public class XorExpr
@@ -79,16 +79,6 @@ public class XorExpr
     int pos_int_const()
     {
         return and_expr.pos_int_const();
-    }
-
-    public String value()
-    {
-        String x = "";
-        if( xor_expr != null )
-        {
-            x = xor_expr.value() + "^";
-        }
-        return x + and_expr.value();
     }
 
     public String toString()

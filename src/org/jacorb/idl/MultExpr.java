@@ -24,7 +24,7 @@ import java.io.PrintWriter;
 
 /**
  * @author Gerald Brose
- * @version $Id: MultExpr.java,v 1.17 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: MultExpr.java,v 1.18 2011-09-21 12:07:08 nick.cross Exp $
  */
 
 public class MultExpr extends IdlSymbol
@@ -96,16 +96,6 @@ public class MultExpr extends IdlSymbol
             }
         }
         return y;
-    }
-
-    public String value()
-    {
-        String x = "";
-        if( mult_expr != null )
-        {
-            x = mult_expr.value() + operator;
-        }
-        return x + unary_expr.value();
     }
 
     public String toString()

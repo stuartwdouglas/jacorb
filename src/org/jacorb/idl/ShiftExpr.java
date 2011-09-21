@@ -22,7 +22,7 @@ package org.jacorb.idl;
 
 /**
  * @author Gerald Brose
- * @version $Id: ShiftExpr.java,v 1.15 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: ShiftExpr.java,v 1.16 2011-09-21 12:07:08 nick.cross Exp $
  */
 
 import java.io.PrintWriter;
@@ -81,16 +81,6 @@ public class ShiftExpr
     int pos_int_const()
     {
         return add_expr.pos_int_const();
-    }
-
-    public String value()
-    {
-        String x = "";
-        if( shift_expr != null )
-        {
-            x = shift_expr.value() + operator;
-        }
-        return x + add_expr.value();
     }
 
     public String toString()

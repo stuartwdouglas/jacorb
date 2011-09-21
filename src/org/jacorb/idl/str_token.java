@@ -27,16 +27,12 @@ package org.jacorb.idl;
  *  field str_val.
  *
  * @see org.jacorb.idl.runtime.str_token
- * @version $Id: str_token.java,v 1.14 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: str_token.java,v 1.15 2011-09-21 12:07:08 nick.cross Exp $
  * @author  Gerald Brose
  */
 
-public class str_token
-    extends org.jacorb.idl.runtime.str_token
-    implements java.io.Serializable
+public class str_token extends org.jacorb.idl.runtime.str_token
 {
-
-    public String str_val;
     public String line_val;
     public int line_no;
     public int char_pos;
@@ -67,6 +63,3 @@ public class str_token
 
 
 }
-
-
-

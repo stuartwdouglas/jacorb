@@ -22,7 +22,7 @@ package org.jacorb.idl;
 
 /**
  * @author Gerald Brose
- * @version $Id: Interface.java,v 1.87 2011-09-13 15:32:58 nick.cross Exp $
+ * @version $Id: Interface.java,v 1.88 2011-09-21 12:07:08 nick.cross Exp $
  */
 
 import java.io.File;
@@ -174,7 +174,18 @@ public class Interface
 
     public String getTypeCodeExpression()
     {
-        if (is_abstract)
+        if (is_local)
+        {
+            return
+            (
+             "org.omg.CORBA.ORB.init().create_local_interface_tc(\"" +
+             id() +
+             "\", \"" +
+             name +
+             "\")"
+             );
+        }
+        else if (is_abstract)
         {
             return
                 (

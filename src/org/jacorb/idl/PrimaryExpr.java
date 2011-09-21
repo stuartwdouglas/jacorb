@@ -24,7 +24,7 @@ import java.io.PrintWriter;
 
 /**
  * @author Gerald Brose
- * @version $Id: PrimaryExpr.java,v 1.20 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: PrimaryExpr.java,v 1.21 2011-09-21 12:07:08 nick.cross Exp $
  */
 
 public class PrimaryExpr
@@ -104,19 +104,6 @@ public class PrimaryExpr
         return Integer.parseInt( ( (Literal)symbol ).toString() );
     }
 
-    public String value()
-    {
-        if( symbol instanceof ConstExpr )
-        {
-            return "(" + ( (ConstExpr)symbol ).value() + ")";
-        }
-        else if( symbol instanceof ScopedName )
-        {
-            return ConstDecl.namedValue( (ScopedName)symbol );
-        }
-        return ( (Literal)symbol ).toString();
-    }
-
     public String toString()
     {
         if( symbol instanceof ConstExpr )
@@ -125,7 +112,7 @@ public class PrimaryExpr
         }
         else if( symbol instanceof ScopedName )
         {
-            return ( (ScopedName)symbol ).resolvedName();
+            return ConstDecl.namedValue( (ScopedName)symbol );
         }
         else
         {

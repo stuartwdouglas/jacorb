@@ -22,7 +22,7 @@ package org.jacorb.idl;
 
 /**
  * @author Gerald Brose
- * @version $Id: OrExpr.java,v 1.16 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: OrExpr.java,v 1.17 2011-09-21 12:07:08 nick.cross Exp $
  */
 
 import java.io.PrintWriter;
@@ -84,16 +84,6 @@ public class OrExpr extends IdlSymbol
     int pos_int_const()
     {
         return xor_expr.pos_int_const();
-    }
-
-    public String value()
-    {
-        String x = "";
-        if( or_expr != null )
-        {
-            x = or_expr.value() + " | ";
-        }
-        return x + xor_expr.value();
     }
 
     public String toString()

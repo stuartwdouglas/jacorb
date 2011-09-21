@@ -24,7 +24,7 @@ import java.io.PrintWriter;
 
 /**
  * @author Gerald Brose
- * @version $Id: AddExpr.java,v 1.17 2011-05-10 15:40:35 nick.cross Exp $
+ * @version $Id: AddExpr.java,v 1.18 2011-09-21 12:07:08 nick.cross Exp $
  */
 
 public class AddExpr extends IdlSymbol
@@ -90,16 +90,6 @@ public class AddExpr extends IdlSymbol
             return z + y;
         }
         return y;
-    }
-
-    public String value()
-    {
-        String x = "";
-        if( add_expr != null )
-        {
-            x = add_expr.value() + operator;
-        }
-        return x + mult_expr.value();
     }
 
     public String toString()

@@ -20,7 +20,7 @@
 
 /**
  * @author Gerald Brose
- * @version $Id: MemberList.java,v 1.19 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: MemberList.java,v 1.20 2011-09-21 12:07:08 nick.cross Exp $
  *
  */
 
@@ -33,7 +33,6 @@ public class MemberList
     extends SymbolList
 {
     Vector extendVector = new Vector();
-    private TypeDeclaration containingType;
     private boolean parsed = false;
 
     public MemberList( int num )
@@ -43,7 +42,6 @@ public class MemberList
 
     public void setContainingType( TypeDeclaration t )
     {
-        containingType = t;
         Enumeration e = v.elements();
         for( ; e.hasMoreElements(); )
         {

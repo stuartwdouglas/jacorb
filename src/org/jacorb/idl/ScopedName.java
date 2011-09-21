@@ -24,7 +24,7 @@ package org.jacorb.idl;
  * IDL scoped names
  *
  * @author Gerald Brose
- * @version $Id: ScopedName.java,v 1.42 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: ScopedName.java,v 1.43 2011-09-21 12:07:08 nick.cross Exp $
  *
  */
 
@@ -578,7 +578,7 @@ public class ScopedName
             return y.typeName();
         }
 
-        if( y instanceof ScopedName && y != null && x != y )
+        if( y instanceof ScopedName && x != y )
         {
             return unMap( y.typeName() );
         }
@@ -589,12 +589,6 @@ public class ScopedName
         {
             resolvedSpec = y;
             return y.typeName();
-        }
-
-        if( y == null )
-        {
-            resolvedSpec = x;
-            return x.typeName();
         }
 
         resolvedSpec = y;

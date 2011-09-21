@@ -22,7 +22,7 @@ package org.jacorb.idl;
 
 /**
  * @author Gerald Brose
- * @version $Id: ElementSpec.java,v 1.25 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: ElementSpec.java,v 1.26 2011-09-21 12:07:08 nick.cross Exp $
  */
 
 public class ElementSpec
@@ -82,7 +82,6 @@ public class ElementSpec
                     ts = ( (SequenceType)ts.typeSpec() ).elementTypeSpec().typeSpec();
                 }
 
-                //                if( ts.typeName().equals( containingUnion.typeName() ) ||
                 if( ScopedName.isRecursionScope( ts.typeName() ) )
                 {
                     ( (SequenceType)seqTs.typeSpec() ).setRecursive();
@@ -98,8 +97,6 @@ public class ElementSpec
             }
 
             containingUnion.addImportedName( ts.typeName() );
-
-            // if( ts != null )
 
             // fix for bug#115: only set the element spec's type spec to the resolved
             // type if it is not an Interface! Otherwise the compile may loop!

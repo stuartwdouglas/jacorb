@@ -29,7 +29,7 @@ import java.util.Vector;
 
 /**
  * @author Gerald Brose
- * @version $Id: OpDecl.java,v 1.53 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: OpDecl.java,v 1.54 2011-09-21 12:07:08 nick.cross Exp $
  */
 
 public class OpDecl
@@ -889,7 +889,6 @@ public class OpDecl
         for( Enumeration e = paramDecls.elements(); e.hasMoreElements(); )
         {
             ParamDecl p = (ParamDecl)e.nextElement();
-            TypeSpec ts = p.paramTypeSpec;
             if( p.paramAttribute != ParamDecl.MODE_IN )
             {
                 ps.println( "\t\t\t\t" + p.printWriteStatement( ( "_arg" + ( argc ) ), "_out" ) );
