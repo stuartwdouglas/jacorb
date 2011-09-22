@@ -55,7 +55,7 @@ import org.omg.IOP.TaggedProfile;
 
 /**
  * @author Gerald Brose,  1999
- * @version $Id: CDROutputStream.java,v 1.147 2011-09-12 15:27:07 nick.cross Exp $
+ * @version $Id: CDROutputStream.java,v 1.148 2011-09-22 14:33:49 nick.cross Exp $
  *
  * A stream for CDR marshalling.
  *
@@ -897,18 +897,19 @@ public class CDROutputStream
             pos += 4;
             index += 4;
 
-            for (int i = 0; i < valueLength; i++)
+            if (codesetEnabled)
             {
-                if (codesetEnabled)
+                for (int i = 0; i < valueLength; i++)
                 {
-                    // alignment/check must happen prior to calling.
                     codeSet.write_char( this, value.charAt(i), false, false, giop_minor );
                 }
-                else
-                {
-                    buffer[pos++] = (byte)value.charAt(i);
-                    index++;
-                }
+            }
+            else
+            {
+                // If not using codesets then use the deprecated getBytes for speed.
+                value.getBytes(0, valueLength, buffer, pos);
+                index += valueLength;
+                pos += valueLength;
             }
 
             buffer[ pos++ ] = (byte) 0; //terminating NUL char
