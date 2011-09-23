@@ -23,7 +23,6 @@ package org.jacorb.orb;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-
 import org.jacorb.config.*;
 import org.slf4j.Logger;
 import org.jacorb.ir.RepositoryID;
@@ -43,7 +42,7 @@ import org.omg.GIOP.ReplyStatusType_1_2;
  * type is used to pass an exception to a reply handler.
  *
  * @author Andre Spiegel <spiegel@gnu.org>
- * @version $Id: ExceptionHolderImpl.java,v 1.23 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: ExceptionHolderImpl.java,v 1.24 2011-09-23 11:29:14 nick.cross Exp $
  */
 public class ExceptionHolderImpl
     extends org.omg.Messaging.ExceptionHolder
@@ -95,7 +94,7 @@ public class ExceptionHolderImpl
             throw new BAD_PARAM( "attempt to create ExceptionHolder " +
                                         "for non-exception reply" );
         }
-        byte_order          = inputStream.littleEndian;
+        byte_order          = inputStream.getLittleEndian();
         marshaled_exception = inputStream.getBody();
     }
 

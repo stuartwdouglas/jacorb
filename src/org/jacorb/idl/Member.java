@@ -26,7 +26,7 @@ import java.util.Vector;
 
 /**
  * @author Gerald Brose
- * @version $Id: Member.java,v 1.35 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: Member.java,v 1.36 2011-09-23 11:29:14 nick.cross Exp $
  */
 public class Member
     extends Declaration
@@ -265,7 +265,7 @@ public class Member
              */
             m.type_spec = ts;
             m.pack_name = this.pack_name;
-            m.name = this.name;
+            m.name = declaratorName;
             extendVector.addElement( m );
         }
         declarators = null;
