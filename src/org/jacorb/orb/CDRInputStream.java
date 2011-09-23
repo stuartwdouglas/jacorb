@@ -60,7 +60,7 @@ import org.jacorb.orb.typecode.TypeCodeCache;
  * Read CDR encoded data
  *
  * @author Gerald Brose, FU Berlin
- * $Id: CDRInputStream.java,v 1.136 2011-09-23 11:29:14 nick.cross Exp $
+ * $Id: CDRInputStream.java,v 1.137 2011-09-23 13:45:31 nick.cross Exp $
  */
 
 public class CDRInputStream
@@ -903,7 +903,7 @@ public class CDRInputStream
             index++;
         }
 
-        if (digits != -1 && (outBuffer.length() != digits))
+        if (digits != -1 && (outBuffer.length() > digits))
         {
             throw new MARSHAL("unexpected number of digits: expected " + digits + " got " + outBuffer.length() + " " + outBuffer);
         }

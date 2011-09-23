@@ -20,6 +20,7 @@ package org.jacorb.orb.dynany;
  *   Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
 
+import org.omg.CORBA.FixedHolder;
 import java.math.BigDecimal;
 import org.slf4j.Logger;
 import org.jacorb.orb.ORB;
@@ -31,7 +32,7 @@ import org.omg.DynamicAny.DynAnyPackage.TypeMismatch;
  * CORBA DynFixed
  *
  * @author Jason Courage
- * @version $Id: DynFixed.java,v 1.13 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: DynFixed.java,v 1.14 2011-09-23 13:45:31 nick.cross Exp $
  */
 
 public final class DynFixed
@@ -141,8 +142,7 @@ public final class DynFixed
          }
          fixed_value = new BigDecimal( val );
 
-         org.omg.CORBA.TypeCode type = orb.create_fixed_tc
-             ((short) fixed_value.precision(), (short)fixed_value.scale());
+         org.omg.CORBA.TypeCode type = new FixedHolder(fixed_value)._type();
 
          if ( type.fixed_digits() > type().fixed_digits() )
          {

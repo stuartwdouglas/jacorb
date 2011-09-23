@@ -51,7 +51,7 @@ import org.omg.CORBA_2_3.portable.OutputStream;
  * CORBA any
  *
  * @author Gerald Brose
- * $Id: Any.java,v 1.64 2011-05-10 15:40:39 nick.cross Exp $
+ * $Id: Any.java,v 1.65 2011-09-23 13:45:31 nick.cross Exp $
  */
 
 public final class Any
@@ -843,8 +843,7 @@ public final class Any
           }
           BigDecimal tmp = new BigDecimal( val );
 
-          org.omg.CORBA.TypeCode tc = ORB.init().create_fixed_tc
-              ((short)tmp.precision(), (short)tmp.scale());
+          org.omg.CORBA.TypeCode tc = new FixedHolder(tmp)._type();
 
           if ( tc.fixed_digits() > type.fixed_digits() )
           {

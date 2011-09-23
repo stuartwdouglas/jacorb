@@ -30,7 +30,7 @@ import org.omg.CORBA.MARSHAL;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: BugJac516Test.java,v 1.2 2011-05-10 15:40:42 nick.cross Exp $
+ * @version $Id: BugJac516Test.java,v 1.3 2011-09-23 13:45:31 nick.cross Exp $
  */
 public class BugJac516Test extends ORBTestCase
 {
@@ -56,19 +56,6 @@ public class BugJac516Test extends ORBTestCase
         {
         }
     }
-
-    public void testReadFixedWithWrongDigitsFails2()
-    {
-        try
-        {
-            in.read_fixed((short)5, (short)1);
-            fail();
-        }
-        catch(MARSHAL e)
-        {
-        }
-    }
-
 
     public void testReadFixedScaleBelowZeroShouldFail()
     {
