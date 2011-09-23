@@ -38,7 +38,7 @@ import org.omg.RTCORBA.Protocol;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: BugJac503Test.java,v 1.3 2011-05-10 15:40:42 nick.cross Exp $
+ * @version $Id: BugJac503Test.java,v 1.4 2011-09-23 15:36:28 nick.cross Exp $
  */
 public class BugJac503Test extends AbstractWIOPTestCase
 {
@@ -104,7 +104,9 @@ public class BugJac503Test extends AbstractWIOPTestCase
 
     public void testForwardRequestInClientInterceptor() throws Exception
     {
-        ForwardInterceptor.protocols = new Protocol[] {new Protocol(new WIOPFactories().profile_tag(), null, null)};
+        WIOPFactories factories = new WIOPFactories();
+        factories.configure (((org.jacorb.orb.ORB)clientOrb).getConfiguration ());
+        ForwardInterceptor.protocols = new Protocol[] {new Protocol(factories.profile_tag(), null, null)};
 
         basicServer.ping();
 

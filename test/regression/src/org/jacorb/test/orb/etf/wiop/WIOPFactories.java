@@ -38,7 +38,7 @@ import org.jacorb.orb.iiop.*;
  * delegates everything to the standard IIOP classes.
  *
  * @author Andre Spiegel spiegel@gnu.org
- * @version $Id: WIOPFactories.java,v 1.11 2011-05-10 15:40:43 nick.cross Exp $
+ * @version $Id: WIOPFactories.java,v 1.12 2011-09-23 15:36:28 nick.cross Exp $
  */
 public class WIOPFactories
     extends _FactoriesLocalBase
@@ -111,7 +111,29 @@ public class WIOPFactories
         {
             IIOPProfile result
                 = new IIOPProfile (tagged_profile.value.profile_data);
+
+            try
+            {
+                result.configure (configuration);
+            }
+            catch( ConfigurationException e )
+            {
+                throw new org.omg.CORBA.INTERNAL("ConfigurationException: " + e.toString());
+            }
+            
+
+            try
+            {
+                result.configure (configuration);
+            }
+            catch( ConfigurationException e )
+            {
+                throw new org.omg.CORBA.INTERNAL("ConfigurationException: " + e.toString());
+            }
+            
             components.value = result.getComponents().asArray();
+            
+            
             return new WIOPProfile (result, this.tag);
         }
     }
