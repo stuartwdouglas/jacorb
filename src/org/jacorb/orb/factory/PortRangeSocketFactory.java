@@ -27,14 +27,10 @@ import java.net.InetSocketAddress;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
-
-
-
-
 import javax.net.ssl.SSLSocket;
+import org.jacorb.config.Configuration;
+import org.jacorb.config.ConfigurationException;
 import org.jacorb.orb.iiop.IIOPAddress;
-
-import org.jacorb.config.*;
 import org.omg.CORBA.TIMEOUT;
 
 /**
@@ -45,7 +41,7 @@ import org.omg.CORBA.TIMEOUT;
  * values to configure the created sockets.
  *
  * @author Steve Osselton
- * @version $Id: PortRangeSocketFactory.java,v 1.20 2011-09-13 12:07:30 nick.cross Exp $
+ * @version $Id: PortRangeSocketFactory.java,v 1.21 2011-09-26 15:19:38 nick.cross Exp $
  */
 public class PortRangeSocketFactory
     extends AbstractSocketFactory

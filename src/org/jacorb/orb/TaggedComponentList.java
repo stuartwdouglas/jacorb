@@ -4,16 +4,13 @@ package org.jacorb.orb;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
-import org.jacorb.orb.ParsedIOR.LongHelper;
-import org.jacorb.orb.ParsedIOR.StringHelper;
-import org.jacorb.util.ObjectUtil;
-import org.omg.CONV_FRAME.CodeSetComponentHelper;
-import org.omg.CONV_FRAME.CodeSetComponentInfo;
-import org.omg.CONV_FRAME.CodeSetComponentInfoHelper;
 import java.util.List;
 import org.jacorb.config.Configurable;
 import org.jacorb.config.Configuration;
 import org.jacorb.config.ConfigurationException;
+import org.omg.CONV_FRAME.CodeSetComponentHelper;
+import org.omg.CONV_FRAME.CodeSetComponentInfo;
+import org.omg.CONV_FRAME.CodeSetComponentInfoHelper;
 import org.omg.IOP.TaggedComponent;
 import org.omg.IOP.TaggedComponentSeqHelper;
 /**
@@ -21,7 +18,7 @@ import org.omg.IOP.TaggedComponentSeqHelper;
  * generic methods to find and access individual components.
  * <p>
  * @author Andre Spiegel
- * @version $Id: TaggedComponentList.java,v 1.12 2011-05-05 12:26:15 nick.cross Exp $
+ * @version $Id: TaggedComponentList.java,v 1.13 2011-09-26 15:21:03 nick.cross Exp $
  */
 public class TaggedComponentList implements Cloneable
 {

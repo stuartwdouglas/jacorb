@@ -22,13 +22,11 @@ package org.jacorb.orb.typecode;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
-import org.jacorb.orb.typecode.AbstractTypeCodeCompactor;
 import org.omg.CORBA.TypeCode;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: JDK15TypeCodeCompactor.java,v 1.1 2011-09-23 11:29:15 nick.cross Exp $
+ * @version $Id: JDK15TypeCodeCompactor.java,v 1.2 2011-09-26 15:19:38 nick.cross Exp $
  */
 public class JDK15TypeCodeCompactor extends AbstractTypeCodeCompactor
 {

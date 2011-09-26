@@ -23,7 +23,6 @@ package org.jacorb.orb.portableInterceptor;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-
 import org.jacorb.orb.MinorCodes;
 import org.jacorb.orb.ORB;
 import org.jacorb.orb.TaggedComponentList;
@@ -39,7 +38,7 @@ import org.omg.IOP.TaggedComponent;
  * See PI Spec p.7-64f
  *
  * @author Nicolas Noffke
- * @version $Id: IORInfoImpl.java,v 1.16 2011-09-13 09:49:01 nick.cross Exp $
+ * @version $Id: IORInfoImpl.java,v 1.17 2011-09-26 15:19:38 nick.cross Exp $
  */
 
 public class IORInfoImpl extends org.omg.CORBA.LocalObject

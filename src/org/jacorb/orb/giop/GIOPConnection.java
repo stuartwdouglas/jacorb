@@ -26,8 +26,8 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import org.jacorb.config.*;
-import org.slf4j.Logger;
+import org.jacorb.config.Configuration;
+import org.jacorb.config.ConfigurationException;
 import org.jacorb.orb.IBufferManager;
 import org.jacorb.orb.ORB;
 import org.jacorb.orb.SystemExceptionHelper;
@@ -35,12 +35,12 @@ import org.jacorb.orb.etf.StreamConnectionBase;
 import org.jacorb.util.ObjectUtil;
 import org.jacorb.util.TimerQueue;
 import org.jacorb.util.TimerQueueAction;
-
 import org.omg.CORBA.CompletionStatus;
 import org.omg.CORBA.NO_IMPLEMENT;
 import org.omg.ETF.BufferHolder;
 import org.omg.GIOP.MsgType_1_1;
 import org.omg.GIOP.ReplyStatusType_1_2;
+import org.slf4j.Logger;
 
 /**
  * GIOPConnection.java
@@ -54,7 +54,7 @@ import org.omg.GIOP.ReplyStatusType_1_2;
  * jacorb.connection.statistics_providers={classnames}, default=(empty)<br>
  *
  * @author Nicolas Noffke
- * @version $Id: GIOPConnection.java,v 1.85 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: GIOPConnection.java,v 1.86 2011-09-26 15:19:38 nick.cross Exp $
  */
 
 public abstract class GIOPConnection

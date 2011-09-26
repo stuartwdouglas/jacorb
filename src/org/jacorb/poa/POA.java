@@ -19,10 +19,10 @@ package org.jacorb.poa;
  *   License along with this library; if not, write to the Free
  *   Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Enumeration;
+import java.util.HashMap;
 import java.util.Hashtable;
+import java.util.Map;
 import org.jacorb.config.Configurable;
 import org.jacorb.config.Configuration;
 import org.jacorb.config.ConfigurationException;
@@ -39,8 +39,8 @@ import org.jacorb.ssl.SSLPolicyValue;
 import org.jacorb.ssl.SSL_POLICY_TYPE;
 import org.omg.BiDirPolicy.BIDIRECTIONAL_POLICY_TYPE;
 import org.omg.BiDirPolicy.BidirectionalPolicy;
-import org.omg.CORBA.NO_IMPLEMENT;
 import org.omg.CORBA.BAD_PARAM;
+import org.omg.CORBA.NO_IMPLEMENT;
 import org.omg.PortableServer.AdapterActivator;
 import org.omg.PortableServer.ID_ASSIGNMENT_POLICY_ID;
 import org.omg.PortableServer.ID_UNIQUENESS_POLICY_ID;
@@ -85,7 +85,7 @@ import org.slf4j.Logger;
  * <code>org.omg.PortableServer.POA</code>
  *
  * @author Reimo Tiedemann, FU Berlin
- * @version $Id: POA.java,v 1.79 2011-09-21 16:03:38 nick.cross Exp $
+ * @version $Id: POA.java,v 1.80 2011-09-26 15:19:38 nick.cross Exp $
  */
 
 public class POA

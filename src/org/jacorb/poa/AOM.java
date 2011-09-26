@@ -21,8 +21,8 @@ package org.jacorb.poa;
  */
 
 import java.util.Collections;
-import java.util.HashSet;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.BlockingQueue;
@@ -45,7 +45,7 @@ import org.slf4j.Logger;
  * The data can be retrieved using getServant() or getObjectId().
  *
  * @author Reimo Tiedemann, FU Berlin
- * @version $Id: AOM.java,v 1.42 2011-09-19 11:37:20 nick.cross Exp $
+ * @version $Id: AOM.java,v 1.43 2011-09-26 15:19:38 nick.cross Exp $
  */
 
 public class AOM

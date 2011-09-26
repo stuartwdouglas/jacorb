@@ -39,7 +39,6 @@ package org.jacorb.orb.factory;
 
 import java.io.IOException;
 import java.net.Socket;
-
 import org.omg.CORBA.TIMEOUT;
 
 
@@ -48,7 +47,7 @@ import org.omg.CORBA.TIMEOUT;
  * for an outgoing connection.
  *
  * @author Gerald Brose
- * @version $Id: SocketFactory.java,v 1.11 2011-05-13 09:24:32 nick.cross Exp $
+ * @version $Id: SocketFactory.java,v 1.12 2011-09-26 15:19:38 nick.cross Exp $
  */
 
 public interface SocketFactory

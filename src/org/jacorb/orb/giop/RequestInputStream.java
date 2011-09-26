@@ -29,10 +29,6 @@ import org.omg.GIOP.LocateRequestHeader_1_0Helper;
 import org.omg.GIOP.LocateRequestHeader_1_2;
 import org.omg.GIOP.LocateRequestHeader_1_2Helper;
 import org.omg.GIOP.MsgType_1_1;
-import org.omg.GIOP.RequestHeader_1_0;
-import org.omg.GIOP.RequestHeader_1_0Helper;
-import org.omg.GIOP.RequestHeader_1_1;
-import org.omg.GIOP.RequestHeader_1_1Helper;
 import org.omg.GIOP.RequestHeader_1_2;
 import org.omg.GIOP.RequestHeader_1_2Helper;
 import org.omg.GIOP.TargetAddress;
@@ -43,7 +39,7 @@ import org.omg.IOP.TaggedProfile;
 
 /**
  * @author Gerald Brose, FU Berlin
- * @version $Id: RequestInputStream.java,v 1.23 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: RequestInputStream.java,v 1.24 2011-09-26 15:19:38 nick.cross Exp $
  */
 public class RequestInputStream
     extends ServiceContextTransportingInputStream

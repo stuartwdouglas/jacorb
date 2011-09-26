@@ -22,9 +22,8 @@ package org.jacorb.orb.standardInterceptors;
  */
 
 
-import org.jacorb.config.*;
-import org.slf4j.Logger;
 import org.ietf.jgss.Oid;
+import org.jacorb.config.ConfigurationException;
 import org.jacorb.orb.CDROutputStream;
 import org.jacorb.orb.ORB;
 import org.jacorb.orb.portableInterceptor.IORInfoImpl;
@@ -46,23 +45,24 @@ import org.omg.CSIIOP.CompoundSecMechList;
 import org.omg.CSIIOP.CompoundSecMechListHelper;
 import org.omg.CSIIOP.SAS_ContextSec;
 import org.omg.CSIIOP.ServiceConfiguration;
-import org.omg.IOP.TAG_CSI_SEC_MECH_LIST;
-import org.omg.IOP.TAG_NULL_TAG;
 import org.omg.IOP.Codec;
 import org.omg.IOP.CodecFactory;
 import org.omg.IOP.ENCODING_CDR_ENCAPS;
 import org.omg.IOP.Encoding;
+import org.omg.IOP.TAG_CSI_SEC_MECH_LIST;
 import org.omg.IOP.TAG_INTERNET_IOP;
+import org.omg.IOP.TAG_NULL_TAG;
 import org.omg.IOP.TaggedComponent;
 import org.omg.PortableInterceptor.IORInfo;
 import org.omg.PortableInterceptor.IORInterceptor;
 import org.omg.PortableInterceptor.ORBInitInfo;
+import org.slf4j.Logger;
 
 /**
  * This interceptor creates an sas TaggedComponent
  *
  * @author David Robison
- * @version $Id: SASComponentInterceptor.java,v 1.27 2011-05-10 15:40:41 nick.cross Exp $
+ * @version $Id: SASComponentInterceptor.java,v 1.28 2011-09-26 15:19:38 nick.cross Exp $
  */
 
 public class SASComponentInterceptor

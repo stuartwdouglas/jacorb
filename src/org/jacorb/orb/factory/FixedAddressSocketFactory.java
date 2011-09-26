@@ -24,8 +24,8 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.Socket;
-
-import org.jacorb.config.*;
+import org.jacorb.config.Configuration;
+import org.jacorb.config.ConfigurationException;
 import org.jacorb.orb.iiop.IIOPAddress;
 
 /**
@@ -35,7 +35,7 @@ import org.jacorb.orb.iiop.IIOPAddress;
  * and use the specified value to configure the sockets it creates.
  *
  * @author Nicolas Noffke
- * @version $Id: FixedAddressSocketFactory.java,v 1.10 2011-09-13 12:07:30 nick.cross Exp $
+ * @version $Id: FixedAddressSocketFactory.java,v 1.11 2011-09-26 15:19:38 nick.cross Exp $
  */
 public class FixedAddressSocketFactory extends AbstractSocketFactory
 {

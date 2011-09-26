@@ -1,9 +1,9 @@
 package org.jacorb.poa;
 
-import org.jacorb.config.*;
-import org.slf4j.Logger;
 import org.jacorb.config.Configuration;
+import org.jacorb.config.ConfigurationException;
 import org.jacorb.orb.ORB;
+import org.slf4j.Logger;
 
 /**
  * factory class to create instances of RPPoolManager
@@ -12,7 +12,7 @@ import org.jacorb.orb.ORB;
  * or return a shared instance.
  *
  * @author Alphonse Bendt
- * @version $Id: RPPoolManagerFactory.java,v 1.7 2009-05-03 21:36:17 andre.spiegel Exp $
+ * @version $Id: RPPoolManagerFactory.java,v 1.8 2011-09-26 15:19:39 nick.cross Exp $
  */
 public class RPPoolManagerFactory
 {

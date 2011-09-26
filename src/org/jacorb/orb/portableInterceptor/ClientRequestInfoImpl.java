@@ -24,7 +24,6 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import org.jacorb.orb.etf.ProfileBase;
-import org.jacorb.util.ObjectUtil;
 import org.omg.CORBA.ARG_IN;
 import org.omg.CORBA.ARG_INOUT;
 import org.omg.CORBA.ARG_OUT;
@@ -53,7 +52,7 @@ import org.slf4j.Logger;
  * See PI Spec p.5-46ff
  *
  * @author Nicolas Noffke
- * @version $Id: ClientRequestInfoImpl.java,v 1.40 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: ClientRequestInfoImpl.java,v 1.41 2011-09-26 15:19:38 nick.cross Exp $
  */
 
 public class ClientRequestInfoImpl

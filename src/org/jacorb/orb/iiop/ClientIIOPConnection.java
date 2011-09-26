@@ -26,10 +26,10 @@ import java.net.SocketTimeoutException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
 import javax.net.ssl.SSLSocket;
-
-import org.jacorb.config.*;
+import org.jacorb.config.Configurable;
+import org.jacorb.config.Configuration;
+import org.jacorb.config.ConfigurationException;
 import org.jacorb.orb.factory.SocketFactory;
 import org.jacorb.orb.giop.TransportManager;
 import org.jacorb.orb.listener.TCPConnectionEvent;
@@ -39,7 +39,7 @@ import org.omg.CORBA.TIMEOUT;
 /**
  * @author Nicolas Noffke
  * @author Andre Spiegel
- * @version $Id: ClientIIOPConnection.java,v 1.42 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: ClientIIOPConnection.java,v 1.43 2011-09-26 15:19:38 nick.cross Exp $
  */
 public class ClientIIOPConnection
     extends IIOPConnection

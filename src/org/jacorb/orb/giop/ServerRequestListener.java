@@ -22,8 +22,9 @@ package org.jacorb.orb.giop;
 
 import java.io.IOException;
 import java.util.List;
-import org.jacorb.config.*;
-import org.slf4j.Logger;
+import org.jacorb.config.Configurable;
+import org.jacorb.config.Configuration;
+import org.jacorb.config.ConfigurationException;
 import org.jacorb.orb.ORB;
 import org.jacorb.orb.SystemExceptionHelper;
 import org.jacorb.orb.dsi.ServerRequest;
@@ -36,10 +37,11 @@ import org.omg.CORBA.OBJECT_NOT_EXIST;
 import org.omg.GIOP.LocateStatusType_1_2;
 import org.omg.GIOP.ReplyStatusType_1_2;
 import org.omg.PortableGroup.TagGroupTaggedComponent;
+import org.slf4j.Logger;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: ServerRequestListener.java,v 1.37 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: ServerRequestListener.java,v 1.38 2011-09-26 15:19:38 nick.cross Exp $
  */
 public class ServerRequestListener
     implements RequestListener, Configurable

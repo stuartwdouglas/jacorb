@@ -25,17 +25,15 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
-
 import javax.net.ssl.SSLException;
 import javax.net.ssl.SSLHandshakeException;
 import javax.net.ssl.SSLKeyException;
 import javax.net.ssl.SSLPeerUnverifiedException;
 import javax.net.ssl.SSLProtocolException;
 import javax.net.ssl.SSLSocket;
-
-import org.slf4j.Logger;
 import org.jacorb.orb.ORB;
 import org.jacorb.orb.iiop.IIOPConnection;
+import org.slf4j.Logger;
 
 
 /**
@@ -44,7 +42,7 @@ import org.jacorb.orb.iiop.IIOPConnection;
  * with the listeners.
  *
  * @author Nick Cross
- * @version $Id: SSLListenerUtil.java,v 1.2 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: SSLListenerUtil.java,v 1.3 2011-09-26 15:19:38 nick.cross Exp $
  */
 public class SSLListenerUtil
 {

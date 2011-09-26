@@ -21,7 +21,6 @@
 package org.jacorb.orb.typecode;
 
 import java.util.Map;
-
 import org.jacorb.orb.CDROutputStream;
 import org.omg.CORBA.TCKind;
 import org.omg.CORBA.TypeCode;
@@ -30,7 +29,7 @@ import org.omg.CORBA.TypeCodePackage.Bounds;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: AbstractInterfaceTypeCodeWriter.java,v 1.1 2011-09-23 11:29:14 nick.cross Exp $
+ * @version $Id: AbstractInterfaceTypeCodeWriter.java,v 1.2 2011-09-26 15:19:38 nick.cross Exp $
  */
 public class AbstractInterfaceTypeCodeWriter extends ComplexTypeCodeWriter
 {

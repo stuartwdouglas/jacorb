@@ -21,18 +21,17 @@ package org.jacorb.orb.giop;
  */
 
 import java.io.IOException;
-
-import org.slf4j.Logger;
 import org.jacorb.orb.SystemExceptionHelper;
 import org.omg.CORBA.MARSHAL;
 import org.omg.GIOP.LocateStatusType_1_2;
 import org.omg.GIOP.MsgType_1_1;
 import org.omg.GIOP.ReplyStatusType_1_0;
 import org.omg.GIOP.ReplyStatusType_1_2;
+import org.slf4j.Logger;
 
 /**
  * @author Gerald Brose
- * @version $Id: ReplyOutputStream.java,v 1.27 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: ReplyOutputStream.java,v 1.28 2011-09-26 15:19:38 nick.cross Exp $
  *
  */
 public class ReplyOutputStream

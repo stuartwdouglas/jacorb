@@ -21,7 +21,6 @@ package org.jacorb.security.sas;
  */
 
 import java.security.Provider;
-
 import org.ietf.jgss.GSSException;
 import org.ietf.jgss.Oid;
 import org.omg.CORBA.Any;
@@ -29,14 +28,13 @@ import org.omg.CORBA.ORB;
 import org.omg.GSSUP.InitialContextToken;
 import org.omg.GSSUP.InitialContextTokenHelper;
 import org.omg.IOP.Codec;
-
 import sun.security.jgss.spi.GSSNameSpi;
 
 /**
  * This is the GSS-API Sercurity Provider Interface (SPI) for the GSSUP Name
  *
  * @author David Robison
- * @version $Id: GSSUPNameSpi.java,v 1.15 2011-05-10 15:40:41 nick.cross Exp $
+ * @version $Id: GSSUPNameSpi.java,v 1.16 2011-09-26 15:19:39 nick.cross Exp $
  */
 
 public final class GSSUPNameSpi 

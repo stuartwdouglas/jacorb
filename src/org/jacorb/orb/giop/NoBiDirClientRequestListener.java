@@ -21,16 +21,16 @@
 package org.jacorb.orb.giop;
 
 import java.io.IOException;
-import org.slf4j.Logger;
 import org.jacorb.orb.ORB;
 import org.jacorb.orb.SystemExceptionHelper;
 import org.omg.CORBA.CompletionStatus;
 import org.omg.CORBA.INV_POLICY;
 import org.omg.GIOP.ReplyStatusType_1_2;
+import org.slf4j.Logger;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: NoBiDirClientRequestListener.java,v 1.16 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: NoBiDirClientRequestListener.java,v 1.17 2011-09-26 15:19:38 nick.cross Exp $
  */
 
 public class NoBiDirClientRequestListener

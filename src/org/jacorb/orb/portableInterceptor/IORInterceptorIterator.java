@@ -21,11 +21,11 @@ package org.jacorb.orb.portableInterceptor;
  *
  */
 
-import org.slf4j.Logger;
 import org.jacorb.orb.standardInterceptors.CodeSetInfoInterceptor;
 import org.omg.CORBA.UserException;
 import org.omg.PortableInterceptor.IORInterceptor;
 import org.omg.PortableInterceptor.Interceptor;
+import org.slf4j.Logger;
 
 /**
  * IORInterceptorIterator.java
@@ -33,7 +33,7 @@ import org.omg.PortableInterceptor.Interceptor;
  * Created: Mon Apr 17 09:53:33 2000
  *
  * @author Nicolas Noffke
- * $Id: IORInterceptorIterator.java,v 1.15 2011-05-10 15:40:40 nick.cross Exp $
+ * $Id: IORInterceptorIterator.java,v 1.16 2011-09-26 15:19:38 nick.cross Exp $
  */
 
 public class IORInterceptorIterator

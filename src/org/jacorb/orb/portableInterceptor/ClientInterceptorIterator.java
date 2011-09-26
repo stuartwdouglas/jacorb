@@ -20,20 +20,20 @@
  */
 package org.jacorb.orb.portableInterceptor;
 
-import org.slf4j.Logger;
 import org.jacorb.orb.SystemExceptionHelper;
 import org.omg.CORBA.UserException;
 import org.omg.PortableInterceptor.ClientRequestInterceptor;
 import org.omg.PortableInterceptor.ForwardRequest;
 import org.omg.PortableInterceptor.Interceptor;
 import org.omg.PortableInterceptor.LOCATION_FORWARD;
+import org.slf4j.Logger;
 
 /**
  * This class is an iterator over an array
  * of ClientRequestInterceptors.
  *
  * @author Nicolas Noffke
- * @version  $Id: ClientInterceptorIterator.java,v 1.19 2011-05-10 15:40:40 nick.cross Exp $
+ * @version  $Id: ClientInterceptorIterator.java,v 1.20 2011-09-26 15:19:38 nick.cross Exp $
  */
 
 public class ClientInterceptorIterator

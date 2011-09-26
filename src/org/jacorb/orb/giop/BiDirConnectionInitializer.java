@@ -20,7 +20,6 @@
 
 package org.jacorb.orb.giop;
 
-import org.slf4j.Logger;
 import org.jacorb.orb.ORB;
 import org.omg.BiDirPolicy.BIDIRECTIONAL_POLICY_TYPE;
 import org.omg.IOP.Codec;
@@ -28,10 +27,11 @@ import org.omg.IOP.ENCODING_CDR_ENCAPS;
 import org.omg.IOP.Encoding;
 import org.omg.PortableInterceptor.ORBInitInfo;
 import org.omg.PortableInterceptor.ORBInitializer;
+import org.slf4j.Logger;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: BiDirConnectionInitializer.java,v 1.15 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: BiDirConnectionInitializer.java,v 1.16 2011-09-26 15:19:38 nick.cross Exp $
  */
 
 public class BiDirConnectionInitializer

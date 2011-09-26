@@ -20,8 +20,9 @@
  */
 package org.jacorb.orb.standardInterceptors;
 
-import org.jacorb.config.*;
-import org.slf4j.Logger;
+import org.jacorb.config.Configurable;
+import org.jacorb.config.Configuration;
+import org.jacorb.config.ConfigurationException;
 import org.jacorb.orb.CDROutputStream;
 import org.jacorb.orb.ORB;
 import org.omg.CORBA.INTERNAL;
@@ -31,12 +32,13 @@ import org.omg.PortableInterceptor.IORInfo;
 import org.omg.PortableInterceptor.IORInterceptor;
 import org.omg.SSLIOP.SSL;
 import org.omg.SSLIOP.SSLHelper;
+import org.slf4j.Logger;
 
 /**
  * This interceptor creates an ssl TaggedComponent
  *
  * @author Nicolas Noffke
- * @version $Id: SSLComponentInterceptor.java,v 1.26 2011-05-10 15:40:41 nick.cross Exp $
+ * @version $Id: SSLComponentInterceptor.java,v 1.27 2011-09-26 15:19:38 nick.cross Exp $
  */
 
 public class SSLComponentInterceptor

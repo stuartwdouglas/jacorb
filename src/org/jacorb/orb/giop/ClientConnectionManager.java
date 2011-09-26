@@ -24,19 +24,20 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Map;
-
-import org.jacorb.config.*;
-import org.slf4j.Logger;
+import org.jacorb.config.Configurable;
+import org.jacorb.config.Configuration;
+import org.jacorb.config.ConfigurationException;
 import org.jacorb.orb.ORB;
 import org.jacorb.orb.iiop.IIOPProfile;
 import org.omg.CORBA.BAD_PARAM;
 import org.omg.ETF.Factories;
+import org.slf4j.Logger;
 
 /**
  * This class manages connections.
  *
  * @author Gerald Brose, FU Berlin
- * @version $Id: ClientConnectionManager.java,v 1.38 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: ClientConnectionManager.java,v 1.39 2011-09-26 15:19:38 nick.cross Exp $
  */
 
 public class ClientConnectionManager

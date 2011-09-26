@@ -22,7 +22,6 @@ package org.jacorb.orb.typecode;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import org.jacorb.orb.CDROutputStream;
 import org.jacorb.orb.TypeCode;
 import org.omg.CORBA.MARSHAL;
@@ -31,7 +30,7 @@ import org.omg.CORBA.TypeCodePackage.BadKind;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: DelegatingTypeCodeWriter.java,v 1.1 2011-09-23 11:29:15 nick.cross Exp $
+ * @version $Id: DelegatingTypeCodeWriter.java,v 1.2 2011-09-26 15:19:38 nick.cross Exp $
  */
 public class DelegatingTypeCodeWriter
 {

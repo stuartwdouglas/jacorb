@@ -1,16 +1,15 @@
 package org.jacorb.orb.listener;
 
+import java.io.IOException;
 import java.security.cert.Certificate;
 import java.util.EventObject;
-
-import java.io.IOException;
 
 /**
  * <code>SSLSessionEvent</code> defines an event state object for a
  * SSL Session.
  *
  * @author Nick Cross
- * @version $Id: SSLSessionEvent.java,v 1.2 2009-09-08 12:35:08 alexander.bykov Exp $
+ * @version $Id: SSLSessionEvent.java,v 1.3 2011-09-26 15:19:38 nick.cross Exp $
  */
 public class SSLSessionEvent extends EventObject
 {

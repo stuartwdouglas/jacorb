@@ -20,15 +20,15 @@
 
 package org.jacorb.orb.giop;
 
-import org.jacorb.config.*;
-import org.slf4j.Logger;
+import org.jacorb.config.Configuration;
 import org.jacorb.util.threadpool.Consumer;
 import org.jacorb.util.threadpool.ConsumerFactory;
 import org.jacorb.util.threadpool.ThreadPool;
+import org.slf4j.Logger;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: MessageReceptorPool.java,v 1.22 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: MessageReceptorPool.java,v 1.23 2011-09-26 15:19:38 nick.cross Exp $
  */
 public class MessageReceptorPool
 {

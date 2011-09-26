@@ -23,18 +23,20 @@ package org.jacorb.poa;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import org.jacorb.config.*;
-import org.slf4j.Logger;
+import org.jacorb.config.Configurable;
+import org.jacorb.config.Configuration;
+import org.jacorb.config.ConfigurationException;
 import org.jacorb.orb.dsi.ServerRequest;
 import org.jacorb.poa.except.ResourceLimitReachedException;
 import org.jacorb.poa.util.StringPair;
 import org.omg.CORBA.BAD_INV_ORDER;
+import org.slf4j.Logger;
 
 /**
  * This class manages a queue of ServerRequest objects.
  *
  * @author Reimo Tiedemann, FU Berlin
- * @version $Id: RequestQueue.java,v 1.26 2011-05-10 15:40:41 nick.cross Exp $
+ * @version $Id: RequestQueue.java,v 1.27 2011-09-26 15:19:39 nick.cross Exp $
  */
 public class RequestQueue
     implements Configurable

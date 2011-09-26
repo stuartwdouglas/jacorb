@@ -21,7 +21,6 @@
 package org.jacorb.orb.typecode;
 
 import java.util.Map;
-
 import org.omg.CORBA.TCKind;
 import org.omg.CORBA.TypeCode;
 import org.omg.CORBA.TypeCodePackage.BadKind;
@@ -32,7 +31,7 @@ import org.omg.CORBA.TypeCodePackage.BadKind;
  * are answered from the cache instead of compacting the TypeCode over and over again.
  *
  * @author Alphonse Bendt
- * @version $Id: AbstractTypeCodeCompactor.java,v 1.1 2011-09-23 11:29:14 nick.cross Exp $
+ * @version $Id: AbstractTypeCodeCompactor.java,v 1.2 2011-09-26 15:19:38 nick.cross Exp $
  */
 public abstract class AbstractTypeCodeCompactor implements TypeCodeCompactor
 {

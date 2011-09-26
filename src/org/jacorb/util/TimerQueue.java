@@ -21,12 +21,11 @@ package org.jacorb.util;
  *
  */
 
+import java.util.Iterator;
 import java.util.SortedMap;
 import java.util.TreeMap;
-//import java.util.Comparator;
-//import java.util.Calendar;
-import java.util.Iterator;
-import org.jacorb.config.*;
+import org.jacorb.config.Configuration;
+import org.jacorb.config.ConfigurationException;
 import org.slf4j.Logger;
 
 
@@ -43,7 +42,7 @@ import org.slf4j.Logger;
  * adversely affect the performance of the timer queue.
  *
  * @author Phil Mesnier <mesnier_p@ociweb.com>
- * @version $Id: TimerQueue.java,v 1.3 2011-05-10 15:40:41 nick.cross Exp $
+ * @version $Id: TimerQueue.java,v 1.4 2011-09-26 15:19:39 nick.cross Exp $
  */
 public class TimerQueue extends Thread
 {

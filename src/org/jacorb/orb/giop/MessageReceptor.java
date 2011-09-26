@@ -21,15 +21,14 @@ package org.jacorb.orb.giop;
  */
 
 import java.net.Socket;
-
-import org.slf4j.Logger;
 import org.jacorb.config.Configuration;
 import org.jacorb.orb.iiop.ServerIIOPConnection;
 import org.jacorb.util.threadpool.Consumer;
+import org.slf4j.Logger;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: MessageReceptor.java,v 1.15 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: MessageReceptor.java,v 1.16 2011-09-26 15:19:38 nick.cross Exp $
  */
 
 public class MessageReceptor

@@ -25,16 +25,17 @@ import java.io.IOException;
 import java.net.Socket;
 import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
-
-import org.jacorb.config.*;
-import org.slf4j.Logger;
+import org.jacorb.config.Configurable;
+import org.jacorb.config.Configuration;
+import org.jacorb.config.ConfigurationException;
 import org.omg.CORBA.TIMEOUT;
+import org.slf4j.Logger;
 
 /**
  * abstract base class for JacORB's default SocketFactory implementations.
  *
  * @author Alphonse Bendt
- * @version $Id: AbstractSocketFactory.java,v 1.9 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: AbstractSocketFactory.java,v 1.10 2011-09-26 15:19:38 nick.cross Exp $
  */
 
 public abstract class AbstractSocketFactory implements SocketFactory, Configurable

@@ -22,14 +22,13 @@
 package org.jacorb.orb.portableInterceptor;
 
 import java.util.HashSet;
-
 import org.omg.PortableInterceptor.ClientRequestInfo;
 import org.omg.PortableInterceptor.ClientRequestInterceptor;
 import org.omg.PortableInterceptor.ForwardRequest;
 
 /**
  * @author Gerald Brose
- * @version $Id: RecursionAwareCI.java,v 1.10 2011-05-10 15:40:41 nick.cross Exp $
+ * @version $Id: RecursionAwareCI.java,v 1.11 2011-09-26 15:19:38 nick.cross Exp $
  */
 public abstract class RecursionAwareCI
     extends org.omg.CORBA.LocalObject

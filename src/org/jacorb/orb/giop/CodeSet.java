@@ -27,11 +27,9 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.Properties;
-import org.slf4j.*;
-import org.slf4j.LoggerFactory;
-import org.jacorb.config.*;
+import org.jacorb.config.Configuration;
+import org.jacorb.config.ConfigurationException;
 import org.jacorb.orb.CDRInputStream;
-import org.jacorb.orb.CDROutputStream;
 import org.omg.CONV_FRAME.CodeSetComponent;
 import org.omg.CONV_FRAME.CodeSetComponentInfo;
 import org.omg.CONV_FRAME.CodeSetContext;
@@ -40,9 +38,11 @@ import org.omg.CORBA.CODESET_INCOMPATIBLE;
 import org.omg.CORBA.MARSHAL;
 import org.omg.IOP.ServiceContext;
 import org.omg.IOP.TAG_CODE_SETS;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 /**
  * @author Gerald Brose
- * @version $Id: CodeSet.java,v 1.30 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: CodeSet.java,v 1.31 2011-09-26 15:19:38 nick.cross Exp $
  */
 public class CodeSet
 {

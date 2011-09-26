@@ -25,7 +25,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
-
 import org.jacorb.orb.BasicAdapter;
 import org.jacorb.orb.CDROutputStream;
 import org.jacorb.orb.ORB;
@@ -43,7 +42,7 @@ import org.omg.PortableInterceptor.ForwardRequest;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: BiDirConnectionClientInterceptor.java,v 1.16 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: BiDirConnectionClientInterceptor.java,v 1.17 2011-09-26 15:19:38 nick.cross Exp $
  */
 public class BiDirConnectionClientInterceptor
     extends DefaultClientInterceptor

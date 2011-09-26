@@ -23,7 +23,6 @@ package org.jacorb.orb.iiop;
 import java.io.IOException;
 import java.net.Socket;
 import java.net.SocketException;
-
 import org.jacorb.orb.etf.StreamConnectionBase;
 import org.jacorb.orb.listener.SSLListenerUtil;
 import org.omg.CORBA.COMM_FAILURE;
@@ -32,7 +31,7 @@ import org.omg.CORBA.COMM_FAILURE;
 /**
  * @author Nicolas Noffke
  * @author Andre Spiegel
- * @version $Id: IIOPConnection.java,v 1.20 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: IIOPConnection.java,v 1.21 2011-09-26 15:19:38 nick.cross Exp $
  */
 public abstract class IIOPConnection
     extends StreamConnectionBase

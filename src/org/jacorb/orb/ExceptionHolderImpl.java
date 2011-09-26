@@ -23,18 +23,20 @@ package org.jacorb.orb;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import org.jacorb.config.*;
-import org.slf4j.Logger;
+import org.jacorb.config.Configurable;
+import org.jacorb.config.Configuration;
+import org.jacorb.config.ConfigurationException;
 import org.jacorb.ir.RepositoryID;
 import org.jacorb.orb.giop.ReplyInputStream;
 import org.jacorb.util.ObjectUtil;
 import org.omg.CORBA.BAD_PARAM;
 import org.omg.CORBA.ExceptionList;
 import org.omg.CORBA.INTERNAL;
-import org.omg.CORBA.TypeCode;
 import org.omg.CORBA.NO_IMPLEMENT;
+import org.omg.CORBA.TypeCode;
 import org.omg.CORBA.UserException;
 import org.omg.GIOP.ReplyStatusType_1_2;
+import org.slf4j.Logger;
 
 /**
  * JacORB-specific implementation of
@@ -42,7 +44,7 @@ import org.omg.GIOP.ReplyStatusType_1_2;
  * type is used to pass an exception to a reply handler.
  *
  * @author Andre Spiegel <spiegel@gnu.org>
- * @version $Id: ExceptionHolderImpl.java,v 1.24 2011-09-23 11:29:14 nick.cross Exp $
+ * @version $Id: ExceptionHolderImpl.java,v 1.25 2011-09-26 15:21:03 nick.cross Exp $
  */
 public class ExceptionHolderImpl
     extends org.omg.Messaging.ExceptionHolder

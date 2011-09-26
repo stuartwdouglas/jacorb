@@ -23,9 +23,9 @@ package org.jacorb.orb;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
-import org.jacorb.config.*;
-import org.slf4j.Logger;
+import org.jacorb.config.Configurable;
+import org.jacorb.config.Configuration;
+import org.jacorb.config.ConfigurationException;
 import org.jacorb.orb.giop.GIOPConnection;
 import org.jacorb.orb.giop.GIOPConnectionManager;
 import org.jacorb.orb.giop.MessageReceptorPool;
@@ -41,12 +41,13 @@ import org.omg.CORBA.INTERNAL;
 import org.omg.ETF.Connection;
 import org.omg.ETF.Factories;
 import org.omg.ETF.Listener;
+import org.slf4j.Logger;
 
 /**
  * Class BasicAdapter, used by the POA.
  *
  * @author Gerald Brose
- * @version $Id: BasicAdapter.java,v 1.65 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: BasicAdapter.java,v 1.66 2011-09-26 15:21:03 nick.cross Exp $
  */
 public class BasicAdapter
     extends org.omg.ETF._HandleLocalBase

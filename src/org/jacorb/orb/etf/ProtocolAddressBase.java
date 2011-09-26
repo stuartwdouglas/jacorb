@@ -20,13 +20,15 @@
  */
 package org.jacorb.orb.etf;
 
-import org.jacorb.config.*;
+import org.jacorb.config.Configurable;
+import org.jacorb.config.Configuration;
+import org.jacorb.config.ConfigurationException;
 import org.jacorb.orb.CDROutputStream;
 
 
 /**
  * @author Phil Mesnier
- * @version $Id: ProtocolAddressBase.java,v 1.8 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: ProtocolAddressBase.java,v 1.9 2011-09-26 15:19:38 nick.cross Exp $
  *
  * provides an abstraction of a protocol specific address.
  * This is necessary to allow the ORB and other components deal with

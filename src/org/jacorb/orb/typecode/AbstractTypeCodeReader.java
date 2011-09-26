@@ -21,11 +21,9 @@
 package org.jacorb.orb.typecode;
 
 import java.util.Map;
-
 import org.jacorb.orb.CDRInputStream;
 import org.jacorb.orb.ORB;
 import org.jacorb.orb.ORBSingleton;
-import org.jacorb.util.ObjectUtil;
 import org.omg.CORBA.BAD_PARAM;
 import org.omg.CORBA.TypeCode;
 
@@ -33,7 +31,7 @@ import org.omg.CORBA.TypeCode;
  * this class captures logic common to all TypeCodeReader implementations
  *
  * @author Alphonse Bendt
- * @version $Id: AbstractTypeCodeReader.java,v 1.1 2011-09-23 11:29:15 nick.cross Exp $
+ * @version $Id: AbstractTypeCodeReader.java,v 1.2 2011-09-26 15:19:38 nick.cross Exp $
  */
 public abstract class AbstractTypeCodeReader implements TypeCodeReader
 {

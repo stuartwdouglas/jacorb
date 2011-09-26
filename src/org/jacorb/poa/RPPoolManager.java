@@ -20,11 +20,12 @@ package org.jacorb.poa;
  *   Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
 
-import java.util.LinkedList;
 import java.util.HashSet;
-import org.jacorb.config.*;
-import org.slf4j.Logger;
+import java.util.LinkedList;
+import org.jacorb.config.Configuration;
+import org.jacorb.config.ConfigurationException;
 import org.jacorb.poa.except.POAInternalError;
+import org.slf4j.Logger;
 
 /**
  * This class provides and manages a pool of ready started threads for
@@ -32,7 +33,7 @@ import org.jacorb.poa.except.POAInternalError;
  *
  * @author Gerald Brose
  * @author Reimo Tiedemann
- * @version $Id: RPPoolManager.java,v 1.27 2011-05-10 15:40:41 nick.cross Exp $
+ * @version $Id: RPPoolManager.java,v 1.28 2011-09-26 15:19:39 nick.cross Exp $
  * @see org.jacorb.poa.RequestProcessor
  */
 

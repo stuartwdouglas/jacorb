@@ -22,19 +22,20 @@ package org.jacorb.orb.factory;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
-
-import org.slf4j.Logger;
-import org.jacorb.config.*;
+import org.jacorb.config.Configurable;
+import org.jacorb.config.Configuration;
+import org.jacorb.config.ConfigurationException;
 import org.jacorb.orb.ORB;
 import org.jacorb.orb.listener.NullSSLSessionListener;
 import org.jacorb.orb.listener.NullTCPConnectionListener;
 import org.jacorb.orb.listener.SSLSessionListener;
 import org.jacorb.orb.listener.TCPConnectionListener;
 import org.jacorb.util.ObjectUtil;
+import org.slf4j.Logger;
 
 /**
  * @author Steve Osselton
- * @version $Id: SocketFactoryManager.java,v 1.24 2011-05-13 09:24:32 nick.cross Exp $
+ * @version $Id: SocketFactoryManager.java,v 1.25 2011-09-26 15:19:38 nick.cross Exp $
  */
 public class SocketFactoryManager
     implements Configurable

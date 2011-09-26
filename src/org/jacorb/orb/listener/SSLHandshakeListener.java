@@ -22,18 +22,18 @@ package org.jacorb.orb.listener;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.security.cert.Certificate;
 import javax.net.ssl.HandshakeCompletedEvent;
 import javax.net.ssl.HandshakeCompletedListener;
 import javax.net.ssl.SSLPeerUnverifiedException;
 import org.slf4j.Logger;
-import java.security.cert.Certificate;
 /**
  * <code>SSLHandshakeListener</code> implements the SSL Handshake Listener
  * in order to detect a successful SSL connection. It then passes this information
  * on to the external SSLListener.
  *
  * @author Nick Cross
- * @version $Id: SSLHandshakeListener.java,v 1.6 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: SSLHandshakeListener.java,v 1.7 2011-09-26 15:19:38 nick.cross Exp $
  */
 public class SSLHandshakeListener implements HandshakeCompletedListener
 {

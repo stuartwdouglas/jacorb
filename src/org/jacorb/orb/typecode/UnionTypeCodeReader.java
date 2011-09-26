@@ -21,13 +21,12 @@
 package org.jacorb.orb.typecode;
 
 import java.util.Map;
-
 import org.jacorb.orb.CDRInputStream;
 import org.omg.CORBA.UnionMember;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: UnionTypeCodeReader.java,v 1.1 2011-09-23 11:29:15 nick.cross Exp $
+ * @version $Id: UnionTypeCodeReader.java,v 1.2 2011-09-26 15:19:38 nick.cross Exp $
  */
 public class UnionTypeCodeReader extends ComplexTypeCodeReader
 {

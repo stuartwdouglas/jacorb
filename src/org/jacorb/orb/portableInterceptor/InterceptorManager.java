@@ -24,20 +24,20 @@ package org.jacorb.orb.portableInterceptor;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-import org.slf4j.Logger;
 import org.jacorb.orb.ORB;
 import org.omg.PortableInterceptor.ClientRequestInterceptor;
 import org.omg.PortableInterceptor.Current;
 import org.omg.PortableInterceptor.IORInterceptor;
 import org.omg.PortableInterceptor.Interceptor;
 import org.omg.PortableInterceptor.ServerRequestInterceptor;
+import org.slf4j.Logger;
 
 /**
  * This class "manages" the portable interceptors registered
  * with the ORB, and controls the PICurrent.
  *
  * @author Nicolas Noffke
- * @version $Id: InterceptorManager.java,v 1.25 2011-05-10 15:40:41 nick.cross Exp $
+ * @version $Id: InterceptorManager.java,v 1.26 2011-09-26 15:19:38 nick.cross Exp $
  */
 
 public class InterceptorManager
