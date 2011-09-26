@@ -60,7 +60,7 @@ import org.jacorb.orb.typecode.TypeCodeCache;
  * Read CDR encoded data
  *
  * @author Gerald Brose, FU Berlin
- * $Id: CDRInputStream.java,v 1.137 2011-09-23 13:45:31 nick.cross Exp $
+ * $Id: CDRInputStream.java,v 1.138 2011-09-26 13:54:04 nick.cross Exp $
  */
 
 public class CDRInputStream
@@ -209,20 +209,13 @@ public class CDRInputStream
 
         try
         {
-            if (this.orb instanceof org.jacorb.orb.ORB)
-            {
-                final org.jacorb.orb.ORB jorb = (org.jacorb.orb.ORB)this.orb;
-                configure((jorb).getConfiguration());
-            }
-            else if (this.orb instanceof ORBSingleton)
-            {
-                configure (JacORBConfiguration.getConfiguration(null, null, false));
-            }
+            configure(((ORBSingleton)this.orb).getConfiguration());
         }
         catch( ConfigurationException e )
         {
             throw new INTERNAL("ConfigurationException: " + e);
         }
+
         typeCodeCache = ((ORBSingleton)this.orb).getTypeCodeCache();
     }
 

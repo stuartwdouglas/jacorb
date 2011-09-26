@@ -31,13 +31,13 @@ import org.omg.PortableServer.POAHelper;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: ClientInterceptorTest.java,v 1.2 2011-05-10 15:40:42 nick.cross Exp $
+ * @version $Id: ClientInterceptorTest.java,v 1.3 2011-09-26 13:54:04 nick.cross Exp $
  */
 public class ClientInterceptorTest extends ORBTestCase
 {
     BasicServer server;
 
-    protected void patchORBProperties(Properties props)
+    protected void patchORBProperties(String testName, Properties props) throws Exception
     {
         props.setProperty("jacorb.orb_initializer.fail_on_error", "true");
         props.setProperty("org.omg.PortableInterceptor.ORBInitializerClass." + ClientInterceptorInit.class.getName(), "");

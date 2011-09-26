@@ -31,11 +31,11 @@ import org.omg.GIOP.ReplyStatusType_1_2;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: BugJac512Giop1_0ClientTest.java,v 1.2 2011-05-10 15:40:42 nick.cross Exp $
+ * @version $Id: BugJac512Giop1_0ClientTest.java,v 1.3 2011-09-26 13:54:04 nick.cross Exp $
  */
 public class BugJac512Giop1_0ClientTest extends ORBTestCase
 {
-    protected void patchORBProperties(String testName, Properties props)
+    protected void patchORBProperties(String testName, Properties props) throws Exception
     {
         props.setProperty("jacorb.giop_minor_version", "0");
     }

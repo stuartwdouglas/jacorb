@@ -40,7 +40,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Gerald Brose, FU Berlin
- * @version $Id: ORBSingleton.java,v 1.62 2011-09-23 15:36:28 nick.cross Exp $
+ * @version $Id: ORBSingleton.java,v 1.63 2011-09-26 13:54:04 nick.cross Exp $
  */
 
 public class ORBSingleton
@@ -95,6 +95,8 @@ public class ORBSingleton
 
                 if (logger.isDebugEnabled())
                 {
+                    logger.debug("BufferManagerFactory: " + bufferManagerFactory);
+                    logger.debug("BufferManager: " + bufferManager);
                     logger.debug("jacorb.interop.strict_check_on_tc_creation set to " + doStrictCheckOnTypecodeCreation);
                 }
 
@@ -895,11 +897,19 @@ public class ORBSingleton
 
     public TypeCodeCache getTypeCodeCache()
     {
+        if (bufferManager == null)
+        {
+            throw new INITIALIZE ("JacORB ORB Singleton not initialized");
+        }
         return typeCodeCache;
     }
 
     public TypeCodeCompactor getTypeCodeCompactor()
     {
+        if (bufferManager == null)
+        {
+            throw new INITIALIZE ("JacORB ORB Singleton not initialized");
+        }
         return typeCodeCompactor;
     }
 }

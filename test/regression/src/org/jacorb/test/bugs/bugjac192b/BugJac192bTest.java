@@ -27,7 +27,7 @@ import org.omg.CORBA.INTERNAL;
 
 /**
  * @author Nick Cross
- * @version $Id: BugJac192bTest.java,v 1.5 2011-05-10 15:40:42 nick.cross Exp $
+ * @version $Id: BugJac192bTest.java,v 1.6 2011-09-26 13:54:04 nick.cross Exp $
  */
 public class BugJac192bTest extends ORBTestCase
 {
@@ -52,10 +52,11 @@ public class BugJac192bTest extends ORBTestCase
         server = JAC192bHelper.narrow( serverObject );
     }
 
-	protected void patchORBProperties(Properties client_props) {
-		client_props.put("org.omg.PortableInterceptor.ORBInitializerClass.CInitializer",
-        "org.jacorb.test.bugs.bugjac192b.CInitializer");
-	}
+    protected void patchORBProperties(String testName, Properties client_props) throws Exception
+    {
+        client_props.put("org.omg.PortableInterceptor.ORBInitializerClass.CInitializer",
+                         "org.jacorb.test.bugs.bugjac192b.CInitializer");
+    }
 
     /**
      * <code>test_interceptorerror</code> tests that if an interceptor throws a
