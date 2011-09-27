@@ -22,6 +22,8 @@
 package org.jacorb.orb;
 
 import java.util.Iterator;
+import java.util.Map;
+
 import org.jacorb.orb.giop.ReplyInputStream;
 import org.jacorb.orb.portableInterceptor.ClientInterceptorIterator;
 import org.jacorb.orb.portableInterceptor.ClientRequestInfoImpl;
@@ -43,7 +45,7 @@ import org.slf4j.Logger;
  * client request and any interceptors registered for it.
  *
  * @author Andre Spiegel
- * @version $Id: DefaultClientInterceptorHandler.java,v 1.3 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: DefaultClientInterceptorHandler.java,v 1.4 2011-09-27 10:22:30 alexander.bykov Exp $
  */
 public class DefaultClientInterceptorHandler implements ClientInterceptorHandler
 {
@@ -85,7 +87,8 @@ public class DefaultClientInterceptorHandler implements ClientInterceptorHandler
                     self,
                     delegate,
                     piorOriginal,
-                    connection);
+                    connection, 
+                    (Map) Delegate.getInvocationContext().peek());
         }
         else
         {
@@ -113,7 +116,8 @@ public class DefaultClientInterceptorHandler implements ClientInterceptorHandler
                                          sync_scope,
                                          self,
                                          delegate,
-                                         piorOriginal);
+                                         piorOriginal,
+                                         (Map) Delegate.getInvocationContext().peek());
 
         isLocal = true;
 

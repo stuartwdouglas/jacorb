@@ -3,7 +3,7 @@ package org.jacorb.test.common;
 /*
  *        JacORB  - a free Java ORB
  *
- *   Copyright (C) 1997-2011 Gerald Brose / The JacORB Team.
+ *   Copyright (C) 1997-2003  Gerald Brose.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -33,12 +33,12 @@ import java.util.Date;
  * that allows you to capture an IOR from the <code>InputStream</code>.
  *
  * @author <a href="mailto:spiegel@gnu.org">Andre Spiegel</a>
- * @version $Id: StreamListener.java,v 1.17 2011-05-10 15:40:42 nick.cross Exp $
+ * @version $Id: StreamListener.java,v 1.18 2011-09-27 10:22:30 alexander.bykov Exp $
  */
 public class StreamListener extends Thread
 {
-    private BufferedReader in;
-    private String id;
+    private final BufferedReader in;
+    private final String id;
     private String ior = null;
     private String exception = null;
     private volatile boolean active = true;
@@ -58,7 +58,16 @@ public class StreamListener extends Thread
      */
     public String getIOR(long timeout)
     {
-        final long waitUntil = System.currentTimeMillis() + timeout;
+        final long waitUntil;
+
+        if (timeout == 0)
+        {
+            waitUntil = Long.MAX_VALUE;
+        }
+        else
+        {
+            waitUntil = System.currentTimeMillis() + timeout;
+        }
 
         synchronized (this)
         {
@@ -193,7 +202,6 @@ public class StreamListener extends Thread
         }
         catch (IOException e)
         {
-            // do nothing
         }
     }
 
