@@ -22,9 +22,13 @@ package org.jacorb.notification.engine;
  */
 
 import java.util.Date;
-
-import org.jacorb.config.*;
-import org.slf4j.Logger;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.TimeUnit;
+import org.jacorb.config.Configuration;
+import org.jacorb.config.ConfigurationException;
 import org.jacorb.notification.conf.Attributes;
 import org.jacorb.notification.conf.Default;
 import org.jacorb.notification.interfaces.Disposable;
@@ -33,20 +37,16 @@ import org.jacorb.notification.interfaces.Message;
 import org.jacorb.notification.interfaces.MessageSupplier;
 import org.jacorb.notification.util.DisposableManager;
 import org.omg.CORBA.Any;
+import org.omg.CORBA.INTERNAL;
 import org.omg.CosNotification.StructuredEvent;
-
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.ScheduledFuture;
-import java.util.concurrent.ThreadFactory;
-import java.util.concurrent.TimeUnit;
+import org.slf4j.Logger;
 
 /**
  * @jmx.mbean
  * @jboss.xmbean
  *
  * @author Alphonse Bendt
- * @version $Id: DefaultTaskProcessor.java,v 1.18 2011-05-10 15:40:38 nick.cross Exp $
+ * @version $Id: DefaultTaskProcessor.java,v 1.19 2011-09-27 14:06:17 nick.cross Exp $
  */
 
 public class DefaultTaskProcessor implements TaskProcessor, Disposable, JMXManageable, DefaultTaskProcessorMBean
@@ -180,13 +180,21 @@ public class DefaultTaskProcessor implements TaskProcessor, Disposable, JMXManag
 
         logger_.info("create TaskProcessor");
 
-        pullWorkerPoolSize_ = config.getAttributeAsInteger(Attributes.PULL_POOL_WORKERS,
-                        Default.DEFAULT_PULL_POOL_SIZE);
+        try
+        {
+           pullWorkerPoolSize_ = config.getAttributeAsInteger(Attributes.PULL_POOL_WORKERS,
+                                                              Default.DEFAULT_PULL_POOL_SIZE);
 
-        pullTaskExecutor_ = new DefaultTaskExecutor("PullThread", pullWorkerPoolSize_, true);
+           pullTaskExecutor_ = new DefaultTaskExecutor("PullThread", pullWorkerPoolSize_, true);
 
-        filterWorkerPoolSize_ = config.getAttributeAsInteger(Attributes.FILTER_POOL_WORKERS,
-                        Default.DEFAULT_FILTER_POOL_SIZE);
+           filterWorkerPoolSize_ = config.getAttributeAsInteger(Attributes.FILTER_POOL_WORKERS,
+                                                                Default.DEFAULT_FILTER_POOL_SIZE);
+        }
+        catch (ConfigurationException ex)
+        {
+           logger_.error ("Error configuring DefaultTaskProcessor ", ex);
+           throw new INTERNAL ("Error configuring DefaultTaskProcessor " + ex);
+        }
 
         taskFactory_ = taskFactory;
     }

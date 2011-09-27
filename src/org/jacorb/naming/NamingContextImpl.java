@@ -51,7 +51,7 @@ import org.slf4j.Logger;
  *      The implementation for the CORBAService Naming
  *
  *      @author Gerald Brose
- *      @version $Id: NamingContextImpl.java,v 1.37 2011-05-11 13:54:13 nick.cross Exp $
+ *      @version $Id: NamingContextImpl.java,v 1.38 2011-09-27 14:06:17 nick.cross Exp $
  */
 
 public class NamingContextImpl
@@ -90,8 +90,8 @@ public class NamingContextImpl
     {
         this.configuration = (org.jacorb.config.Configuration)myConfiguration;
         logger = configuration.getLogger("jacorb.naming");
-        doPurge = configuration.getAttribute("jacorb.naming.purge","off").equals("on");
-        ping = configuration.getAttribute("jacorb.naming.ping","off").equals("on");
+        doPurge = configuration.getAttributeAsBoolean("jacorb.naming.purge",false);
+        ping = configuration.getAttributeAsBoolean("jacorb.naming.ping",false);
     }
 
 

@@ -31,7 +31,6 @@ import java.lang.reflect.Method;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
-
 import org.jacorb.config.Configuration;
 import org.jacorb.config.ConfigurationException;
 import org.jacorb.imr.AdminPackage.DuplicateServerName;
@@ -82,7 +81,7 @@ import org.slf4j.Logger;
  *
  * @author Nicolas Noffke
  *
- * $Id: ImplementationRepositoryImpl.java,v 1.77 2011-05-10 15:40:36 nick.cross Exp $
+ * $Id: ImplementationRepositoryImpl.java,v 1.78 2011-09-27 14:06:17 nick.cross Exp $
  */
 
 public class ImplementationRepositoryImpl
@@ -1301,6 +1300,7 @@ public class ImplementationRepositoryImpl
         {
             lros = new LocateRequestOutputStream ( orb, object_key, connection.getId(), 2);
             receiver = new LocateReplyReceiver((org.jacorb.orb.ORB)orb);
+            receiver.configure (configuration);
 
             connection.sendRequest(
                 lros,

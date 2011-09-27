@@ -11,7 +11,7 @@ import org.omg.PortableServer.POA;
 
 /**
  * @author Andre Spiegel
- * @version $Id: IIOPAddressServerImpl.java,v 1.7 2010-01-16 16:24:10 alexander.bykov Exp $
+ * @version $Id: IIOPAddressServerImpl.java,v 1.8 2011-09-27 14:06:18 nick.cross Exp $
  */
 public class IIOPAddressServerImpl extends IIOPAddressServerPOA
     implements Configurable
@@ -28,9 +28,9 @@ public class IIOPAddressServerImpl extends IIOPAddressServerPOA
         config.setAttribute ("OAIAddr",host);
         if (port != -1)
         {
-            config.setAttribute ("OAPort", Integer.toString(port));
+            config.setAttribute ("OAPort", port);
         }
-        
+
         try
         {
             config.getORB().configure(config);
@@ -57,7 +57,7 @@ public class IIOPAddressServerImpl extends IIOPAddressServerPOA
     public void clearSocketAddress()
     {
         config.setAttribute ("OAIAddr", null);
-        config.setAttribute ("OAPort", null);
+        config.setAttribute ("OAPort", -1);
         config.setAttribute ("OAAddress",null);
 
         try
@@ -76,7 +76,7 @@ public class IIOPAddressServerImpl extends IIOPAddressServerPOA
 
         if (port != -1)
         {
-            config.setAttribute ("jacorb.ior_proxy_port",Integer.toString(port));
+            config.setAttribute ("jacorb.ior_proxy_port", port);
         }
 
         try
@@ -106,7 +106,7 @@ public class IIOPAddressServerImpl extends IIOPAddressServerPOA
     public void clearIORAddress()
     {
         config.setAttribute ("jacorb.ior_proxy_host", null);
-        config.setAttribute ("jacorb.ior_proxy_port", null);
+        config.setAttribute ("jacorb.ior_proxy_port", -1);
         config.setAttribute ("jacorb.ior_proxy_address", null);
         try
         {

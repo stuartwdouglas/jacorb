@@ -24,14 +24,13 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import org.jacorb.config.Configuration;
-import org.jacorb.config.ConfigurationException;
 import org.jacorb.orb.ParsedIOR;
 import org.omg.CONV_FRAME.CodeSetComponentInfo;
 import org.slf4j.Logger;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: ClientConnection.java,v 1.71 2011-09-26 15:19:38 nick.cross Exp $
+ * @version $Id: ClientConnection.java,v 1.72 2011-09-27 14:06:18 nick.cross Exp $
  */
 public class ClientConnection
     implements ReplyListener, ConnectionListener
@@ -107,7 +106,7 @@ public class ClientConnection
         logger =
             configuration.getLogger("jacorb.giop.conn");
 
-        ignoreComponentInfo = ! (configuration.getAttributeAsBoolean("jacorb.codeset", true));
+        ignoreComponentInfo = ! (configuration.getAttributeAsBoolean("jacorb.codeset", false));
 
         //For BiDirGIOP, the connection initiator may only generate
         //even valued request ids, and the other side odd valued
@@ -122,16 +121,7 @@ public class ClientConnection
         connection.setReplyListener( this );
         connection.setConnectionListener( this );
 
-        try
-        {
-            replies = (Map) configuration.getAttributeAsObject("java.util.Map", HashMap.class.getName());
-        }
-        catch (ConfigurationException e)
-        {
-            // should never happen
-            throw new RuntimeException(e);
-        }
-
+        replies = new HashMap();
         sasContexts = new HashMap();
     }
 
@@ -169,6 +159,7 @@ public class ClientConnection
         CodeSetComponentInfo info = pior.getCodeSetComponentInfo();
         if (info != null && !ignoreComponentInfo)
         {
+           logger.debug ("### checking codesets ");
             connection.markTCSNegotiated(); // even if this aborts, we should not try negotiating again.
             connection.setCodeSets( CodeSet.getNegotiatedCodeSet( info, /* wide */ false ),
                                     CodeSet.getNegotiatedCodeSet( info, /* wide */ true ) );

@@ -54,7 +54,7 @@ import org.slf4j.Logger;
  * jacorb.connection.statistics_providers={classnames}, default=(empty)<br>
  *
  * @author Nicolas Noffke
- * @version $Id: GIOPConnection.java,v 1.86 2011-09-26 15:19:38 nick.cross Exp $
+ * @version $Id: GIOPConnection.java,v 1.87 2011-09-27 14:06:18 nick.cross Exp $
  */
 
 public abstract class GIOPConnection
@@ -187,12 +187,11 @@ public abstract class GIOPConnection
     public void configure(Configuration configuration)
         throws ConfigurationException
     {
-        org.jacorb.config.Configuration jacorbConfiguration = (org.jacorb.config.Configuration) configuration;
-        this.orb = jacorbConfiguration.getORB();
+        this.orb = configuration.getORB();
 
         buf_mg = orb.getBufferManager();
 
-        logger = jacorbConfiguration.getLogger("jacorb.giop.conn");
+        logger = configuration.getLogger("jacorb.giop.conn");
         dump_incoming =
             configuration.getAttributeAsBoolean("jacorb.debug.dump_incoming_messages", false);
         timeout =
@@ -216,8 +215,7 @@ public abstract class GIOPConnection
                         new ConnectionReset (max_request_write_time);
             }
 
-        List statsProviderClassNames =
-            jacorbConfiguration.getAttributeList( "jacorb.connection.statistics_providers");
+        List statsProviderClassNames = configuration.getAttributeList( "jacorb.connection.statistics_providers");
 
         for (Iterator iter = statsProviderClassNames.iterator (); iter.hasNext ();) {
             String className = (String) iter.next ();

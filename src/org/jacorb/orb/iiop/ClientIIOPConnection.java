@@ -39,7 +39,7 @@ import org.omg.CORBA.TIMEOUT;
 /**
  * @author Nicolas Noffke
  * @author Andre Spiegel
- * @version $Id: ClientIIOPConnection.java,v 1.43 2011-09-26 15:19:38 nick.cross Exp $
+ * @version $Id: ClientIIOPConnection.java,v 1.44 2011-09-27 14:06:18 nick.cross Exp $
  */
 public class ClientIIOPConnection
     extends IIOPConnection
@@ -51,6 +51,8 @@ public class ClientIIOPConnection
     private int noOfRetries  = 5;
     private int retryInterval = 0;
     private boolean doSupportSSL = false;
+    private int client_required = -1;
+    private int client_supported = -1;
     private TransportManager transportManager;
     private TCPConnectionListener connectionListener;
     private boolean keepAlive;
@@ -83,6 +85,10 @@ public class ClientIIOPConnection
             configuration.getAttributeAsBoolean("jacorb.security.support_ssl", false);
         transportManager =
             this.configuration.getORB().getTransportManager();
+        client_required =
+           configuration.getAttributeAsInteger("jacorb.security.ssl.client.required_options", 16, 16);
+        client_supported =
+           configuration.getAttributeAsInteger("jacorb.security.ssl.client.supported_options", 16, 16);
 
         keepAlive = configuration.getAttributeAsBoolean("jacorb.connection.client.keepalive", false);
 
@@ -432,11 +438,6 @@ public class ClientIIOPConnection
     protected void checkSSL()
     {
         if (!doSupportSSL) return;
-
-        int client_required =
-            configuration.getAttributeAsInteger("jacorb.security.ssl.client.required_options", 16, 16);
-        int client_supported =
-            configuration.getAttributeAsInteger("jacorb.security.ssl.client.supported_options", 16, 16);
 
         ssl_port = ((IIOPProfile) profile).getSslPortIfSupported( client_required, client_supported );
         use_ssl  = ssl_port != -1;

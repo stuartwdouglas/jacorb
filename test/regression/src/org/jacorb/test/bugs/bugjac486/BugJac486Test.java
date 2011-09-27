@@ -21,10 +21,8 @@
 package org.jacorb.test.bugs.bugjac486;
 
 import java.util.Properties;
-
 import junit.framework.Test;
 import junit.framework.TestSuite;
-
 import org.jacorb.orb.iiop.IIOPProfile;
 import org.jacorb.test.BasicServer;
 import org.jacorb.test.BasicServerHelper;
@@ -36,7 +34,7 @@ import org.jacorb.test.orb.BasicServerImpl;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: BugJac486Test.java,v 1.3 2011-05-10 15:40:42 nick.cross Exp $
+ * @version $Id: BugJac486Test.java,v 1.4 2011-09-27 14:06:18 nick.cross Exp $
  */
 public class BugJac486Test extends ClientServerTestCase
 {

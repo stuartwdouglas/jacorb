@@ -21,6 +21,7 @@
 package org.jacorb.orb.giop;
 
 import org.jacorb.config.Configuration;
+import org.jacorb.config.ConfigurationException;
 import org.jacorb.util.threadpool.Consumer;
 import org.jacorb.util.threadpool.ConsumerFactory;
 import org.jacorb.util.threadpool.ThreadPool;
@@ -28,7 +29,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: MessageReceptorPool.java,v 1.23 2011-09-26 15:19:38 nick.cross Exp $
+ * @version $Id: MessageReceptorPool.java,v 1.24 2011-09-27 14:06:18 nick.cross Exp $
  */
 public class MessageReceptorPool
 {
@@ -42,8 +43,9 @@ public class MessageReceptorPool
      * @param threadNamePrefix prefix that's used to name all threads that are created by this pool
      * @param myConfiguration current configuration
      * TODO configuration of this class should be enhanced. config param does not feel right.
+    * @throws ConfigurationException
      */
-    public MessageReceptorPool(String config, String threadNamePrefix, Configuration myConfiguration)
+    public MessageReceptorPool(String config, String threadNamePrefix, Configuration myConfiguration) throws ConfigurationException
     {
         if (!"server".equals(config) && !"client".equals(config))
         {

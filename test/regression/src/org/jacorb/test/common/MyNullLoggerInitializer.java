@@ -20,22 +20,16 @@
 
 package org.jacorb.test.common;
 
-import java.io.IOException;
 import java.util.logging.Handler;
-
 import org.jacorb.config.Configuration;
-import org.jacorb.config.ConfigurationException;
 import org.jacorb.config.LoggingInitializer;
-import org.slf4j.Logger;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: MyNullLoggerInitializer.java,v 1.2 2011-05-10 15:40:42 nick.cross Exp $
+ * @version $Id: MyNullLoggerInitializer.java,v 1.3 2011-09-27 14:06:18 nick.cross Exp $
  */
 public class MyNullLoggerInitializer extends LoggingInitializer
 {
-    private final Logger nullLogger = new MyNullLogger();
-
     public void init (Configuration config)
     {
         java.util.logging.Logger rootLogger =

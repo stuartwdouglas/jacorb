@@ -21,7 +21,8 @@ package org.jacorb.notification.engine;
  *
  */
 
-import org.jacorb.config.*;
+import org.jacorb.config.Configuration;
+import org.jacorb.config.ConfigurationException;
 import org.jacorb.notification.conf.Attributes;
 import org.jacorb.notification.conf.Default;
 import org.jacorb.notification.interfaces.Disposable;
@@ -32,7 +33,7 @@ import org.jacorb.notification.util.AbstractPoolablePool;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: DefaultTaskFactory.java,v 1.7 2011-05-10 15:40:38 nick.cross Exp $
+ * @version $Id: DefaultTaskFactory.java,v 1.8 2011-09-27 14:06:17 nick.cross Exp $
  */
 
 public class DefaultTaskFactory implements Disposable, TaskFactory
@@ -41,10 +42,10 @@ public class DefaultTaskFactory implements Disposable, TaskFactory
      * TaskExecutor used to invoke match-Operation on filters
      */
     private final TaskExecutor filterTaskExecutor_;
-    
+
     private final int filterWorkerPoolSize_;
-    
-    private final AbstractPoolablePool filterProxyConsumerTaskPool_ = 
+
+    private final AbstractPoolablePool filterProxyConsumerTaskPool_ =
         new AbstractPoolablePool("FilterProxyConsumerTaskPool")
     {
         public Object newInstance()
@@ -54,7 +55,7 @@ public class DefaultTaskFactory implements Disposable, TaskFactory
         }
     };
 
-    private final AbstractPoolablePool filterSupplierAdminTaskPool_ = 
+    private final AbstractPoolablePool filterSupplierAdminTaskPool_ =
         new AbstractPoolablePool("FilterSupplierAdminTaskPool")
     {
         public Object newInstance()
@@ -64,7 +65,7 @@ public class DefaultTaskFactory implements Disposable, TaskFactory
         }
     };
 
-    private final AbstractPoolablePool filterConsumerAdminTaskPool_ = 
+    private final AbstractPoolablePool filterConsumerAdminTaskPool_ =
         new AbstractPoolablePool("FilterConsumerAdminTaskPool")
     {
         public Object newInstance()
@@ -74,7 +75,7 @@ public class DefaultTaskFactory implements Disposable, TaskFactory
         }
     };
 
-    private final AbstractPoolablePool filterProxySupplierTaskPool_ = 
+    private final AbstractPoolablePool filterProxySupplierTaskPool_ =
         new AbstractPoolablePool("FilterProxySupplierTaskPool")
     {
         public Object newInstance()
@@ -86,13 +87,13 @@ public class DefaultTaskFactory implements Disposable, TaskFactory
 
     // //////////////////////////////////////
 
-    public DefaultTaskFactory(Configuration config)
+    public DefaultTaskFactory(Configuration config) throws ConfigurationException
     {
         filterWorkerPoolSize_ = config.getAttributeAsInteger(Attributes.FILTER_POOL_WORKERS,
                 Default.DEFAULT_FILTER_POOL_SIZE);
-        
+
         filterTaskExecutor_ = new DefaultTaskExecutor("FilterThread", filterWorkerPoolSize_);
-        
+
         configure(config);
     }
 
@@ -216,11 +217,11 @@ public class DefaultTaskFactory implements Disposable, TaskFactory
     /**
      * @param filterStagesWithMessageConsumer
      *            Array of FilterStages that have an MessageConsumer attached.
-     * 
+     *
      * @param mesg
      *            the Message that is to be delivered by the created PushToConsumerTask. This method
      *            assumes ownership of the Message.
-     * 
+     *
      * @param map
      *            Map(FilterStage=>Message) of alternate Messages that should be used for specific
      *            MessageConsumers.

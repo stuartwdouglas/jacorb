@@ -34,7 +34,7 @@ import org.slf4j.Logger;
  *
  * @author Nicolas Noffke
  * @author Andre Spiegel
- * @version $Id: ConnectionBase.java,v 1.10 2011-05-12 12:56:52 nick.cross Exp $
+ * @version $Id: ConnectionBase.java,v 1.11 2011-09-27 14:06:18 nick.cross Exp $
  */
 
 public abstract class ConnectionBase
@@ -93,7 +93,7 @@ public abstract class ConnectionBase
 
         logger = configuration.getLogger(configuration.getLoggerName(getClass()));
 
-        if( configuration.getAttribute("jacorb.debug.dump_outgoing_messages","off").equals("on"))
+        if(configuration.getAttributeAsBoolean("jacorb.debug.dump_outgoing_messages",false))
         {
             b_out = new ByteArrayOutputStream();
         }

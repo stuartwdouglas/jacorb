@@ -28,7 +28,7 @@ import java.util.Vector;
 
 /**
  * @author Gerald Brose
- * @version $Id: InterfaceBody.java,v 1.34 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: InterfaceBody.java,v 1.35 2011-09-27 14:06:17 nick.cross Exp $
  *
  * directly known subclasses: ValueBody
  */
@@ -420,8 +420,8 @@ public class InterfaceBody
             return;
         }
 
-        ps.print  ( "\tstatic private final java.util.HashMap");
-        ps.println( " m_opsHash = new java.util.HashMap();" );
+        ps.print  ( "\tstatic private final java.util.HashMap<String,Integer>");
+        ps.println( " m_opsHash = new java.util.HashMap<String,Integer>();" );
 
         ps.println( "\tstatic" );
         ps.println( "\t{" );

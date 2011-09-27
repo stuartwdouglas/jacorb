@@ -10,7 +10,7 @@ import org.omg.CORBA.ORB;
 /**
  * A LoggingInitializer for the JDK logging system.
  * @author Andre Spiegel <spiegel@gnu.org>
- * @version $Id: JdkLoggingInitializer.java,v 1.7 2011-04-07 15:55:18 phil.mesnier Exp $
+ * @version $Id: JdkLoggingInitializer.java,v 1.8 2011-09-27 14:06:17 nick.cross Exp $
  */
 public class JdkLoggingInitializer extends LoggingInitializer
 {
@@ -115,6 +115,11 @@ public class JdkLoggingInitializer extends LoggingInitializer
                     System.err.println ("could not write log file");
                     handler = new ConsoleHandler();
                 }
+               catch (ConfigurationException ex)
+               {
+                  System.err.println ("could not write log file due to configuration exception " + ex);
+                  handler = new ConsoleHandler();
+               }
             }
             else
             {

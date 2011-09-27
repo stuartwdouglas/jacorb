@@ -41,7 +41,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: ServerRequestListener.java,v 1.38 2011-09-26 15:19:38 nick.cross Exp $
+ * @version $Id: ServerRequestListener.java,v 1.39 2011-09-27 14:06:18 nick.cross Exp $
  */
 public class ServerRequestListener
     implements RequestListener, Configurable
@@ -60,15 +60,13 @@ public class ServerRequestListener
         this.rootPOA = rootPOA;
     }
 
-    public void configure(Configuration myConfiguration)
+    public void configure(Configuration configuration)
         throws ConfigurationException
     {
-        org.jacorb.config.Configuration configuration = (org.jacorb.config.Configuration)myConfiguration;
         logger =
             configuration.getLogger("jacorb.giop.server.listener");
 
-        boolean supportSSL =
-            configuration.getAttribute("jacorb.security.support_ssl","off").equals("on");
+        boolean supportSSL = configuration.getAttributeAsBoolean("jacorb.security.support_ssl",false);
 
         if( supportSSL )
         {

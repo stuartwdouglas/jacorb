@@ -23,9 +23,8 @@ package org.jacorb.notification.filter;
 
 import java.util.Hashtable;
 import java.util.Map;
-
-import org.jacorb.config.*;
-import org.slf4j.Logger;
+import org.jacorb.config.Configuration;
+import org.jacorb.config.ConfigurationException;
 import org.jacorb.notification.conf.Attributes;
 import org.jacorb.notification.conf.Default;
 import org.jacorb.notification.interfaces.Disposable;
@@ -34,6 +33,7 @@ import org.jacorb.notification.util.DisposableManager;
 import org.jacorb.notification.util.LogUtil;
 import org.omg.CORBA.Any;
 import org.omg.CORBA.AnyHolder;
+import org.omg.CORBA.INTERNAL;
 import org.omg.CORBA.ORB;
 import org.omg.CORBA.TypeCode;
 import org.omg.CosNotification.Property;
@@ -48,10 +48,11 @@ import org.omg.CosNotifyFilter.MappingConstraintPair;
 import org.omg.CosNotifyFilter.MappingFilterOperations;
 import org.omg.CosNotifyFilter.MappingFilterPOATie;
 import org.omg.CosNotifyFilter.UnsupportedFilterableData;
+import org.slf4j.Logger;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: MappingFilterImpl.java,v 1.7 2011-05-10 15:40:38 nick.cross Exp $
+ * @version $Id: MappingFilterImpl.java,v 1.8 2011-09-27 14:06:17 nick.cross Exp $
  */
 
 public class MappingFilterImpl implements GCDisposable, MappingFilterOperations
@@ -118,8 +119,16 @@ public class MappingFilterImpl implements GCDisposable, MappingFilterOperations
 
         servant_ = new MappingFilterPOATie(usageDecorator_.getMappingFilterOperations());
 
-        maxIdleTime_ = config.getAttributeAsLong(Attributes.DEAD_FILTER_INTERVAL,
+        try
+        {
+           maxIdleTime_ = config.getAttributeAsLong(Attributes.DEAD_FILTER_INTERVAL,
                 Default.DEFAULT_DEAD_FILTER_INTERVAL);
+        }
+        catch (ConfigurationException ex)
+        {
+           logger_.error ("Error configuring " + Attributes.DEAD_FILTER_INTERVAL, ex);
+           throw new INTERNAL ("Error configuring MappingFilterImpl " + ex);
+        }
     }
 
     // /////////////////////////////////////

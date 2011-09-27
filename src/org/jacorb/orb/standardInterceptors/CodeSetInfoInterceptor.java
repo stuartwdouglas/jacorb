@@ -35,7 +35,7 @@ import org.omg.PortableInterceptor.IORInterceptor;
  * This interceptor creates a codeset TaggedComponent.
  *
  * @author Nicolas Noffke
- * @version $Id: CodeSetInfoInterceptor.java,v 1.29 2011-09-26 15:19:38 nick.cross Exp $
+ * @version $Id: CodeSetInfoInterceptor.java,v 1.30 2011-09-27 14:06:18 nick.cross Exp $
  */
 
 public class CodeSetInfoInterceptor
@@ -44,19 +44,11 @@ public class CodeSetInfoInterceptor
 {
     private final org.omg.IOP.TaggedComponent tagc;
 
-    public CodeSetInfoInterceptor(ORB orb)
+    public CodeSetInfoInterceptor(ORB orb) throws ConfigurationException
     {
         super();
 
-        try
-        {
             configure(orb.getConfiguration());
-        }
-        catch (ConfigurationException ex)
-        {
-            ex.printStackTrace();
-            // will have to do with defaults
-        }
 
         // encapsulate it into TaggedComponent
         final CDROutputStream out = new CDROutputStream( orb );

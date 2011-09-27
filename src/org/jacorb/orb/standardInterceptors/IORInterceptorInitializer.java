@@ -33,7 +33,7 @@ import org.slf4j.Logger;
  * used by JacORB.
  *
  * @author Nicolas Noffke
- * @version $Id: IORInterceptorInitializer.java,v 1.25 2011-09-26 15:19:38 nick.cross Exp $
+ * @version $Id: IORInterceptorInitializer.java,v 1.26 2011-09-27 14:06:18 nick.cross Exp $
  */
 
 public class IORInterceptorInitializer
@@ -64,7 +64,7 @@ public class IORInterceptorInitializer
         }
         catch (Exception e)
         {
-            logger.error("unexpected exception", e);
+            logger.error ("Unexpected exception in IORInterceptorInitializer", e);
             throw new INTERNAL(e.toString());
         }
     }

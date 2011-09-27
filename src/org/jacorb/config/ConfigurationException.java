@@ -24,18 +24,18 @@ package org.jacorb.config;
  * Used to report errors in the JacORB configuration, such as missing
  * attributes or illegal attribute values.
  * @author Andre Spiegel <spiegel@gnu.org>
- * @version $Id: ConfigurationException.java,v 1.2 2011-05-10 15:40:35 nick.cross Exp $
+ * @version $Id: ConfigurationException.java,v 1.3 2011-09-27 14:06:17 nick.cross Exp $
  */
-public class ConfigurationException extends RuntimeException
+public class ConfigurationException extends Exception
 {
     public ConfigurationException (String message)
     {
         super (message);
     }
-    
+
     public ConfigurationException (String message, Throwable cause)
     {
         super (message, cause);
     }
-        
+
 }

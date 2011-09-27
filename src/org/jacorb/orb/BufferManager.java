@@ -23,7 +23,6 @@ import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-
 import org.jacorb.config.Configurable;
 import org.jacorb.config.Configuration;
 import org.jacorb.config.ConfigurationException;
@@ -39,7 +38,7 @@ import org.omg.CORBA.NO_MEMORY;
  * Buffers are generally created on demand.
  *
  * @author Gerald Brose
- * @version $Id: BufferManager.java,v 1.36 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: BufferManager.java,v 1.37 2011-09-27 14:06:17 nick.cross Exp $
 */
 
 public class BufferManager extends AbstractBufferManager
@@ -105,21 +104,29 @@ public class BufferManager extends AbstractBufferManager
      */
     public BufferManager(Configuration configuration)
     {
-        this.time = configuration.getAttributeAsInteger("jacorb.bufferManagerMaxFlush", 0);
-        this.maxManagedBufferSize = configuration.getAttributeAsInteger("jacorb.maxManagedBufSize", 22);
-        this.threshold = configuration.getAttributeAsInteger("jacorb.bufferManagerThreshold", 20);
+        try
+        {
+           this.time = configuration.getAttributeAsInteger("jacorb.bufferManagerMaxFlush", 0);
+           this.maxManagedBufferSize = configuration.getAttributeAsInteger("jacorb.maxManagedBufSize", 22);
+           this.threshold = configuration.getAttributeAsInteger("jacorb.bufferManagerThreshold", 20);
+        }
+        catch (ConfigurationException ex)
+        {
+           configuration.getLogger ("buffer").error ("Error configuring the BufferManager", ex);
+           throw new INTERNAL ("Unable to configure the BufferManager");
+        }
 
         try
         {
-            expansionPolicy = (BufferManagerExpansionPolicy) 
-                configuration.getAttributeAsObject ("jacorb.buffermanager.expansionpolicy", 
+            expansionPolicy = (BufferManagerExpansionPolicy)
+                configuration.getAttributeAsObject ("jacorb.buffermanager.expansionpolicy",
                                                     DefaultExpansionPolicy.class.getName ());
             if (expansionPolicy instanceof Configurable)
             {
                 ((Configurable)expansionPolicy).configure (configuration);
             }
         }
-        catch (ConfigurationException e) 
+        catch (ConfigurationException e)
         {
             this.expansionPolicy = null;
         }
@@ -207,8 +214,8 @@ public class BufferManager extends AbstractBufferManager
         {
             size = expansionPolicy.getExpandedSize (size);
         }
-        
-        return getBuffer (size); 
+
+        return getBuffer (size);
     }
 
     /**

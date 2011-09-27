@@ -24,7 +24,6 @@ package org.jacorb.config;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.logging.Formatter;
-import java.util.logging.Level;
 import java.util.logging.LogRecord;
 
 /**
@@ -32,7 +31,7 @@ import java.util.logging.LogRecord;
  * than the standard JDK setting.
  *
  * @author Andre Spiegel <spiegel@gnu.org>
- * @version $Id: JacORBLogFormatter.java,v 1.6 2011-05-10 15:40:35 nick.cross Exp $
+ * @version $Id: JacORBLogFormatter.java,v 1.7 2011-09-27 14:06:17 nick.cross Exp $
  */
 public class JacORBLogFormatter extends Formatter
 {

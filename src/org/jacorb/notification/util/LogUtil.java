@@ -21,20 +21,12 @@
 
 package org.jacorb.notification.util;
 
-import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
-import java.util.Properties;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.jacorb.config.Configuration;
-import org.jacorb.config.ConfigurationException;
-import org.jacorb.config.JacORBConfiguration;
-import org.jacorb.util.ObjectUtil;
+import org.slf4j.Logger;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: LogUtil.java,v 1.7 2011-05-10 15:40:39 nick.cross Exp $
+ * @version $Id: LogUtil.java,v 1.8 2011-09-27 14:06:17 nick.cross Exp $
  */
 public class LogUtil
 {
