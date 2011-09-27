@@ -32,7 +32,7 @@ import org.omg.PortableInterceptor.ServerRequestInterceptor;
  * ServerRequestInterceptors.
  *
  * @author Nicolas Noffke
- * @version $Id: ServerInterceptorIterator.java,v 1.15 2011-05-10 15:40:41 nick.cross Exp $
+ * @version $Id: ServerInterceptorIterator.java,v 1.16 2011-09-27 12:54:25 alexander.bykov Exp $
  */
 
 public class ServerInterceptorIterator
@@ -103,7 +103,7 @@ public class ServerInterceptorIterator
                 case RECEIVE_REQUEST_SERVICE_CONTEXTS :
                 {
                     ((ServerRequestInterceptor) interceptor).
-                    receive_request_service_contexts(info);
+                        receive_request_service_contexts(info);
                     break;
                 }
                 case RECEIVE_REQUEST :

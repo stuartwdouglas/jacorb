@@ -37,7 +37,7 @@ import org.slf4j.Logger;
  * with the ORB, and controls the PICurrent.
  *
  * @author Nicolas Noffke
- * @version $Id: InterceptorManager.java,v 1.26 2011-09-26 15:19:38 nick.cross Exp $
+ * @version $Id: InterceptorManager.java,v 1.27 2011-09-27 12:54:25 alexander.bykov Exp $
  */
 
 public class InterceptorManager
@@ -66,6 +66,12 @@ public class InterceptorManager
     private final Logger logger;
 
     private static final ThreadLocal piCurrent = new ThreadLocal();
+
+    /**
+     * This is to hold the PICurrent for local invocations that involve interceptors to prevent the
+     * client PICurrent being overwritten by a server PICurrent
+     */
+    private static final ThreadLocal localPICurrent = new ThreadLocal ();
 
     public static final PICurrentImpl EMPTY_CURRENT = new PICurrentImpl(null, 0);
 
@@ -105,13 +111,45 @@ public class InterceptorManager
      */
     public Current getCurrent()
     {
-        Current value = (Current)piCurrent.get();
+        Current value = null;
+
+        if (localPICurrent.get () != null)
+        {
+           value = (Current)localPICurrent.get ();
+        }
+
         if (value == null)
         {
-            value = getEmptyCurrent();
-            piCurrent.set(value);
+           value = (Current)piCurrent.get();
+
+           if (value == null)
+           {
+               value = getEmptyCurrent();
+               piCurrent.set(value);
+           }
         }
         return value;
+    }
+
+    public boolean hasCurrent()
+    {
+       return (piCurrent.get() != null);
+    }
+
+    /**
+     * Set the local PICurrent with the servers PICurrent
+     */
+    public void setLocalPICurrent (Current localCurrent)
+    {
+       localPICurrent.set (localCurrent);
+    }
+
+    /**
+     * When the local invocation is complete we should clear the local PICurrent
+     */
+    public void removeLocalPICurrent ()
+    {
+       localPICurrent.set (null);
     }
 
     /**
@@ -226,8 +264,8 @@ public class InterceptorManager
             }
         }
 
-        if (null!=piCurrent.get()) {
-            removeTSCurrent();
-        }
+        // Clear the static threadlocals.
+        piCurrent.set (null);
+        localPICurrent.set (null);
     }
 } // InterceptorManager

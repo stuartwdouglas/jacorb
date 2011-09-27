@@ -114,7 +114,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Gerald Brose, FU Berlin
- * @version $Id: ORB.java,v 1.200 2011-09-23 15:36:28 nick.cross Exp $
+ * @version $Id: ORB.java,v 1.201 2011-09-27 12:54:26 alexander.bykov Exp $
  */
 
 public final class ORB
@@ -1994,6 +1994,11 @@ public final class ORB
 
         poolManagerFactory.destroy();
 
+        if( interceptor_manager != null )
+        {
+            interceptor_manager.destroy();
+        }
+
         // notify all threads waiting in orb.run()
         synchronized( runSync )
         {
@@ -2028,11 +2033,6 @@ public final class ORB
             {
                 shutdown( true );
             }
-        }
-
-        if( interceptor_manager != null )
-        {
-            interceptor_manager.destroy();
         }
 
         // other clean up possible here ?
