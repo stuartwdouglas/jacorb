@@ -22,7 +22,7 @@ package org.jacorb.idl;
 
 /**
  * @author Gerald Brose
- * @version $Id: Interface.java,v 1.88 2011-09-21 12:07:08 nick.cross Exp $
+ * @version $Id: Interface.java,v 1.89 2011-09-28 14:58:03 nick.cross Exp $
  */
 
 import java.io.File;
@@ -857,8 +857,17 @@ public class Interface
 
         ps.println("public" + parser.getFinalString() + " class " + name + "Helper");
         ps.println("{");
-        ps.println("\tprivate static org.omg.CORBA.TypeCode typeCode;");
-        ps.println();
+
+        ps.println("\tprivate static class TypeCodeHolder");
+        ps.println("\t{");
+        ps.println("\t\tstatic final org.omg.CORBA.TypeCode _type = " + getTypeCodeExpression() + ";");
+        ps.println("\t}"  + Environment.NL);
+
+        /* type() method */
+        ps.println("\tpublic static org.omg.CORBA.TypeCode type ()");
+        ps.println("\t{");
+        ps.println("\t\treturn TypeCodeHolder._type;");
+        ps.println("\t}" + Environment.NL);
 
         // Generate insert (handle either CORBA.Object or Serializable case)
         ps.println("\tpublic static void insert (final org.omg.CORBA.Any any, final " + typeName() + " s)");
@@ -926,16 +935,6 @@ public class Interface
             }
         }
 
-        ps.println("\t}");
-
-        // Generate the typecode
-        ps.println("\tpublic synchronized static org.omg.CORBA.TypeCode type()");
-        ps.println("\t{");
-        ps.println("\t\tif (typeCode == null)");
-        ps.println("\t\t{");
-        ps.println("\t\t\ttypeCode = " + getTypeCodeExpression() + ";");
-        ps.println("\t\t}");
-        ps.println("\t\treturn typeCode;");
         ps.println("\t}");
 
         printIdMethod(ps);

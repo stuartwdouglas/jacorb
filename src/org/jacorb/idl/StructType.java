@@ -29,7 +29,7 @@ import java.util.Set;
 
 /**
  * @author Gerald Brose
- * @version $Id: StructType.java,v 1.69 2011-09-27 14:06:17 nick.cross Exp $
+ * @version $Id: StructType.java,v 1.70 2011-09-28 14:58:03 nick.cross Exp $
  */
 
 public class StructType
@@ -446,18 +446,15 @@ public class StructType
 
         ps.println("public" + parser.getFinalString() + " class " + className + "Helper");
         ps.println("{");
-        ps.println("\tprivate static org.omg.CORBA.TypeCode _type = null;");
+        ps.println("\tprivate static class TypeCodeHolder");
+        ps.println("\t{");
+        ps.println("\t\tstatic final org.omg.CORBA.TypeCode _type = " + getTypeCodeExpression() + ";");
+        ps.println("\t}"  + Environment.NL);
 
         /* type() method */
         ps.println("\tpublic static org.omg.CORBA.TypeCode type ()");
         ps.println("\t{");
-        ps.println("\t\tif (_type == null)");
-        ps.println("\t\t{");
-
-        ps.println("\t\t\t_type = " + getTypeCodeExpression() + ";");
-
-        ps.println("\t\t}");
-        ps.println("\t\treturn _type;");
+        ps.println("\t\treturn TypeCodeHolder._type;");
         ps.println("\t}" + Environment.NL);
 
         String type = getJavaTypeName();

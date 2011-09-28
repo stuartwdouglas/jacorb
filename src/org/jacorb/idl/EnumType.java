@@ -28,7 +28,7 @@ import java.util.Set;
 
 /**
  * @author Gerald Brose
- * @version $Id: EnumType.java,v 1.47 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: EnumType.java,v 1.48 2011-09-28 14:58:03 nick.cross Exp $
  */
 
 public class EnumType
@@ -271,31 +271,15 @@ public class EnumType
         ps.println("public" + parser.getFinalString() + " class " + className + "Helper");
         ps.println("{");
 
-        ps.println("\tprivate static org.omg.CORBA.TypeCode _type = null;");
+        ps.println("\tprivate static class TypeCodeHolder");
+        ps.println("\t{");
+        ps.println("\t\tstatic final org.omg.CORBA.TypeCode _type = " + getTypeCodeExpression() + ";");
+        ps.println("\t}"  + Environment.NL);
 
         /* type() method */
         ps.println("\tpublic static org.omg.CORBA.TypeCode type ()");
         ps.println("\t{");
-        ps.println("\t\tif (_type == null)");
-        ps.println("\t\t{");
-
-        StringBuffer sb = new StringBuffer();
-        sb.append("org.omg.CORBA.ORB.init().create_enum_tc(" +
-                   typeName() + "Helper.id(),\"" + className() + "\",");
-
-        sb.append("new String[]{");
-
-        for (Enumeration e = enumlist.v.elements(); e.hasMoreElements();)
-        {
-            sb.append("\"" + (String) e.nextElement() + "\"");
-            if (e.hasMoreElements())
-                sb.append(",");
-        }
-        sb.append("})");
-
-        ps.println("\t\t\t_type = " + sb.toString() + ";");
-        ps.println("\t\t}");
-        ps.println("\t\treturn _type;");
+        ps.println("\t\treturn TypeCodeHolder._type;");
         ps.println("\t}" + Environment.NL);
 
         String type = typeName();

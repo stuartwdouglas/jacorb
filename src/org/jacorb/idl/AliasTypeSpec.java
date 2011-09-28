@@ -27,7 +27,7 @@ import java.util.Set;
 
 /**
  * @author Gerald Brose
- * @version $Id: AliasTypeSpec.java,v 1.61 2011-05-10 15:40:35 nick.cross Exp $
+ * @version $Id: AliasTypeSpec.java,v 1.62 2011-09-28 14:58:03 nick.cross Exp $
  */
 
 public class AliasTypeSpec
@@ -446,8 +446,13 @@ public class AliasTypeSpec
         ps.println("public" + parser.getFinalString() + " class " +
                     className + "Helper");
         ps.println("{");
+        
+        
+        ps.println("\tprivate static class TypeCodeHolder");
+        ps.println("\t{");
+        ps.println("\t\tstatic final org.omg.CORBA.TypeCode _type = " + getTypeCodeExpression() + ";");
+        ps.println("\t}"  + Environment.NL);
 
-        ps.println("\tprivate static org.omg.CORBA.TypeCode _type = null;" + Environment.NL);
         String type = originalType.typeName();
 
         ps.println("\tpublic static void insert (org.omg.CORBA.Any any, " +
@@ -495,13 +500,7 @@ public class AliasTypeSpec
 
         ps.println("\tpublic static org.omg.CORBA.TypeCode type ()");
         ps.println("\t{");
-        ps.println("\t\tif (_type == null)");
-        ps.println("\t\t{");
-
-        ps.println("\t\t\t_type = " + getTypeCodeExpression() + ";");
-
-        ps.println("\t\t}");
-        ps.println("\t\treturn _type;");
+        ps.println("\t\treturn TypeCodeHolder._type;");
         ps.println("\t}" + Environment.NL);
 
         printIdMethod(ps); // inherited from IdlSymbol
