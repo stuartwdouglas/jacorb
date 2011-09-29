@@ -33,7 +33,7 @@ import java.util.Set;
 
 /**
  * @author Andre Spiegel
- * @version $Id: ValueDecl.java,v 1.61 2011-09-28 14:58:03 nick.cross Exp $
+ * @version $Id: ValueDecl.java,v 1.62 2011-09-29 11:23:19 nick.cross Exp $
  */
 
 public class ValueDecl
@@ -846,8 +846,6 @@ public class ValueDecl
             out.println("\t{");
             out.println("\t\treturn TypeCodeHolder._type;");
             out.println("\t}" + Environment.NL);
-
-            out.println("\tprivate static org.omg.CORBA.TypeCode typeCode;");
 
             // insert() / extract()
 
