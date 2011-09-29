@@ -30,7 +30,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: ClientConnection.java,v 1.72 2011-09-27 14:06:18 nick.cross Exp $
+ * @version $Id: ClientConnection.java,v 1.73 2011-09-29 13:01:37 nick.cross Exp $
  */
 public class ClientConnection
     implements ReplyListener, ConnectionListener
@@ -159,7 +159,6 @@ public class ClientConnection
         CodeSetComponentInfo info = pior.getCodeSetComponentInfo();
         if (info != null && !ignoreComponentInfo)
         {
-           logger.debug ("### checking codesets ");
             connection.markTCSNegotiated(); // even if this aborts, we should not try negotiating again.
             connection.setCodeSets( CodeSet.getNegotiatedCodeSet( info, /* wide */ false ),
                                     CodeSet.getNegotiatedCodeSet( info, /* wide */ true ) );
