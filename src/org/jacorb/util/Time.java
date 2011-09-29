@@ -30,7 +30,7 @@ import org.omg.TimeBase.UtcTHelper;
  * Contains static methods to handle CORBA time values.
  *
  * @author Andre Spiegel <spiegel@gnu.org>
- * @version $Id: Time.java,v 1.14 2011-05-10 15:40:41 nick.cross Exp $
+ * @version $Id: Time.java,v 1.15 2011-09-29 18:56:16 phil.mesnier Exp $
  */
 public class Time
 {
@@ -205,7 +205,7 @@ public class Time
             long delta = Time.millisTo(time);
             long then = now + delta;
 
-            while(delta > 0)
+            while (delta > 0)
             {
                 try
                 {

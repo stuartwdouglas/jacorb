@@ -3,7 +3,7 @@ package org.jacorb.util;
 /*
  *        JacORB - a free Java ORB
  *
- *   Copyright (C) 2002-2011 Gerald Brose / The JacORB Team.
+ *   Copyright (C) 2011 Gerald Brose / The JacORB Team.
  *
  *   This library is free software; you can redistribute it and/or
  *   modify it under the terms of the GNU Library General Public
@@ -36,7 +36,7 @@ import java.util.Calendar;
  * adversely affect the performance of the timer queue.
  *
  * @author Phil Mesnier <mesnier_p@ociweb.com>
- * @version $Id: TimerQueueAction.java,v 1.3 2011-05-10 15:40:41 nick.cross Exp $
+ * @version $Id: TimerQueueAction.java,v 1.4 2011-09-29 18:56:16 phil.mesnier Exp $
  */
 public class TimerQueueAction
 {
@@ -83,8 +83,10 @@ public class TimerQueueAction
     public void expire ()
     {
         // subclass this to do something besides notify a waiter
-        if ( notifyTarget != null ) {
-            synchronized (notifyTarget) {
+        if ( notifyTarget != null )
+        {
+            synchronized (notifyTarget)
+            {
                 notifyTarget.notifyAll();
             }
         }
