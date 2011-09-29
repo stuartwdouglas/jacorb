@@ -34,7 +34,7 @@ import org.slf4j.Logger;
  *
  * @author Nicolas Noffke
  * @author Andre Spiegel
- * @version $Id: ConnectionBase.java,v 1.11 2011-09-27 14:06:18 nick.cross Exp $
+ * @version $Id: ConnectionBase.java,v 1.12 2011-09-29 19:27:57 phil.mesnier Exp $
  */
 
 public abstract class ConnectionBase
@@ -214,4 +214,3 @@ public abstract class ConnectionBase
         return localhost;
     }
 }
-

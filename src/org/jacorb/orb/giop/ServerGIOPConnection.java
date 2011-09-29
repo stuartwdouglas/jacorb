@@ -26,7 +26,7 @@ import org.jacorb.orb.iiop.IIOPConnection;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: ServerGIOPConnection.java,v 1.30 2011-05-12 12:56:52 nick.cross Exp $
+ * @version $Id: ServerGIOPConnection.java,v 1.31 2011-09-29 19:27:57 phil.mesnier Exp $
  */
 
 public class ServerGIOPConnection
@@ -143,7 +143,7 @@ public class ServerGIOPConnection
     {
         try
         {
-            getWriteLock();
+            getWriteLock(0);
 
             write( CLOSE_CONNECTION_MESSAGE,
                    0,

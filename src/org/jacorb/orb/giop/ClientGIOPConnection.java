@@ -26,7 +26,7 @@ import org.jacorb.config.ConfigurationException;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: ClientGIOPConnection.java,v 1.24 2011-09-26 15:19:38 nick.cross Exp $
+ * @version $Id: ClientGIOPConnection.java,v 1.25 2011-09-29 19:27:57 phil.mesnier Exp $
  */
 public class ClientGIOPConnection
     extends GIOPConnection
@@ -131,7 +131,7 @@ public class ClientGIOPConnection
             //Solve potential deadlock caused by COMM_FAILURE.
             //The strategy is getting write_lock before sync
             //connect_sync when you need both of them.
-            getWriteLock();
+            getWriteLock(0);
             synchronized (connect_sync)
             {
                 transport.close();
