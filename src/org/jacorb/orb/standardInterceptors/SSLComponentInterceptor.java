@@ -38,7 +38,7 @@ import org.slf4j.Logger;
  * This interceptor creates an ssl TaggedComponent
  *
  * @author Nicolas Noffke
- * @version $Id: SSLComponentInterceptor.java,v 1.28 2011-09-27 14:06:18 nick.cross Exp $
+ * @version $Id: SSLComponentInterceptor.java,v 1.29 2011-09-30 15:55:05 alexander.bykov Exp $
  */
 
 public class SSLComponentInterceptor
@@ -62,9 +62,9 @@ public class SSLComponentInterceptor
     public void configure(Configuration configuration)
         throws ConfigurationException
     {
-        supported = configuration.getAttributeAsInteger("jacorb.security.ssl.server.supported_options",20,16); // 16 is the base as we take the string value as hex!
+        supported = configuration.getAttributeAsInteger("jacorb.security.ssl.server.supported_options", 0x20, 16); // 16 is the base as we take the string value as hex!
 
-        required = configuration.getAttributeAsInteger("jacorb.security.ssl.server.required_options",0,16);
+        required = configuration.getAttributeAsInteger("jacorb.security.ssl.server.required_options", 0, 16);
 
     }
 

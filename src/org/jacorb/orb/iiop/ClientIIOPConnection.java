@@ -39,7 +39,7 @@ import org.omg.CORBA.TIMEOUT;
 /**
  * @author Nicolas Noffke
  * @author Andre Spiegel
- * @version $Id: ClientIIOPConnection.java,v 1.44 2011-09-27 14:06:18 nick.cross Exp $
+ * @version $Id: ClientIIOPConnection.java,v 1.45 2011-09-30 15:55:05 alexander.bykov Exp $
  */
 public class ClientIIOPConnection
     extends IIOPConnection
@@ -86,9 +86,9 @@ public class ClientIIOPConnection
         transportManager =
             this.configuration.getORB().getTransportManager();
         client_required =
-           configuration.getAttributeAsInteger("jacorb.security.ssl.client.required_options", 16, 16);
+           configuration.getAttributeAsInteger("jacorb.security.ssl.client.required_options", 0x10, 16);
         client_supported =
-           configuration.getAttributeAsInteger("jacorb.security.ssl.client.supported_options", 16, 16);
+           configuration.getAttributeAsInteger("jacorb.security.ssl.client.supported_options", 0x10, 16);
 
         keepAlive = configuration.getAttributeAsBoolean("jacorb.connection.client.keepalive", false);
 

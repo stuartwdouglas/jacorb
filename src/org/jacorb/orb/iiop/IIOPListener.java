@@ -53,7 +53,7 @@ import org.omg.SSLIOP.TAG_SSL_SEC_TRANS;
 
 /**
  * @author Andre Spiegel
- * @version $Id: IIOPListener.java,v 1.53 2011-09-27 14:06:18 nick.cross Exp $
+ * @version $Id: IIOPListener.java,v 1.54 2011-09-30 15:55:05 alexander.bykov Exp $
  */
 public class IIOPListener
     extends org.jacorb.orb.etf.ListenerBase
@@ -143,7 +143,7 @@ public class IIOPListener
             configuration.getAttributeAsBoolean("jacorb.security.support_ssl", false);
 
         target_supports =
-           configuration.getAttributeAsInteger("jacorb.security.ssl.server.supported_options", 20, 16); // 16 is the base as we take the string value as hex!
+           configuration.getAttributeAsInteger("jacorb.security.ssl.server.supported_options", 0x20, 16); // 16 is the base as we take the string value as hex!
 
         // make sure that the minimum options are always in the set of supported options
         target_supports |= MIN_SSL_OPTIONS;

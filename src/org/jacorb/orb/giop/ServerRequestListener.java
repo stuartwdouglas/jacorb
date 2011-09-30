@@ -41,7 +41,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: ServerRequestListener.java,v 1.39 2011-09-27 14:06:18 nick.cross Exp $
+ * @version $Id: ServerRequestListener.java,v 1.40 2011-09-30 15:55:05 alexander.bykov Exp $
  */
 public class ServerRequestListener
     implements RequestListener, Configurable
@@ -71,7 +71,7 @@ public class ServerRequestListener
         if( supportSSL )
         {
             int required =
-                configuration.getAttributeAsInteger("jacorb.security.ssl.server.required_options", 16, 16);
+                configuration.getAttributeAsInteger("jacorb.security.ssl.server.required_options", 0x10, 16);
 
             //if we require EstablishTrustInTarget or
             //EstablishTrustInClient, SSL must be used.
