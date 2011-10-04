@@ -39,7 +39,7 @@ import org.omg.CORBA.TIMEOUT;
 /**
  * @author Nicolas Noffke
  * @author Andre Spiegel
- * @version $Id: ClientIIOPConnection.java,v 1.46 2011-10-04 12:25:44 alexander.bykov Exp $
+ * @version $Id: ClientIIOPConnection.java,v 1.47 2011-10-04 13:48:54 alexander.bykov Exp $
  */
 public class ClientIIOPConnection
     extends IIOPConnection
@@ -440,7 +440,6 @@ public class ClientIIOPConnection
         // Check if SSL profile
         if (((IIOPProfile)profile).getSSL () == null)
         {
-            logger.warn ("checkSSL(): non-SSL IIOP profile is used.");
             return;
         }
 
