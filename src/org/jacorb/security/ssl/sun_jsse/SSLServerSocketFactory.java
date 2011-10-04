@@ -37,7 +37,7 @@ import org.jacorb.config.ConfigurationException;
 
 /**
  * @author Nicolas Noffke
- * $Id: SSLServerSocketFactory.java,v 1.30 2011-09-30 15:55:05 alexander.bykov Exp $
+ * $Id: SSLServerSocketFactory.java,v 1.31 2011-10-04 13:34:22 nick.cross Exp $
  */
 
 public class SSLServerSocketFactory
@@ -142,13 +142,12 @@ public class SSLServerSocketFactory
         {
             factory = createServerSocketFactory();
         }
-        catch( Exception e )
+        catch(Exception e)
         {
-            logger.warn("Unable to create ServerSocketFactory", e);
+            logger.warn("Unable to create ServerSocketFactory : {}", e.getMessage (), e);
 
             throw new ConfigurationException("Unable to create ServerSocketFactory!", e);
         }
-
 
         // Andrew T. Finnell
         // We need to obtain all the cipher suites to use from the
