@@ -1,5 +1,5 @@
 %
-% $Id: configuration.tex,v 1.66 2011-09-23 11:29:14 nick.cross Exp $
+% $Id: configuration.tex,v 1.67 2011-10-04 08:50:56 nick.cross Exp $
 %
 
 This chapter explains the general mechanism for configuring JacORB
@@ -1060,6 +1060,11 @@ factories. & millisec & 0\\
 CloseConnection messsage. If set to ``on'', the TCP/IP connection won't be
 closed directly. Instead, it is waited for the client to do so
 first. Please see \ref{connection_management}. & boolean & off \\
+\hline
+
+\verb"jacorb.connection.non"
+\verb"blocking" & This property enables use of non-blocking I/O (NIO) on IIOP
+based transports. & boolean & off \\
 \hline
 
 \verb"jacorb.listener.server"
