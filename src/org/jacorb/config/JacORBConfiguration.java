@@ -41,7 +41,7 @@ import org.slf4j.Logger;
  * The Class JacORBConfiguration.
  *
  * @author Gerald Brose
- * @version $Id: JacORBConfiguration.java,v 1.44 2011-09-30 11:25:05 nick.cross Exp $
+ * @version $Id: JacORBConfiguration.java,v 1.45 2011-10-04 08:54:19 nick.cross Exp $
  */
 public class JacORBConfiguration implements Configuration
 {
@@ -930,9 +930,9 @@ public class JacORBConfiguration implements Configuration
      * @return the attribute list
      * @see org.jacorb.config.Configuration#getAttributeList(java.lang.String)
      */
-    public List getAttributeList(String key)
+    public List<String> getAttributeList(String key)
     {
-        List result = new ArrayList();
+        List<String> result = new ArrayList<String>();
         String value = null;
 
         try

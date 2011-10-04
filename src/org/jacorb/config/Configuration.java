@@ -53,7 +53,7 @@ import org.jacorb.orb.ORB;
  * retreive their Logger objects.
  *
  * @author Gerald Brose, XTRADYNE Technologies
- * @version $Id: Configuration.java,v 1.25 2011-09-27 14:06:17 nick.cross Exp $
+ * @version $Id: Configuration.java,v 1.26 2011-10-04 08:54:19 nick.cross Exp $
  */
 
 public interface Configuration
@@ -136,7 +136,7 @@ public interface Configuration
      * this method returns these values as a list of Strings.
      * If the property is not set, an empty list is returned.
      */
-    List getAttributeList(String key);
+    List<String> getAttributeList(String key);
 
     /**
      *
