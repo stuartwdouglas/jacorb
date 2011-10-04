@@ -21,20 +21,17 @@ package org.jacorb.test.orb.connection;
  */
 
 import java.util.Properties;
-
 import junit.framework.Test;
 import junit.framework.TestSuite;
-
 import org.jacorb.test.TestIf;
 import org.jacorb.test.TestIfHelper;
 import org.jacorb.test.common.ClientServerSetup;
 import org.jacorb.test.common.ClientServerTestCase;
-import org.jacorb.test.common.CommonSetup;
 import org.jacorb.test.common.TestUtils;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: ServerConnectionTimeoutTest.java,v 1.11 2011-05-10 15:40:43 nick.cross Exp $
+ * @version $Id: ServerConnectionTimeoutTest.java,v 1.12 2011-10-04 13:31:20 nick.cross Exp $
  */
 public class ServerConnectionTimeoutTest extends ClientServerTestCase
 {
