@@ -32,6 +32,7 @@ import org.jacorb.notification.engine.TaskProcessor;
 import org.jacorb.notification.interfaces.Message;
 import org.jacorb.notification.servant.ITypedAdmin;
 import org.jacorb.notification.servant.TypedProxyPullConsumerImpl;
+import org.jacorb.test.common.CommonSetup;
 import org.jacorb.test.common.ORBSetup;
 import org.jacorb.test.notification.common.NotificationTestCase;
 import org.jacorb.test.notification.common.NotificationTestCaseSetup;
@@ -55,7 +56,7 @@ import java.util.concurrent.ScheduledFuture;
 
 /**
  * @author Alphonse Bendt
- * @version $Id: TypedProxyPullConsumerImplTest.java,v 1.14 2011-05-10 15:40:43 nick.cross Exp $
+ * @version $Id: TypedProxyPullConsumerImplTest.java,v 1.15 2011-10-05 11:12:36 alexander.bykov Exp $
  */
 public class TypedProxyPullConsumerImplTest extends NotificationTestCase
 {
@@ -95,6 +96,8 @@ public class TypedProxyPullConsumerImplTest extends NotificationTestCase
     {
     	Properties props = new Properties();
     	props.setProperty("ORBInitRef.InterfaceRepository", getRepository().toString());
+    	// FIXME: bugzilla #820 - disabled security for some regression tests
+    	props.setProperty (CommonSetup.JACORB_REGRESSION_DISABLE_SECURITY, "true");
     	myORB = new ORBSetup(this, props);
     	myORB.setUp();
 

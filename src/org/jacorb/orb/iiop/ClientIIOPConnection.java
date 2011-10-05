@@ -39,7 +39,7 @@ import org.omg.CORBA.TIMEOUT;
 /**
  * @author Nicolas Noffke
  * @author Andre Spiegel
- * @version $Id: ClientIIOPConnection.java,v 1.47 2011-10-04 13:48:54 alexander.bykov Exp $
+ * @version $Id: ClientIIOPConnection.java,v 1.48 2011-10-05 11:12:36 alexander.bykov Exp $
  */
 public class ClientIIOPConnection
     extends IIOPConnection
@@ -437,22 +437,10 @@ public class ClientIIOPConnection
      */
     protected void checkSSL()
     {
-        // Check if SSL profile
-        if (((IIOPProfile)profile).getSSL () == null)
-        {
-            return;
-        }
+        if (!doSupportSSL) return;
 
-        if (doSupportSSL)
-        {
-            ssl_port = ((IIOPProfile) profile).getSslPortIfSupported( client_required, client_supported );
-            use_ssl  = ssl_port != -1;
-        }
-        else
-        {
-            use_ssl = false;
-            ssl_port = -1;
-        }
+        ssl_port = ((IIOPProfile) profile).getSslPortIfSupported( client_required, client_supported );
+        use_ssl  = ssl_port != -1;
     }
 
 
