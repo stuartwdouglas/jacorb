@@ -26,7 +26,7 @@ import org.jacorb.config.ConfigurationException;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: ClientGIOPConnection.java,v 1.25 2011-09-29 19:27:57 phil.mesnier Exp $
+ * @version $Id: ClientGIOPConnection.java,v 1.26 2011-10-06 19:17:43 phil.mesnier Exp $
  */
 public class ClientGIOPConnection
     extends GIOPConnection
@@ -51,7 +51,12 @@ public class ClientGIOPConnection
 
         ignore_pending_messages_on_timeout =
             configuration.getAttributeAsBoolean("jacorb.connection.client.timeout_ignores_pending_messages", false);
-        use_client_write_monitor ();
+
+        int max_request_write_time =
+            configuration.getAttributeAsInteger("jacorb.connection.request.write_timeout", 0);
+
+        init_write_monitor (max_request_write_time);
+
     }
 
     /**

@@ -26,7 +26,7 @@ import org.jacorb.orb.iiop.IIOPConnection;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: ServerGIOPConnection.java,v 1.31 2011-09-29 19:27:57 phil.mesnier Exp $
+ * @version $Id: ServerGIOPConnection.java,v 1.32 2011-10-06 19:17:43 phil.mesnier Exp $
  */
 
 public class ServerGIOPConnection
@@ -58,8 +58,6 @@ public class ServerGIOPConnection
         this.manager = manager;
     }
 
-
-
     public void configure(Configuration configuration)
         throws ConfigurationException
     {
@@ -67,9 +65,12 @@ public class ServerGIOPConnection
 
         delayClose =
             configuration.getAttributeAsBoolean("jacorb.connection.delay_close", false);
-        use_server_write_monitor();
-    }
 
+        int max_reply_write_time =
+            configuration.getAttributeAsInteger("jacorb.connection.reply.write_timeout", 0);
+
+        init_write_monitor (max_reply_write_time);
+    }
 
     /**
      * Try an orderly shutdown of this connection by sending a

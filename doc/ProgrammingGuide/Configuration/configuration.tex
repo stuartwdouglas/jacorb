@@ -1,5 +1,5 @@
 %
-% $Id: configuration.tex,v 1.68 2011-10-04 10:22:55 nick.cross Exp $
+% $Id: configuration.tex,v 1.69 2011-10-06 19:17:43 phil.mesnier Exp $
 %
 
 This chapter explains the general mechanism for configuring JacORB
@@ -1065,6 +1065,22 @@ first. Please see \ref{connection_management}. & boolean & off \\
 \verb"jacorb.connection.non"
 \verb"blocking" & This property enables use of non-blocking I/O (NIO) on IIOP
 based transports. & boolean & off \\
+\hline
+
+\verb"jacorb.connection.req"
+\verb"uest.write_timeout" & Sets the maximum amount of time in milliseconds
+a client will spend waiting to write a request. Effective when using blocking
+I/O to ensure a hung peer will not lock up a the client. A request that cannot
+be sent before the deadline expires is discarded, the connection is closed,
+and an exception is raised to the client application. \\
+\hline
+
+\verb"jacorb.connection.rep"
+\verb"ly.write_timeout" & Sets the maximum amount of time in milliseconds
+a server will spend waiting to write a reply. Effective when using blocking
+I/O to ensure a hung peer will not lock up a the server. A reply that cannot
+be sent before the deadline expires is discarded and the connection is
+closed. \\
 \hline
 
 \verb"jacorb.listener.server"
