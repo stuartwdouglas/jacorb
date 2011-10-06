@@ -21,9 +21,8 @@
 
 package org.jacorb.orb;
 
-import java.util.Iterator;
+import java.util.Collection;
 import java.util.Map;
-
 import org.jacorb.orb.giop.ReplyInputStream;
 import org.jacorb.orb.portableInterceptor.ClientInterceptorIterator;
 import org.jacorb.orb.portableInterceptor.ClientRequestInfoImpl;
@@ -45,7 +44,7 @@ import org.slf4j.Logger;
  * client request and any interceptors registered for it.
  *
  * @author Andre Spiegel
- * @version $Id: DefaultClientInterceptorHandler.java,v 1.4 2011-09-27 10:22:30 alexander.bykov Exp $
+ * @version $Id: DefaultClientInterceptorHandler.java,v 1.5 2011-10-06 12:43:49 nick.cross Exp $
  */
 public class DefaultClientInterceptorHandler implements ClientInterceptorHandler
 {
@@ -87,7 +86,7 @@ public class DefaultClientInterceptorHandler implements ClientInterceptorHandler
                     self,
                     delegate,
                     piorOriginal,
-                    connection, 
+                    connection,
                     (Map) Delegate.getInvocationContext().peek());
         }
         else
@@ -139,15 +138,12 @@ public class DefaultClientInterceptorHandler implements ClientInterceptorHandler
              */
             if ( !(isLocal) )
             {
-
-                // Add any new service contexts to the message
-                Iterator ctx = info.getRequestServiceContexts();
-
-                while ( ctx.hasNext() )
-                {
-                    info.request_os.addServiceContext
-                        ( ( ServiceContext ) ctx.next() );
-                }
+               // Add any new service contexts to the message
+               Collection<ServiceContext> ctx = info.getRequestServiceContexts ();
+               for (ServiceContext s : ctx)
+               {
+                  info.request_os.addServiceContext (s);
+               }
             }
         }
     }

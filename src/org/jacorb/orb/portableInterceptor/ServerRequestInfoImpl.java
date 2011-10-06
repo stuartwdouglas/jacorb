@@ -22,7 +22,7 @@ package org.jacorb.orb.portableInterceptor;
  */
 
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.Collection;
 import org.jacorb.orb.dsi.ServerRequest;
 import org.jacorb.poa.POA;
 import org.omg.CORBA.Any;
@@ -49,7 +49,7 @@ import org.omg.PortableServer.Servant;
  * See PI Spec p.5-50ff
  *
  * @author Nicolas Noffke
- * @version $Id: ServerRequestInfoImpl.java,v 1.24 2011-09-13 09:49:01 nick.cross Exp $
+ * @version $Id: ServerRequestInfoImpl.java,v 1.25 2011-10-06 12:43:49 nick.cross Exp $
  */
 
 public class ServerRequestInfoImpl
@@ -108,7 +108,7 @@ public class ServerRequestInfoImpl
      * @param bs
      */
     public ServerRequestInfoImpl( org.jacorb.orb.ORB orb,
-                                  ServiceContext [] contexts,
+                                  Collection<ServiceContext> contexts,
                                   Servant servant,
                                   byte[] objectId,
                                   String operation,
@@ -134,7 +134,7 @@ public class ServerRequestInfoImpl
 
         if (contexts != null)
         {
-           setRequestServiceContexts(contexts);
+           setRequestServiceContexts(contexts.toArray (new ServiceContext[contexts.size ()]));
         }
 
         sending_exception = orb.create_any();
@@ -155,7 +155,7 @@ public class ServerRequestInfoImpl
         target_most_derived_interface = all_ifs[0];
 
         POA parent = poa;
-        ArrayList al = new ArrayList ();
+        ArrayList<String> al = new ArrayList<String> ();
 
         while (parent != null)
         {
@@ -229,11 +229,6 @@ public class ServerRequestInfoImpl
         }
     }
 
-
-    public Iterator getReplyServiceContexts()
-    {
-        return reply_ctx.values().iterator();
-    }
 
     /**
      * returns a reference to the calls target.

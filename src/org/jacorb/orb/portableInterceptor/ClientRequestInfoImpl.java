@@ -21,10 +21,8 @@
 package org.jacorb.orb.portableInterceptor;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-
 import org.jacorb.orb.etf.ProfileBase;
 import org.omg.CORBA.ARG_IN;
 import org.omg.CORBA.ARG_INOUT;
@@ -54,7 +52,7 @@ import org.slf4j.Logger;
  * See PI Spec p.5-46ff
  *
  * @author Nicolas Noffke
- * @version $Id: ClientRequestInfoImpl.java,v 1.42 2011-09-27 10:22:30 alexander.bykov Exp $
+ * @version $Id: ClientRequestInfoImpl.java,v 1.43 2011-10-06 12:43:49 nick.cross Exp $
  */
 
 public class ClientRequestInfoImpl
@@ -77,7 +75,7 @@ public class ClientRequestInfoImpl
     public org.jacorb.orb.giop.ReplyInputStream reply_is = null;
 
     public final org.jacorb.orb.giop.ClientConnection connection;
-    
+
     private final Map invocationContext;
 
     public ClientRequestInfoImpl
@@ -178,7 +176,7 @@ public class ClientRequestInfoImpl
                                    short sync_scope,
                                    org.omg.CORBA.Object self,
                                    org.jacorb.orb.Delegate delegate,
-                                   org.jacorb.orb.ParsedIOR piorOriginal, 
+                                   org.jacorb.orb.ParsedIOR piorOriginal,
                                    Map invocationContext)
     {
         super();
@@ -275,16 +273,6 @@ public class ClientRequestInfoImpl
         //exceptions will be set when available
     }
 
-    /**
-     * This method builds an array of ServiceContexts.
-     * The last ServiceContext is a dummy object for
-     * data aligning purposes.
-     */
-
-    public Iterator getRequestServiceContexts()
-    {
-        return request_ctx.values().iterator();
-    }
 
     // implementation                        of
     // org.omg.PortableInterceptor.RequestInfoOperations interface
