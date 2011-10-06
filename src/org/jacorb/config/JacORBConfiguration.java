@@ -41,7 +41,7 @@ import org.slf4j.Logger;
  * The Class JacORBConfiguration.
  *
  * @author Gerald Brose
- * @version $Id: JacORBConfiguration.java,v 1.45 2011-10-04 08:54:19 nick.cross Exp $
+ * @version $Id: JacORBConfiguration.java,v 1.46 2011-10-06 12:42:36 nick.cross Exp $
  */
 public class JacORBConfiguration implements Configuration
 {
@@ -753,7 +753,7 @@ public class JacORBConfiguration implements Configuration
     /* (non-Javadoc)
      * @see org.jacorb.config.Configuration#getLoggerName(java.lang.Class)
      */
-    public String getLoggerName(Class clz)
+    public String getLoggerName(Class<?> clz)
     {
         final String clazzName = clz.getName();
         final String packageName = clazzName.substring(0, clazzName.lastIndexOf('.'));
@@ -967,7 +967,7 @@ public class JacORBConfiguration implements Configuration
     {
         try
         {
-            Class clazz = ObjectUtil.classForName(className);
+            Class<?> clazz = ObjectUtil.classForName(className);
             final Object instance = clazz.newInstance();
 
             if (instance instanceof Configurable)
@@ -1073,9 +1073,9 @@ public class JacORBConfiguration implements Configuration
      * @return the attribute names with prefix
      * @see org.jacorb.config.Configuration#getAttributeNamesWithPrefix(java.lang.String)
      */
-    public List getAttributeNamesWithPrefix(String prefix)
+    public List<String> getAttributeNamesWithPrefix(String prefix)
     {
-        final List attributesWithPrefix = new ArrayList();
+        final ArrayList<String> attributesWithPrefix = new ArrayList<String>();
 
         final String[] allAttributes = getAttributeNames();
 

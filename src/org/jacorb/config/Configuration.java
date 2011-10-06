@@ -53,7 +53,7 @@ import org.jacorb.orb.ORB;
  * retreive their Logger objects.
  *
  * @author Gerald Brose, XTRADYNE Technologies
- * @version $Id: Configuration.java,v 1.26 2011-10-04 08:54:19 nick.cross Exp $
+ * @version $Id: Configuration.java,v 1.27 2011-10-06 12:42:36 nick.cross Exp $
  */
 
 public interface Configuration
@@ -73,7 +73,7 @@ public interface Configuration
     /**
      * Uses the class name to return a name suitable for naming the logger.
      */
-    String getLoggerName(Class clazz);
+    String getLoggerName(Class<?> clazz);
 
     /**
      * Returns the value of the configuration attribute with the given key.
@@ -166,5 +166,5 @@ public interface Configuration
      * return all attribute names that start
      * with the specified prefix
      */
-    List getAttributeNamesWithPrefix(String string);
+    List<String> getAttributeNamesWithPrefix(String string);
 }

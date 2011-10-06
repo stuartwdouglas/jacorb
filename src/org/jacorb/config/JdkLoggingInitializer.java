@@ -10,7 +10,7 @@ import org.omg.CORBA.ORB;
 /**
  * A LoggingInitializer for the JDK logging system.
  * @author Andre Spiegel <spiegel@gnu.org>
- * @version $Id: JdkLoggingInitializer.java,v 1.8 2011-09-27 14:06:17 nick.cross Exp $
+ * @version $Id: JdkLoggingInitializer.java,v 1.9 2011-10-06 12:42:36 nick.cross Exp $
  */
 public class JdkLoggingInitializer extends LoggingInitializer
 {
@@ -23,7 +23,7 @@ public class JdkLoggingInitializer extends LoggingInitializer
 
     static
     {
-        Class c = null;
+        Class<?> c = null;
         try
         {
             c = ObjectUtil.classForName ("org.slf4j.impl.JDK14LoggerAdapter");
