@@ -53,7 +53,7 @@ import org.jacorb.orb.ORB;
  * retreive their Logger objects.
  *
  * @author Gerald Brose, XTRADYNE Technologies
- * @version $Id: Configuration.java,v 1.27 2011-10-06 12:42:36 nick.cross Exp $
+ * @version $Id: Configuration.java,v 1.28 2011-10-07 15:36:53 alexander.bykov Exp $
  */
 
 public interface Configuration
@@ -137,6 +137,13 @@ public interface Configuration
      * If the property is not set, an empty list is returned.
      */
     List<String> getAttributeList(String key);
+    
+    /**
+     * For a property that has a list of comma-separated values,
+     * this method returns these values as a array of Strings.
+     * If the property is not set or has empty value, null is returned.
+     */
+    String[] getAttributeAsStringsArray(String key);
 
     /**
      *

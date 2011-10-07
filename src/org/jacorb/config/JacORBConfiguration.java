@@ -41,7 +41,7 @@ import org.slf4j.Logger;
  * The Class JacORBConfiguration.
  *
  * @author Gerald Brose
- * @version $Id: JacORBConfiguration.java,v 1.46 2011-10-06 12:42:36 nick.cross Exp $
+ * @version $Id: JacORBConfiguration.java,v 1.47 2011-10-07 15:36:53 alexander.bykov Exp $
  */
 public class JacORBConfiguration implements Configuration
 {
@@ -954,6 +954,36 @@ public class JacORBConfiguration implements Configuration
         }
         return result;
     }
+    
+    public String[] getAttributeAsStringsArray(String key)
+    {
+        String value = null;
+
+        try
+        {
+            value = getAttribute(key);
+        }
+        catch( ConfigurationException ce)
+        {
+            // ignore
+        }
+        
+        if (value == null)
+        {
+            return null;
+        }
+        
+        List<String> values = getAttributeList (key);
+        
+        // Return null if key is defined but has empty value
+        if (values.size () < 1)
+        {
+            return null;
+        }
+        
+        return (String[]) values.toArray (new String[values.size ()]);
+    }
+    
 
     /**
      * New instance.
