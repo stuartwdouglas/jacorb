@@ -1,5 +1,5 @@
 %
-% $Id: configuration.tex,v 1.69 2011-10-06 19:17:43 phil.mesnier Exp $
+% $Id: configuration.tex,v 1.70 2011-10-10 16:09:12 phil.mesnier Exp $
 %
 
 This chapter explains the general mechanism for configuring JacORB
@@ -1064,7 +1064,9 @@ first. Please see \ref{connection_management}. & boolean & off \\
 
 \verb"jacorb.connection.non"
 \verb"blocking" & This property enables use of non-blocking I/O (NIO) on IIOP
-based transports. & boolean & off \\
+based transports. & boolean & off. Note that this feature is currently only
+for client-side connections, and only for plain IIOP - not SSL. There is no
+technical reason for these restrictions, simply lack of current need. \\
 \hline
 
 \verb"jacorb.connection.req"
