@@ -38,7 +38,7 @@ import org.omg.CORBA.NO_MEMORY;
  * Buffers are generally created on demand.
  *
  * @author Gerald Brose
- * @version $Id: BufferManager.java,v 1.37 2011-09-27 14:06:17 nick.cross Exp $
+ * @version $Id: BufferManager.java,v 1.38 2011-10-18 21:45:06 nick.cross Exp $
 */
 
 public class BufferManager extends AbstractBufferManager
@@ -385,20 +385,20 @@ public class BufferManager extends AbstractBufferManager
             while (true)
             {
                 // Sleep (note time check on wake to catch premature awakening bug)
-
-                try
+                time = sleepInterval + System.currentTimeMillis();
+                synchronized(this)
                 {
-                    time = sleepInterval + System.currentTimeMillis();
-                    synchronized(this)
+                    while(!done && System.currentTimeMillis() <= time)
                     {
-                        while(!done && System.currentTimeMillis() <= time)
+                        try
                         {
                             wait(sleepInterval);
                         }
+                        catch (InterruptedException ex)
+                        {
+                            // ignored
+                        }
                     }
-                }
-                catch (InterruptedException ex) {
-                    // ignored
                 }
 
                 // Check not shutting down

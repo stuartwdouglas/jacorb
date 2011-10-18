@@ -115,7 +115,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Gerald Brose, FU Berlin
- * @version $Id: ORB.java,v 1.203 2011-09-29 19:27:57 phil.mesnier Exp $
+ * @version $Id: ORB.java,v 1.204 2011-10-18 21:45:06 nick.cross Exp $
  */
 
 public final class ORB
@@ -1454,15 +1454,15 @@ public final class ORB
 
         synchronized ( runSync )
         {
-            try
+            while ( run )
             {
-                while ( run )
+                try
                 {
                     runSync.wait();
                 }
-            }
-            catch (InterruptedException ex)
-            {
+                catch (InterruptedException ex)
+                {
+                }
             }
         }
 

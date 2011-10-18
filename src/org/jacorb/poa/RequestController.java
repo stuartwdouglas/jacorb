@@ -40,7 +40,7 @@ import org.slf4j.Logger;
  * requests out from the queue and will see that the necessary steps are taken.
  *
  * @author Reimo Tiedemann
- * @version $Id: RequestController.java,v 1.44 2011-09-27 14:06:18 nick.cross Exp $
+ * @version $Id: RequestController.java,v 1.45 2011-10-18 21:45:06 nick.cross Exp $
  */
 
 public final class RequestController
@@ -520,7 +520,7 @@ public final class RequestController
         {
             try
             {
-                    logger.debug("somebody waits for completion and there are active processors");
+                logger.debug("somebody waits for completion and there are active processors");
                 wait();
             }
             catch (InterruptedException e)

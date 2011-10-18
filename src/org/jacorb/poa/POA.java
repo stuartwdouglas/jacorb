@@ -85,7 +85,7 @@ import org.slf4j.Logger;
  * <code>org.omg.PortableServer.POA</code>
  *
  * @author Reimo Tiedemann, FU Berlin
- * @version $Id: POA.java,v 1.80 2011-09-26 15:19:38 nick.cross Exp $
+ * @version $Id: POA.java,v 1.81 2011-10-18 21:45:06 nick.cross Exp $
  */
 
 public class POA
@@ -1041,7 +1041,8 @@ public class POA
             try
             {
                 thread.join();
-            } catch (InterruptedException e) {}
+            }
+            catch (InterruptedException e) {}
         }
     }
 

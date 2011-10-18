@@ -31,7 +31,7 @@ import org.omg.PortableServer.POAManagerPackage.State;
  * The poa manager class, an implementation of org.omg.PortableServer.POAManager
  *
  * @author Reimo Tiedemann, FU Berlin
- * @version $Id: POAManager.java,v 1.19 2011-09-27 14:06:18 nick.cross Exp $
+ * @version $Id: POAManager.java,v 1.20 2011-10-18 21:45:06 nick.cross Exp $
  */
 
 public class POAManager
@@ -137,9 +137,11 @@ public class POAManager
             thread.start();
             if (wait_for_completion)
             {
-                try {
+                try
+                {
                     thread.join();
-                } catch (InterruptedException e) {}
+                }
+                catch (InterruptedException e) {}
             }
         }
     }
@@ -188,9 +190,11 @@ public class POAManager
             thread.start();
             if (wait_for_completion)
             {
-                try {
+                try
+                {
                     thread.join();
-                } catch (InterruptedException e) {}
+                }
+                catch (InterruptedException e) {}
             }
         }
     }
@@ -266,9 +270,11 @@ public class POAManager
             thread.start();
             if (wait_for_completion)
             {
-                try {
+                try
+                {
                     thread.join();
-                } catch (InterruptedException e) {}
+                }
+                catch (InterruptedException e) {}
             }
         }
     }

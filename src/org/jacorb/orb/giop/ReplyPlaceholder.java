@@ -31,7 +31,7 @@ import org.omg.CORBA.portable.RemarshalException;
  * implemented in subclasses.
  *
  * @author Nicolas Noffke
- * @version $Id: ReplyPlaceholder.java,v 1.26 2011-09-27 14:06:18 nick.cross Exp $
+ * @version $Id: ReplyPlaceholder.java,v 1.27 2011-10-18 21:45:06 nick.cross Exp $
  */
 public abstract class ReplyPlaceholder
 {
@@ -110,16 +110,16 @@ public abstract class ReplyPlaceholder
 
         synchronized(lock)
         {
-            try
+            while(!ready && System.currentTimeMillis() < _maxWait)
             {
-                while(!ready && System.currentTimeMillis() < _maxWait)
+                try
                 {
                     lock.wait( _timeout );
                 }
-            }
-            catch( InterruptedException e )
-            {
-                // ignored
+                catch( InterruptedException e )
+                {
+                    // ignored
+                }
             }
 
             if (!ready && _shouldUseTimeout)
