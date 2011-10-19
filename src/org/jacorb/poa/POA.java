@@ -85,7 +85,7 @@ import org.slf4j.Logger;
  * <code>org.omg.PortableServer.POA</code>
  *
  * @author Reimo Tiedemann, FU Berlin
- * @version $Id: POA.java,v 1.81 2011-10-18 21:45:06 nick.cross Exp $
+ * @version $Id: POA.java,v 1.82 2011-10-19 21:53:04 nick.cross Exp $
  */
 
 public class POA
@@ -1139,7 +1139,7 @@ public class POA
     {
         if (isPersistent())
         {
-            return IdUtil.concat(IdUtil.createId(4), watermark);
+            return IdUtil.concat(IdUtil.createId(), watermark);
         }
 
         // Synchonize as the increment is not an atomic operation.
@@ -1157,7 +1157,7 @@ public class POA
             }
             else
             {
-                watermark = IdUtil.createId(4);
+                watermark = IdUtil.createId();
             }
         }
         return watermark;
