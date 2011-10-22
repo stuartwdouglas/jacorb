@@ -38,7 +38,7 @@ import org.omg.CosNaming.NamingContextPackage.NotFound;
 
 /**
  * @author Gerald Brose, FU Berlin/XTRADYNE Technologies AG
- * @version $Id: NSTree.java,v 1.13 2011-05-11 13:54:13 nick.cross Exp $
+ * @version $Id: NSTree.java,v 1.14 2011-10-22 22:11:13 nick.cross Exp $
  */
 
 public class NSTree extends JTree
@@ -65,7 +65,7 @@ public class NSTree extends JTree
       size = new Dimension (width, height);
       nsTable = theTable;
       rootContext = rootCntxt;
-      ContextNode cn = new ContextNode (rootContext, (DefaultTreeModel)getModel ());
+      ContextNode cn = new ContextNode (orb, rootContext, (DefaultTreeModel)getModel ());
       cn.setNode (root);
       root.setUserObject (cn);
    }
