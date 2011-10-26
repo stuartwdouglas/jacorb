@@ -9,7 +9,7 @@ import org.omg.CORBA.*;
  * transparent.
  *
  * @author Nicolas Noffke
- * @version $Id: Client.java,v 1.1 2009-11-09 16:10:52 alexander.bykov Exp $
+ * @version $Id: Client.java,v 1.2 2011-10-26 13:26:15 phil.mesnier Exp $
  */
 
 public class Client
@@ -66,7 +66,7 @@ public class Client
         }
         catch(Exception e)
         {
-            System.out.println("[Client] failed to invoke");
+            System.out.println("[Client] failed to invoke: " + e.getMessage());
             System.exit(1);
         }
     }
