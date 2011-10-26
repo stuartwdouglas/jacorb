@@ -30,7 +30,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * this can be a timed event, I/O event, or I/O event with an
  * expiration.
  * @author Ciju John <johnc@ociweb.com>
- * @version $Id: SelectorRequest.java,v 1.2 2011-09-29 18:57:21 phil.mesnier Exp $
+ * @version $Id: SelectorRequest.java,v 1.3 2011-10-26 13:30:18 phil.mesnier Exp $
  */
 public class SelectorRequest
 {
@@ -56,7 +56,7 @@ public class SelectorRequest
     public final SocketChannel channel;
     public SelectionKey key = null;
     public final int op;
-    public final SelectorRequestCallback callback;
+    public SelectorRequestCallback callback;
     public final long nanoDeadline;
 
     private final ReentrantLock lock = new ReentrantLock();
@@ -109,7 +109,7 @@ public class SelectorRequest
         this.nanoDeadline = (nanoDeadline == 0 ? Long.MAX_VALUE : nanoDeadline);
     }
 
-    /**
+   /**
      * Called by the SelectorManager to notify a change of status. Will wake up
      * a thread blocked in waitOnCOmpletion
      */
