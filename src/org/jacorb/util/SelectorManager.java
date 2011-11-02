@@ -20,20 +20,18 @@
 
 package org.jacorb.util;
 
-import java.util.Date;
 import java.io.IOException;
-import java.util.Iterator;
-import java.util.ListIterator;
-import java.util.Map;
-import java.util.Hashtable;
-import java.util.LinkedList;
-import java.util.NoSuchElementException;
-import java.util.Enumeration;
+import java.nio.channels.CancelledKeyException;
+import java.nio.channels.ClosedChannelException;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
-import java.nio.channels.SocketChannel;
 import java.nio.channels.spi.SelectorProvider;
-import java.util.concurrent.atomic.AtomicInteger;
+import java.util.Enumeration;
+import java.util.Hashtable;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.ListIterator;
+import java.util.NoSuchElementException;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
@@ -41,11 +39,10 @@ import java.util.concurrent.FutureTask;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
-import java.nio.channels.ClosedChannelException;
-import java.nio.channels.CancelledKeyException;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.ReentrantLock;
-
-import org.jacorb.config.*;
+import org.jacorb.config.Configuration;
+import org.jacorb.config.ConfigurationException;
 import org.slf4j.Logger;
 
 /**
@@ -56,7 +53,7 @@ import org.slf4j.Logger;
  * in the future.
  *
  * @auther Ciju John <johnc@ociweb.com>
- * @version $Id: SelectorManager.java,v 1.3 2011-10-31 22:03:36 phil.mesnier Exp $
+ * @version $Id: SelectorManager.java,v 1.4 2011-11-02 22:03:58 nick.cross Exp $
  */
 public class SelectorManager extends Thread
 {

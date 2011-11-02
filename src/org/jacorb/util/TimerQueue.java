@@ -20,11 +20,6 @@ package org.jacorb.util;
  * 675 Mass Ave, Cambridge, MA 02139, USA.
  */
 
-import java.util.Iterator;
-import java.util.SortedMap;
-import java.util.TreeMap;
-import org.jacorb.config.Configuration;
-import org.slf4j.Logger;
 
 
 /**
@@ -43,7 +38,7 @@ import org.slf4j.Logger;
  * go away
  *
  * @author Phil Mesnier <mesnier_p@ociweb.com>
- * @version $Id: TimerQueue.java,v 1.7 2011-10-26 13:29:01 phil.mesnier Exp $
+ * @version $Id: TimerQueue.java,v 1.8 2011-11-02 22:03:58 nick.cross Exp $
  */
 public class TimerQueue
 {
