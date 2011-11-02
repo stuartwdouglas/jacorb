@@ -6,14 +6,14 @@
 
    <!-- ==================================================== -->
    <!--            JacORB idl build file                     -->
-   <!-- $Id: build.xml,v 1.64 2010-04-20 15:46:04 nick.cross Exp $ -->
+   <!-- $Id: build.xml,v 1.65 2011-11-02 22:00:32 nick.cross Exp $ -->
    <!-- ==================================================== -->
 
    &common;
 
    <target name="local-init" depends="init, load-taskdef" >
       <presetdef name="idl-javac">
-         <jacorb-javac javac-src="${src.generated}" />
+         <jacorb-javac javac-src="${src.generated}" javac-xlint=""/>
       </presetdef>
 
       <presetdef name="idl-jacidl-jacorb">
