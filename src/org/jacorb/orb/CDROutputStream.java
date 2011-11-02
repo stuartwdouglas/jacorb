@@ -57,7 +57,7 @@ import org.omg.IOP.TaggedProfile;
 
 /**
  * @author Gerald Brose,  1999
- * @version $Id: CDROutputStream.java,v 1.150 2011-09-27 14:06:17 nick.cross Exp $
+ * @version $Id: CDROutputStream.java,v 1.151 2011-11-02 23:01:46 nick.cross Exp $
  *
  * A stream for CDR marshalling.
  *
@@ -186,33 +186,6 @@ public class CDROutputStream
 
     private final static DelegatingTypeCodeWriter typeCodeWriter = new DelegatingTypeCodeWriter();
 
-    /**
-     * This stream is self-configuring, i.e. configure() is private
-     * and only called from the constructor
-     */
-
-    private void configure(Configuration configuration) throws ConfigurationException
-    {
-       codesetEnabled  = configuration.getAttributeAsBoolean ("jacorb.codeset", false);
-
-        useBOM = configuration.getAttributeAsBoolean("jacorb.use_bom",false);
-
-        chunkCustomRmiValuetypes = configuration.getAttributeAsBoolean("jacorb.interop.chunk_custom_rmi_valuetypes", false);
-
-        useIndirection = !( configuration.getAttributeAsBoolean("jacorb.interop.indirection_encoding_disable", false));
-
-        nullStringEncoding =
-            configuration.getAttributeAsBoolean("jacorb.interop.null_string_encoding", false);
-
-        mutator = (IORMutator) configuration.getAttributeAsObject("jacorb.iormutator");
-
-        isMutatorEnabled = (mutator != null);
-
-        deferredArrayQueueSize = (configuration.getAttributeAsInteger("jacorb.deferredArrayQueue", 8)) * 1000;
-    }
-
-
-
     private static class DeferredWriteFrame
     {
         public final int write_pos;
@@ -269,16 +242,13 @@ public class CDROutputStream
     {
         this(orb, -1);
 
-        if (orb instanceof org.jacorb.orb.ORB)
+        try
         {
-            try
-            {
-                configure(((org.jacorb.orb.ORB)orb).getConfiguration());
-            }
-            catch(ConfigurationException e)
-            {
-                throw new INTERNAL(e.getMessage());
-            }
+            configure(((ORBSingleton)orb).getConfiguration());
+        }
+        catch(ConfigurationException e)
+        {
+            throw new INTERNAL(e.getMessage());
         }
     }
 
@@ -296,6 +266,33 @@ public class CDROutputStream
     public org.omg.CORBA.ORB orb()
     {
         return orb;
+    }
+
+
+
+    /**
+     * This stream is self-configuring, i.e. configure() is private
+     * and only called from the constructor
+     */
+
+    private void configure(Configuration configuration) throws ConfigurationException
+    {
+       codesetEnabled  = configuration.getAttributeAsBoolean ("jacorb.codeset", false);
+
+        useBOM = configuration.getAttributeAsBoolean("jacorb.use_bom",false);
+
+        chunkCustomRmiValuetypes = configuration.getAttributeAsBoolean("jacorb.interop.chunk_custom_rmi_valuetypes", false);
+
+        useIndirection = !( configuration.getAttributeAsBoolean("jacorb.interop.indirection_encoding_disable", false));
+
+        nullStringEncoding =
+            configuration.getAttributeAsBoolean("jacorb.interop.null_string_encoding", false);
+
+        mutator = (IORMutator) configuration.getAttributeAsObject("jacorb.iormutator");
+
+        isMutatorEnabled = (mutator != null);
+
+        deferredArrayQueueSize = (configuration.getAttributeAsInteger("jacorb.deferredArrayQueue", 8)) * 1000;
     }
 
 

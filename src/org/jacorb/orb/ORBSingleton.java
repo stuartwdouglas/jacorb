@@ -40,7 +40,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Gerald Brose, FU Berlin
- * @version $Id: ORBSingleton.java,v 1.63 2011-09-26 13:54:04 nick.cross Exp $
+ * @version $Id: ORBSingleton.java,v 1.64 2011-11-02 23:01:46 nick.cross Exp $
  */
 
 public class ORBSingleton
@@ -49,6 +49,7 @@ public class ORBSingleton
     private static final String FACTORY_METHODS_MESG = "The Singleton ORB only permits factory methods";
 
     private boolean doStrictCheckOnTypecodeCreation;
+
     protected Logger logger;
 
     protected IBufferManager bufferManager;
@@ -362,7 +363,7 @@ public class ORBSingleton
         if (checkName)
         {
             // check that member names are legal and unique
-            final HashSet names = new HashSet() ;
+            final HashSet<String> names = new HashSet<String>() ;
             for( int i = 0; i < members.length; i++ )
             {
                 boolean fault = false;
@@ -417,7 +418,7 @@ public class ORBSingleton
         checkTCName (name, true);
 
         // check that member names are legal and unique
-        final HashSet names = new HashSet() ;
+        final HashSet<String> names = new HashSet<String>() ;
         for( int i = 0; i < members.length; i++ )
         {
             checkTCMemberType( members[i].type );
@@ -532,7 +533,7 @@ public class ORBSingleton
         checkTCName (name, true);
 
         // check that member names are legal and unique
-        final HashSet names = new HashSet();
+        final HashSet<String> names = new HashSet<String>();
         for( int i = 0; i < members.length; i++ )
         {
             if (checkName)
