@@ -28,7 +28,7 @@ import org.omg.PortableServer.POA;
 /**
  * JacORB implementation of IR ConstantDef objects
  * @author  Gerald Brose
- * @version $Id: ConstantDef.java,v 1.20 2011-05-10 15:40:37 nick.cross Exp $
+ * @version $Id: ConstantDef.java,v 1.21 2011-11-10 09:00:41 nick.cross Exp $
  */
 
 public class ConstantDef
@@ -174,7 +174,7 @@ public class ConstantDef
 
         try
         {
-            value.insert_object(typeCode,
+            value.insert(typeCode,
                                 field.get(null) );
         }
         catch ( Exception e )

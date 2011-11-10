@@ -32,7 +32,7 @@ import org.omg.PortableInterceptor.InvalidSlot;
  * See PI Spec p. 6-55ff
  *
  * @author Nicolas Noffke
- * @version $Id: PICurrentImpl.java,v 1.13 2011-05-10 15:40:41 nick.cross Exp $
+ * @version $Id: PICurrentImpl.java,v 1.14 2011-11-10 09:00:41 nick.cross Exp $
  */
 
 public class PICurrentImpl extends org.omg.CORBA.LocalObject
@@ -67,7 +67,7 @@ public class PICurrentImpl extends org.omg.CORBA.LocalObject
         for(int _i = 0; _i < m_slots.length; _i++)
         {
             m_slots[_i] = m_orb.create_any();
-            ((org.jacorb.orb.Any) m_slots[_i]).insert_object(source.m_slots[_i].type(),
+            ((org.jacorb.orb.Any) m_slots[_i]).insert(source.m_slots[_i].type(),
                     ((org.jacorb.orb.Any) source.m_slots[_i]).value());
         }
     }
