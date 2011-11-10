@@ -50,7 +50,7 @@ import org.omg.CORBA_2_3.portable.OutputStream;
  * CORBA any
  *
  * @author Gerald Brose
- * $Id: Any.java,v 1.66 2011-09-26 15:21:39 nick.cross Exp $
+ * $Id: Any.java,v 1.67 2011-11-10 08:41:27 nick.cross Exp $
  */
 
 public final class Any
@@ -1219,7 +1219,9 @@ public final class Any
             }
             case TCKind._tk_objref:     // 14
             {
-                insert_Object( input.read_Object());
+                // Bug852 modification to attempt to use the original type ID to
+                // create the object embedded in the any.
+                insert_Object( input.read_Object(), type);
                 break;
             }
             case TCKind._tk_struct:     // 15
