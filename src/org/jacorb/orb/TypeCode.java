@@ -27,7 +27,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.jacorb.ir.RepositoryID;
 import org.jacorb.util.ObjectUtil;
 import org.omg.CORBA.INTERNAL;
@@ -39,7 +38,7 @@ import org.omg.CORBA.ValueMember;
  * JacORB implementation of CORBA TypeCodes
  *
  * @author Gerald Brose, FU Berlin
- * @version $Id: TypeCode.java,v 1.53 2011-09-23 11:29:14 nick.cross Exp $
+ * @version $Id: TypeCode.java,v 1.54 2011-11-10 09:58:10 nick.cross Exp $
  */
 
 public class TypeCode
@@ -216,7 +215,10 @@ public class TypeCode
             member_type[i] = members[i].type;
         }
 
-        resolveRecursion();
+        if (kind == TCKind._tk_struct)
+        {
+           resolveRecursion(this);
+        }
     }
 
     /**
@@ -248,7 +250,7 @@ public class TypeCode
             member_type[i] = members[i].type;
         }
 
-        resolveRecursion();
+        resolveRecursion(this);
     }
 
     /**
@@ -1522,19 +1524,6 @@ public class TypeCode
                               : org.omg.CORBA.PRIVATE_MEMBER.value;
         return new ValueMember (field.getName(), id, "", "1.0", tc, null, access);
     }
-
-   /*
-    * Resolve any recursive TypeCodes contained within this TypeCode. This
-    * TypeCode is the actual (non-recursive) TypeCode that replaces any
-    * recursive TypeCodes with the same RepositoryId.
-    */
-   private void resolveRecursion ()
-   {
-      if (kind == TCKind._tk_struct || kind == TCKind._tk_union)
-      {
-         resolveRecursion (this);
-      }
-   }
 
    /*
     * Resolve any recursive TypeCodes contained within this TypeCode.
