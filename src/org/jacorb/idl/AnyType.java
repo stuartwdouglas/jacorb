@@ -24,7 +24,7 @@ import java.io.PrintWriter;
 
 /**
  * @author Gerald Brose
- * @version $Id: AnyType.java,v 1.17 2011-05-10 15:40:35 nick.cross Exp $
+ * @version $Id: AnyType.java,v 1.18 2011-11-11 21:00:52 nick.cross Exp $
  */
 
 public class AnyType
@@ -43,15 +43,6 @@ public class AnyType
     public String typeName()
     {
         return "org.omg.CORBA.Any";
-    }
-
-    /**
-     * @return the string "any".
-     */
-
-    public String getIDLTypeName()
-    {
-        return "any";
     }
 
 
@@ -108,7 +99,7 @@ public class AnyType
     {
         ps.println("\t\t" + resultname + " = (" + resulttype + ")" + anyname + ".extract_any();");
     }
- 
+
 }
 
 

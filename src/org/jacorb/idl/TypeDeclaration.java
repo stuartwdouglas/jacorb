@@ -22,7 +22,7 @@ package org.jacorb.idl;
 
 /**
  * @author Gerald Brose
- * @version $Id: TypeDeclaration.java,v 1.31 2011-09-21 12:07:08 nick.cross Exp $
+ * @version $Id: TypeDeclaration.java,v 1.32 2011-11-11 21:00:52 nick.cross Exp $
  */
 
 import java.io.PrintWriter;
@@ -54,27 +54,6 @@ public class TypeDeclaration
     {
         return type_decl.typeName();
     }
-
-    /**
-     * get this types's mapped Java name
-     */
-
-    public String getJavaTypeName()
-    {
-        return type_decl.getJavaTypeName();
-    }
-
-
-    /**
-     * get this symbol's IDL type name
-     */
-
-    public String getIDLTypeName()
-    {
-        return type_decl.getIDLTypeName();
-    }
-
-
 
     /**
      *  we have to be able to distinguish between explicitly typedef'd

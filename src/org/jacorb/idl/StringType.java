@@ -25,7 +25,7 @@ import java.util.Set;
 
 /**
  * @author Gerald Brose
- * @version $Id: StringType.java,v 1.21 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: StringType.java,v 1.22 2011-11-11 21:00:52 nick.cross Exp $
  */
 
 public class StringType
@@ -66,11 +66,6 @@ public class StringType
     public String typeName()
     {
         return "java.lang.String";
-    }
-
-    public String getIDLTypeName()
-    {
-        return ( wide ? "wstring" : "string" );
     }
 
     public TypeSpec typeSpec()
@@ -155,19 +150,19 @@ public class StringType
         else
         {
             readExpr = var_name + "=" + strname + ".read_string()";
-        }   
+        }
 
         // JAC#676: bounds check has been added
         if( max != null )
         {
-            String varName = 
+            String varName =
                 getFullName( ScopedName.unPseudoName( pack_name.length() > 0 ? pack_name + "." + name : name ));
-            
-            readExpr = "if( (" + readExpr + ").length() > " + max.pos_int_const() 
-                + " ) throw new org.omg.CORBA.BAD_PARAM(\"String bounds violation for " + varName 
+
+            readExpr = "if( (" + readExpr + ").length() > " + max.pos_int_const()
+                + " ) throw new org.omg.CORBA.BAD_PARAM(\"String bounds violation for " + varName
                 + ": only not greater than <" + max.pos_int_const() + "> length is allowed\")";
         }
-        
+
         readExpr += ";";
         return readExpr;
     }
@@ -181,23 +176,23 @@ public class StringType
         // holder
         String tmpResultName = "tmpResult" + tmpResultsCount++;
         String writeStat = "java.lang.String " + tmpResultName + " = " + var_name + ";\n";
-             
+
 
         String writeExpr;
         if( wide )
         {
             writeExpr = strname + ".write_wstring( " + tmpResultName + " )";
         }
-        else 
+        else
         {
             writeExpr = strname + ".write_string( " + tmpResultName + " )";
         }
 
-       
+
         if( max != null)
         {
-            writeStat += "if( " + tmpResultName + ".length() > " + max.pos_int_const() 
-                + " ) { throw new org.omg.CORBA.BAD_PARAM( \"String bounds violation for " + var_name 
+            writeStat += "if( " + tmpResultName + ".length() > " + max.pos_int_const()
+                + " ) { throw new org.omg.CORBA.BAD_PARAM( \"String bounds violation for " + var_name
                 + ": only not greater than <" + max.pos_int_const() + "> length is allowed\"); } else { "
                 + writeExpr + "; }";
         }
@@ -205,7 +200,7 @@ public class StringType
         {
             writeStat += writeExpr + ";";
         }
-        
+
         return writeStat;
     }
 

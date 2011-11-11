@@ -22,14 +22,13 @@ package org.jacorb.idl;
 
 import java.io.PrintWriter;
 import java.math.BigInteger;
-
 import org.jacorb.idl.runtime.int_token;
 import org.jacorb.idl.runtime.long_token;
 import org.jacorb.idl.runtime.token;
 
 /**
  * @author Gerald Brose
- * @version $Id: Literal.java,v 1.29 2011-09-21 12:07:08 nick.cross Exp $
+ * @version $Id: Literal.java,v 1.30 2011-11-11 21:00:52 nick.cross Exp $
  */
 
 public class Literal
@@ -113,7 +112,7 @@ public class Literal
                 }
                 else
                 {
-                    parser.error( "Illegal assignment to '" + ts.getIDLTypeName()
+                    parser.error( "Illegal assignment to '" + TypeSpec.getIDLType (ts)
                         + "' of '" + string + "' value" );
 
                     // do not check further conditions

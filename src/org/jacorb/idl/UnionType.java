@@ -28,7 +28,7 @@ import java.util.Set;
 
 /**
  * @author Gerald Brose
- * @version $Id: UnionType.java,v 1.83 2011-09-28 14:58:03 nick.cross Exp $
+ * @version $Id: UnionType.java,v 1.84 2011-11-11 21:00:52 nick.cross Exp $
  */
 public class UnionType
     extends TypeDeclaration
@@ -103,17 +103,6 @@ public class UnionType
         return typeName;
     }
 
-    /**
-     * get this types's mapped Java name
-     */
-
-    public String getJavaTypeName()
-    {
-        if (typeName == null)
-            setPrintPhaseNames();
-        return typeName;
-    }
-
     public String className()
     {
         String fullName = typeName();
@@ -141,7 +130,7 @@ public class UnionType
 
     public String helperName()
     {
-        return getJavaTypeName() + "Helper";
+        return typeName() + "Helper";
     }
 
     public void set_included(boolean i)

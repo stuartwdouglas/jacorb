@@ -24,7 +24,7 @@ import java.io.PrintWriter;
 
 /**
  * @author Gerald Brose
- * @version $Id: CharType.java,v 1.18 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: CharType.java,v 1.19 2011-11-11 21:00:52 nick.cross Exp $
  */
 public class CharType
     extends BaseType
@@ -62,10 +62,6 @@ public class CharType
         return "char";
     }
 
-    public String getIDLTypeName()
-    {
-        return ( wide ? "wchar" : "char" );
-    }
 
     public TypeSpec typeSpec()
     {

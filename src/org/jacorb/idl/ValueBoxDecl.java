@@ -28,7 +28,7 @@ import java.util.Set;
 
 /**
  * @author Gerald Brose
- * @version $Id: ValueBoxDecl.java,v 1.39 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: ValueBoxDecl.java,v 1.40 2011-11-11 21:00:52 nick.cross Exp $
  */
 
 public class ValueBoxDecl
@@ -68,7 +68,7 @@ public class ValueBoxDecl
         }
         else
         {
-            return unwindTypedefs(typeSpec).getJavaTypeName();
+            return unwindTypedefs(typeSpec).typeName();
         }
     }
 

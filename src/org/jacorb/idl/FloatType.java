@@ -24,7 +24,7 @@ import java.io.PrintWriter;
 
 /**
  * @author Gerald Brose
- * @version $Id: FloatType.java,v 1.15 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: FloatType.java,v 1.16 2011-11-11 21:00:52 nick.cross Exp $
  */
 
 public class FloatType
@@ -36,22 +36,6 @@ public class FloatType
     }
 
     public String typeName()
-    {
-        return "float";
-    }
-
-    /**
-     * get this types's mapped Java name
-     */
-    public String getJavaTypeName()
-    {
-        return "float";
-    }
-
-    /**
-     * get this symbol's IDL type name
-     */
-    public String getIDLTypeName()
     {
         return "float";
     }

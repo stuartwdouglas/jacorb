@@ -24,7 +24,7 @@ import java.io.PrintWriter;
 
 /**
  * @author Gerald Brose
- * @version $Id: OctetType.java,v 1.16 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: OctetType.java,v 1.17 2011-11-11 21:00:52 nick.cross Exp $
  */
 
 public class OctetType
@@ -43,25 +43,6 @@ public class OctetType
     public String typeName()
     {
         return "byte";
-    }
-
-    /**
-     * get this types's mapped Java name
-     */
-
-    public String getJavaTypeName()
-    {
-        return "byte";
-    }
-
-
-    /**
-     * get this symbol's IDL type name
-     */
-
-    public String getIDLTypeName()
-    {
-        return "octet";
     }
 
     public TypeSpec typeSpec()

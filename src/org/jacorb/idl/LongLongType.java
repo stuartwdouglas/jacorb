@@ -26,7 +26,7 @@ import java.io.PrintWriter;
  * Represents IDL long long and unsigned long long types
  *
  * @author Gerald Brose
- * @version $Id: LongLongType.java,v 1.18 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: LongLongType.java,v 1.19 2011-11-11 21:00:52 nick.cross Exp $
  */
 
 public class LongLongType
@@ -50,26 +50,6 @@ public class LongLongType
     public String typeName()
     {
         return "long";
-    }
-
-    /**
-     * get this types's mapped Java name
-     */
-    public String getJavaTypeName()
-    {
-        return typeName();
-    }
-
-    /**
-     * get this symbol's IDL type name
-     */
-    public String getIDLTypeName()
-    {
-        if( unsigned )
-        {
-            return "unsigned long long";
-        }
-        return "long long";
     }
 
     public boolean basic()

@@ -24,7 +24,7 @@ import java.io.PrintWriter;
 
 /**
  * @author Gerald Brose
- * @version $Id: ShortType.java,v 1.17 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: ShortType.java,v 1.18 2011-11-11 21:00:52 nick.cross Exp $
  */
 
 public class ShortType
@@ -37,28 +37,6 @@ public class ShortType
 
     public String typeName()
     {
-        return "short";
-    }
-
-    /**
-     * get this types's mapped Java name
-     */
-
-    public String getJavaTypeName()
-    {
-        return "short";
-    }
-
-    /**
-     * get this symbol's IDL type name
-     */
-
-    public String getIDLTypeName()
-    {
-        if( unsigned )
-        {
-            return "unsigned short";
-        }
         return "short";
     }
 

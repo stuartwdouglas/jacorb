@@ -21,11 +21,12 @@
 package org.jacorb.idl;
 
 import java.io.PrintWriter;
+import java.util.HashMap;
 import java.util.Set;
 
 /**
  * @author Gerald Brose
- * @version $Id: TypeSpec.java,v 1.31 2011-05-10 15:40:36 nick.cross Exp $
+ * @version $Id: TypeSpec.java,v 1.32 2011-11-11 21:00:52 nick.cross Exp $
  */
 
 
@@ -34,6 +35,64 @@ public class TypeSpec
 {
     protected String alias = null;
     public TypeSpec type_spec;
+
+    /**
+     * Used to translate between Java value and CORBA key for Literal.parse error messages
+     * e.g. org.omg.CORBA.Any --> any or
+     */
+    private static final HashMap<String, String> typeMap = new HashMap<String,String>();
+
+    static
+    {
+       typeMap.put ("byte", "byte");
+       typeMap.put ("org.omg.CORBA.Any", "any");
+       typeMap.put ("char", "char");
+       typeMap.put ("string", "string");
+       typeMap.put ("java.math.BigDecimal", "fixed");
+       typeMap.put ("float", "float");
+       typeMap.put ("long", "long long");
+       typeMap.put ("int", "int");
+       typeMap.put ("byte", "byte");
+       typeMap.put ("short", "short");
+
+    }
+
+    protected static String getIDLType (TypeSpec ts)
+    {
+       String key = ts.typeName ();
+       if (ts instanceof CharType && ((CharType)ts).isWide ())
+       {
+          return "wchar";
+       }
+       else if (ts instanceof StringType && ((StringType)ts).isWide ())
+       {
+          return "wstring";
+       }
+       else if (ts instanceof IntType && ((IntType)ts).unsigned)
+       {
+          return "unsigned " + typeMap.get (key);
+       }
+       else if (ts instanceof LongType && ((LongType)ts).unsigned)
+       {
+          if (((LongType)ts).unsigned)
+          {
+             return "unsigned long";
+          }
+          else
+          {
+             return "long";
+          }
+       }
+       else if ( ! typeMap.containsKey (key))
+       {
+          parser.error ("TypeSpec typeMap does not contain mapping for " + key + " - please report this bug");
+          return key;
+       }
+       else
+       {
+          return typeMap.get (key);
+       }
+    }
 
     public TypeSpec( int num )
     {
@@ -47,34 +106,10 @@ public class TypeSpec
         return ts;
     }
 
-    /**
-     * @deprecated use either getJavaTypeName() or getIDLTypeName()
-     */
-
-
     public String typeName()
     {
         return type_spec.typeName();
     }
-
-    /**
-     * get this types's mapped Java name
-     */
-
-    public String getJavaTypeName()
-    {
-        return typeName();
-    }
-
-    /**
-     * get this symbol's IDL type name
-     */
-
-    public String getIDLTypeName()
-    {
-        return typeName();
-    }
-
 
     public TypeSpec typeSpec()
     {
@@ -85,12 +120,12 @@ public class TypeSpec
     {
     	return type_spec.getTCKind();
     }
-    	
+
     public void accept( IDLTreeVisitor visitor )
     {
     	type_spec.accept(visitor);
     }
-    
+
     public void setPackage( String s )
     {
         s = parser.pack_replace( s );
