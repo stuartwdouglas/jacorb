@@ -8,7 +8,7 @@ import org.jacorb.test.common.CommonSetup;
 
 /**
  * @author Andre Spiegel
- * @version $Id: NIOBiDirTest.java,v 1.1 2011-10-04 13:31:20 nick.cross Exp $
+ * @version $Id: NIOBiDirTest.java,v 1.2 2011-11-21 20:13:56 nick.cross Exp $
  */
 public class NIOBiDirTest extends BiDirTest
 {
@@ -33,7 +33,10 @@ public class NIOBiDirTest extends BiDirTest
 
         BiDirSetup setup = new BiDirSetup (suite, properties, properties);
 
-        suite.addTest (new NIOBiDirTest ("test_callback", setup));
+        if ( ! setup.isSSLEnabled ())
+        {
+            suite.addTest (new NIOBiDirTest ("test_callback", setup));
+        }
 
         return setup;
     }
