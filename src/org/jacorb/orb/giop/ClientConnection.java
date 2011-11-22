@@ -30,7 +30,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Nicolas Noffke
- * @version $Id: ClientConnection.java,v 1.73 2011-09-29 13:01:37 nick.cross Exp $
+ * @version $Id: ClientConnection.java,v 1.74 2011-11-22 15:34:37 nick.cross Exp $
  */
 public class ClientConnection
     implements ReplyListener, ConnectionListener
@@ -160,8 +160,13 @@ public class ClientConnection
         if (info != null && !ignoreComponentInfo)
         {
             connection.markTCSNegotiated(); // even if this aborts, we should not try negotiating again.
-            connection.setCodeSets( CodeSet.getNegotiatedCodeSet( info, /* wide */ false ),
-                                    CodeSet.getNegotiatedCodeSet( info, /* wide */ true ) );
+            CodeSet c1 = CodeSet.getNegotiatedCodeSet( info, /* wide */ false );
+            CodeSet c2 = CodeSet.getNegotiatedCodeSet( info, /* wide */ true );
+
+            connection.setCodeSets( c1, c2);
+
+            logger.info ("Negotiated char codeset of " + c1 +
+                         " and wchar of " + c2);
         }
         else
         {

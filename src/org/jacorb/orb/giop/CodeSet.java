@@ -42,7 +42,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 /**
  * @author Gerald Brose
- * @version $Id: CodeSet.java,v 1.31 2011-09-26 15:19:38 nick.cross Exp $
+ * @version $Id: CodeSet.java,v 1.32 2011-11-22 15:34:37 nick.cross Exp $
  */
 public class CodeSet
 {
@@ -102,6 +102,7 @@ public class CodeSet
     private int id;
 
     /** The canonical name of this code set. */
+
     private String name;
 
 
@@ -145,6 +146,7 @@ public class CodeSet
                 {
                     logger.error("Cannot set default NCSC to " + ncsc);
                 }
+                logger.info ("Set default native char codeset to " + codeset);
             }
 
             if (ncsw != null && ! ("".equals (ncsw)))
@@ -158,7 +160,8 @@ public class CodeSet
                 {
                     logger.error("Cannot set default NCSW to " + ncsw);
                 }
-            }
+                logger.info ("Set default native wchar codeset to " + codeset);
+          }
 
             logger = config.getLogger("jacorb.codeset");
             isConfigured = true;
@@ -493,6 +496,12 @@ public class CodeSet
     public String getName()
     {
         return name;
+    }
+
+
+    public String toString ()
+    {
+        return getName();
     }
 
 
