@@ -41,7 +41,7 @@ import org.jacorb.idl.util.IDLLogger;
  *
  * @author Gerald Brose <mailto:gerald.brose@acm.org>
  *
- * $Id: parser.cup,v 1.121 2011-09-21 12:07:08 nick.cross Exp $
+ * $Id: parser.cup,v 1.122 2011-11-22 15:34:13 nick.cross Exp $
  */
 
 action code
@@ -150,7 +150,7 @@ parser code
         objectCachePlugin = null;
 
         activeParseThreads = 0;
-        InterfaceBody.parseThreads.clear();
+        InterfaceBody.clearParseThreads ();
 
         out_dir = ".";
         package_prefix = null;
