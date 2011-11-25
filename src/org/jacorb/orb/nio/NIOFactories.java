@@ -21,15 +21,12 @@
 
 package org.jacorb.orb.nio;
 
-import org.jacorb.config.*;
-import org.omg.ETF.Profile;
-import org.jacorb.orb.iiop.IIOPListener;
-import org.jacorb.orb.iiop.IIOPAddress;
-import org.jacorb.orb.iiop.IIOPProfile;
+import org.omg.ETF.Connection;
+
 
 /**
  * @author Ciju John
- * @version $Id: NIOFactories.java,v 1.2 2011-09-29 19:25:32 phil.mesnier Exp $
+ * @version $Id: NIOFactories.java,v 1.3 2011-11-25 11:58:10 nick.cross Exp $
  *
  * This class is identical to the iiop.IIOPFactories except for the static
  *  initialization bit.
@@ -37,9 +34,11 @@ import org.jacorb.orb.iiop.IIOPProfile;
 public class NIOFactories
         extends org.jacorb.orb.iiop.IIOPFactories
 {
-    static
+   /**
+    * Return the correct type of connection
+    */
+    protected Connection create_connection_internal ()
     {
-        connectionClz = ClientNIOConnection.class;
+       return new ClientNIOConnection();
     }
-
 }
