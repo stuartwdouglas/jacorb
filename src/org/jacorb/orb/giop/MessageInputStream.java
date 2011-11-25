@@ -30,13 +30,17 @@ import org.omg.CORBA.MARSHAL;
  * Created: Sat Aug 18 21:07:07 2002
  *
  * @author Nicolas Noffke
- * @version $Id: MessageInputStream.java,v 1.10 2011-05-10 15:40:40 nick.cross Exp $
+ * @version $Id: MessageInputStream.java,v 1.11 2011-11-25 20:36:30 nick.cross Exp $
  */
 
 public class MessageInputStream
     extends CDRInputStream
 {
-    protected final int msg_size;
+    /**
+     * Change protection to public for those users that might be interested in the
+     * msg_size. Enhancement for Bugzlla 913.
+     */
+    public final int msg_size;
 
     public MessageInputStream( org.omg.CORBA.ORB orb, byte[] buffer)
     {
