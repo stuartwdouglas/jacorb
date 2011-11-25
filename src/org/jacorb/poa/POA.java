@@ -85,7 +85,7 @@ import org.slf4j.Logger;
  * <code>org.omg.PortableServer.POA</code>
  *
  * @author Reimo Tiedemann, FU Berlin
- * @version $Id: POA.java,v 1.82 2011-10-19 21:53:04 nick.cross Exp $
+ * @version $Id: POA.java,v 1.83 2011-11-25 20:31:58 nick.cross Exp $
  */
 
 public class POA
@@ -260,7 +260,7 @@ public class POA
     public void configure(Configuration myConfiguration)
         throws ConfigurationException
     {
-        this.configuration = (org.jacorb.config.Configuration)myConfiguration;
+        this.configuration = myConfiguration;
         logger = configuration.getLogger("jacorb.poa");
 
         String tmp =

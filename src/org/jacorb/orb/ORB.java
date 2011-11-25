@@ -115,7 +115,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Gerald Brose, FU Berlin
- * @version $Id: ORB.java,v 1.206 2011-11-02 23:01:46 nick.cross Exp $
+ * @version $Id: ORB.java,v 1.207 2011-11-25 20:31:58 nick.cross Exp $
  */
 
 public final class ORB
@@ -2519,9 +2519,7 @@ public final class ORB
      */
     private void configureObjectKeyMap (Configuration config)
     {
-        final org.jacorb.config.Configuration configuration = (org.jacorb.config.Configuration)config;
-
-        objectKeyMap.configureObjectKeyMap(configuration);
+        objectKeyMap.configureObjectKeyMap(config);
     }
 
     /**

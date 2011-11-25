@@ -40,7 +40,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Gerald Brose, FU Berlin
- * @version $Id: ORBSingleton.java,v 1.64 2011-11-02 23:01:46 nick.cross Exp $
+ * @version $Id: ORBSingleton.java,v 1.65 2011-11-25 20:31:58 nick.cross Exp $
  */
 
 public class ORBSingleton
@@ -82,8 +82,7 @@ public class ORBSingleton
 
                 // Don't call configure method as if this has been called from ORB::ctor
                 // class construction order can cause issues.
-                logger = ((org.jacorb.config.Configuration)configuration).getLogger
-                    ("jacorb.orb.singleton");
+                logger = configuration.getLogger ("jacorb.orb.singleton");
 
                 doStrictCheckOnTypecodeCreation = configuration.getAttributeAsBoolean
                     ("jacorb.interop.strict_check_on_tc_creation", true);
@@ -130,7 +129,7 @@ public class ORBSingleton
 
     protected void configure(Configuration config) throws ConfigurationException
     {
-        configuration = (org.jacorb.config.Configuration) config;
+        configuration = config;
 
         logger = configuration.getLogger("jacorb.orb");
 

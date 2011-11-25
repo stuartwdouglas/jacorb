@@ -33,7 +33,7 @@ import org.slf4j.Logger;
  *
  * @author Gerald Brose
  * @author Reimo Tiedemann
- * @version $Id: RPPoolManager.java,v 1.29 2011-10-03 10:01:13 nick.cross Exp $
+ * @version $Id: RPPoolManager.java,v 1.30 2011-11-25 20:31:58 nick.cross Exp $
  * @see org.jacorb.poa.RequestProcessor
  */
 
@@ -150,7 +150,7 @@ public abstract class RPPoolManager
             }
         }
 
-        RequestProcessor[] rps = (RequestProcessor[]) pool.toArray(new RequestProcessor[pool.size()]);
+        RequestProcessor[] rps = pool.toArray(new RequestProcessor[pool.size()]);
 
         for (int i=0; i<rps.length; i++)
         {

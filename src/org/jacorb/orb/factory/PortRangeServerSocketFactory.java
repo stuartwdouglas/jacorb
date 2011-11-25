@@ -31,7 +31,7 @@ import org.slf4j.Logger;
 
 /**
  * @author Steve Osselton
- * @version $Id: PortRangeServerSocketFactory.java,v 1.13 2011-09-26 15:19:38 nick.cross Exp $
+ * @version $Id: PortRangeServerSocketFactory.java,v 1.14 2011-11-25 20:31:58 nick.cross Exp $
  */
 public class PortRangeServerSocketFactory
     implements ServerSocketFactory, Configurable
@@ -60,7 +60,7 @@ public class PortRangeServerSocketFactory
     public void configure(Configuration config)
         throws ConfigurationException
     {
-        logger = ((org.jacorb.config.Configuration)config).getLogger("jacorb.orb.port_rang_fctry");
+        logger = config.getLogger("jacorb.orb.port_rang_fctry");
 
         // Get configured max and min port numbers
         portMin = getPortProperty(config, MIN_PROP);

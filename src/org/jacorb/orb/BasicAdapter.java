@@ -47,7 +47,7 @@ import org.slf4j.Logger;
  * Class BasicAdapter, used by the POA.
  *
  * @author Gerald Brose
- * @version $Id: BasicAdapter.java,v 1.66 2011-09-26 15:21:03 nick.cross Exp $
+ * @version $Id: BasicAdapter.java,v 1.67 2011-11-25 20:31:58 nick.cross Exp $
  */
 public class BasicAdapter
     extends org.omg.ETF._HandleLocalBase
@@ -86,10 +86,8 @@ public class BasicAdapter
     public void configure(Configuration myConfiguration)
         throws ConfigurationException
     {
-        configuration =
-            (org.jacorb.config.Configuration)myConfiguration;
-        logger =
-            configuration.getLogger("jacorb.orb.basic");
+        configuration = myConfiguration;
+        logger = configuration.getLogger("jacorb.orb.basic");
 
         receptor_pool = new MessageReceptorPool("server", "ServerMessageReceptor", myConfiguration);
 

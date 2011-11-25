@@ -103,7 +103,7 @@ import org.slf4j.Logger;
  * JacORB implementation of CORBA object reference
  *
  * @author Gerald Brose
- * @version $Id: Delegate.java,v 1.183 2011-10-06 12:43:49 nick.cross Exp $
+ * @version $Id: Delegate.java,v 1.184 2011-11-25 20:31:58 nick.cross Exp $
  *
  */
 
@@ -920,8 +920,9 @@ public final class Delegate
     }
 
     /**
-     * @deprecated Deprecated by CORBA 2.3
+     * Deprecated by CORBA 2.3
      */
+    @Deprecated
     public org.omg.CORBA.InterfaceDef get_interface( org.omg.CORBA.Object self )
     {
         return org.omg.CORBA.InterfaceDefHelper.narrow( get_interface_def( self ) ) ;
