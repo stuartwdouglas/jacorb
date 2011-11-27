@@ -1,23 +1,68 @@
 #!/bin/sh
+#
+# JACO - JacORB cmdline
+# @author Christoph Becker (PrismTech)
+# @author Alexander Fetke (PrismTech)
+# @author Alphonse Bendt (PrismTech)
+# @version $Id: jaco.tpl,v 1.5 2006-12-21 10:08:51 alphonse.bendt Exp $
+# don't edit this file. edit the template instead
 
-# I would prefer it this way, but there does not seem to be a way to
-# find out the HOME of the JDK ...
-# : ${JAVA_HOME:="@@@JAVA_HOME@@@"}
-# ... If there is no JDK, simply set the following ...
-# : ${JRE_HOME:="$JAVA_HOME/jre"}
+resolve()
+{
+    CMD="$1"
+    # test if CMD is a symlink or not
+    while [ -h "$CMD" ] ; do
+        link=`find "$CMD" -printf "%l\n"`
+        if expr "$link" : '/.*' > /dev/null; then
+            CMD="$link"
+        else
+            CMD=`dirname "$CMD"`"/$link"
+        fi
+    done
+    echo $CMD;
+}
 
-# ... but we have to refer to the JRE only!
-: ${JRE_HOME:="c:\jdk1.3\jre"}
+case $0 in
+    /*)
+        _SELF="$0"
+        ;;
+    *)
+        _SELF="`pwd`/$0"
+        ;;
+esac
 
-: ${JACORB_HOME:="C:\Work\JacORB"}
-export JACORB_HOME
+_SELF=`resolve "$_SELF"`
+_BIN_DIR_RAW=`dirname "$_SELF"`
+_BIN_DIR_NORM=`cd "$_BIN_DIR_RAW" > /dev/null 2>&1; pwd`
+RESOLVED_JACORB_HOME=`dirname "$_BIN_DIR_NORM"`
 
-: ${JACORB_THREADS:="-native"}
+JACORB_HOME=${RESOLVED_JACORB_HOME}
 
-# call java interpreter
-exec ${JRE_HOME}/bin/java ${JACORB_THREADS} \
-    -Xbootclasspath:${JACORB_HOME}/lib/jacorb.jar:${JRE_HOME}/lib/rt.jar:${CLASSPATH} \
-    -Dorg.omg.CORBA.ORBClass=org.jacorb.orb.ORB \
-    -Dorg.omg.CORBA.ORBSingletonClass=org.jacorb.orb.ORBSingleton \
-    "$@"
+# Test if JRE_HOME or JAVA_HOME provide java-binary
+# if not fall back to path
+if [ -n "$JRE_HOME" ] && [ -x "$JRE_HOME/bin/java" ]
+then
+    RESOLVED_JAVA_CMD=$JRE_HOME/bin/java
+else
+    if [ -n "$JAVA_HOME" ] && [ -x "$JAVA_HOME/bin/java" ]
+    then
+        RESOLVED_JAVA_CMD=$JAVA_HOME/bin/java
+    else
+        RESOLVED_JAVA_CMD=java
+    fi
+fi
 
+JAVA_CMD=${RESOLVED_JAVA_CMD}
+
+# verbosity output
+#echo    "using JAVA_CMD   : ${JAVA_CMD}"
+#echo    "Using JacORB from: ${JACORB_HOME}"
+#echo -e "using CLASSPATH  :\n\t`echo $CLASSPATH | sed -e 's/:/\n\t/g'`"
+
+exec "$JAVA_CMD"                                                    \
+    -Djava.endorsed.dirs="${JACORB_HOME}/lib"                                          \
+    -Djacorb.home="${JACORB_HOME}"                                  \
+    -Dorg.omg.CORBA.ORBClass=org.jacorb.orb.ORB                     \
+    -Dorg.omg.CORBA.ORBSingletonClass=org.jacorb.orb.ORBSingleton   \
+    -classpath "${CLASSPATH}"                                       \
+     "$@"

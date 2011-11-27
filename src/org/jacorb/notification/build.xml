@@ -36,7 +36,6 @@
 		<path id="classpath">
 			<path refid="path.base" />
 			<path refid="path.mx4j" />
-			<path refid="path.jboss" />
 			<pathelement location="${lib}/wrapper-3.1.0.jar" />
 		</path>
 
@@ -86,13 +85,12 @@
 		<jacorb-antlr package="${etcl.target.package}" source="${dir.etcl.grammar}/tcl.g" />
 	</target>
 
-	<target name="jmx" depends="init.local, xdoclet.init-jmx, jmx.mbean, jmx.mx4j, jmx.jboss" description="Generate JMX Interfaces" />
+	<target name="jmx" depends="init.local, xdoclet.init-jmx, jmx.mbean, jmx.mx4j" description="Generate JMX Interfaces" />
 
 	<target name="jmx.mbean">
 		<!-- MBean Interfaces need to be generated always -->
 		<jacorb-jmxgen>
 			<files>
-				<exclude name="org/jacorb/notification/jmx/jboss/**" />
 				<exclude name="org/jacorb/notification/jmx/mx4j/**" />
 				<include name="org/jacorb/notification/**/*.java" />
 			</files>
@@ -120,7 +118,6 @@
 		<jacorb-jmxgen>
 			<files>
 				<include name="org/jacorb/notification/**/*.java" />
-				<exclude name="org/jacorb/notification/jmx/jboss/**" />
 			</files>
 
 			<tasks>
@@ -132,35 +129,9 @@
                <jacorb-javac javac-classpathref="classpath"
                              javac-includes="org/jacorb/notification/**/*.java"
                              javac-excludes="org/jacorb/notification/WrapperMain.java,
-                                             org/jacorb/notification/filter/bsh/**,
-                                             org/jacorb/notification/jmx/jboss/**"
+                                             org/jacorb/notification/filter/bsh/**"
                              javac-xlint=""/>
 
-	</target>
-
-	<target name="jmx.jboss" if="jboss.home">
-		<!-- create JBoss specific MBean interfaces -->
-		<jacorb-jmxgen>
-			<files>
-				<include name="org/jacorb/notification/jmx/jboss/**" />
-			</files>
-
-			<tasks>
-				<!-- Create the {0}MBean interface for the MBean -->
-				<mbeaninterface />
-			</tasks>
-		</jacorb-jmxgen>
-		<jacorb-jmxgen>
-			<files>
-				<include name="org/jacorb/notification/**/*.java" />
-				<exclude name="org/jacorb/notification/jmx/mx4j/**" />
-			</files>
-
-			<tasks>
-				<!-- Create the JBoss specific XML descriptions for the MBean -->
-				<jbossxmbean destdir="${src}/generated" />
-			</tasks>
-		</jacorb-jmxgen>
 	</target>
 
 	<target name="compile" depends="init.local, compile.server" description="Compile JacORB Notification Service" />
@@ -175,12 +146,8 @@
 
 		<jacorb-javac javac-classpathref="classpath" javac-includes="org/jacorb/notification/WrapperMain.java" javac-xlint=""/>
 
-		<antcall target="server.sar" />
 	</target>
 
-	<target name="server.sar" if="jboss.home">
-		<ant antfile="${basedir}/src/org/jacorb/notification/jmx/jboss/build.xml" />
-	</target>
 
 	<!-- clean -->
 	<target name="clean" depends="init, clean.classes" description="remove all compiled classes" />
